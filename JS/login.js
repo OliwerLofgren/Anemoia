@@ -3,7 +3,7 @@
 function signInpage(event) {
   document.querySelector("main").innerHTML = `
     <main>
-        <h1>Filmfeud</h1>
+        <h1>Anomeia Login</h1>
         <div>
             <div class="box">
                 <button id="login">Login</button>

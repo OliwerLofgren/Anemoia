@@ -46,6 +46,8 @@ if ($request_method == "POST") {
         "id" => $id,
         "username" => $username,
         "password" => $password,
+        "accsess" => true,
+        "indications" => 0
     ];
     
     //Saving the new user in the database and send a response if everything went OK

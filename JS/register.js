@@ -3,7 +3,7 @@
 function signUppage(event) {
   document.querySelector("main").innerHTML = `
     <main>
-    <h1>Anomeia</h1>
+    <h1>Anomeia Register</h1>
     <div>
         <div class="box">
             <button id="register">Register</button>
