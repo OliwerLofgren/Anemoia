@@ -1,10 +1,4 @@
-if(localStorage.getItem("username")){
-  RenderStartingpage()
-}else{
-  signUppage()
-}
-
-
+signUppage();
 function RenderStartingpage() {
   document.querySelector("body").innerHTML = `
         <h1>Welcome</h1>
@@ -16,15 +10,12 @@ function RenderStartingpage() {
 
 function goToLayout(layoutName) {
   window.location.href = `?layout=${layoutName}`;
-  displayLayoutName(); // Call the function to display the layout name
 }
 
 function displayLayoutName() {
   // Parse the layout name from the URL query parameter
   const urlParams = new URLSearchParams(window.location.search);
   const layoutName = urlParams.get("layout");
-
-  document.body.innerHTML = "";
 
   // Create a new h1 element
   const h1Element = document.createElement("h1");
@@ -35,3 +26,6 @@ function displayLayoutName() {
   // Append the h1 element to the body of the document
   document.body.appendChild(h1Element);
 }
+
+// Call the function to display the layout name
+displayLayoutName();
