@@ -1,9 +1,12 @@
-if(localStorage.getItem("username")){
-  RenderStartingpage()
-}else{
-  signUppage()
+if (localStorage.getItem("username")) {
+  if (!window.location.search.includes("layout")) {
+    RenderStartingpage();
+  } else {
+    displayLayoutName();
+  }
+} else {
+  signUppage();
 }
-
 
 function RenderStartingpage() {
   document.querySelector("body").innerHTML = `
