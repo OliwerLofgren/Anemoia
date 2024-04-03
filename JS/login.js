@@ -8,7 +8,7 @@ function signInpage(event) {
             <div class="box">
                 <button id="login">Login</button>
                 <input placeholder="Username" id="loginUsername"></input>
-                <input placeholder="Password" id="loginPassword"></input>
+                <input placeholder="Password" id="loginPassword" type="password"></input>
             </div>
         </div>
     </main>
