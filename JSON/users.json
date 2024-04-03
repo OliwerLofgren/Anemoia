@@ -1,9 +1,9 @@
 [
-    {
-        "id": 1,
-        "username": "Oliwer",
-        "password": "123",
-        "accsess": true,
-        "indications": 0
-    }
+  {
+    "id": 1,
+    "username": "Oliwer",
+    "password": "123",
+    "accsess": true,
+    "indications": 0
+  }
 ]
