@@ -1,1 +1,1 @@
-signInpage();
+signUppage();
