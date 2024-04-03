@@ -21,7 +21,7 @@ function loginFunction(event) {
   let password = document.getElementById("loginPassword").value;
   console.log(username);
 
-  fetch("../PHP/login.php", {
+  fetch("login.php", {
     method: "POST",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify({
@@ -32,7 +32,7 @@ function loginFunction(event) {
   })
     .then((request) => request.json())
     .then((resource) => {
-        console.log(resource);
+      console.log(resource);
       if (resource.message === "Login successful!") {
         console.log("sucess");
         window.localStorage.setItem("username", username);
