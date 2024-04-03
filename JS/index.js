@@ -9,7 +9,7 @@ function RenderStartingpage() {
 }
 
 function goToLayout(layoutName) {
-  window.location.href = `layoutPage.html?layout=${layoutName}`;
+  window.location.href = `?layout=${layoutName}`;
 }
 
 function displayLayoutName() {
