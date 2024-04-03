@@ -23,8 +23,8 @@ $request_method = $_SERVER["REQUEST_METHOD"];
 
 //Check if is a POST-method otherwise send a error message
 if ($request_method == "POST") {
-    $username = $input_data["username"];
-    $password = $input_data["password"];
+    $username = $input_data["registerUsername"];
+    $password = $input_data["registerPassword"];
 
     //If you are trying to register with a username that already exist in the database, error message
     foreach($users as $user){
@@ -45,9 +45,6 @@ if ($request_method == "POST") {
         "id" => $id,
         "username" => $username,
         "password" => $password,
-        "uploaded_photos" => [],
-        "saved_photos" => [],
-        "profile_picture" => ""
     ];
     
     //Saving the new user in the database and send a response if everything went OK

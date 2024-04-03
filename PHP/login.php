@@ -12,8 +12,8 @@ $request_method = $_SERVER["REQUEST_METHOD"];
 //Check if method is POST otherwise error message
 if ($request_method == "POST") {
     //Save username and password from php://input (uppgifter från databasen)
-    $username = $input_data["username"];
-    $password = $input_data["password"];
+    $username = $input_data["loginUsername"];
+    $password = $input_data["loginPassword"];
 
     //If you are trying to login with empty username/password, error message
     if($username == "" or $password == ""){
@@ -26,7 +26,6 @@ if ($request_method == "POST") {
             $logged_in_user = [
                 "id" => $user["id"],
                 "username" => $username,
-                "profile_picture" => $user["profile_picture"],
             ];
             sendJSON($logged_in_user);
         }
