@@ -8,7 +8,7 @@ function signUppage(event) {
         <div class="box">
             <button id="register">Register</button>
             <input placeholder="Username" id="registerUsername"></input>
-            <input placeholder="Password" id="registerPassword"></input>
+            <input placeholder="Password" id="registerPassword" type ="password"></input>
         </div>
         <button id="loginShortCut">Go to login</button>
     </div>
@@ -22,7 +22,7 @@ function registerFunction(event) {
     let username = document.getElementById("registerUsername").value;
     let password = document.getElementById("registerPassword").value;
 
-    fetch("../PHP/api.php", {
+    fetch("../PHP/register.php", {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify({ username: username, password: password, action: "register" })
