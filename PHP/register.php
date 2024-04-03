@@ -2,8 +2,9 @@
 ini_set("display_errors", 1);
 require_once("functions.php");
 
-$filename = "JSON/users.json";
+$filename = "../JSON/users.json";
 $input_data = json_decode(file_get_contents("php://input"), true);
+
 
 //If database-file dosent exist, create it otherwise decode it
 if (!file_exists($filename)) {
@@ -23,8 +24,8 @@ $request_method = $_SERVER["REQUEST_METHOD"];
 
 //Check if is a POST-method otherwise send a error message
 if ($request_method == "POST") {
-    $username = $input_data["registerUsername"];
-    $password = $input_data["registerPassword"];
+    $username = $input_data["username"];
+    $password = $input_data["password"];
 
     //If you are trying to register with a username that already exist in the database, error message
     foreach($users as $user){

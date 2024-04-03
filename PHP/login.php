@@ -2,7 +2,7 @@
 ini_set("display_errors", 1);
 require_once("functions.php");
 
-$filename = "JSON/users.json";
+$filename = "../JSON/users.json";
 $users = [];
 
 $users = json_decode(file_get_contents($filename), true);
@@ -12,8 +12,8 @@ $request_method = $_SERVER["REQUEST_METHOD"];
 //Check if method is POST otherwise error message
 if ($request_method == "POST") {
     //Save username and password from php://input (uppgifter från databasen)
-    $username = $input_data["loginUsername"];
-    $password = $input_data["loginPassword"];
+    $username = $input_data["username"];
+    $password = $input_data["password"];
 
     //If you are trying to login with empty username/password, error message
     if($username == "" or $password == ""){
