@@ -26,6 +26,7 @@ if ($request_method == "POST") {
             $logged_in_user = [
                 "id" => $user["id"],
                 "username" => $username,
+                "message" => "Login successful!"
             ];
             sendJSON($logged_in_user);
         }

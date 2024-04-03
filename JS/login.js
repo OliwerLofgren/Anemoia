@@ -32,11 +32,11 @@ function loginFunction(event) {
   })
     .then((request) => request.json())
     .then((resource) => {
+        console.log(resource);
       if (resource.message === "Login successful!") {
         console.log("sucess");
         window.localStorage.setItem("username", username);
         RenderStartingpage();
-        initializeLeaderboard();
       } else {
         console.log("login failed");
       }
