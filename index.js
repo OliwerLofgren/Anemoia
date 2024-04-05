@@ -1,3 +1,5 @@
+// localStorage.clear();
+
 if (localStorage.getItem("username")) {
   if (!window.location.search.includes("layout")) {
     RenderStartingpage();
@@ -10,31 +12,29 @@ if (localStorage.getItem("username")) {
 
 function RenderStartingpage() {
   document.querySelector("body").innerHTML = `
-        <h1>Welcome</h1>
-        <button onclick="goToLayout('layout1')">Layout 1</button>
-        <button onclick="goToLayout('layout2')">Layout 2</button>
-        <button onclick="goToLayout('layout3')">Layout 3</button>
-    `;
+    <h1>Welcome</h1>
+    <button onclick="continueToNextLayout()">Continue</button>
+  `;
 }
 
-function goToLayout(layoutName) {
-  window.location.href = `?layout=${layoutName}`;
-  displayLayoutName(); // Call the function to display the layout name
+function continueToNextLayout() {
+  let keysFound = parseInt(window.localStorage.getItem("keysFound")) || 0;
+  keysFound++;
+
+  window.localStorage.setItem("keysFound", keysFound);
+
+  window.location.href = `?layout=layout${keysFound}`;
 }
 
 function displayLayoutName() {
-  // Parse the layout name from the URL query parameter
   const urlParams = new URLSearchParams(window.location.search);
-  const layoutName = urlParams.get("layout");
+  const layoutNumber = urlParams.get("layout").replace("layout", "");
 
   document.body.innerHTML = "";
 
-  // Create a new h1 element
   const h1Element = document.createElement("h1");
 
-  // Set the text content of the h1 element to the layout name
-  h1Element.textContent = layoutName;
+  h1Element.textContent = `Layout ${layoutNumber}`;
 
-  // Append the h1 element to the body of the document
   document.body.appendChild(h1Element);
 }

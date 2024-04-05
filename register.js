@@ -11,6 +11,7 @@ function signUppage(event) {
             <input placeholder="Password" id="registerPassword" type ="password"></input>
         </div>
         <button id="loginShortCut">Go to login</button>
+        <p id="registrationMessage"></p>
     </div>
 </main>
     `;
@@ -34,5 +35,9 @@ function registerFunction(event) {
       password: password,
       action: "register",
     }),
-  });
+  })
+    .then((respone) => respone.json())
+    .then((data) => {
+      document.getElementById("registrationMessage").textContent = data.message;
+    });
 }

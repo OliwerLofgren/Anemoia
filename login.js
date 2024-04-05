@@ -10,6 +10,7 @@ function signInpage(event) {
                 <input placeholder="Username" id="loginUsername"></input>
                 <input placeholder="Password" id="loginPassword" type="password"></input>
             </div>
+            <p id="loginMessage"></p>
         </div>
     </main>
     `;
@@ -34,11 +35,15 @@ function loginFunction(event) {
     .then((resource) => {
       console.log(resource);
       if (resource.message === "Login successful!") {
-        console.log("sucess");
+        document.getElementById("loginMessage").textContent = resource.message;
+
         window.localStorage.setItem("username", username);
+        window.localStorage.setItem("keysFound", 0);
+
         RenderStartingpage();
       } else {
         console.log("login failed");
+        document.getElementById("loginMessage").textContent = resource.message;
       }
     });
 }
