@@ -11,8 +11,11 @@ if (localStorage.getItem("username")) {
 }
 
 function RenderStartingpage() {
+  let username = localStorage.getItem("username");
+
   document.querySelector("body").innerHTML = `
     <h1>Welcome</h1>
+    <h3>${username}</h3>
     <button onclick="continueToNextLayout()">Continue</button>
   `;
 }
