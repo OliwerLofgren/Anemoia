@@ -32,7 +32,7 @@ function RenderStartingpage() {
 
   let buttonsHTML = "";
   for (let i = 1; i < keysFound + 1; i++) {
-    buttonsHTML += `<button onclick="goToLayout(${i})" id="${i}">Ledtråd ${i}</button>`;
+    buttonsHTML += `<button onclick="goToLayout(${i})" id="${i}">Clues ${i}</button>`;
   }
 
   document.querySelector("body").innerHTML = `
@@ -55,23 +55,38 @@ function continueToNextLayout() {
 function displayLayoutName() {
   const urlParams = new URLSearchParams(window.location.search);
   const layoutNumber = urlParams.get("layout").replace("layout", "");
+  const keysFound = parseInt(window.localStorage.getItem("keysFound")) || 0;
 
   if (layoutNumber === "0" || isNaN(parseInt(layoutNumber))) {
     RenderStartingpage();
     return;
   }
-
-  const keysFound = parseInt(window.localStorage.getItem("keysFound")) || 0;
+  if (addKey()) {
+    continueToNextLayout();
+  }
 
   if (layoutNumber > keysFound) {
     RenderStartingpage();
   } else {
     document.querySelector("body").innerHTML = `
       <h1>Welcome to Layout ${layoutNumber}</h1>
-      <button id="goHome"> Go Home</button>
+      <button id="goHome">Go to Startpage</button>
     `;
     document.getElementById("goHome").addEventListener("click", (event) => {
       RenderStartingpage();
     });
+  }
+}
+function addKey() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const layoutNumber = urlParams.get("layout").replace("layout", "");
+
+  let keys = parseInt(window.localStorage.getItem("keysFound"));
+  console.log(layoutNumber);
+
+  if (keys + 1 === parseInt(layoutNumber)) {
+    return true;
+  } else {
+    return false;
   }
 }
