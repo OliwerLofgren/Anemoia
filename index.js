@@ -18,7 +18,6 @@ function checkLayout(num) {
   const layoutUrl = window.location.search.split("?layout=")[1];
   const numKeys = parseInt(window.localStorage.getItem("keysFound"));
   const numLayout = parseInt(layoutUrl.match(/\d+/));
-
   if (num > numKeys) {
     RenderStartingpage();
     return;
@@ -26,7 +25,7 @@ function checkLayout(num) {
 
   history.pushState(null, "", `?layout=layout${num}`);
   document.querySelector("body").innerHTML = `
-      <h1>Welcome to layout${num}</h1>
+      <h1>Welcome to Layout ${num}</h1>
       <button id="goHome"> Go Home</button>
   `;
 
@@ -66,17 +65,22 @@ function continueToNextLayout() {
 function displayLayoutName() {
   const urlParams = new URLSearchParams(window.location.search);
   const layoutNumber = urlParams.get("layout").replace("layout", "");
-  console.log(layoutNumber);
-  checkLayout(layoutNumber);
+  console.log("gefsq");
 
-  document.body.innerHTML = "";
-  if (layoutNumber > parseInt(window.localStorage.getItem("keysFound"))) {
+  if (layoutNumber === "0" || isNaN(parseInt(layoutNumber))) {
+    RenderStartingpage();
+    return;
+  }
+
+  const keysFound = parseInt(window.localStorage.getItem("keysFound")) || 0;
+
+  if (layoutNumber > keysFound) {
     RenderStartingpage();
   } else {
     document.querySelector("body").innerHTML = `
-  <h1>Welcome to Layout ${layoutNumber}</h1>
-  <button id="goHome"> Go Home</button>
-  `;
+      <h1>Welcome to Layout ${layoutNumber}</h1>
+      <button id="goHome"> Go Home</button>
+    `;
     document.getElementById("goHome").addEventListener("click", (event) => {
       RenderStartingpage();
     });
