@@ -98,11 +98,8 @@ function addKey() {
 
 
 function displayContent(currentIndex) {
-  
   const layoutUrl = window.location.search.split("?layout=")[1];
-
   let aiDiv = document.getElementById("aiDiv");
-  
   
   if (!aiDiv) {
     aiDiv = document.createElement("div");
@@ -111,37 +108,43 @@ function displayContent(currentIndex) {
       <img id="content_img" src="default-pfp.jpg"></img>
       <div id="content_div">
         <p id="ai_content_p"></p>
+        <p id="user_content_p"></p>
       </div>
       <button id="nextMessage">Next</button>
-
-      <p id="user_content_p"></p>
     `;
     document.body.append(aiDiv);
   }
 
-
-      const message = content.layout1[currentIndex];
+  console.log(layoutUrl);
+  //FIXA DETTA
+  for (let layoutContent in content) {
+    if (layoutUrl === layoutContent) {
+      const message = content[layoutContent][currentIndex];
       const container = document.getElementById('content_div');
 
       const sender = Object.keys(message)[0];
       const text = message[sender];
+      let replacedContent = text.replace(/USER/g, window.localStorage.getItem("username"));
 
       const targetElement = sender === "AI" ? "ai_content_p" : "user_content_p";
       const messageContainer = document.getElementById(targetElement);
 
       const messageElement = document.createElement('div');
       messageElement.classList.add('message', sender.toLowerCase());
-      messageElement.textContent = text;  
-        
-        let index = 0;
-        const interval = setInterval(() => {
-          if (index < text.length) {
-            messageContainer.textContent += text[index];
-            index++;
-          } else {
-            clearInterval(interval);
-          }
-        }, 50);
+      console.log(messageElement);
+     
+
+      let index = 0;
+      const interval = setInterval(() => {
+        if (index < replacedContent.length) {
+          messageContainer.textContent += replacedContent[index];
+          index++;
+        } else {
+          clearInterval(interval);
+        }
+      }, 50);
+    }
+  }
 }
 
 
