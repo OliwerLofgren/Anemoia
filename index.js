@@ -1,3 +1,5 @@
+
+
 let goToLayout = (layoutName) => {
   console.log(layoutName);
   window.location.href = `?layout=${layoutName}`;
@@ -32,7 +34,7 @@ function RenderStartingpage() {
 
   let buttonsHTML = "";
   for (let i = 1; i < keysFound + 1; i++) {
-    buttonsHTML += `<button onclick="checkLayout(${i})" id="${i}">Layout ${i}</button>`;
+    buttonsHTML += `<button onclick="goToLayout(${i})" id="${i}">Layout ${i}</button>`;
   }
 
   document.querySelector("body").innerHTML = `
@@ -55,13 +57,16 @@ function continueToNextLayout() {
 function displayLayoutName() {
   const urlParams = new URLSearchParams(window.location.search);
   const layoutNumber = urlParams.get("layout").replace("layout", "");
+  const keysFound = parseInt(window.localStorage.getItem("keysFound")) || 0;
+  
 
   if (layoutNumber === "0" || isNaN(parseInt(layoutNumber))) {
     RenderStartingpage();
     return;
   }
-
-  const keysFound = parseInt(window.localStorage.getItem("keysFound")) || 0;
+  if(addKey()){
+    continueToNextLayout()
+  }
 
   if (layoutNumber > keysFound) {
     RenderStartingpage();
@@ -73,5 +78,18 @@ function displayLayoutName() {
     document.getElementById("goHome").addEventListener("click", (event) => {
       RenderStartingpage();
     });
+  }
+}
+function addKey(){
+  const urlParams = new URLSearchParams(window.location.search);
+  const layoutNumber = urlParams.get("layout").replace("layout", "");
+
+  let keys = parseInt(window.localStorage.getItem("keysFound"))
+  console.log(layoutNumber);
+
+  if(keys + 1 === parseInt(layoutNumber)){
+    return true
+  }else{
+    return false
   }
 }
