@@ -39,7 +39,7 @@ h3 {
   left: 50%;
   transform: translateX(-50%);
 }
-#content_p {
+#ai_content_p, #user_content_p {
   color: white;
   max-width: 80%; /* Adjust the max-width as needed */
   margin: 0 auto; /* Center the element horizontally */

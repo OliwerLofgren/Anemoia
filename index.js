@@ -1,3 +1,4 @@
+let messageIndex = 0;
 let goToLayout = (layoutNumber) => {
   console.log(layoutNumber);
   window.location.href = `?layout=layout${layoutNumber}`;
@@ -12,6 +13,8 @@ if (localStorage.getItem("username")) {
 } else {
   signUppage();
 }
+
+
 
 function checkLayout(num) {
   const layoutUrl = window.location.search.split("?layout=")[1];
@@ -77,7 +80,7 @@ function displayLayoutName() {
     });
   }
 
-  displayContent();
+  displayContent(messageIndex);
 }
 function addKey() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -93,39 +96,58 @@ function addKey() {
   }
 }
 
-function displayContent() {
+
+function displayContent(currentIndex) {
+  
   const layoutUrl = window.location.search.split("?layout=")[1];
-  console.log(layoutUrl);
-  let aiDiv = document.createElement("div");
-  aiDiv.innerHTML = `
-    <img id="content_img" src="default-pfp.jpg"></img>
 
-    <div id="content_div">
+  let aiDiv = document.getElementById("aiDiv");
+  
+  
+  if (!aiDiv) {
+    aiDiv = document.createElement("div");
+    aiDiv.id = "aiDiv";
+    aiDiv.innerHTML = `
+      <img id="content_img" src="default-pfp.jpg"></img>
+      <div id="content_div">
+        <p id="ai_content_p"></p>
+      </div>
+      <button id="nextMessage">Next</button>
 
-      <p id="content_p"></p>  
-
-    </div>
-  `;
-
-  document.body.append(aiDiv);
-
-  for (let layoutContent in content) {
-    if (layoutUrl === layoutContent) {
-      let replacedContent = content[layoutContent].replace(
-        /USER/g,
-        window.localStorage.getItem("username")
-      );
-
-      const text = replacedContent;
-      let index = 0;
-      const interval = setInterval(() => {
-        if (index < text.length) {
-          document.getElementById("content_p").textContent += text[index];
-          index++;
-        } else {
-          clearInterval(interval);
-        }
-      }, 50);
-    }
+      <p id="user_content_p"></p>
+    `;
+    document.body.append(aiDiv);
   }
+
+
+      const message = content.layout1[currentIndex];
+      const container = document.getElementById('content_div');
+
+      const sender = Object.keys(message)[0];
+      const text = message[sender];
+
+      const targetElement = sender === "AI" ? "ai_content_p" : "user_content_p";
+      const messageContainer = document.getElementById(targetElement);
+
+      const messageElement = document.createElement('div');
+      messageElement.classList.add('message', sender.toLowerCase());
+      messageElement.textContent = text;  
+        
+        let index = 0;
+        const interval = setInterval(() => {
+          if (index < text.length) {
+            messageContainer.textContent += text[index];
+            index++;
+          } else {
+            clearInterval(interval);
+          }
+        }, 50);
 }
+
+
+document.getElementById("nextMessage").addEventListener("click", event => {
+  messageIndex++
+  document.getElementById("ai_content_p").innerHTML = ``;
+  document.getElementById("user_content_p").innerHTML = ``
+  displayContent(messageIndex)
+})
