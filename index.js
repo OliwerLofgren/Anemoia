@@ -29,8 +29,8 @@ function checkLayout(num) {
       <h1>Welcome to layout${num}</h1>
       <button id="goHome"> Go Home</button>
   `;
-  
-  document.getElementById("goHome").addEventListener("click", event => {
+
+  document.getElementById("goHome").addEventListener("click", (event) => {
     RenderStartingpage();
   });
 }
@@ -42,7 +42,7 @@ function RenderStartingpage() {
   let keysFound = parseInt(window.localStorage.getItem("keysFound")) || 0;
 
   let buttonsHTML = "";
-  for (let i = 1; i <= keysFound + 1; i++) {
+  for (let i = 1; i < keysFound + 1; i++) {
     buttonsHTML += `<button onclick="checkLayout(${i})" id="${i}">Layout ${i}</button>`;
   }
 
@@ -61,27 +61,24 @@ function continueToNextLayout() {
   window.localStorage.setItem("keysFound", keysFound);
 
   window.location.href = `?layout=layout${keysFound}`;
-  checkLayout()
-  
 }
 
 function displayLayoutName() {
   const urlParams = new URLSearchParams(window.location.search);
   const layoutNumber = urlParams.get("layout").replace("layout", "");
   console.log(layoutNumber);
-  checkLayout(layoutNumber)
+  checkLayout(layoutNumber);
 
   document.body.innerHTML = "";
-if(layoutNumber > parseInt(window.localStorage.getItem("keysFound"))){
-  RenderStartingpage()
-}else{
-
-  document.querySelector("body").innerHTML = `
+  if (layoutNumber > parseInt(window.localStorage.getItem("keysFound"))) {
+    RenderStartingpage();
+  } else {
+    document.querySelector("body").innerHTML = `
   <h1>Welcome to Layout ${layoutNumber}</h1>
   <button id="goHome"> Go Home</button>
-  `
-  document.getElementById("goHome").addEventListener("click", event => {
-    RenderStartingpage()
-  })
-}
+  `;
+    document.getElementById("goHome").addEventListener("click", (event) => {
+      RenderStartingpage();
+    });
+  }
 }
