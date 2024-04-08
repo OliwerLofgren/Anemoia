@@ -111,7 +111,12 @@ function displayContent() {
 
   for (let layoutContent in content) {
     if (layoutUrl === layoutContent) {
-      const text = content[layoutContent];
+      let replacedContent = content[layoutContent].replace(
+        /USER/g,
+        window.localStorage.getItem("username")
+      );
+
+      const text = replacedContent;
       let index = 0;
       const interval = setInterval(() => {
         if (index < text.length) {
@@ -120,7 +125,7 @@ function displayContent() {
         } else {
           clearInterval(interval);
         }
-      }, 50); // Adjust the interval as needed for the desired animation speed
+      }, 50);
     }
   }
 }

@@ -9,7 +9,7 @@ const content = {
     "Det var jag, Johan som har dödat din lärare, men vart jag befinner mig kommer du aldrig ta reda på. Det finns inga bevis att det är jag som har dödat honom, så lycka till HAHAHAHA",
   layout5:
     "Att du inte har gett upp ännu USER. Det ska jag beundra dig för. . . Men det är de enda jag kommer beundra dig för så få inga förhoppningar. . .",
-  layout6: "USER. . . USER. . . USER. . .",
+  layout6: "USER . . . USER . . . USER . . .",
   layout7:
     "Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum,",
 };

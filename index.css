@@ -29,6 +29,8 @@ button:hover {
 h1,
 h3 {
   color: #196591;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 #goHome {
