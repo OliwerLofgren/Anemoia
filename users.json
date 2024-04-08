@@ -1,14 +1,6 @@
 [
     {
         "id": 1,
-        "username": "callw",
-        "password": "123",
-        "accsess": true,
-        "indications": 0,
-        "keysFound": 0
-    },
-    {
-        "id": 2,
         "username": "calle",
         "password": "123",
         "accsess": true,

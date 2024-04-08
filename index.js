@@ -90,3 +90,28 @@ function addKey() {
     return false;
   }
 }
+
+function displayContent(){
+
+  let aiDiv = document.createElement("div")
+  aiDiv.innerHTML = `
+    <img id="content_img">jag är en ai </img>
+
+    <div id="content_div">
+
+      <p id="content_p"></p>  
+      
+    </div>
+  `
+  const layoutUrl = window.location.search.split("?layout=")[1];
+  for(layoutContent of content){
+    if(layoutUrl === layoutContent){
+
+    }
+  }
+  
+  
+
+
+  
+}
