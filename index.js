@@ -14,24 +14,14 @@ if (localStorage.getItem("username")) {
 }
 
 function checkLayout(num) {
-  console.log(num);
   const layoutUrl = window.location.search.split("?layout=")[1];
   const numKeys = parseInt(window.localStorage.getItem("keysFound"));
   const numLayout = parseInt(layoutUrl.match(/\d+/));
+
   if (num > numKeys) {
-    RenderStartingpage();
-    return;
+    return false;
   }
-
-  history.pushState(null, "", `?layout=layout${num}`);
-  document.querySelector("body").innerHTML = `
-      <h1>Welcome to Layout ${num}</h1>
-      <button id="goHome"> Go Home</button>
-  `;
-
-  document.getElementById("goHome").addEventListener("click", (event) => {
-    RenderStartingpage();
-  });
+  return true;
 }
 
 function RenderStartingpage() {
@@ -65,7 +55,6 @@ function continueToNextLayout() {
 function displayLayoutName() {
   const urlParams = new URLSearchParams(window.location.search);
   const layoutNumber = urlParams.get("layout").replace("layout", "");
-  console.log("gefsq");
 
   if (layoutNumber === "0" || isNaN(parseInt(layoutNumber))) {
     RenderStartingpage();
