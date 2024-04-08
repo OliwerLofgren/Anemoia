@@ -1,6 +1,6 @@
-let goToLayout = (layoutName) => {
-  console.log(layoutName);
-  window.location.href = `?layout=${layoutName}`;
+let goToLayout = (layoutNumber) => {
+  console.log(layoutNumber);
+  window.location.href = `?layout=layout${layoutNumber}`;
 };
 
 if (localStorage.getItem("username")) {
