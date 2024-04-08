@@ -32,14 +32,14 @@ function RenderStartingpage() {
 
   let buttonsHTML = "";
   for (let i = 1; i < keysFound + 1; i++) {
-    buttonsHTML += `<button onclick="checkLayout(${i})" id="${i}">Layout ${i}</button>`;
+    buttonsHTML += `<button onclick="goToLayout(${i})" id="${i}">Ledtråd ${i}</button>`;
   }
 
   document.querySelector("body").innerHTML = `
     <h1>Welcome</h1>
     <h3>${username}</h3>
     ${buttonsHTML}
-    <button onclick="continueToNextLayout()">Continue</button>
+    
   `;
 }
 
