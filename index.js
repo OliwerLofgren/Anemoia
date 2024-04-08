@@ -76,6 +76,8 @@ function displayLayoutName() {
       RenderStartingpage();
     });
   }
+
+  displayContent()
 }
 function addKey() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -92,7 +94,8 @@ function addKey() {
 }
 
 function displayContent(){
-
+  const layoutUrl = window.location.search.split("?layout=")[1];
+console.log(layoutUrl);
   let aiDiv = document.createElement("div")
   aiDiv.innerHTML = `
     <img id="content_img">jag är en ai </img>
@@ -100,15 +103,20 @@ function displayContent(){
     <div id="content_div">
 
       <p id="content_p"></p>  
-      
+
     </div>
   `
-  const layoutUrl = window.location.search.split("?layout=")[1];
-  for(layoutContent of content){
-    if(layoutUrl === layoutContent){
 
+
+  for(let layoutContent in content){
+    console.log(layoutContent,layoutUrl);
+    if(layoutUrl === layoutContent){
+      console.log("true");
+      document.getElementById("content_p").textContent = content[layoutContent]
     }
   }
+  document.body.append(aiDiv)
+  
   
   
 
