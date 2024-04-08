@@ -77,7 +77,7 @@ function displayLayoutName() {
     });
   }
 
-  displayContent()
+  displayContent();
 }
 function addKey() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -93,33 +93,34 @@ function addKey() {
   }
 }
 
-function displayContent(){
+function displayContent() {
   const layoutUrl = window.location.search.split("?layout=")[1];
-console.log(layoutUrl);
-  let aiDiv = document.createElement("div")
+  console.log(layoutUrl);
+  let aiDiv = document.createElement("div");
   aiDiv.innerHTML = `
-    <img id="content_img">jag är en ai </img>
+    <img id="content_img" src="default-pfp.jpg"></img>
 
     <div id="content_div">
 
       <p id="content_p"></p>  
 
     </div>
-  `
+  `;
 
+  document.body.append(aiDiv);
 
-  for(let layoutContent in content){
-    console.log(layoutContent,layoutUrl);
-    if(layoutUrl === layoutContent){
-      console.log("true");
-      document.getElementById("content_p").textContent = content[layoutContent]
+  for (let layoutContent in content) {
+    if (layoutUrl === layoutContent) {
+      const text = content[layoutContent];
+      let index = 0;
+      const interval = setInterval(() => {
+        if (index < text.length) {
+          document.getElementById("content_p").textContent += text[index];
+          index++;
+        } else {
+          clearInterval(interval);
+        }
+      }, 50); // Adjust the interval as needed for the desired animation speed
     }
   }
-  document.body.append(aiDiv)
-  
-  
-  
-
-
-  
 }

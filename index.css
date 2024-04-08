@@ -31,9 +31,20 @@ h3 {
   color: #196591;
 }
 
-/* #goHome {
+#goHome {
   position: fixed;
-  bottom: 20px; 
-  left: 50%; 
-  transform: translateX(-50%); 
-} */
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#content_p {
+  color: white;
+  max-width: 80%; /* Adjust the max-width as needed */
+  margin: 0 auto; /* Center the element horizontally */
+}
+
+#content_img {
+  height: 100px;
+  width: 100px;
+  padding-top: 100px;
+}
