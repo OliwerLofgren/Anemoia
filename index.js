@@ -1,4 +1,3 @@
-
 let goToLayout = (layoutName) => {
   console.log(layoutName);
   window.location.href = `?layout=${layoutName}`;
@@ -14,15 +13,13 @@ if (localStorage.getItem("username")) {
   signUppage();
 }
 
-
-
 function checkLayout(num) {
+  console.log(num);
   const layoutUrl = window.location.search.split("?layout=")[1];
   const numKeys = parseInt(window.localStorage.getItem("keysFound"));
   const numLayout = parseInt(layoutUrl.match(/\d+/));
 
   if (num > numKeys) {
-    // If the layout number is higher than the number of keys found, redirect to starting page
     RenderStartingpage();
     return;
   }
@@ -37,7 +34,6 @@ function checkLayout(num) {
     RenderStartingpage();
   });
 }
-
 
 function RenderStartingpage() {
   history.pushState(null, "", "?layout=layout0");
@@ -73,9 +69,10 @@ function displayLayoutName() {
   const urlParams = new URLSearchParams(window.location.search);
   const layoutNumber = urlParams.get("layout").replace("layout", "");
   console.log(layoutNumber);
+  checkLayout(layoutNumber)
 
   document.body.innerHTML = "";
-if(layoutNumber === "0"){
+if(layoutNumber > parseInt(window.localStorage.getItem("keysFound"))){
   RenderStartingpage()
 }else{
 
