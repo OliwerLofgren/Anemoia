@@ -123,6 +123,10 @@ function displayContent(currentIndex) {
       const message = content[layoutContent][currentIndex];
       const container = document.getElementById('content_div');
 
+      if(message === undefined){
+        document.getElementById("ai_content_p").textContent = "Gå och scanna nästa qr kod!"
+        return;
+      }
       const sender = Object.keys(message)[0];
       const text = message[sender];
       let replacedContent = text.replace(/USER/g, window.localStorage.getItem("username"));
@@ -157,6 +161,12 @@ function displayContent(currentIndex) {
           const userMessageContainer = document.getElementById("user_content_p");
           const message = content[layoutContent][currentIndex + 1];
           const container = document.getElementById('content_div');
+          console.log(message);
+          if(message === undefined){
+            document.getElementById("ai_content_p").textContent = "Gå och scanna nästa qr kod!"
+            document.getElementById("ai_content_p").style.color = "limegreen"
+            return;
+          }
           
           const sender = Object.keys(message)[0];
           if(sender !== "AI"){
