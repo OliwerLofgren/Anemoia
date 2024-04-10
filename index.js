@@ -121,9 +121,13 @@ function displayContent(currentIndex) {
       const message = content[layoutContent][currentIndex];
       const container = document.getElementById("content_div");
 
-      if(message === undefined){
-        document.getElementById("ai_content_p").textContent = "Gå och scanna nästa qr kod!"
-        return;
+      if (message === undefined) {
+        setTimeout(() => {
+          document.getElementById("ai_content_p").style.color = "limegreen";
+          document.getElementById("ai_content_p").textContent =
+            "Gå och scanna nästa qr kod!";
+          return;
+        }, 600);
       }
       const sender = Object.keys(message)[0];
       const text = message[sender];
@@ -162,14 +166,17 @@ function displayContent(currentIndex) {
           const userMessageContainer =
             document.getElementById("user_content_p");
           const message = content[layoutContent][currentIndex + 1];
-          const container = document.getElementById('content_div');
+          const container = document.getElementById("content_div");
           console.log(message);
-          if(message === undefined){
-            document.getElementById("ai_content_p").textContent = "Gå och scanna nästa qr kod!"
-            document.getElementById("ai_content_p").style.color = "limegreen"
-            return;
+          if (message === undefined) {
+            setTimeout(() => {
+              document.getElementById("ai_content_p").style.color = "limegreen";
+              document.getElementById("ai_content_p").textContent =
+                "Gå och scanna nästa qr kod!";
+              return;
+            }, 600);
           }
-          
+
           const sender = Object.keys(message)[0];
           if (sender !== "AI") {
             document.getElementById("nextMessage").style.display = "flex";
