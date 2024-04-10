@@ -50,3 +50,16 @@ h3 {
   width: 100px;
   padding-top: 100px;
 }
+#user_content_p{
+  padding: 10px;
+}
+#nextMessage{
+  background-color: #196591;
+  width: 250px;
+  height: auto;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 30px;
+}
