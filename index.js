@@ -106,15 +106,16 @@ function displayContent(currentIndex) {
       <img id="content_img" src="default-pfp.jpg"></img>
       <div id="content_div">
         <p id="ai_content_p"></p>
+      </div>
+      <div id="nextMessage">
         <p id="user_content_p"></p>
       </div>
-      <button id="nextMessage">Next</button>
     `;
     document.body.append(aiDiv);
   }
 
   console.log(layoutUrl);
-  //FIXA DETTA
+
   for (let layoutContent in content) {
     if (layoutUrl === layoutContent) {
       const message = content[layoutContent][currentIndex];
@@ -127,22 +128,52 @@ function displayContent(currentIndex) {
         window.localStorage.getItem("username")
       );
 
-      const targetElement = sender === "AI" ? "ai_content_p" : "user_content_p";
-      const messageContainer = document.getElementById(targetElement);
+      console.log(sender);
+      if (sender === "AI") {
+        document.getElementById("nextMessage").style.display = "none";
+        const messageContainer = document.getElementById("ai_content_p");
+        const messageElement = document.createElement("div");
+        messageElement.classList.add("message", sender.toLowerCase());
+        console.log(messageElement);
 
-      const messageElement = document.createElement("div");
-      messageElement.classList.add("message", sender.toLowerCase());
-      console.log(messageElement);
+        let index = 0;
+        const interval = setInterval(() => {
+          if (index < replacedContent.length) {
+            messageContainer.textContent += replacedContent[index];
+            index++;
+          } else {
+            clearInterval(interval);
+            displayUserMessage();
+            if (document.getElementById("user_content_p").textContent === "") {
+              document.getElementById("ai_content_p").textContent = "";
+              messageIndex++;
+              displayContent(messageIndex);
+            }
+          }
+        }, 50);
 
-      let index = 0;
-      const interval = setInterval(() => {
-        if (index < replacedContent.length) {
-          messageContainer.textContent += replacedContent[index];
-          index++;
-        } else {
-          clearInterval(interval);
+        function displayUserMessage() {
+          // You can replace this with your actual logic to display user's message
+          const userMessageContainer =
+            document.getElementById("user_content_p");
+          const message = content[layoutContent][currentIndex + 1];
+          const container = document.getElementById("content_div");
+
+          const sender = Object.keys(message)[0];
+          if (sender !== "AI") {
+            document.getElementById("nextMessage").style.display = "flex";
+            const text = message[sender];
+            let replacedContent = text.replace(
+              /USER/g,
+              window.localStorage.getItem("username")
+            );
+            userMessageContainer.textContent = replacedContent;
+          }
         }
-      }, 50);
+      } else {
+        messageIndex++;
+        displayContent(messageIndex);
+      }
     }
   }
 }
