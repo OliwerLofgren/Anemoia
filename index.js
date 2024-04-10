@@ -146,14 +146,15 @@ function displayContent(currentIndex) {
             displayUserMessage();
             if (document.getElementById("user_content_p").textContent === "") {
               document.getElementById("ai_content_p").textContent = "";
-              messageIndex++;
-              displayContent(messageIndex);
+              setTimeout(() => {
+                messageIndex++;
+                displayContent(messageIndex);
+              }, 600);
             }
           }
         }, 50);
 
         function displayUserMessage() {
-          // You can replace this with your actual logic to display user's message
           const userMessageContainer =
             document.getElementById("user_content_p");
           const message = content[layoutContent][currentIndex + 1];
