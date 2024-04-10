@@ -1,7 +1,15 @@
 [
     {
         "id": 1,
-        "username": "calle",
+        "username": "Oliwer",
+        "password": "123",
+        "accsess": true,
+        "indications": 0,
+        "keysFound": 0
+    },
+    {
+        "id": 2,
+        "username": "Oliwer1",
         "password": "123",
         "accsess": true,
         "indications": 0,

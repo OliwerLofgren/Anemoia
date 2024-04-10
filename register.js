@@ -4,12 +4,12 @@ function signUppage(event) {
   document.querySelector("main").innerHTML = `
     <main>
     <h1>Anomeia Register</h1>
-    <div>
-        <div class="box">
-            <button id="register">Register</button>
-            <input placeholder="Username" id="registerUsername"></input>
-            <input placeholder="Password" id="registerPassword" type ="password"></input>
-        </div>
+    <div class="container">
+      <div class="box">
+        <input placeholder="Username" id="registerUsername"></input>
+        <input placeholder="Password" id="registerPassword" type ="password"></input>
+        <button id="register">Register</button>
+      </div>
         <button id="loginShortCut">Go to login</button>
         <p id="registrationMessage"></p>
     </div>

@@ -4,17 +4,21 @@ function signInpage(event) {
   document.querySelector("main").innerHTML = `
     <main>
         <h1>Anomeia Login</h1>
-        <div>
+        <div class="container">
             <div class="box">
-                <button id="login">Login</button>
-                <input placeholder="Username" id="loginUsername"></input>
-                <input placeholder="Password" id="loginPassword" type="password"></input>
+              <input placeholder="Username" id="loginUsername"></input>
+              <input placeholder="Password" id="loginPassword" type="password"></input>
+              <button id="login">Login</button>
             </div>
+            <button id="loginShortCut">Go to register</button>
             <p id="loginMessage"></p>
         </div>
     </main>
     `;
   document.getElementById("login").addEventListener("click", loginFunction);
+  document
+    .getElementById("loginShortCut")
+    .addEventListener("click", signUppage);
 }
 
 function loginFunction(event) {

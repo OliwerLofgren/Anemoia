@@ -1,3 +1,4 @@
+// localStorage.clear();
 let messageIndex = 0;
 let goToLayout = (layoutNumber) => {
   console.log(layoutNumber);
@@ -13,8 +14,6 @@ if (localStorage.getItem("username")) {
 } else {
   signUppage();
 }
-
-
 
 function checkLayout(num) {
   const layoutUrl = window.location.search.split("?layout=")[1];
@@ -35,14 +34,14 @@ function RenderStartingpage() {
 
   let buttonsHTML = "";
   for (let i = 1; i < keysFound + 1; i++) {
-    buttonsHTML += `<button onclick="goToLayout(${i})" id="${i}">Clues ${i}</button>`;
+    buttonsHTML += `<button onclick="goToLayout(${i})" class="clue_button" id="${i}">Ledtråd ${i}</button>`;
   }
 
   document.querySelector("body").innerHTML = `
-    <h1>Welcome</h1>
+    <h1>Välkommen till Anomeia</h1>
     <h3>${username}</h3>
     ${buttonsHTML}
-    
+    <p id="scan_p">Skanna första QR-koden för att fortsätta!</p>
   `;
 }
 
@@ -72,8 +71,8 @@ function displayLayoutName() {
     RenderStartingpage();
   } else {
     document.querySelector("body").innerHTML = `
-      <h1>Welcome to Layout ${layoutNumber}</h1>
-      <button id="goHome">Go to Startpage</button>
+      <h1>Ledtråd ${layoutNumber}</h1>
+      <button id="goHome">Gå tillbaka</button>
     `;
     document.getElementById("goHome").addEventListener("click", (event) => {
       RenderStartingpage();
@@ -96,11 +95,10 @@ function addKey() {
   }
 }
 
-
 function displayContent(currentIndex) {
   const layoutUrl = window.location.search.split("?layout=")[1];
   let aiDiv = document.getElementById("aiDiv");
-  
+
   if (!aiDiv) {
     aiDiv = document.createElement("div");
     aiDiv.id = "aiDiv";
@@ -120,19 +118,21 @@ function displayContent(currentIndex) {
   for (let layoutContent in content) {
     if (layoutUrl === layoutContent) {
       const message = content[layoutContent][currentIndex];
-      const container = document.getElementById('content_div');
+      const container = document.getElementById("content_div");
 
       const sender = Object.keys(message)[0];
       const text = message[sender];
-      let replacedContent = text.replace(/USER/g, window.localStorage.getItem("username"));
+      let replacedContent = text.replace(
+        /USER/g,
+        window.localStorage.getItem("username")
+      );
 
       const targetElement = sender === "AI" ? "ai_content_p" : "user_content_p";
       const messageContainer = document.getElementById(targetElement);
 
-      const messageElement = document.createElement('div');
-      messageElement.classList.add('message', sender.toLowerCase());
+      const messageElement = document.createElement("div");
+      messageElement.classList.add("message", sender.toLowerCase());
       console.log(messageElement);
-     
 
       let index = 0;
       const interval = setInterval(() => {
@@ -147,10 +147,9 @@ function displayContent(currentIndex) {
   }
 }
 
-
-document.getElementById("nextMessage").addEventListener("click", event => {
-  messageIndex++
+document.getElementById("nextMessage").addEventListener("click", (event) => {
+  messageIndex++;
   document.getElementById("ai_content_p").innerHTML = ``;
-  document.getElementById("user_content_p").innerHTML = ``
-  displayContent(messageIndex)
-})
+  document.getElementById("user_content_p").innerHTML = ``;
+  displayContent(messageIndex);
+});
