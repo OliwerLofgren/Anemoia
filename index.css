@@ -7,6 +7,8 @@ body {
   text-align: center;
   height: 100vh;
   width: 100vw;
+  position: relative;
+  overflow: hidden;
 }
 
 button {
@@ -33,13 +35,17 @@ h3 {
   margin: 0 auto;
 }
 
+h1 {
+  margin-top: 50px;
+}
 #goHome {
   position: fixed;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
 }
-#ai_content_p, #user_content_p {
+#ai_content_p,
+#user_content_p {
   color: white;
   max-width: 80%; /* Adjust the max-width as needed */
   margin: 0 auto; /* Center the element horizontally */
@@ -50,10 +56,59 @@ h3 {
   width: 100px;
   padding-top: 100px;
 }
-#user_content_p{
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 50%;
+}
+
+#loginShortCut {
+  border: none;
+  background-color: rgba(255, 222, 173, 0);
+  text-decoration: underline;
+}
+
+#registrationMessage,
+#loginMessage {
+  color: white;
+}
+
+#scan_p {
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.clue_button {
+  margin-top: 30px;
+}
+
+#user_content_p {
   padding: 10px;
 }
-#nextMessage{
+#nextMessage {
   background-color: #196591;
   width: 250px;
   height: auto;
