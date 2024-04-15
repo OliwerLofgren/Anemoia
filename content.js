@@ -56,4 +56,30 @@ const content = {
     },
     { Spelare: "Leta information i mobiltelefonen!" },
   ],
+  layout6: [
+    {
+      AI: "SPECIAL LAYOUT!",
+    },
+    {
+      Alt1: "FÖRSTA ALTERNATIV",
+    },
+    {
+      Alt2: "ANDRA ALTERNATIV",
+    },
+  ],
+};
+
+const content_2 = {
+  layoutAlt1: [
+    {
+      AI: "Välkommen till den andra avslutet USER",
+    },
+    {
+      Spelare:
+        "Tack, nu har jag bestämt mig att verkligen ta reda på vem du är >:)",
+    },
+    {
+      AI: "Lycka till USER . . .",
+    },
+  ],
 };
