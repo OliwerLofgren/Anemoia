@@ -29,8 +29,7 @@ const content = {
       AI: "Scannar… Enligt mina beräkningar rörde sig Johannes snabbare än vanligt, skrev slarvigare än vanligt och dessa egenskaper kan uppfattas av människor som stress. Johannes såg ut att tappa ett föremål, finns den kvar?",
     },
     {
-      Spelare:
-        "*Spelaren lokaliserar anteckningsblocket, spelaren tror att blocket är Johannes, det står inget namn på blocket men det har synts på övervakningskameran. ( Detta är i själva verket kollega A+ anteckningsblock och allt negativt som man kan läsa i blocket riktar sig mot Johannes själv och inte mot någon annan. Loggbok, dagbok, viktiga forskningsframsteg) Här börjar spelaren kanske förstå lite att AI:n är en del av berättelsen och inte bara ett verktyg.",
+      Spelare: "ses",
     },
     {
       AI: "Scannar… Oj, jag menar ok, en loggbok. Finns det något intressant i den? Det kanske inte är så viktigt? Bara en massa kladd.",

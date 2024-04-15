@@ -1,4 +1,23 @@
 // localStorage.clear();
+
+if (localStorage.getItem("access") === "false") {
+  accessCheck();
+}
+
+function accessCheck() {
+  history.pushState(null, "", "?layout=layout0");
+
+  document.body.innerHTML = "";
+  const button = document.querySelector("button");
+  const img = document.querySelector("img");
+  if (button) button.style.display = "none";
+  if (img) img.style.display = "none";
+
+  const h1Element = document.createElement("h1");
+  h1Element.textContent = "ACCESS DENIED";
+  document.body.appendChild(h1Element);
+}
+
 let messageIndex = 0;
 let goToLayout = (layoutNumber) => {
   console.log(layoutNumber);
@@ -41,8 +60,12 @@ function RenderStartingpage() {
     <h1>Välkommen till Anomeia</h1>
     <h3>${username}</h3>
     ${buttonsHTML}
-    <p id="scan_p">Skanna första QR-koden för att fortsätta!</p>
+    <p id="scan_p" style="color:limegreen;">Skanna första / nästa QR-koden för att fortsätta!</p>
   `;
+  if (localStorage.getItem("access") === "false") {
+    accessCheck();
+  }
+  // displayUpload();
 }
 
 function continueToNextLayout() {
@@ -96,6 +119,8 @@ function addKey() {
 }
 
 function displayContent(currentIndex) {
+  // accessCheck();
+
   const layoutUrl = window.location.search.split("?layout=")[1];
   let aiDiv = document.getElementById("aiDiv");
 
@@ -114,8 +139,6 @@ function displayContent(currentIndex) {
     document.body.append(aiDiv);
   }
 
-  console.log(layoutUrl);
-
   for (let layoutContent in content) {
     if (layoutUrl === layoutContent) {
       const message = content[layoutContent][currentIndex];
@@ -125,7 +148,7 @@ function displayContent(currentIndex) {
         setTimeout(() => {
           document.getElementById("ai_content_p").style.color = "limegreen";
           document.getElementById("ai_content_p").textContent =
-            "Gå och scanna nästa qr kod!";
+            "Skanna nästa QR-kod för att fortsätta!";
           return;
         }, 600);
       }
@@ -136,7 +159,6 @@ function displayContent(currentIndex) {
         window.localStorage.getItem("username")
       );
 
-      console.log(sender);
       if (sender === "AI") {
         document.getElementById("nextMessage").style.display = "none";
         const messageContainer = document.getElementById("ai_content_p");
@@ -172,7 +194,8 @@ function displayContent(currentIndex) {
             setTimeout(() => {
               document.getElementById("ai_content_p").style.color = "limegreen";
               document.getElementById("ai_content_p").textContent =
-                "Gå och scanna nästa qr kod!";
+                "Skanna nästa QR-kod för att fortsätta!";
+
               return;
             }, 600);
           }
