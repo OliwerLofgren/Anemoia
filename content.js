@@ -65,6 +65,15 @@ const content = {
     {
       Alt2: "ANDRA ALTERNATIV",
     },
+    {
+      AI: "ahh, intressant val"
+    },
+    {
+      Spelare: "Vad händer nu?"
+    },
+    {
+      AI: "... bhbhvhbhbh"
+    }
   ],
 };
 
@@ -79,6 +88,9 @@ const content_2 = {
     },
     {
       AI: "Lycka till USER . . .",
+    },
+    {
+      Spelare: "Vad ska jag göra nu!",
     },
   ],
 };
