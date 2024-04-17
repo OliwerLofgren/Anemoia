@@ -136,7 +136,9 @@ function displayContent(currentIndex) {
       <div id="nextMessage" class="nextMessage">
         <p id="user_content_p"></p>
       </div>
-      <div id="alternative2" style="display: none;" class="nextMessage">ALTERNATIV 2</div>
+      <div id="user_options"></div>
+      
+    
     `;
     document.body.append(aiDiv);
   }
@@ -154,80 +156,96 @@ function displayContent(currentIndex) {
           return;
         }, 600);
       }
-      const sender = Object.keys(message)[0];
-      const text = message[sender];
-      let replacedContent = text.replace(
-        /USER/g,
-        window.localStorage.getItem("username")
-      );
-
-      if (sender === "AI") {
+      
+      console.log(Object.keys(message).length);
+      if (message === undefined || Object.keys(message).length == 0) {
         document.getElementById("nextMessage").style.display = "none";
-        const messageContainer = document.getElementById("ai_content_p");
-        const messageElement = document.createElement("div");
-        messageElement.classList.add("message", sender.toLowerCase());
-        console.log(messageElement);
-
-        let index = 0;
-        const interval = setInterval(() => {
-          if (index < replacedContent.length) {
-            messageContainer.textContent += replacedContent[index];
-            index++;
-          } else {
-            clearInterval(interval);
-            if(alternateEnding === false){
-              displayUserMessage();
-            }
-            if (document.getElementById("user_content_p").textContent === "") {
-              document.getElementById("ai_content_p").textContent = "";
-              setTimeout(() => {
-                messageIndex++;
-                displayContent(messageIndex);
-              }, 600);
-            }
-          }
-        }, 50);
-
-        function displayUserMessage() {
-          const userMessageContainer = document.getElementById("user_content_p");
-          const message = content[layoutContent][currentIndex + 1];
-          const container = document.getElementById("content_div");
-          console.log(message);
-          if (message === undefined) {
-            setTimeout(() => {
-              document.getElementById("ai_content_p").style.color = "limegreen";
-              document.getElementById("ai_content_p").textContent =
-                "Skanna nästa QR-kod för att fortsätta!";
-
-              return;
-            }, 600);
-          }
-
-          const sender = Object.keys(message)[0];
-          if (sender !== "AI") {
-            document.getElementById("nextMessage").style.display = "flex";
-            if(layoutUrl === "layout6"){
-              if(document.getElementById("alternative2")){
-                document.getElementById("alternative2").style.display = "flex"
-                document.getElementById("alternative2").addEventListener("click", alternativeEnd);
-                
-              }
-              
-            }
-            const text = message[sender];
-            let replacedContent = text.replace(
-              /USER/g,
-              window.localStorage.getItem("username")
-            );
-            userMessageContainer.textContent = replacedContent;
-          }
+        setTimeout(() => {
+          document.getElementById("ai_content_p").style.color = "limegreen";
+          document.getElementById("ai_content_p").textContent =
+            "Skanna nästa QR-kod för att fortsätta!";
+    
+          return;
+        }, 600);
+      }else{
+        let replacedContent;
+        const sender = Object.keys(message)[0];
+        const text = message[sender];
+        if(text){
+          replacedContent = text.replace(
+            /USER/g,
+            window.localStorage.getItem("username")
+          );
         }
-      } else {
-        if (!alternateEnding && !(layoutUrl === "layout6" && !layoutSixFinished)) { // Add condition for layout six
-          displayContent(messageIndex);
+        
+        if(sender === "Spelare"){
+          console.log(replacedContent);
+          displayUserMessage(replacedContent)
+        }
+        if (sender === "AI") {
+          document.getElementById("nextMessage").style.display = "none";
+          const messageContainer = document.getElementById("ai_content_p");
+          const messageElement = document.createElement("div");
+          messageElement.classList.add("message", sender.toLowerCase());
+          console.log(messageElement);
+  
+          let index = 0;
+          const interval = setInterval(() => {
+            if (index < replacedContent.length) {
+              messageContainer.textContent += replacedContent[index];
+              index++;
+            } else {
+
+              if(replacedContent === "SPECIAL LAYOUT!"){
+                let alt1 = document.createElement("div");
+                let alt2 = document.createElement("div");
+    
+                alt1.classList.add("nextMessage");
+                alt1.textContent = "Option 1";
+                alt1.addEventListener("click", event => {
+                  window.location.href = `?layout=layout7`;
+                  displayContent(0)
+
+                })
+    
+                alt2.classList.add("nextMessage");
+                alt2.textContent = "Option 2";
+                alt2.addEventListener("click", event => {
+                  window.location.href = `?layout=layout8`;
+                  displayContent(0)
+
+                })
+    
+                document.querySelector("#user_options").append(alt1,alt2)
+              }
+              clearInterval(interval);
+              if (document.getElementById("user_content_p").textContent === "") {
+                document.getElementById("ai_content_p").textContent = "";
+                setTimeout(() => {
+                  messageIndex++;
+                  displayContent(messageIndex);
+                }, 600);
+              }
+            }
+          }, 50);   
         }
       }
     }
+  }
+}
+
+function displayUserMessage(text) {
+ 
+  document.getElementById("nextMessage").style.display = "flex";
+  document.getElementById("user_content_p").textContent = text
+  if (text === undefined) {
+    setTimeout(() => {
+      document.getElementById("ai_content_p").style.color = "limegreen";
+      document.getElementById("ai_content_p").textContent =
+        "Skanna nästa QR-kod för att fortsätta!";
+
+      return;
+    }, 600);
   }
 }
 
@@ -235,64 +253,6 @@ document.getElementById("nextMessage").addEventListener("click", (event) => {
   messageIndex++;
   document.getElementById("ai_content_p").innerHTML = ``;
   document.getElementById("user_content_p").innerHTML = ``;
-  if(document.getElementById("alternative2")){
-    document.getElementById("alternative2").remove()
-  }
+  
   displayContent(messageIndex);
 });
-
-async function alternativeEnd(event) {
-  alternateEnding = true;
-  document.getElementById("ai_content_p").textContent = "";
-  document.getElementById("alternative2").remove()
-
-  
-  for (const message of content_2.layoutAlt1) {
-    
-    const sender = Object.keys(message)[0];
-    const text = message[sender];
-    let replacedContent = text.replace(
-      /USER/g,
-      window.localStorage.getItem("username")
-    );
-    console.log(replacedContent);
-
-    if (sender === "Spelare") {
-      isUserMessage = true;
-      document.getElementById("user_content_p").textContent = replacedContent;
-      // Wait for user input before displaying the next AI message
-      await new Promise(resolve => {
-        document.getElementById("nextMessage").style.display = "flex";
-        document.getElementById("nextMessage").onclick = () => {
-          document.getElementById("nextMessage").style.display = "none";
-          resolve();
-        };
-      });
-    } else if (sender === "AI") {
-      console.log("FFEFFE");
-      document.getElementById("nextMessage").style.display = "none";
-      await displayMessage(replacedContent);
-    }
-  }
-  alternateEnding = false;
-}
-
-function displayMessage(replacedContent) {
-  console.log(replacedContent);
-  return new Promise(resolve => {
-    const messageContainer = document.getElementById("ai_content_p");
-    messageContainer.textContent = ""; // Clear existing content
-
-    let i = 0;
-    const interval = setInterval(() => {
-      if (i < replacedContent.length) {
-        messageContainer.textContent += replacedContent[i];
-        i++;
-      } else {
-        clearInterval(interval);
-        // Resolve the Promise after displaying the message
-        resolve();
-      }
-    }, 50);
-  });
-}
