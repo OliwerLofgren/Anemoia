@@ -98,13 +98,12 @@ input {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
+  width: 90%;
 }
 
 .clue_button {
   margin-top: 30px;
 }
-
 
 .nextMessage {
   padding: 10px;

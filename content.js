@@ -1,7 +1,7 @@
 const content = {
   layout1: [
     {
-      AI: "Hej, jag är ett",
+      AI: "Hej, jag är ett avancerat AI-hjälpmedel skapad av Johannes. Du är inte Johannes, vart är Johannes?",
     },
     { Spelare: "Johannes har blivit mördad." },
     { AI: "Scannar… Ok. Analyserar information. Bekräftat." },
@@ -66,25 +66,25 @@ const content = {
       Alt2: "ANDRA ALTERNATIV",
     },
     {
-      AI: "ahh, intressant val"
+      AI: "ahh, intressant val",
     },
     {
-      Spelare: "Vad händer nu?"
+      Spelare: "Vad händer nu?",
     },
     {
-      AI: "... bhbhvhbhbh"
-    }
+      AI: "... bhbhvhbhbh",
+    },
   ],
   layout7: [
     {
-      AI: "ahh, intressant val"
+      AI: "ahh, intressant val",
     },
     {
-      Spelare: "Vad händer nu?"
+      Spelare: "Vad händer nu?",
     },
     {
-      AI: "... bhbhvhbhbh"
-    }
+      AI: "... bhbhvhbhbh",
+    },
   ],
   layout8: [
     {
@@ -100,9 +100,6 @@ const content = {
     {
       Spelare: "Vad ska jag göra nu!",
     },
-    {
-
-    }
+    {},
   ],
 };
-

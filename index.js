@@ -4,7 +4,7 @@ if (localStorage.getItem("access") === "false") {
   accessCheck();
 }
 let alternateEnding = false;
-let layoutSixFinished = false; 
+let layoutSixFinished = false;
 function accessCheck() {
   history.pushState(null, "", "?layout=layout0");
 
@@ -48,6 +48,7 @@ function checkLayout(num) {
 
 function RenderStartingpage() {
   history.pushState(null, "", "?layout=layout0");
+
   let username = localStorage.getItem("username");
 
   let keysFound = parseInt(window.localStorage.getItem("keysFound")) || 0;
@@ -119,7 +120,6 @@ function addKey() {
   }
 }
 
-
 function displayContent(currentIndex) {
   // accessCheck();
   const layoutUrl = window.location.search.split("?layout=")[1];
@@ -154,9 +154,9 @@ function displayContent(currentIndex) {
           document.getElementById("ai_content_p").textContent =
             "Skanna nästa QR-kod för att fortsätta!";
           return;
-        }, 600);
+        }, 1000);
       }
-      
+
       console.log(Object.keys(message).length);
       if (message === undefined || Object.keys(message).length == 0) {
         document.getElementById("nextMessage").style.display = "none";
@@ -164,23 +164,23 @@ function displayContent(currentIndex) {
           document.getElementById("ai_content_p").style.color = "limegreen";
           document.getElementById("ai_content_p").textContent =
             "Skanna nästa QR-kod för att fortsätta!";
-    
+
           return;
-        }, 600);
-      }else{
+        }, 1000);
+      } else {
         let replacedContent;
         const sender = Object.keys(message)[0];
         const text = message[sender];
-        if(text){
+        if (text) {
           replacedContent = text.replace(
             /USER/g,
             window.localStorage.getItem("username")
           );
         }
-        
-        if(sender === "Spelare"){
+
+        if (sender === "Spelare") {
           console.log(replacedContent);
-          displayUserMessage(replacedContent)
+          displayUserMessage(replacedContent);
         }
         if (sender === "AI") {
           document.getElementById("nextMessage").style.display = "none";
@@ -188,46 +188,45 @@ function displayContent(currentIndex) {
           const messageElement = document.createElement("div");
           messageElement.classList.add("message", sender.toLowerCase());
           console.log(messageElement);
-  
+
           let index = 0;
           const interval = setInterval(() => {
             if (index < replacedContent.length) {
               messageContainer.textContent += replacedContent[index];
               index++;
             } else {
-
-              if(replacedContent === "SPECIAL LAYOUT!"){
+              if (replacedContent === "SPECIAL LAYOUT!") {
                 let alt1 = document.createElement("div");
                 let alt2 = document.createElement("div");
-    
+
                 alt1.classList.add("nextMessage");
                 alt1.textContent = "Option 1";
-                alt1.addEventListener("click", event => {
+                alt1.addEventListener("click", (event) => {
                   window.location.href = `?layout=layout7`;
-                  displayContent(0)
+                  displayContent(0);
+                });
 
-                })
-    
                 alt2.classList.add("nextMessage");
                 alt2.textContent = "Option 2";
-                alt2.addEventListener("click", event => {
+                alt2.addEventListener("click", (event) => {
                   window.location.href = `?layout=layout8`;
-                  displayContent(0)
+                  displayContent(0);
+                });
 
-                })
-    
-                document.querySelector("#user_options").append(alt1,alt2)
+                document.querySelector("#user_options").append(alt1, alt2);
               }
               clearInterval(interval);
-              if (document.getElementById("user_content_p").textContent === "") {
+              if (
+                document.getElementById("user_content_p").textContent === ""
+              ) {
                 document.getElementById("ai_content_p").textContent = "";
                 setTimeout(() => {
                   messageIndex++;
                   displayContent(messageIndex);
-                }, 600);
+                }, 1000);
               }
             }
-          }, 50);   
+          }, 50);
         }
       }
     }
@@ -235,9 +234,8 @@ function displayContent(currentIndex) {
 }
 
 function displayUserMessage(text) {
- 
   document.getElementById("nextMessage").style.display = "flex";
-  document.getElementById("user_content_p").textContent = text
+  document.getElementById("user_content_p").textContent = text;
   if (text === undefined) {
     setTimeout(() => {
       document.getElementById("ai_content_p").style.color = "limegreen";
@@ -253,6 +251,6 @@ document.getElementById("nextMessage").addEventListener("click", (event) => {
   messageIndex++;
   document.getElementById("ai_content_p").innerHTML = ``;
   document.getElementById("user_content_p").innerHTML = ``;
-  
+
   displayContent(messageIndex);
 });
