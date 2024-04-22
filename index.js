@@ -63,7 +63,13 @@ function RenderStartingpage() {
     <h3>${username}</h3>
     ${buttonsHTML}
     <p id="scan_p" style="color:limegreen;">Skanna första / nästa QR-koden för att fortsätta!</p>
-  `;
+    <div class="line_parent">
+      <div class="lines" id="line_1"></div>
+      <div class="lines" id="line_2"></div>
+      <div class="lines" id="line_3"></div>
+      <div class="lines" id="line_4"></div>
+    </div>
+    `;
   if (localStorage.getItem("access") === "false") {
     accessCheck();
   }
@@ -98,6 +104,8 @@ function displayLayoutName() {
     document.querySelector("body").innerHTML = `
       <h1>Ledtråd ${layoutNumber}</h1>
       <button id="goHome">Gå tillbaka</button>
+      <div class="lines" id="line_1"></div>
+      <div class="lines" id="line_2"></div>
     `;
     document.getElementById("goHome").addEventListener("click", (event) => {
       RenderStartingpage();
