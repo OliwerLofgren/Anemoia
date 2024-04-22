@@ -73,6 +73,9 @@ function RenderStartingpage() {
   if (localStorage.getItem("access") === "false") {
     accessCheck();
   }
+  if (parseInt(window.localStorage.getItem("keysFound")) >= 2) {
+    document.getElementById("scan_p").innerHTML = "";
+  }
   // displayUpload();
 }
 
