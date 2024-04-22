@@ -76,7 +76,7 @@ function RenderStartingpage() {
   if (parseInt(window.localStorage.getItem("keysFound")) >= 2) {
     document.getElementById("scan_p").innerHTML = "";
   }
-  // displayUpload();
+  displayUpload();
 }
 
 function continueToNextLayout() {
@@ -152,7 +152,6 @@ function displayContent(currentIndex) {
     
     `;
     document.body.append(aiDiv);
-    
   }
 
   for (let layoutContent in content) {
@@ -161,14 +160,14 @@ function displayContent(currentIndex) {
       const container = document.getElementById("content_div");
 
       if (message === undefined) {
-        showEndMessage()
+        showEndMessage();
       }
 
       console.log(Object.keys(message).length);
       if (message === undefined || Object.keys(message).length == 0) {
         document.getElementById("nextMessage").style.display = "none";
-        showEndMessage()
-      }else{
+        showEndMessage();
+      } else {
         let replacedContent;
         const sender = Object.keys(message)[0];
         const text = message[sender];
@@ -185,8 +184,8 @@ function displayContent(currentIndex) {
         }
         if (sender === "AI") {
           document.getElementById("nextMessage").style.display = "none";
-          document.getElementById("ai_content_p").style.opacity = "100%"
-        
+          document.getElementById("ai_content_p").style.opacity = "100%";
+
           const messageContainer = document.getElementById("ai_content_p");
           const messageElement = document.createElement("div");
           messageElement.classList.add("message", sender.toLowerCase());
@@ -197,9 +196,9 @@ function displayContent(currentIndex) {
             if (index < replacedContent.length) {
               messageContainer.textContent += replacedContent[index];
               index++;
-              if(index === replacedContent.length){
+              if (index === replacedContent.length) {
                 console.log("jife");
-                document.getElementById("ai_content_p").style.opacity = "0%"
+                document.getElementById("ai_content_p").style.opacity = "0%";
               }
             } else {
               if (replacedContent === "SPECIAL LAYOUT!") {
@@ -244,7 +243,7 @@ function displayUserMessage(text) {
   document.getElementById("nextMessage").style.display = "flex";
   document.getElementById("user_content_p").textContent = text;
   if (text === undefined) {
-    showEndMessage()
+    showEndMessage();
   }
 }
 
@@ -256,10 +255,10 @@ document.getElementById("nextMessage").addEventListener("click", (event) => {
   displayContent(messageIndex);
 });
 
-function showEndMessage(){
+function showEndMessage() {
   setTimeout(() => {
     document.getElementById("ai_content_p").style.color = "limegreen";
-    document.getElementById("ai_content_p").style.border = "none"
+    document.getElementById("ai_content_p").style.border = "none";
     document.getElementById("ai_content_p").textContent =
       "Skanna nästa QR-kod för att fortsätta!";
 
