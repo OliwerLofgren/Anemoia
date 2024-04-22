@@ -74,7 +74,7 @@ function RenderStartingpage() {
   if (parseInt(window.localStorage.getItem("keysFound")) >= 2) {
     document.getElementById("scan_p").innerHTML = "";
   }
-  displayUpload();
+  // displayUpload();
 }
 
 function continueToNextLayout() {

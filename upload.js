@@ -1,46 +1,39 @@
 function displayUpload() {
   const body = document.querySelector("body");
 
-  // Create file input element
   const fileInput = document.createElement("input");
   fileInput.type = "file";
   fileInput.id = "fileInput";
-  fileInput.style.display = "none"; // Hide the file input
+  fileInput.style.display = "none";
 
-  // Create browse button
   const browseButton = document.createElement("button");
   browseButton.textContent = "Browse";
   browseButton.id = "browseButton";
   browseButton.style.display = "inline-block";
 
-  // Add event listener to browse button to trigger file input click
   browseButton.addEventListener("click", function () {
-    fileInput.click(); // Trigger file input click
+    fileInput.click();
   });
 
-  // Create upload button
   const uploadButton = document.createElement("button");
   uploadButton.textContent = "Upload";
   uploadButton.id = "uploadButton";
   uploadButton.style.display = "inline-block";
 
-  let selectedFile; // Variable to store selected file
+  let selectedFile;
 
-  // Add event listener to file input to handle file selection
   fileInput.addEventListener("change", function () {
-    selectedFile = fileInput.files[0]; // Store selected file
+    selectedFile = fileInput.files[0];
   });
 
-  // Add event listener to upload button to trigger file upload
   uploadButton.addEventListener("click", function () {
     if (selectedFile) {
-      uploadFile(selectedFile); // Upload selected file
+      uploadFile(selectedFile);
     } else {
       console.error("No file selected");
     }
   });
 
-  // Append elements to the body
   body.appendChild(fileInput);
   body.appendChild(browseButton);
   body.appendChild(uploadButton);

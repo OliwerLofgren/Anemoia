@@ -44,6 +44,7 @@ function loginFunction(event) {
         window.localStorage.setItem("username", username);
         window.localStorage.setItem("keysFound", 0);
         window.localStorage.setItem("access", "true");
+        window.localStorage.setItem("upload", "false");
 
         RenderStartingpage();
       } else {
