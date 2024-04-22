@@ -4,7 +4,7 @@ if (localStorage.getItem("access") === "false") {
   accessCheck();
 }
 let alternateEnding = false;
-let layoutSixFinished = false; 
+let layoutSixFinished = false;
 function accessCheck() {
   history.pushState(null, "", "?layout=layout0");
 
@@ -48,6 +48,7 @@ function checkLayout(num) {
 
 function RenderStartingpage() {
   history.pushState(null, "", "?layout=layout0");
+
   let username = localStorage.getItem("username");
 
   let keysFound = parseInt(window.localStorage.getItem("keysFound")) || 0;
@@ -62,7 +63,13 @@ function RenderStartingpage() {
     <h3>${username}</h3>
     ${buttonsHTML}
     <p id="scan_p" style="color:limegreen;">Skanna första / nästa QR-koden för att fortsätta!</p>
-  `;
+    <div class="line_parent">
+      <div class="lines" id="line_1"></div>
+      <div class="lines" id="line_2"></div>
+      <div class="lines" id="line_3"></div>
+      <div class="lines" id="line_4"></div>
+    </div>
+    `;
   if (localStorage.getItem("access") === "false") {
     accessCheck();
   }
@@ -97,6 +104,8 @@ function displayLayoutName() {
     document.querySelector("body").innerHTML = `
       <h1>Ledtråd ${layoutNumber}</h1>
       <button id="goHome">Gå tillbaka</button>
+      <div class="lines" id="line_1"></div>
+      <div class="lines" id="line_2"></div>
     `;
     document.getElementById("goHome").addEventListener("click", (event) => {
       RenderStartingpage();
@@ -118,7 +127,6 @@ function addKey() {
     return false;
   }
 }
-
 
 function displayContent(currentIndex) {
   // accessCheck();
@@ -152,7 +160,7 @@ function displayContent(currentIndex) {
       if (message === undefined) {
         showEndMessage()
       }
-      
+
       console.log(Object.keys(message).length);
       if (message === undefined || Object.keys(message).length == 0) {
         document.getElementById("nextMessage").style.display = "none";
@@ -161,16 +169,16 @@ function displayContent(currentIndex) {
         let replacedContent;
         const sender = Object.keys(message)[0];
         const text = message[sender];
-        if(text){
+        if (text) {
           replacedContent = text.replace(
             /USER/g,
             window.localStorage.getItem("username")
           );
         }
-        
-        if(sender === "Spelare"){
+
+        if (sender === "Spelare") {
           console.log(replacedContent);
-          displayUserMessage(replacedContent)
+          displayUserMessage(replacedContent);
         }
         if (sender === "AI") {
           document.getElementById("nextMessage").style.display = "none";
@@ -180,7 +188,7 @@ function displayContent(currentIndex) {
           const messageElement = document.createElement("div");
           messageElement.classList.add("message", sender.toLowerCase());
           console.log(messageElement);
-  
+
           let index = 0;
           const interval = setInterval(() => {
             if (index < replacedContent.length) {
@@ -191,39 +199,38 @@ function displayContent(currentIndex) {
                 document.getElementById("ai_content_p").style.opacity = "0%"
               }
             } else {
-
-              if(replacedContent === "SPECIAL LAYOUT!"){
+              if (replacedContent === "SPECIAL LAYOUT!") {
                 let alt1 = document.createElement("div");
                 let alt2 = document.createElement("div");
-    
+
                 alt1.classList.add("nextMessage");
                 alt1.textContent = "Option 1";
-                alt1.addEventListener("click", event => {
+                alt1.addEventListener("click", (event) => {
                   window.location.href = `?layout=layout7`;
-                  displayContent(0)
+                  displayContent(0);
+                });
 
-                })
-    
                 alt2.classList.add("nextMessage");
                 alt2.textContent = "Option 2";
-                alt2.addEventListener("click", event => {
+                alt2.addEventListener("click", (event) => {
                   window.location.href = `?layout=layout8`;
-                  displayContent(0)
+                  displayContent(0);
+                });
 
-                })
-    
-                document.querySelector("#user_options").append(alt1,alt2)
+                document.querySelector("#user_options").append(alt1, alt2);
               }
               clearInterval(interval);
-              if (document.getElementById("user_content_p").textContent === "") {
+              if (
+                document.getElementById("user_content_p").textContent === ""
+              ) {
                 document.getElementById("ai_content_p").textContent = "";
                 setTimeout(() => {
                   messageIndex++;
                   displayContent(messageIndex);
-                }, 600);
+                }, 1000);
               }
             }
-          }, 50);   
+          }, 50);
         }
       }
     }
@@ -231,9 +238,8 @@ function displayContent(currentIndex) {
 }
 
 function displayUserMessage(text) {
- 
   document.getElementById("nextMessage").style.display = "flex";
-  document.getElementById("user_content_p").textContent = text
+  document.getElementById("user_content_p").textContent = text;
   if (text === undefined) {
     showEndMessage()
   }
@@ -243,7 +249,7 @@ document.getElementById("nextMessage").addEventListener("click", (event) => {
   messageIndex++;
   document.getElementById("ai_content_p").innerHTML = "";
   document.getElementById("user_content_p").innerHTML = ``;
-  
+
   displayContent(messageIndex);
 });
 
