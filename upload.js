@@ -54,6 +54,7 @@ function uploadFile(file) {
       return response.json();
     })
     .then((data) => {
+      window.localStorage.setItem("upload", "true")
       console.log(data);
       checkUpload()
     })

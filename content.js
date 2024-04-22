@@ -22,7 +22,11 @@ const content = {
   layout2: [
     {
       AI:"Ladda upp en fil så jag kan bekräfta att du är riktig"
-    }
+    },
+    {
+      AI:"Bästa king, nu kan vi forsätta på vårt äventyr!"
+    },
+
   ],
   layout3: [
     {
