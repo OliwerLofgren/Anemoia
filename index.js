@@ -1,4 +1,3 @@
-//localStorage.clear()
 if (localStorage.getItem("access") === "false") {
   accessCheck();
 }
@@ -156,12 +155,14 @@ function displayContent(currentIndex) {
     if (layoutUrl === layoutContent) {
       const message = content[layoutContent][currentIndex];
       const container = document.getElementById("content_div");
-      document.getElementById("ai_content_p").style.opacity = "0%"; 
-      
- 
-      if (message == undefined || Object.keys(message).length == 0) {
+
+      if (message === undefined) {
+        showEndMessage();
+      }
+
+      console.log(Object.keys(message).length);
+      if (message === undefined || Object.keys(message).length == 0) {
         document.getElementById("nextMessage").style.display = "none";
-        document.getElementById("ai_content_p").style.opacity = "0%";
         showEndMessage();
       } else {
         let replacedContent;
@@ -173,7 +174,6 @@ function displayContent(currentIndex) {
             window.localStorage.getItem("username")
           );
         }
-        
 
         if (sender === "Spelare") {
           console.log(replacedContent);
@@ -181,7 +181,7 @@ function displayContent(currentIndex) {
         }
         if (sender === "AI") {
           document.getElementById("nextMessage").style.display = "none";
-          
+          document.getElementById("ai_content_p").style.opacity = "100%";
 
           const messageContainer = document.getElementById("ai_content_p");
           const messageElement = document.createElement("div");
@@ -189,10 +189,8 @@ function displayContent(currentIndex) {
           console.log(messageElement);
 
           let index = 0;
-          document.getElementById("ai_content_p").style.opacity = "100%";
           const interval = setInterval(() => {
             if (index < replacedContent.length) {
-              
               messageContainer.textContent += replacedContent[index];
               index++;
               if (index === replacedContent.length) {
@@ -207,49 +205,34 @@ function displayContent(currentIndex) {
                 alt1.classList.add("nextMessage");
                 alt1.textContent = "Option 1";
                 alt1.addEventListener("click", (event) => {
-                  window.location.href = `?layout=layout8`;
+                  window.location.href = `?layout=layout7`;
                   displayContent(0);
                 });
 
                 alt2.classList.add("nextMessage");
                 alt2.textContent = "Option 2";
                 alt2.addEventListener("click", (event) => {
-                  window.location.href = `?layout=layout9`;
+                  window.location.href = `?layout=layout8`;
                   displayContent(0);
                 });
 
                 document.querySelector("#user_options").append(alt1, alt2);
               }
               clearInterval(interval);
-              if (document.getElementById("user_content_p").textContent === "") {
+              if (
+                document.getElementById("user_content_p").textContent === ""
+              ) {
                 document.getElementById("ai_content_p").textContent = "";
                 setTimeout(() => {
                   messageIndex++;
                   displayContent(messageIndex);
                 }, 1000);
-                if(layoutUrl === "layout2"){
-                  console.log("hej");
-                  document.getElementById("ai_content_p").style.opacity = "0%"
-                  if(window.localStorage.getItem("upload") === "false"){
-                    displayUpload()
-                  }
-                }
               }
             }
           }, 50);
         }
       }
     }
-  }
-}
-
-function checkUpload(){
-  if(window.localStorage.getItem("upload") === "true"){
-    console.log("kmceac");
-    showEndMessage()
-    
-  }else{
-    document.getElementById("ai_content_p").innerHTML = "Du måste ladda upp manneeeeen, komigen!!!! palla!!!";
   }
 }
 
@@ -270,11 +253,9 @@ document.getElementById("nextMessage").addEventListener("click", (event) => {
 });
 
 function showEndMessage() {
-  console.log("YO WTF IS HAPPENING?");
   setTimeout(() => {
     document.getElementById("ai_content_p").style.color = "limegreen";
     document.getElementById("ai_content_p").style.border = "none";
-    document.getElementById("ai_content_p").style.opacity = "100%";
     document.getElementById("ai_content_p").textContent =
       "Skanna nästa QR-kod för att fortsätta!";
 
