@@ -76,7 +76,6 @@ function RenderStartingpage() {
   if (parseInt(window.localStorage.getItem("keysFound")) >= 2) {
     document.getElementById("scan_p").innerHTML = "";
   }
-  // displayUpload();
 }
 
 function continueToNextLayout() {
@@ -105,7 +104,7 @@ function displayLayoutName() {
     RenderStartingpage();
   } else {
     document.querySelector("body").innerHTML = `
-      <h1>Ledtråd ${layoutNumber}</h1>
+      <h1 id="h1_clue">Ledtråd ${layoutNumber}</h1>
       <button id="goHome">Gå tillbaka</button>
       <div class="lines" id="line_1"></div>
       <div class="lines" id="line_2"></div>
