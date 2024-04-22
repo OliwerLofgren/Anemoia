@@ -21,10 +21,15 @@ const content = {
   ],
   layout2: [
     {
+      AI:"Ladda upp en fil så jag kan bekräfta att du är riktig"
+    }
+  ],
+  layout3: [
+    {
       AI: "Scannar… Okej intressant, enligt schemat så startade Johannes dagen med en föreläsning klockan 10.15 men vad jag kan se från övervakningskameror så anlände Johannes redan klockan 06.42.36. En av mina kameror kan visa dig mer. Om du går till 'plats' så kan du se vad jag har sett. Du behöver vara tillräckligt nära kameran så att jag kan vidarebefordra via kamerans Wi-Fi.",
     },
   ],
-  layout3: [
+  layout4: [
     {
       AI: "Scannar… Enligt mina beräkningar rörde sig Johannes snabbare än vanligt, skrev slarvigare än vanligt och dessa egenskaper kan uppfattas av människor som stress. Johannes såg ut att tappa ett föremål, finns den kvar?",
     },
@@ -43,19 +48,19 @@ const content = {
       AI: "Scannar… 'Angående den utrivna sidan kan jag inte ge en exakt förklaring till varför den är borta. Det kan vara en teknisk felaktighet eller en medveten handling av författaren. Mer information kan krävas för att avgöra orsaken. Men innan den utrivna sidan finns det en sista loggpost om ett lyckat framsteg. Det verkar vara ett betydelsefullt genombrott i forskningen för dem. Det sägs åtminstone i tidningen när de intervjuade kollegorna kring Johannes död.'",
     },
   ],
-  layout4: [
+  layout5: [
     {
       AI: "Scannar… Jag kan inte lokalisera någon övervakningskamera som har fångat någon aktivitet i närområdet. Johannes mobil slutade skicka signaler under ett tillfälle här. Allt jag kan ge dig är: oförklarad morsekod som är koordinater till vart Johannes mobil (vår nästa QR-kod) befinner sig. Kanske tillsammans med eventuellt mordvapen?",
     },
     { Spelare: "OK." },
   ],
-  layout5: [
+  layout6: [
     {
       AI: "Scannar… Du har lokaliserat en mobiltelefon. Utför en säkerhetskopia… Kopia med all information jag kunde återskapa är nu tillgänglig.",
     },
     { Spelare: "Leta information i mobiltelefonen!" },
   ],
-  layout6: [
+  layout7: [
     {
       AI: "SPECIAL LAYOUT!",
     },
@@ -75,7 +80,7 @@ const content = {
       AI: "... bhbhvhbhbh",
     },
   ],
-  layout7: [
+  layout8: [
     {
       AI: "ahh, intressant val",
     },
@@ -86,7 +91,7 @@ const content = {
       AI: "... bhbhvhbhbh",
     },
   ],
-  layout8: [
+  layout9: [
     {
       AI: "Välkommen till den andra avslutet USER",
     },

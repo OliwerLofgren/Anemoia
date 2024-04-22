@@ -62,6 +62,7 @@ function uploadFile(file) {
     })
     .then((data) => {
       console.log(data);
+      checkUpload()
     })
     .catch((error) => {
       console.error("Error:", error);
