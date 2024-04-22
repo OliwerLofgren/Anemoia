@@ -1,5 +1,3 @@
-// localStorage.clear();
-
 if (localStorage.getItem("access") === "false") {
   accessCheck();
 }
@@ -162,8 +160,8 @@ function displayContent(currentIndex) {
         showEndMessage();
       }
 
-      console.log(Object.keys(message).length);
-      if (message === undefined || Object.keys(message).length == 0) {
+      console.log(message);
+      if (message == undefined || Object.keys(message).length == 0) {
         document.getElementById("nextMessage").style.display = "none";
         showEndMessage();
       } else {
@@ -176,6 +174,7 @@ function displayContent(currentIndex) {
             window.localStorage.getItem("username")
           );
         }
+        
 
         if (sender === "Spelare") {
           console.log(replacedContent);
@@ -207,14 +206,14 @@ function displayContent(currentIndex) {
                 alt1.classList.add("nextMessage");
                 alt1.textContent = "Option 1";
                 alt1.addEventListener("click", (event) => {
-                  window.location.href = `?layout=layout7`;
+                  window.location.href = `?layout=layout8`;
                   displayContent(0);
                 });
 
                 alt2.classList.add("nextMessage");
                 alt2.textContent = "Option 2";
                 alt2.addEventListener("click", (event) => {
-                  window.location.href = `?layout=layout8`;
+                  window.location.href = `?layout=layout9`;
                   displayContent(0);
                 });
 
@@ -230,11 +229,22 @@ function displayContent(currentIndex) {
                   displayContent(messageIndex);
                 }, 1000);
               }
+              if(layoutUrl === "layout2"){
+                displayUpload()
+                
+              }
             }
           }, 50);
         }
       }
     }
+  }
+}
+
+function checkUpload(){
+  if(window.localStorage.getItem("upload") === "true"){
+    console.log("kmceac");
+    showEndMessage()
   }
 }
 

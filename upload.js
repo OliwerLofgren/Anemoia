@@ -55,8 +55,7 @@ function uploadFile(file) {
     })
     .then((data) => {
       console.log(data);
-      const div = document.createElement("p");
-      div.textContent = data;
+      checkUpload()
     })
     .catch((error) => {
       console.error("Error:", error);
