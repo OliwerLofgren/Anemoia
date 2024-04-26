@@ -68,6 +68,7 @@ function RenderStartingpage() {
       <div class="lines" id="line_3"></div>
       <div class="lines" id="line_4"></div>
     </div>
+    <button id="goToClues" class="clue_button">Clues</button>
     `;
   if (localStorage.getItem("access") === "false") {
     accessCheck();
@@ -75,9 +76,26 @@ function RenderStartingpage() {
   if (parseInt(window.localStorage.getItem("keysFound")) >= 2) {
     document.getElementById("scan_p").innerHTML = "";
   }
+  document.getElementById("goToClues").addEventListener("click", goToClues)
   // displayUpload();
 }
-
+function goToClues(event){
+  console.log(event);
+  if(window.localStorage.getItem("upload") === "false"){
+    document.querySelector("body").innerHTML = `
+    <p>Du har inga ledtrådar än, kom tillbaka när du skaffat ledtrådar</p>
+    <button id="goHome">Gå tillbaka</button>`
+  }
+  
+  if(window.localStorage.getItem("upload") === "true"){
+    document.querySelector("body").innerHTML = `
+    <img>här ska bilden vara</img>
+    <button id="goHome">Gå tillbaka</button>`
+  }
+  document.getElementById("goHome").addEventListener("click", (event) => {
+    RenderStartingpage();
+  });
+}
 function continueToNextLayout() {
   let keysFound = parseInt(window.localStorage.getItem("keysFound")) || 0;
   keysFound++;
@@ -180,7 +198,7 @@ function displayContent(currentIndex) {
           console.log(replacedContent);
           displayUserMessage(replacedContent);
         }
-        if (sender === "AI") {
+        if (sender === "Anemonia") {
           document.getElementById("nextMessage").style.display = "none";
           
 
@@ -200,6 +218,15 @@ function displayContent(currentIndex) {
                 console.log("jife");
                 document.getElementById("ai_content_p").style.opacity = "0%";
               }
+              if(replacedContent === "Ladda upp en fil så jag kan bekräfta att du är riktig"){
+                if(!document.getElementById("browseButton")){
+                  if(window.localStorage.getItem("upload") === "false"){
+                    document.getElementById("ai_content_p").style.opacity = "0%"
+                    displayUpload()
+                  }
+                }
+
+              }
             } else {
               if (replacedContent === "SPECIAL LAYOUT!") {
                 let alt1 = document.createElement("div");
@@ -208,14 +235,14 @@ function displayContent(currentIndex) {
                 alt1.classList.add("nextMessage");
                 alt1.textContent = "Option 1";
                 alt1.addEventListener("click", (event) => {
-                  window.location.href = `?layout=layout8`;
+                  window.location.href = `?layout=layout7`;
                   displayContent(0);
                 });
 
                 alt2.classList.add("nextMessage");
                 alt2.textContent = "Option 2";
                 alt2.addEventListener("click", (event) => {
-                  window.location.href = `?layout=layout9`;
+                  window.location.href = `?layout=layout8`;
                   displayContent(0);
                 });
 
@@ -227,14 +254,8 @@ function displayContent(currentIndex) {
                 setTimeout(() => {
                   messageIndex++;
                   displayContent(messageIndex);
-                }, 1000);
-                if(layoutUrl === "layout2"){
-                  console.log("hej");
-                  document.getElementById("ai_content_p").style.opacity = "0%"
-                  if(window.localStorage.getItem("upload") === "false"){
-                    displayUpload()
-                  }
-                }
+                }, 800);
+                
               }
             }
           }, 50);
@@ -262,15 +283,21 @@ function displayUserMessage(text) {
   }
 }
 
-document.getElementById("nextMessage").addEventListener("click", (event) => {
-  messageIndex++;
-  document.getElementById("ai_content_p").innerHTML = "";
-  document.getElementById("user_content_p").innerHTML = ``;
+  document.getElementById("nextMessage").addEventListener("click", (event) => {
+    messageIndex++;
+    document.getElementById("ai_content_p").innerHTML = "";
+    document.getElementById("user_content_p").innerHTML = ``;
+  
+    displayContent(messageIndex);
+  });
 
-  displayContent(messageIndex);
-});
 
 function showEndMessage() {
+  if(window.location.search.split("?layout=")[1] === "layout2"){
+    if(window.localStorage.getItem("upload") === "false"){
+      return false;
+    }
+  }
   console.log("YO WTF IS HAPPENING?");
   setTimeout(() => {
     document.getElementById("ai_content_p").style.color = "limegreen";
@@ -281,4 +308,43 @@ function showEndMessage() {
 
     return;
   }, 600);
+}
+
+if(window.location.search.split("?layout=")[1] === "layout4"){
+  document.querySelector("body").innerHTML = `
+  <!-- Fake captcha start -->
+  <div class="fkrc-container fkrc-m-p">
+    <!-- Captcha checkbox widget -->
+    <div id="fkrc-checkbox-window" class="fkrc-checkbox-window fkrc-m-p fkrc-block">
+        <div class="fkrc-checkbox-container fkrc-m-p">
+            <button type="button" id="fkrc-checkbox" class="fkrc-checkbox fkrc-m-p fkrc-line-normal"></button>
+        </div>
+        <p class="fkrc-im-not-a-robot fkrc-m-p fkrc-line-normal">I'm not a robot</p>
+        <img src="./uploads/captcha_logo.svg" class="fkrc-captcha-logo fkrc-line-normal" alt="">
+        <p class="fkrc-checkbox-desc fkrc-m-p fkrc-line-normal">CAPTCHA</p>
+        <p class="fkrc-checkbox-desc fkrc-m-p fkrc-line-normal">Privacy - Terms</p>
+        <img src="./uploads/captcha_spinner.gif" class="fkrc-spinner fkrc-m-p fkrc-line-normal" alt="" id="fkrc-spinner">
+    </div>
+    <!-- Captcha checkbox verification window -->
+    <div id="fkrc-verifywin-window" class="fkrc-verifywin-window">
+        <div class="fkrc-verifywin-container">
+            <header class="fkrc-verifywin-header">
+                
+                <span class="fkrc-verifywin-header-text-big fkrc-m-p fkrc-block">Tack mannen</span>
+               
+            </header>
+            <main class="fkrc-verifywin-main">
+                Your content
+            </main>
+        </div>
+        <footer class="fkrc-verifywin-container fkrc-verifywin-footer">
+            <div class="fkrc-verifywin-footer-left">
+                Press the verify button to proceed.
+            </div>
+            <button type="button" class="fkrc-verifywin-verify-button fkrc-block" id="fkrc-verifywin-verify-button">Verify</button>
+        </footer>
+    </div>
+    <img src="./uploads/captcha_arrow.svg" alt="" class="fkrc-verifywin-window-arrow" id="fkrc-verifywin-window-arrow"/>
+</div>
+<!-- Fake captcha end -->`
 }
