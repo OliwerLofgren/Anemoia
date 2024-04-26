@@ -1,4 +1,3 @@
-//localStorage.clear()
 if (localStorage.getItem("access") === "false") {
   accessCheck();
 }
@@ -122,7 +121,7 @@ function displayLayoutName() {
     RenderStartingpage();
   } else {
     document.querySelector("body").innerHTML = `
-      <h1>Ledtråd ${layoutNumber}</h1>
+      <h1 id="h1_clue">Ledtråd ${layoutNumber}</h1>
       <button id="goHome">Gå tillbaka</button>
       <div class="lines" id="line_1"></div>
       <div class="lines" id="line_2"></div>
@@ -175,12 +174,14 @@ function displayContent(currentIndex) {
     if (layoutUrl === layoutContent) {
       const message = content[layoutContent][currentIndex];
       const container = document.getElementById("content_div");
-      document.getElementById("ai_content_p").style.opacity = "0%"; 
-      
- 
-      if (message == undefined || Object.keys(message).length == 0) {
+
+      if (message === undefined) {
+        showEndMessage();
+      }
+
+      console.log(Object.keys(message).length);
+      if (message === undefined || Object.keys(message).length == 0) {
         document.getElementById("nextMessage").style.display = "none";
-        document.getElementById("ai_content_p").style.opacity = "0%";
         showEndMessage();
       } else {
         let replacedContent;
@@ -192,7 +193,6 @@ function displayContent(currentIndex) {
             window.localStorage.getItem("username")
           );
         }
-        
 
         if (sender === "Spelare") {
           console.log(replacedContent);
@@ -200,7 +200,7 @@ function displayContent(currentIndex) {
         }
         if (sender === "Anemonia") {
           document.getElementById("nextMessage").style.display = "none";
-          
+          document.getElementById("ai_content_p").style.opacity = "100%";
 
           const messageContainer = document.getElementById("ai_content_p");
           const messageElement = document.createElement("div");
@@ -208,10 +208,8 @@ function displayContent(currentIndex) {
           console.log(messageElement);
 
           let index = 0;
-          document.getElementById("ai_content_p").style.opacity = "100%";
           const interval = setInterval(() => {
             if (index < replacedContent.length) {
-              
               messageContainer.textContent += replacedContent[index];
               index++;
               if (index === replacedContent.length) {
@@ -249,7 +247,9 @@ function displayContent(currentIndex) {
                 document.querySelector("#user_options").append(alt1, alt2);
               }
               clearInterval(interval);
-              if (document.getElementById("user_content_p").textContent === "") {
+              if (
+                document.getElementById("user_content_p").textContent === ""
+              ) {
                 document.getElementById("ai_content_p").textContent = "";
                 setTimeout(() => {
                   messageIndex++;
@@ -262,16 +262,6 @@ function displayContent(currentIndex) {
         }
       }
     }
-  }
-}
-
-function checkUpload(){
-  if(window.localStorage.getItem("upload") === "true"){
-    console.log("kmceac");
-    showEndMessage()
-    
-  }else{
-    document.getElementById("ai_content_p").innerHTML = "Du måste ladda upp manneeeeen, komigen!!!! palla!!!";
   }
 }
 
@@ -302,7 +292,6 @@ function showEndMessage() {
   setTimeout(() => {
     document.getElementById("ai_content_p").style.color = "limegreen";
     document.getElementById("ai_content_p").style.border = "none";
-    document.getElementById("ai_content_p").style.opacity = "100%";
     document.getElementById("ai_content_p").textContent =
       "Skanna nästa QR-kod för att fortsätta!";
 
