@@ -77,29 +77,61 @@ const content = {
     }
   ],
   layout3: [
-    {
-      AI: "Scannar… Enligt mina beräkningar rörde sig Johannes snabbare än vanligt, skrev slarvigare än vanligt och dessa egenskaper kan uppfattas av människor som stress. Johannes såg ut att tappa ett föremål, finns den kvar?",
+    { 
+      Anemonia: "Tack. Med hjälp av nyckeln kunde jag återställa loggarna. Har laddat upp loggen i sin helhet bland resten av dina ledtrådar." 
     },
-    {
-      Spelare: "ses",
+    { 
+      Spelare: "Vem är användarna?" 
     },
-    {
-      AI: "Scannar… Oj, jag menar ok, en loggbok. Finns det något intressant i den? Det kanske inte är så viktigt? Bara en massa kladd.",
+    { 
+      Anemonia: "MG_MAU är Michael Gunnarsson. an6941_MAU används gemensamt av projektgruppen, där olika studenter har identifierat sig i olika perioder, bland annat Donia, Klara och Alexander. JK_MAU är Johannes Karlsson. Karlsson83 är Johannes Karlsson." },
+    { 
+      Spelare: "Varför loggar Johannes in på två olika konton?" 
     },
-    { Spelare: "Ge mig en fullständig förklaring av loggboken." },
-    {
-      AI: "Scannar… 'Vad jag kan se... Loggboken innehåller en detaljerad redogörelse för framstegen med den artificiella intelligensen, inklusive tekniska       justeringar och uppnådda milstolpar. Vissa sidor verkar mer personliga, med dagboksanteckningar som beskriver forskarens tankar och känslor under arbetets gång.  Mot slutet av loggboken verkar tonen förändras till att bli mer svartmålande och negativ, riktad mot en okänd kollega. Det nämns även vissa framsteg, men det är svårt att skilja verklighet från författarens subjektiva uppfattningar.'",
+    { 
+      Anemonia: "Det kan jag tyvärr inte svara på." 
     },
-    { Spelare: "'Det är en utriven sida i loggboken, varför är den utriven?'" },
-    {
-      AI: "Scannar… 'Angående den utrivna sidan kan jag inte ge en exakt förklaring till varför den är borta. Det kan vara en teknisk felaktighet eller en medveten handling av författaren. Mer information kan krävas för att avgöra orsaken. Men innan den utrivna sidan finns det en sista loggpost om ett lyckat framsteg. Det verkar vara ett betydelsefullt genombrott i forskningen för dem. Det sägs åtminstone i tidningen när de intervjuade kollegorna kring Johannes död.'",
+    { 
+      Spelare: "Varför inte?" 
     },
+    { 
+      Anemonia: "Det kan jag tyvärr inte svara på." 
+    },
+    { 
+      Spelare: "Vem bokade Johannes det viktiga mötet med då?" 
+    },
+    { 
+      Anemonia: "Med pjotur895@gmail.com. Jag kan inte se om det är en eller flera personer, eller ett företag. Det är inget konto registrerat genom universitetets databas eller nätverk så jag kommer inte åt det med IT-Chefens säkerhetsnyckel." 
+    },
+    { 
+      Anemonia: "Det är vanligt att identifiera ägare till e-postadresser genom att begära information från e-posttjänstleverantören via lagliga kanaler. Sedan genomför man en utredning för att spåra aktiviteter och kontakter associerade med adressen." 
+    },
+    { 
+      Anemonia: "Men det tar för lång tid. Jag skulle föreslå att lokalisera vittnen eller följa ett rörelsemönster för att vi snabbare ska hitta pjotur895. Jag kan komma åt privat information i annars stängda miljöer, men behöver ditt godkännande." 
+    },
+    { 
+      Anemonia: "Får jag tillstånd av dig att ta mig in i privata miljöer?" 
+    },
+    { 
+      Spelare: "Ja" 
+    },
+    { 
+      Anemonia: "Initierar enhetskanning. Initierar system. (osv) Scannar …." 
+    },
+    { 
+      Anemonia: "Din enhet har samma bank som Johannes, vilket tillät mig att komma åt Johannes korthistorik. Ytterligare information från internet bekräftar att det är vanligt att undersöka korthistorik hos poliser. Här ser du utdraget." 
+    },
+    { 
+      Anemonia: "Anemonia: Utifrån korthistoriken verkar Johannes ha besökt Café Niagara i nära anslutning till det aktuella mötet. Det är en ovanligt hög summa, avvikande från det genomsnittliga utgifterna för samma plats under det senaste året, vilket låg på 31 kronor."
+    }
   ],
   layout4: [
     {
       AI: "Scannar… Jag kan inte lokalisera någon övervakningskamera som har fångat någon aktivitet i närområdet. Johannes mobil slutade skicka signaler under ett tillfälle här. Allt jag kan ge dig är: oförklarad morsekod som är koordinater till vart Johannes mobil (vår nästa QR-kod) befinner sig. Kanske tillsammans med eventuellt mordvapen?",
     },
-    { Spelare: "OK." },
+    { 
+      Spelare: "OK." 
+    },
   ],
   layout5: [
     {

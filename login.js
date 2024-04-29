@@ -5,6 +5,7 @@ function signInpage(event) {
     <main>
         <h1>Anomeia Login</h1>
         <div class="container">
+        <div id="helloMessage">Welcome</div>
             <div class="box">
               <input placeholder="Username" id="loginUsername"></input>
               <input placeholder="Password" id="loginPassword" type="password"></input>
