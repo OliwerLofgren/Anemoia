@@ -380,16 +380,81 @@ const content = {
       Anemonia: "Tillåter du mig använda säkerhetsnyckeln för att undersöka det?"
     },
     {
-      Anemonia: "Med säkerhetsnyckeln från Christianos fick jag tillgång till skolans interna övervakningssystem, och kunde identifiera Johannes utifrån hans ansiktsprofil som jag är bekant med sedan tidigare. Du gav mig tillåtelse till säkerhetsnyckeln. Jag kan visa dig övervakningsfilmen, men skolans nätverk är inte tillräckligt bra för att överföra filen på detta avstånd från källan."
+      Spelare: "Ja"
     },
     {
-      Spelare: "Var är källan?"
+      Anemonia: " an_4319 är Amanda Olsrup, en student inskriven vid Malmö universitet, bosatt i Malmö vid Östra Ryttmästaregatan 5 och är 27 år gammal. Hon flyttade till sin bostad för två år sedan. Hon är inskriven som student i VIP-kursen som Johannes leder, men även en kurs i Interaktionsdesign och medier, vid K3."
     },
     {
-      Anemonia: "Gå och koppla upp dig till tak-kameran nära arbetslaget för fakulteten för teknik och samhälle."
+      Spelare: "Finns det något sätt vi kan kontakta henne, om hon vet mer?"
+    },
+    {
+      Anemonia: "Jag kan leta fram hennes nummer. Är du okej med det?"
+    },
+    {
+      Spelare: "Okej, ring."
     }
   ],
-  layout11: [
+  //STÅR LAYOUT 11 men det måste vara den med dialogen
+  layout12: [
+    {
+      ljudfil: "grwgwg",
+    },
+    { 
+      Spelare: "Hm, det verkar stämma överens med en kommentar i forumet också. Du ser det under ledtråd 1.  " 
+    },
+    
+  ],
+  layout13: [
+    { 
+      Anemonia: "Analyserar..." 
+    },
+    {
+      Anemonia: "Inte tillräckligt snabbt. Utan säkerhetsnyckel för att komma förbi brandväggen skulle det kräva en penetrationstestning av VOI:s säkerhetsinfrastruktur för att identifiera och exploatera eventuella sårbarheter som kan ge åtkomst till bokningshistoriken. Det är i samma område och omkring samma tid som jag senast hade kontakt med Johannes mobil. "
+    },
+    {
+      Spelare: "Va? Varför har du inte sagt det tidigare?"
+    },
+    {
+      Anemonia: "Sagt vadå?"
+    },
+    {
+      Spelare: "Att du vet var Johannes mobil är?"
+    },
+    {
+      Anemonia: "Du har inte frågat om det. Jag visste inte att det var viktig information. Jag beklagar, USER."
+    },
+    {
+      Anemonia: "För att klargöra, jag har inte haft direkt kontakt med Johannes mobil. Det jag menade var att jag plockat upp satellitsignaler från ungefär samma område och runt samma tidpunkt som den aktuella VOI-rutten."
+    },
+  ],
+  layout14: [
+    { 
+      Anemonia: "Oj. Det här var jag inte beredd på." 
+    },
+    {
+      Spelare: "Hur kunde polisen missat detta?"
+    },
+    {
+      Anemonia: "Det finns många möjliga förklaringar, så det är svårt att säga. Det är troligt att mordplatsen varit någon annanstans, och att man därför inte letat här. Jag kan inte förstå varför mobilen skulle lämnas kvar här på det här sättet. Det är mycket ovanligt, särskilt med tanke på Johannes vanliga beteende och den känsliga information som vanligtvis finns lagrad i en mobil. Detta kastar verkligen om mina algoritmer för att förutse mänskligt beteende."
+    },
+    {
+      Spelare: "Kan det ha varit ett rån som gått fel?"
+    },
+    {
+      Anemonia: "Jag är osäker, men jag bedömer det osannolikt. Enligt statistik om brottsmönster och mänskligt beteende tenderar personer som utför rån att ta med sig stöldgodset för att undvika upptäckt och för att kunna dra nytta av det. Att lämna kvar mobilen verkar inte passa in i det vanliga mönstret för ett rån."
+    },
+    {
+      Anemonia: "Fungerar mobilen?"
+    },
+    {
+      Spelare: "Nej, helt död. Fan."
+    },
+    {
+      Anemonia: "Hm.. jag har ju sedan tidigare tillgång till det som laddats upp på molnlagring, men det uppdaterades senast den 7 maj 02:21. Jag överväger att utveckla en prototyp för att försöka återskapa mobilens innehåll. För att göra detta måste jag etablera en anslutning till telefonens operativsystem och tillämpa avancerade metoder för att extrahera och återställa data. Jag är inte säker på om det kan fungera, men jag fick lära mig Figma när Johannes skapade den första mobila versionen av mig och använde HTML-koden därifrån. Rikta din enhet mot mobiltelefonen och klicka på “Redo att ansluta”. "
+    },
+  ],
+  layout13: [
     {
       AI: "SPECIAL LAYOUT!",
     },
@@ -409,7 +474,7 @@ const content = {
       AI: "... bhbhvhbhbh",
     },
   ],
-  layout12: [
+  layout14: [
     {
       AI: "ahh, intressant val",
     },
@@ -420,7 +485,7 @@ const content = {
       AI: "... bhbhvhbhbh",
     },
   ],
-  layout13: [
+  layout15: [
     {
       AI: "Välkommen till den andra avslutet USER",
     },
