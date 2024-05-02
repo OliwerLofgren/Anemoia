@@ -135,7 +135,7 @@ function displayContent(currentIndex) {
     aiDiv = document.createElement("div");
     aiDiv.id = "aiDiv";
     aiDiv.innerHTML = `
-      <img id="content_img" src="default-pfp.jpg"></img>
+      <img id="content_img" src="./uploads/anemoia1.png"></img>
       <div id="content_div">
         <p id="ai_content_p"></p>
       </div>
@@ -280,12 +280,15 @@ function showEndMessage() {
 }
 
 if (window.location.search.split("?layout=")[1] === "layout4") {
+  /*
   document.querySelector("body").innerHTML = `
 
   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.1.8/build/spline-viewer.js"></script>
 <spline-viewer url="https://prod.spline.design/Xz5uwIX7cuwOBMMv/scene.splinecode"></spline-viewer>
 
- `;
+ `
+ */
+  displayImage("./uploads/Kvitto.png");
 }
 function goToClues(event) {
   console.log(event);
@@ -309,7 +312,7 @@ function displayImage(url) {
   <img id="content_img" src="default-pfp.jpg"></img>
   <img src="${url}"></img>
   <button id="nextMessage"></button>
-  <button id="goHome"></button>`;
+  <button id="goHome">Go Home!</button>`;
 }
 
 /*
