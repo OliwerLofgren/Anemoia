@@ -22,6 +22,7 @@ button {
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
+
 }
 
 h1,
@@ -56,7 +57,7 @@ h1 {
 
 #ai_content_p {
   --b: 2px;
-  --c: #00ff48;
+  --c: #9ed644;
   --w: 20px;
 
   border: var(--b) solid #0000;
@@ -96,14 +97,21 @@ h1 {
   align-items: center;
 }
 
-input {
-  background-color: #ffffff;
-  color: #333;
-  border: 1px solid #ccc;
+input{
+  background-color: #333;
+  color: white;
+  border: none;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
   width: 50%;
+  text-align: center;
+}
+#registerPassword{
+  margin-bottom: 50px;
+}
+#loginPassword{
+  margin-bottom: 50px;
 }
 
 #loginShortCut {
@@ -153,7 +161,7 @@ input {
 
 .lines {
   width: 100px;
-  border: 1px solid #00ff48;
+  border: 1px solid #9ed644;
   position: absolute;
 }
 
@@ -175,4 +183,8 @@ input {
   transform: rotate(90deg);
   top: 500px;
   left: -45px;
+}
+#helloMessage{
+  position: relative;
+  top: -100px;
 }

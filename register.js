@@ -3,8 +3,9 @@
 function signUppage(event) {
   document.querySelector("main").innerHTML = `
     <main>
-    <h1>Anomeia Register</h1>
+    <h1>Anomeia</h1>
     <div class="container">
+    <div id="helloMessage">What should I call you?</div>
       <div class="box">
         <input placeholder="Username" id="registerUsername"></input>
         <input placeholder="Password" id="registerPassword" type ="password"></input>

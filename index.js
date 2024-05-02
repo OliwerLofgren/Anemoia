@@ -1,3 +1,4 @@
+//window.localStorage.clear()
 if (localStorage.getItem("access") === "false") {
   accessCheck();
 }
@@ -60,13 +61,14 @@ function RenderStartingpage() {
     <h1>Välkommen till Anomeia</h1>
     <h3>${username}</h3>
     ${buttonsHTML}
-    <p id="scan_p" style="color:limegreen;">Skanna första / nästa QR-koden för att fortsätta!</p>
+    <p id="scan_p" style="color:#9ed644;;">Skanna första / nästa QR-koden för att fortsätta!</p>
     <div class="line_parent">
       <div class="lines" id="line_1"></div>
       <div class="lines" id="line_2"></div>
       <div class="lines" id="line_3"></div>
       <div class="lines" id="line_4"></div>
     </div>
+    <button id="goToClues" class="clue_button">Clues</button>
     `;
   if (localStorage.getItem("access") === "false") {
     accessCheck();
@@ -74,7 +76,10 @@ function RenderStartingpage() {
   if (parseInt(window.localStorage.getItem("keysFound")) >= 2) {
     document.getElementById("scan_p").innerHTML = "";
   }
+  document.getElementById("goToClues").addEventListener("click", goToClues)
+  // displayUpload();
 }
+
 
 function continueToNextLayout() {
   let keysFound = parseInt(window.localStorage.getItem("keysFound")) || 0;
@@ -179,7 +184,7 @@ function displayContent(currentIndex) {
           console.log(replacedContent);
           displayUserMessage(replacedContent);
         }
-        if (sender === "AI") {
+        if (sender === "Anemonia") {
           document.getElementById("nextMessage").style.display = "none";
           document.getElementById("ai_content_p").style.opacity = "100%";
 
@@ -189,13 +194,24 @@ function displayContent(currentIndex) {
           console.log(messageElement);
 
           let index = 0;
+          if (index === replacedContent.length) {
+            setInterval(() => {
+              console.log("jife");
+            },1000)
+        }
           const interval = setInterval(() => {
             if (index < replacedContent.length) {
               messageContainer.textContent += replacedContent[index];
               index++;
-              if (index === replacedContent.length) {
-                console.log("jife");
-                document.getElementById("ai_content_p").style.opacity = "0%";
+              
+              if(replacedContent === "Ladda upp en fil så jag kan bekräfta att du är riktig"){
+                if(!document.getElementById("browseButton")){
+                  if(window.localStorage.getItem("upload") === "false"){
+                    //document.getElementById("ai_content_p").style.opacity = "0%"
+                    displayUpload()
+                  }
+                }
+
               }
             } else {
               if (replacedContent === "SPECIAL LAYOUT!") {
@@ -219,14 +235,12 @@ function displayContent(currentIndex) {
                 document.querySelector("#user_options").append(alt1, alt2);
               }
               clearInterval(interval);
-              if (
-                document.getElementById("user_content_p").textContent === ""
-              ) {
-                document.getElementById("ai_content_p").textContent = "";
+              if (document.getElementById("user_content_p").textContent === "") {
                 setTimeout(() => {
                   messageIndex++;
                   displayContent(messageIndex);
-                }, 1000);
+                }, 800);
+                
               }
             }
           }, 50);
@@ -244,21 +258,99 @@ function displayUserMessage(text) {
   }
 }
 
-document.getElementById("nextMessage").addEventListener("click", (event) => {
-  messageIndex++;
-  document.getElementById("ai_content_p").innerHTML = "";
-  document.getElementById("user_content_p").innerHTML = ``;
+  document.getElementById("nextMessage").addEventListener("click", (event) => {
+    messageIndex++;
+    document.getElementById("ai_content_p").innerHTML = "";
+    document.getElementById("user_content_p").innerHTML = ``;
+  
+    displayContent(messageIndex);
+  });
 
-  displayContent(messageIndex);
-});
 
 function showEndMessage() {
+  if(window.location.search.split("?layout=")[1] === "layout2" || window.localStorage.getItem("upload") === "false"){
+      console.log("end here");
+      return false;
+    
+  }
+  console.log("YO WTF IS HAPPENING?");
   setTimeout(() => {
-    document.getElementById("ai_content_p").style.color = "limegreen";
-    document.getElementById("ai_content_p").style.border = "none";
-    document.getElementById("ai_content_p").textContent =
-      "Skanna nästa QR-kod för att fortsätta!";
-
-    return;
+    const aiContentP = document.getElementById("ai_content_p");
+    aiContentP.style.color = "#9ed644";
+    aiContentP.style.border = "none";
+    aiContentP.textContent = "Skanna nästa QR-kod för att fortsätta!";
   }, 600);
+
 }
+
+if(window.location.search.split("?layout=")[1] === "layout4"){
+  document.querySelector("body").innerHTML = `
+
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.1.8/build/spline-viewer.js"></script>
+<spline-viewer url="https://prod.spline.design/Xz5uwIX7cuwOBMMv/scene.splinecode"></spline-viewer>
+
+ `
+}
+function goToClues(event){
+  console.log(event);
+  if(window.localStorage.getItem("upload") === "false"){
+    document.querySelector("body").innerHTML = `
+    <p>Du har inga ledtrådar än, kom tillbaka när du skaffat ledtrådar</p>
+    <button id="goHome">Gå tillbaka</button>`
+  }
+  
+  if(window.localStorage.getItem("upload") === "true"){
+    document.querySelector("body").innerHTML = `
+    <img>här ska bilden vara</img>
+    <button id="goHome">Gå tillbaka</button>`
+  }
+  document.getElementById("goHome").addEventListener("click", (event) => {
+    RenderStartingpage();
+  });
+}
+function displayImage(url){
+  document.querySelector("body").innerHTML =  `
+  <img id="content_img" src="default-pfp.jpg"></img>
+  <img src="${url}"></img>
+  <button id="nextMessage"></button>
+  <button id="goHome"></button>`
+}
+
+/*
+
+ <!-- Fake captcha start -->
+  <div class="fkrc-container fkrc-m-p">
+    <!-- Captcha checkbox widget -->
+    <div id="fkrc-checkbox-window" class="fkrc-checkbox-window fkrc-m-p fkrc-block">
+        <div class="fkrc-checkbox-container fkrc-m-p">
+            <button type="button" id="fkrc-checkbox" class="fkrc-checkbox fkrc-m-p fkrc-line-normal"></button>
+        </div>
+        <p class="fkrc-im-not-a-robot fkrc-m-p fkrc-line-normal">I'm not a robot</p>
+        <img src="./uploads/captcha_logo.svg" class="fkrc-captcha-logo fkrc-line-normal" alt="">
+        <p class="fkrc-checkbox-desc fkrc-m-p fkrc-line-normal">CAPTCHA</p>
+        <p class="fkrc-checkbox-desc fkrc-m-p fkrc-line-normal">Privacy - Terms</p>
+        <img src="./uploads/captcha_spinner.gif" class="fkrc-spinner fkrc-m-p fkrc-line-normal" alt="" id="fkrc-spinner">
+    </div>
+    <!-- Captcha checkbox verification window -->
+    <div id="fkrc-verifywin-window" class="fkrc-verifywin-window">
+        <div class="fkrc-verifywin-container">
+            <header class="fkrc-verifywin-header">
+                
+                <span class="fkrc-verifywin-header-text-big fkrc-m-p fkrc-block">Tack mannen</span>
+               
+            </header>
+            <main class="fkrc-verifywin-main">
+                Your content
+            </main>
+        </div>
+        <footer class="fkrc-verifywin-container fkrc-verifywin-footer">
+            <div class="fkrc-verifywin-footer-left">
+                Press the verify button to proceed.
+            </div>
+            <button type="button" class="fkrc-verifywin-verify-button fkrc-block" id="fkrc-verifywin-verify-button">Verify</button>
+        </footer>
+    </div>
+    <img src="./uploads/captcha_arrow.svg" alt="" class="fkrc-verifywin-window-arrow" id="fkrc-verifywin-window-arrow"/>
+</div>
+<!-- Fake captcha end -->`
+*/
