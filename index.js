@@ -271,22 +271,24 @@ function displayUserMessage(text) {
     showEndMessage();
   }
 }
+if(document.getElementById("nextMessage")){
 
-document.getElementById("nextMessage").addEventListener("click", (event) => {
-  messageIndex++;
-  document.getElementById("ai_content_p").innerHTML = "";
-  document.getElementById("user_content_p").innerHTML = ``;
-
-  displayContent(messageIndex);
-});
+  document.getElementById("nextMessage").addEventListener("click", (event) => {
+    messageIndex++;
+    document.getElementById("ai_content_p").innerHTML = "";
+    document.getElementById("user_content_p").innerHTML = ``;
+  
+    displayContent(messageIndex);
+  });
+}
 
 function showEndMessage() {
-  if (
-    window.location.search.split("?layout=")[1] === "layout2" ||
-    window.localStorage.getItem("upload") === "false"
-  ) {
-    console.log("end here");
-    return false;
+  if (window.location.search.split("?layout=")[1] === "layout2") {
+    window.localStorage.setItem("cluesFound",4);
+  }
+  if(parseInt(window.localStorage.getItem("cluesFound")) === 4){
+    alert("Du har 4 nya ledtrådar i ledtrådsbanken")
+    console.log("hje");
   }
   console.log("YO WTF IS HAPPENING?");
   setTimeout(() => {
