@@ -53,27 +53,21 @@ function RenderStartingpage() {
   let keysFound = parseInt(window.localStorage.getItem("keysFound")) || 0;
 
   let optionsHTML = "";
-
   for (let i = 1; i < keysFound + 1; i++) {
-    optionsHTML += `<option value="${i}">Dialoger ${i}</option>`;
+    optionsHTML += `<option value="${i}">Dialog ${i}</option>`;
   }
+  console.log(optionsHTML);
 
   document.querySelector("body").innerHTML = `
-    <h1>Välkommen till Anomeia</h1>
-    <h3>${username}</h3>
-    <select id="dialogSelect">
-      ${optionsHTML}
-    </select>
-    <p id="scan_p" style="color:#9ed644;">Skanna första / nästa QR-koden för att fortsätta!</p>
-    <button id="goToClues" class="clue_button">Ledtrådar</button>
-  `;
+  <h1>Välkommen till Anomeia</h1>
+  <h3>${username}</h3>
+  <select id="dialogSelect" >
+    ${optionsHTML}
+  </select>
+  <p id="scan_p" style="color:#9ed644;">Skanna första / nästa QR-koden för att fortsätta!</p>
+  <button id="goToClues" class="clue_button">Ledtrådar</button>
+`;
 
-  if (localStorage.getItem("access") === "false") {
-    accessCheck();
-  }
-  if (parseInt(window.localStorage.getItem("keysFound")) >= 2) {
-    document.getElementById("scan_p").innerHTML = "";
-  }
   document.getElementById("goToClues").addEventListener("click", goToClues);
 
   document
@@ -90,6 +84,13 @@ function RenderStartingpage() {
       goToLayout(dialogIndex);
     });
   });
+
+  if (localStorage.getItem("access") === "false") {
+    accessCheck();
+  }
+  if (parseInt(window.localStorage.getItem("keysFound")) >= 2) {
+    document.getElementById("scan_p").innerHTML = "";
+  }
 
   // displayUpload();
 }

@@ -50,7 +50,6 @@ h1 {
 #ai_content_p,
 #user_content_p {
   color: white;
-
   margin: 0 auto;
 }
 
@@ -207,4 +206,11 @@ input {
 #helloMessage {
   position: relative;
   top: -100px;
+}
+
+#dialogSelect {
+  border: 1px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 10px;
+  border-radius: 5px;
 }
