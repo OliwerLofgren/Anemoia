@@ -54,7 +54,7 @@ function RenderStartingpage() {
 
   let buttonsHTML = "";
   for (let i = 1; i < keysFound + 1; i++) {
-    buttonsHTML += `<button onclick="goToLayout(${i})" class="clue_button" id="${i}">Ledtråd ${i}</button>`;
+    buttonsHTML += `<button onclick="goToLayout(${i})" class="clue_button" id="${i}">Dialoger ${i}</button>`;
   }
 
   document.querySelector("body").innerHTML = `
@@ -62,7 +62,7 @@ function RenderStartingpage() {
     <h3>${username}</h3>
     ${buttonsHTML}
     <p id="scan_p" style="color:#9ed644;;">Skanna första / nästa QR-koden för att fortsätta!</p>
-    <button id="goToClues" class="clue_button">Clues</button>
+    <button id="goToClues" class="clue_button">Ledtrådar</button>
     `;
   if (localStorage.getItem("access") === "false") {
     accessCheck();
@@ -100,10 +100,7 @@ function displayLayoutName() {
     RenderStartingpage();
   } else {
     document.querySelector("body").innerHTML = `
-      <h1 id="h1_clue">Ledtråd ${layoutNumber}</h1>
       <button id="goHome">Gå tillbaka</button>
-      <div class="lines" id="line_1"></div>
-      <div class="lines" id="line_2"></div>
     `;
     document.getElementById("goHome").addEventListener("click", (event) => {
       RenderStartingpage();

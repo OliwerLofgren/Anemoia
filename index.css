@@ -22,7 +22,6 @@ button {
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
-
 }
 
 h1,
@@ -36,7 +35,7 @@ h3 {
 h1 {
   text-align: center;
   vertical-align: text-top;
-  font-size: 36px;
+  font-size: 28px;
   line-height: auto;
   border-style: hidden;
   outline: none;
@@ -76,13 +75,26 @@ h1 {
       100% 100% / var(--_p);
 
   padding: 5px;
+  width: 250px;
 }
+
 #content_img {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   height: 100px;
   width: 100px;
   border-radius: 50%; /* Makes it a circle */
-  box-shadow: 0px 0px 50px white; 
+  box-shadow: 0px 0px 50px white;
   background-image: url("uploads/anemoia.png");
+}
+
+#content_div {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .container {
@@ -99,7 +111,7 @@ h1 {
   align-items: center;
 }
 
-input{
+input {
   background-color: #333;
   color: white;
   border: none;
@@ -109,10 +121,10 @@ input{
   width: 50%;
   text-align: center;
 }
-#registerPassword{
+#registerPassword {
   margin-bottom: 50px;
 }
-#loginPassword{
+#loginPassword {
   margin-bottom: 50px;
 }
 
@@ -142,6 +154,11 @@ input{
 
 .nextMessage {
   padding: 10px;
+
+  position: fixed;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   width: 200px;
   height: auto;
@@ -186,7 +203,7 @@ input{
   top: 500px;
   left: -45px;
 }
-#helloMessage{
+#helloMessage {
   position: relative;
   top: -100px;
 }
