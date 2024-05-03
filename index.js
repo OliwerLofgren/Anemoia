@@ -52,7 +52,7 @@ function RenderStartingpage() {
 
   let keysFound = parseInt(window.localStorage.getItem("keysFound")) || 0;
 
-  let optionsHTML = "";
+  let optionsHTML = "<option value='' selected disabled>Välj en dialog</option>"; 
   for (let i = 1; i < keysFound + 1; i++) {
     optionsHTML += `<option value="${i}">Dialog ${i}</option>`;
   }
@@ -61,7 +61,7 @@ function RenderStartingpage() {
   document.querySelector("body").innerHTML = `
   <h1>Välkommen till Anomeia</h1>
   <h3>${username}</h3>
-  <select id="dialogSelect" >
+  <select id="dialogSelect">
     ${optionsHTML}
   </select>
   <p id="scan_p" style="color:#9ed644;">Skanna första / nästa QR-koden för att fortsätta!</p>
@@ -190,7 +190,7 @@ function displayContent(currentIndex) {
             window.localStorage.getItem("username")
           );
         }
-
+        console.log(replacedContent.length);
         if (sender === "Spelare") {
           console.log(replacedContent);
           displayUserMessage(replacedContent);
@@ -212,6 +212,19 @@ function displayContent(currentIndex) {
           }
           const interval = setInterval(() => {
             if (index < replacedContent.length) {
+             let secondPart = ""
+              if(index === 290){
+                const firstPart = replacedContent.slice(0, index) 
+                secondPart = replacedContent.slice(index);
+                console.log(content);
+                console.log(content[layoutContent]);
+             
+              }
+              if(secondPart !== ""){
+                messageContainer.textContent = ""
+                replacedContent = secondPart;
+                index = 0;
+              }
               messageContainer.textContent += replacedContent[index];
               index++;
 
