@@ -227,6 +227,7 @@ function displayContent(currentIndex) {
   // accessCheck();
   const layoutUrl = window.location.search.split("?layout=")[1];
   let aiDiv = document.getElementById("aiDiv");
+  
 
   if (!aiDiv) {
     aiDiv = document.createElement("div");
@@ -250,6 +251,7 @@ function displayContent(currentIndex) {
     if (layoutUrl === layoutContent) {
       const message = content[layoutContent][currentIndex];
       const container = document.getElementById("content_div");
+      
 
       
 
@@ -288,6 +290,7 @@ function displayContent(currentIndex) {
 
           let index = 0;
           if (index === replacedContent.length) {
+            document.getElementById("ai_content_p").textContent = ""
             setInterval(() => {
               console.log("jife");
             }, 1000);
@@ -354,8 +357,19 @@ if (document.getElementById("nextMessage")) {
   });
 }
 
-function showEndMessage() {
-  switchFunction(window.location.search.split("?layout=")[1])
+function showEndMessage(check) {
+  if(check !== true){
+    switchFunction(window.location.search.split("?layout=")[1])
+  }
+  if(check === true){
+    console.log("hfu");
+    setTimeout(() => {
+      const aiContentP = document.getElementById("ai_content_p");
+      aiContentP.style.color = "#9ed644";
+      aiContentP.style.border = "none";
+      aiContentP.textContent = "Skanna nästa QR-kod för att fortsätta!";
+    }, 600);
+  }
   if (window.location.search.split("?layout=")[1] === "layout2") {
     window.localStorage.setItem("cluesFound", 4);
   }
@@ -364,12 +378,7 @@ function showEndMessage() {
     console.log("hje");
   }
   console.log("YO WTF IS HAPPENING?");
-  setTimeout(() => {
-    const aiContentP = document.getElementById("ai_content_p");
-    aiContentP.style.color = "#9ed644";
-    aiContentP.style.border = "none";
-    aiContentP.textContent = "Skanna nästa QR-kod för att fortsätta!";
-  }, 600);
+  
 }
 
 // if (window.location.search.split("?layout=")[1] === "layout4") {
@@ -451,7 +460,7 @@ function switchFunction(layout){
       passwordFunction()
       break;
     case "layout3":
-      
+      showEndMessage(true)
       break;
     case "layout4":
       

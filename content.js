@@ -128,7 +128,7 @@ const content = {
       Anemonia: "Det verkar som att Johannes haft ett möte med en annan person, om han inte köpt fika till två andra. Johannes köper ofta en kaffe och en kanelbulle." 
     },
     { 
-      Spelaren: "Då måste morotskakan vara till pjotur895?" 
+      Spelare: "Då måste morotskakan vara till pjotur895?" 
     },
     {
       Anemonia: "Troligtvis. Finns det något i våra ledtrådar sedan tidigare som kan hjälpa oss ta reda på vem det kan vara?"
