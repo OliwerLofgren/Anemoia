@@ -1,4 +1,4 @@
-//window.localStorage.clear()
+// window.localStorage.clear();
 if (localStorage.getItem("access") === "false") {
   accessCheck();
 }
@@ -35,19 +35,22 @@ if (localStorage.getItem("username")) {
   signUppage();
 }
 
-function checkLayout(num) {
-  const layoutUrl = window.location.search.split("?layout=")[1];
-  const numKeys = parseInt(window.localStorage.getItem("keysFound"));
-  const numLayout = parseInt(layoutUrl.match(/\d+/));
-  console.log(numLayout);
+// function checkLayout(num) {
+//   const layoutUrl = window.location.search.split("?layout=")[1];
+//   const numKeys = parseInt(window.localStorage.getItem("keysFound"));
+//   const numLayout = parseInt(layoutUrl.match(/\d+/));
 
-  if (num > numKeys) {
-    return false;
-  }
-  return true;
-}
+//   if (num > numKeys) {
+//     return false;
+//   }
+//   return true;
+// }
 
 function RenderStartingpage() {
+  if (document.getElementById("content_img")) {
+    document.getElementById("content_img").remove();
+  }
+
   history.pushState(null, "", "?layout=layout0");
   
 
@@ -56,7 +59,8 @@ function RenderStartingpage() {
   let keysFound = parseInt(window.localStorage.getItem("keysFound")) || 0;
   let cluesFound = parseInt(window.localStorage.getItem("cluesFound")) || 0;
 
-  let optionsHTML = "<option value='' selected disabled>Välj en dialog</option>"; 
+  let optionsHTML =
+    "<option value='' selected disabled>Välj en dialog</option>";
   for (let i = 1; i < keysFound + 1; i++) {
     optionsHTML += `<option value="${i}">Dialog ${i}</option>`;
   }
@@ -69,7 +73,7 @@ function RenderStartingpage() {
   document.querySelector("body").innerHTML = `
   <h1>Välkommen till Anomeia</h1>
   <h3>${username}</h3>
-  <select id="dialogSelect">
+  <select id="dialogSelect" >
     ${optionsHTML}
   </select>
   <p id="scan_p" style="color:#9ed644;">Skanna första / nästa QR-koden för att fortsätta!</p>
@@ -113,9 +117,17 @@ const dialogOptions = document.querySelectorAll("#dialogSelect option");
 function goToClues(clueIndex) {
   console.log(clueIndex);
 
-  document.querySelector("h1").remove();
-  document.querySelector("h3").remove();
-  document.getElementById("dialogSelect").remove();
+  const children = document.body.children;
+  for (let i = 0; i < children.length; i++) {
+    const child = children[i];
+    if (child.id !== "clueSelect" && child.id !== "gohome") {
+      child.remove();
+    }
+  }
+
+  if (document.querySelector("h3")) {
+    document.querySelector("h3").remove();
+  }
 
   const img = document.createElement("img");
   img.id = "clueImage";
@@ -140,29 +152,20 @@ function goToClues(clueIndex) {
       img.src = "uploads/Kvitto.png";
       break;
     default:
+      break;
   }
 
-  document.body.append(img);
+  document.body.appendChild(img);
 
-  const goHome = document.createElement("button");
-  goHome.id = "gohome";
-  goHome.textContent = "Gå tillbaka";
-
-  goHome.addEventListener("click", (event) => {
-    RenderStartingpage();
-  });
-  document.body.append(goHome);
-  // if (window.localStorage.getItem("upload") === "false") {
-  //   document.querySelector("body").innerHTML = `
-  //   <p>Du har inga ledtrådar än, kom tillbaka när du skaffat ledtrådar</p>
-  //   <button id="goHome">Gå tillbaka</button>`;
-  // }
-
-  // if (window.localStorage.getItem("upload") === "true") {
-  //   document.querySelector("body").innerHTML = `
-  //   <img>här ska bilden vara</img>
-  //   <button id="goHome">Gå tillbaka</button>`;
-  // }
+  if (!document.getElementById("gohome")) {
+    const goHome = document.createElement("button");
+    goHome.id = "gohome";
+    goHome.textContent = "Gå tillbaka";
+    goHome.addEventListener("click", (event) => {
+      RenderStartingpage();
+    });
+    document.body.append(goHome);
+  }
 }
 
 function continueToNextLayout() {
@@ -173,7 +176,12 @@ function continueToNextLayout() {
 
   window.location.href = `?layout=layout${keysFound}`;
 }
-
+function checkUpload() {
+  if (window.localStorage.getItem("upload") === "true") {
+    console.log("Upload key is true!");
+    showEndMessage();
+  }
+}
 function displayLayoutName() {
   const urlParams = new URLSearchParams(window.location.search);
   const layoutNumber = urlParams.get("layout").replace("layout", "");
@@ -189,6 +197,7 @@ function displayLayoutName() {
 
   if (layoutNumber > keysFound) {
     RenderStartingpage();
+    window.location.reload();
   } else {
     document.querySelector("body").innerHTML = `
       <button id="goHome">Gå tillbaka</button>
@@ -263,7 +272,7 @@ function displayContent(currentIndex) {
             window.localStorage.getItem("username")
           );
         }
-        console.log(replacedContent.length);
+
         if (sender === "Spelare") {
           console.log(replacedContent);
           displayUserMessage(replacedContent);
@@ -285,19 +294,6 @@ function displayContent(currentIndex) {
           }
           const interval = setInterval(() => {
             if (index < replacedContent.length) {
-             let secondPart = ""
-              if(index === 290){
-                const firstPart = replacedContent.slice(0, index) 
-                secondPart = replacedContent.slice(index);
-                console.log(content);
-                console.log(content[layoutContent]);
-             
-              }
-              if(secondPart !== ""){
-                messageContainer.textContent = ""
-                replacedContent = secondPart;
-                index = 0;
-              }
               messageContainer.textContent += replacedContent[index];
               index++;
 
@@ -363,13 +359,9 @@ function showEndMessage() {
   if (window.location.search.split("?layout=")[1] === "layout2") {
     window.localStorage.setItem("cluesFound", 4);
   }
-  if (parseInt(window.localStorage.getItem("cluesFound")) === 4 && window.location.search.split("?layout=")[1] === "layout2") {
+  if (parseInt(window.localStorage.getItem("cluesFound")) === 4) {
     alert("Du har 4 nya ledtrådar i ledtrådsbanken");
     console.log("hje");
-  }
-  
-  if(document.getElementById("nextMessage")){
-    document.getElementById("nextMessage").remove()
   }
   console.log("YO WTF IS HAPPENING?");
   setTimeout(() => {
@@ -379,6 +371,18 @@ function showEndMessage() {
     aiContentP.textContent = "Skanna nästa QR-kod för att fortsätta!";
   }, 600);
 }
+
+// if (window.location.search.split("?layout=")[1] === "layout4") {
+//   /*
+//   document.querySelector("body").innerHTML = `
+
+//   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.1.8/build/spline-viewer.js"></script>
+// <spline-viewer url="https://prod.spline.design/Xz5uwIX7cuwOBMMv/scene.splinecode"></spline-viewer>
+
+//  `
+//  */
+//   displayImage("./uploads/Kvitto.png");
+// }
 
 function displayImage(url) {
   document.querySelector("body").innerHTML = `
