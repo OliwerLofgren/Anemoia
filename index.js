@@ -362,9 +362,23 @@ function showEndMessage() {
   if (window.location.search.split("?layout=")[1] === "layout2") {
     window.localStorage.setItem("cluesFound", 4);
   }
-  if (parseInt(window.localStorage.getItem("cluesFound")) === 4) {
+  if (parseInt(window.localStorage.getItem("cluesFound")) === 4 && window.location.search.split("?layout=")[1] === "layout4") {
     alert("Du har 4 nya ledtrådar i ledtrådsbanken");
     console.log("hje");
+  }
+  if (window.location.search.split("?layout=")[1] === "layout5") {
+    document.querySelector("body").innerHTML = `
+    <img id="content_img" src="./uploads/anemoia1.png"></img>
+      <div id="content_div">
+        <p id="ai_content_p"></p>
+      </div>
+      <h2>Skriv in lösenordet för att komma vidare</h2>
+      <input id = "passwordInput"></input>
+      <button id="checkPassword">Tryck för att testa lösenordet</button>
+
+    `
+    document.getElementById("checkPassword").addEventListener("click", checkPassword)  
+    return;
   }
   console.log("YO WTF IS HAPPENING?");
   setTimeout(() => {
@@ -374,18 +388,6 @@ function showEndMessage() {
     aiContentP.textContent = "Skanna nästa QR-kod för att fortsätta!";
   }, 600);
 }
-
-// if (window.location.search.split("?layout=")[1] === "layout4") {
-//   /*
-//   document.querySelector("body").innerHTML = `
-
-//   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.1.8/build/spline-viewer.js"></script>
-// <spline-viewer url="https://prod.spline.design/Xz5uwIX7cuwOBMMv/scene.splinecode"></spline-viewer>
-
-//  `
-//  */
-//   displayImage("./uploads/Kvitto.png");
-// }
 
 function displayImage(url) {
   document.querySelector("body").innerHTML = `
@@ -433,3 +435,14 @@ function displayImage(url) {
 </div>
 <!-- Fake captcha end -->`
 */
+
+
+  /*
+//   document.querySelector("body").innerHTML = `
+
+//   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.1.8/build/spline-viewer.js"></script>
+// <spline-viewer url="https://prod.spline.design/Xz5uwIX7cuwOBMMv/scene.splinecode"></spline-viewer>
+
+//  `
+//  */
+//   displayImage("./uploads/Kvitto.png");
