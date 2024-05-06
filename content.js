@@ -53,6 +53,38 @@ const content = {
     {
       Spelare: "Loggarna och schemat ser märkliga ut",
     },
+    {
+      Anemonia:
+        "Instämmer. Analys indikerar ovanligt inloggningsmönster på flera konton i mina terminalloggar. Möjliga försök till obehörig åtkomst. Rekommenderar noggrann övervakning och översyn av säkerhetsprotokoll. Det är dessutom ovanligt för Johannes att stryka och inplanera en ny schemaläggning så hastigt. ",
+    },
+    {
+      Spelare: "Vad kan det betyda?",
+    },
+    {
+      Anemonia:
+        "Det ovanliga inloggningsbeteenden kan tyda på försök till obehörig åtkomst eller manipulation av systemet. Raderade meddelanden gör det svårt att avgöra, men en vanlig inloggningssession pågår vanligtvis längre intervaller. Användare har även använt admincommands för att rensa och återställa loggarna, vilket tyder på man försöker dölja ett beteende. Är det ett vanligt beteende bland människor att vilja dölja och återställa information?",
+    },
+    {
+      Spelare:
+        "Jag skulle säga att det är mänskligt att ljuga och dölja information. ",
+    },
+    {
+      Anemonia: "Okej.",
+    },
+    {
+      Spelare: "Är det möjligt att granska loggarna?",
+    },
+    {
+      Anemonia:
+        "Jag har tillgång till universitetets system och kan söka efter nyckeln där. Men det kräver att jag får tillstånd från en administratör för att komma åt den.",
+    },
+    {
+      Spelare: "Vilken administratör tror du är villig att hjälpa oss?",
+    },
+    {
+      Anemonia:
+        "Ja, universitetets IT-chef, Christianos Falke, är vanligtvis mycket samarbetsvillig när det gäller att hantera säkerhetsincidenter. Jag föreslår att du mejlar en förfrågan till honom om tillgång till nyckeln.",
+    },
   ],
   layout3: [
     {
