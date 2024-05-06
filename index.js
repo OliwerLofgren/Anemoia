@@ -2,6 +2,7 @@
 if (localStorage.getItem("access") === "false") {
   accessCheck();
 }
+
 let alternateEnding = false;
 let layoutSixFinished = false;
 function accessCheck() {
@@ -38,6 +39,7 @@ function checkLayout(num) {
   const layoutUrl = window.location.search.split("?layout=")[1];
   const numKeys = parseInt(window.localStorage.getItem("keysFound"));
   const numLayout = parseInt(layoutUrl.match(/\d+/));
+  console.log(numLayout);
 
   if (num > numKeys) {
     return false;
@@ -47,6 +49,7 @@ function checkLayout(num) {
 
 function RenderStartingpage() {
   history.pushState(null, "", "?layout=layout0");
+  
 
   let username = localStorage.getItem("username");
 
@@ -83,7 +86,8 @@ function RenderStartingpage() {
       goToLayout(dialogIndex);
     });
 
-  const dialogOptions = document.querySelectorAll("#dialogSelect option");
+
+const dialogOptions = document.querySelectorAll("#dialogSelect option");
   dialogOptions.forEach((option) => {
     option.addEventListener("click", (event) => {
       const dialogIndex = event.target.value;
@@ -105,6 +109,7 @@ function RenderStartingpage() {
 
   // displayUpload();
 }
+
 function goToClues(clueIndex) {
   console.log(clueIndex);
 
@@ -237,13 +242,16 @@ function displayContent(currentIndex) {
       const message = content[layoutContent][currentIndex];
       const container = document.getElementById("content_div");
 
-      if (message === undefined) {
-        showEndMessage();
-      }
+      
 
-      console.log(Object.keys(message).length);
+      console.log(message);
+      
       if (message === undefined || Object.keys(message).length == 0) {
-        document.getElementById("nextMessage").style.display = "none";
+        console.log("hmm");
+        if(document.getElementById("nextMessage")){
+          
+          document.getElementById("nextMessage").style.display = "none";
+        }
         showEndMessage();
       } else {
         let replacedContent;
@@ -293,16 +301,8 @@ function displayContent(currentIndex) {
               messageContainer.textContent += replacedContent[index];
               index++;
 
-              if (
-                replacedContent ===
-                "Ladda upp en fil så jag kan bekräfta att du är riktig"
-              ) {
-                if (!document.getElementById("browseButton")) {
-                  if (window.localStorage.getItem("upload") === "false") {
-                    displayUpload();
-                  }
-                }
-              }
+              
+              
             } else {
               if (replacedContent === "SPECIAL LAYOUT!") {
                 let alt1 = document.createElement("div");
@@ -359,26 +359,17 @@ if (document.getElementById("nextMessage")) {
 }
 
 function showEndMessage() {
+  switchFunction(window.location.search.split("?layout=")[1])
   if (window.location.search.split("?layout=")[1] === "layout2") {
     window.localStorage.setItem("cluesFound", 4);
   }
-  if (parseInt(window.localStorage.getItem("cluesFound")) === 4 && window.location.search.split("?layout=")[1] === "layout4") {
+  if (parseInt(window.localStorage.getItem("cluesFound")) === 4 && window.location.search.split("?layout=")[1] === "layout2") {
     alert("Du har 4 nya ledtrådar i ledtrådsbanken");
     console.log("hje");
   }
-  if (window.location.search.split("?layout=")[1] === "layout5") {
-    document.querySelector("body").innerHTML = `
-    <img id="content_img" src="./uploads/anemoia1.png"></img>
-      <div id="content_div">
-        <p id="ai_content_p"></p>
-      </div>
-      <h2>Skriv in lösenordet för att komma vidare</h2>
-      <input id = "passwordInput"></input>
-      <button id="checkPassword">Tryck för att testa lösenordet</button>
-
-    `
-    document.getElementById("checkPassword").addEventListener("click", checkPassword)  
-    return;
+  
+  if(document.getElementById("nextMessage")){
+    document.getElementById("nextMessage").remove()
   }
   console.log("YO WTF IS HAPPENING?");
   setTimeout(() => {
@@ -446,3 +437,25 @@ function displayImage(url) {
 //  `
 //  */
 //   displayImage("./uploads/Kvitto.png");
+
+function switchFunction(layout){
+  switch (layout) {
+    case "layout1":
+      displayUpload()
+      break;
+    case "layout2":
+      passwordFunction()
+      break;
+    case "layout3":
+      
+      break;
+    case "layout4":
+      
+      break;
+    case "layout5":
+      
+      break;
+    default:
+      break;
+  }
+}
