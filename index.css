@@ -236,3 +236,6 @@ input {
   color: black;
   font-size: 12.5px;
 }
+select {
+  margin-top: 20px;
+}

@@ -172,7 +172,12 @@ function continueToNextLayout() {
 
   window.location.href = `?layout=layout${keysFound}`;
 }
-
+function checkUpload() {
+  if (window.localStorage.getItem("upload") === "true") {
+    console.log("Upload key is true!");
+    showEndMessage();
+  }
+}
 function displayLayoutName() {
   const urlParams = new URLSearchParams(window.location.search);
   const layoutNumber = urlParams.get("layout").replace("layout", "");
