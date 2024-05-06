@@ -10,7 +10,7 @@ function passwordFunction(){
         <div id="content_div">
           <p id="ai_content_p"></p>
         </div>
-        <h2>Skriv in lösenordet för att komma vidare</h2>
+        <h2 id="h2">Skriv in lösenordet för att komma vidare</h2>
         <input id = "passwordInput"></input>
         <button id="checkPassword">Tryck för att testa lösenordet</button>
   
