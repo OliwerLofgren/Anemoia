@@ -1,11 +1,11 @@
 [
     {
         "id": 1,
-        "username": "callw",
+        "username": "Oliwer",
         "password": "123",
         "access": "true",
         "indications": 0,
         "keysFound": 0,
-        "upload": "true"
+        "upload": "false"
     }
 ]
