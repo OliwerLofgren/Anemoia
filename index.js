@@ -52,7 +52,6 @@ function RenderStartingpage() {
   }
 
   history.pushState(null, "", "?layout=layout0");
-  
 
   let username = localStorage.getItem("username");
 
@@ -90,8 +89,7 @@ function RenderStartingpage() {
       goToLayout(dialogIndex);
     });
 
-
-const dialogOptions = document.querySelectorAll("#dialogSelect option");
+  const dialogOptions = document.querySelectorAll("#dialogSelect option");
   dialogOptions.forEach((option) => {
     option.addEventListener("click", (event) => {
       const dialogIndex = event.target.value;
@@ -251,14 +249,11 @@ function displayContent(currentIndex) {
       const message = content[layoutContent][currentIndex];
       const container = document.getElementById("content_div");
 
-      
-
       console.log(message);
-      
+
       if (message === undefined || Object.keys(message).length == 0) {
         console.log("hmm");
-        if(document.getElementById("nextMessage")){
-          
+        if (document.getElementById("nextMessage")) {
           document.getElementById("nextMessage").style.display = "none";
         }
         showEndMessage();
@@ -296,9 +291,6 @@ function displayContent(currentIndex) {
             if (index < replacedContent.length) {
               messageContainer.textContent += replacedContent[index];
               index++;
-
-              
-              
             } else {
               if (replacedContent === "SPECIAL LAYOUT!") {
                 let alt1 = document.createElement("div");
@@ -355,7 +347,7 @@ if (document.getElementById("nextMessage")) {
 }
 
 function showEndMessage() {
-  switchFunction(window.location.search.split("?layout=")[1])
+  switchFunction(window.location.search.split("?layout=")[1]);
   if (window.location.search.split("?layout=")[1] === "layout2") {
     window.localStorage.setItem("cluesFound", 4);
   }
@@ -431,8 +423,7 @@ function displayImage(url) {
 <!-- Fake captcha end -->`
 */
 
-
-  /*
+/*
 //   document.querySelector("body").innerHTML = `
 
 //   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.1.8/build/spline-viewer.js"></script>
@@ -442,22 +433,20 @@ function displayImage(url) {
 //  */
 //   displayImage("./uploads/Kvitto.png");
 
-function switchFunction(layout){
+function switchFunction(layout) {
   switch (layout) {
     case "layout1":
-      displayUpload()
+      displayUpload();
       break;
     case "layout2":
-      passwordFunction()
+      passwordFunction();
       break;
     case "layout3":
-      
+      showEndMessage(true);
       break;
     case "layout4":
-      
       break;
     case "layout5":
-      
       break;
     default:
       break;
