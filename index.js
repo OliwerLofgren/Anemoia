@@ -109,9 +109,13 @@ function RenderStartingpage() {
 function goToClues(clueIndex) {
   console.log(clueIndex);
 
-  document.querySelector("h1").remove();
-  document.querySelector("h3").remove();
-  document.getElementById("dialogSelect").remove();
+  const children = document.body.children;
+  for (let i = 0; i < children.length; i++) {
+    const child = children[i];
+    if (child.id !== "clueSelect" && child.id !== "gohome") {
+      child.remove();
+    }
+  }
 
   const img = document.createElement("img");
   img.id = "clueImage";
@@ -136,29 +140,20 @@ function goToClues(clueIndex) {
       img.src = "uploads/Kvitto.png";
       break;
     default:
+      break;
   }
 
-  document.body.append(img);
+  document.body.appendChild(img);
 
-  const goHome = document.createElement("button");
-  goHome.id = "gohome";
-  goHome.textContent = "Gå tillbaka";
-
-  goHome.addEventListener("click", (event) => {
-    RenderStartingpage();
-  });
-  document.body.append(goHome);
-  // if (window.localStorage.getItem("upload") === "false") {
-  //   document.querySelector("body").innerHTML = `
-  //   <p>Du har inga ledtrådar än, kom tillbaka när du skaffat ledtrådar</p>
-  //   <button id="goHome">Gå tillbaka</button>`;
-  // }
-
-  // if (window.localStorage.getItem("upload") === "true") {
-  //   document.querySelector("body").innerHTML = `
-  //   <img>här ska bilden vara</img>
-  //   <button id="goHome">Gå tillbaka</button>`;
-  // }
+  if (!document.getElementById("gohome")) {
+    const goHome = document.createElement("button");
+    goHome.id = "gohome";
+    goHome.textContent = "Gå tillbaka";
+    goHome.addEventListener("click", (event) => {
+      RenderStartingpage();
+    });
+    document.body.append(goHome);
+  }
 }
 
 function continueToNextLayout() {
