@@ -9,7 +9,6 @@ function verifyCaptcha() {
 
 
 
-
 let checkboxWindow = document.getElementById("fkrc-checkbox-window");
 let checkboxBtn = document.getElementById("fkrc-checkbox");
 let checkboxBtnSpinner = document.getElementById("fkrc-spinner");
@@ -18,7 +17,9 @@ let verifyWindowArrow = document.getElementById("fkrc-verifywin-window-arrow");
 let verifyBtn = document.getElementById("fkrc-verifywin-verify-button");
 
 function addCaptchaListeners() {
+    console.log("helloooo");
     if (checkboxBtn && verifyBtn) {
+        console.log("JIFENFI");
         document.addEventListener("click", function (event) {
             if (!event.path.includes(verifyWindow) && isVerifyWindowVisible()) {
                 closeVerifyWindow();

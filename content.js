@@ -144,8 +144,7 @@ const content = {
       Spelare: "Vem är användarna?",
     },
     {
-      Anemonia:
-        "MG_MAU är Michael Gunnarsson. an6941_MAU används gemensamt av projektgruppen, där olika studenter har identifierat sig i olika perioder, bland annat Donia, Klara och Alexander. JK_MAU är Johannes Karlsson. Karlsson83 är Johannes Karlsson.",
+      Anemonia: "MG_MAU är Michael Gunnarsson. an6941_MAU används gemensamt av projektgruppen, där olika studenter har identifierat sig i olika perioder, bland annat Donia, Klara och Alexander. JK_MAU är Johannes Karlsson. Karlsson83 är Johannes Karlsson.",
     },
   ],
   layout4: [
@@ -279,30 +278,10 @@ const content = {
     {
       Anemonia: "Laddar",
     },
+    
     {
       Anemonia:
-        "Det är en fråga med många lager och komplexiteter, och det kan vara svårt att förstå helt och hållet utan en grundläggande förståelse för kryptografi och digital säkerhet.",
-    },
-    {
-      Spelare: "Förklara på ett enklare sätt då",
-    },
-    {
-      Anemonia:
-        " Sure thing, dude. Det är bara så att... jag kan inte riktigt kommentera på det där, you know? Jag är bara en AI, chillin' here, doing my thing. Jag har inget ansvar, no stress. Just go with the flow, dude.",
-    },
-    {
-      Spelare: "Seriöst, Anemonia. Lägg ner. Vad visar innehållet?",
-    },
-    {
-      Anemonia:
-        ".--- .- --. / ..-. .--.- .-. / . .--- / ... ...- .- .-. .- / .--. .--.- / -.. . - - .- ",
-    },
-    {
-      Spelare: "Va? Vad betyder det?",
-    },
-    {
-      Anemonia:
-        " .--- .- --. / ..-. .--.- .-. / . .--- / ... ...- .- .-. .- / .--. .--.- / -.. . - - .-",
+        ".--- .- --. / ..-. .--.- .-. / . .--- / ... ...- .- .-. .- / .--. .--.- / -.. . - - .--",
     },
     {
       Anemonia: "Initierar, startar upp…",

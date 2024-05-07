@@ -1,10 +1,12 @@
-// window.localStorage.clear();
+//window.localStorage.clear();
 if (localStorage.getItem("access") === "false") {
   accessCheck();
 }
-
+let conversationPaused = false;
 let alternateEnding = false;
 let layoutSixFinished = false;
+let layout10Passed = false;
+
 function accessCheck() {
   history.pushState(null, "", "?layout=layout0");
 
@@ -221,6 +223,7 @@ function addKey() {
   }
 }
 
+
 function displayContent(currentIndex) {
   // accessCheck();
   const layoutUrl = window.location.search.split("?layout=")[1];
@@ -235,6 +238,7 @@ function displayContent(currentIndex) {
       <div id="content_div">
         <p id="ai_content_p"></p>
       </div>
+      
       <div id="nextMessage" class="nextMessage">
         <p id="user_content_p"></p>
       </div>
@@ -244,88 +248,107 @@ function displayContent(currentIndex) {
     `;
     document.body.append(aiDiv);
   }
-
-  for (let layoutContent in content) {
-    if (layoutUrl === layoutContent) {
-      const message = content[layoutContent][currentIndex];
-      const container = document.getElementById("content_div");
+  if (layoutUrl === "layout10" && layout10Passed === false) {
+    let helpMe = document.getElementById("helpButton");
+    if (!helpMe) {
+      helpMe = document.createElement("p");
+      helpMe.setAttribute("id", "helpButton");
+      helpMe.textContent = "jag behöver hjälp";
+      document.querySelector("#user_options").appendChild(helpMe);
+      helpMe.addEventListener("click", event => {
+        passwordFunction(currentIndex);
+      })
       
+    }
+  }
+console.log(conversationPaused);
+  if(conversationPaused === false){
 
-      console.log(message);
-
-      if (message === undefined || Object.keys(message).length == 0) {
-        console.log("hmm");
-        if (document.getElementById("nextMessage")) {
-          document.getElementById("nextMessage").style.display = "none";
-        }
-        showEndMessage();
-      } else {
-        let replacedContent;
-        const sender = Object.keys(message)[0];
-        const text = message[sender];
-        if (text) {
-          replacedContent = text.replace(
-            /USER/g,
-            window.localStorage.getItem("username")
-          );
-        }
-
-        if (sender === "Spelare") {
-          console.log(replacedContent);
-          displayUserMessage(replacedContent);
-        }
-        if (sender === "Anemonia") {
-          document.getElementById("nextMessage").style.display = "none";
-          document.getElementById("ai_content_p").style.opacity = "100%";
-
-          const messageContainer = document.getElementById("ai_content_p");
-          const messageElement = document.createElement("div");
-          messageElement.classList.add("message", sender.toLowerCase());
-          console.log(messageElement);
-
-          let index = 0;
-          if (index === replacedContent.length) {
-            document.getElementById("ai_content_p").textContent = ""
-            setInterval(() => {
-              console.log("jife");
-            }, 1000);
+    for (let layoutContent in content) {
+      if (layoutUrl === layoutContent) {
+        const message = content[layoutContent][currentIndex];
+        const container = document.getElementById("content_div");
+        
+  
+        console.log(message);
+  
+        if (message === undefined || Object.keys(message).length == 0) {
+          console.log("hmm");
+          if (document.getElementById("nextMessage")) {
+            document.getElementById("nextMessage").style.display = "none";
           }
-          const interval = setInterval(() => {
-            if (index < replacedContent.length) {
-              messageContainer.textContent += replacedContent[index];
-              index++;
-            } else {
-              if (replacedContent === "SPECIAL LAYOUT!") {
-                let alt1 = document.createElement("div");
-                let alt2 = document.createElement("div");
-
-                alt1.classList.add("nextMessage");
-                alt1.textContent = "Option 1";
-                alt1.addEventListener("click", (event) => {
-                  window.location.href = `?layout=layout7`;
-                  displayContent(0);
-                });
-
-                alt2.classList.add("nextMessage");
-                alt2.textContent = "Option 2";
-                alt2.addEventListener("click", (event) => {
-                  window.location.href = `?layout=layout8`;
-                  displayContent(0);
-                });
-
-                document.querySelector("#user_options").append(alt1, alt2);
-              }
-              clearInterval(interval);
-              if (
-                document.getElementById("user_content_p").textContent === ""
-              ) {
-                setTimeout(() => {
-                  messageIndex++;
-                  displayContent(messageIndex);
-                }, 800);
-              }
+          showEndMessage();
+        } else {
+          let replacedContent;
+          const sender = Object.keys(message)[0];
+          const text = message[sender];
+          if (text) {
+            replacedContent = text.replace(
+              /USER/g,
+              window.localStorage.getItem("username")
+            );
+          }
+        
+          if (sender === "Spelare") {
+            console.log(replacedContent);
+            displayUserMessage(replacedContent);
+          }
+          if (sender === "Anemonia") {
+            document.getElementById("nextMessage").style.display = "none";
+            document.getElementById("ai_content_p").style.opacity = "100%";
+  
+            const messageContainer = document.getElementById("ai_content_p");
+            const messageElement = document.createElement("div");
+            messageElement.classList.add("message", sender.toLowerCase());
+            console.log(messageElement);
+  
+            let index = 0;
+            if (index === replacedContent.length && conversationPaused === false) {
+              document.getElementById("ai_content_p").textContent = ""
+              setInterval(() => {
+                console.log("jife");
+              }, 1000);
             }
-          }, 50);
+            const interval = setInterval(() => {
+              if (index < replacedContent.length && conversationPaused === false) {
+                messageContainer.textContent += replacedContent[index];
+                index++;
+              } else {
+                if(replacedContent === ".--- .- --. / ..-. .--.- .-. / . .--- / ... ...- .- .-. .- / .--. .--.- / -.. . - - .--"){
+                  conversationPaused = true;
+                }
+                if (replacedContent === "SPECIAL LAYOUT!") {
+                  let alt1 = document.createElement("div");
+                  let alt2 = document.createElement("div");
+  
+                  alt1.classList.add("nextMessage");
+                  alt1.textContent = "Option 1";
+                  alt1.addEventListener("click", (event) => {
+                    window.location.href = `?layout=layout7`;
+                    displayContent(0);
+                  });
+  
+                  alt2.classList.add("nextMessage");
+                  alt2.textContent = "Option 2";
+                  alt2.addEventListener("click", (event) => {
+                    window.location.href = `?layout=layout8`;
+                    displayContent(0);
+                  });
+  
+                  document.querySelector("#user_options").append(alt1, alt2);
+                }
+                clearInterval(interval);
+                if (
+                  document.getElementById("user_content_p").textContent === ""
+                ) {
+                  setTimeout(() => {
+                    messageIndex++;
+                    displayContent(messageIndex);
+                  }, 800);
+                }
+              }
+            }, 50);
+          }
         }
       }
     }
@@ -362,85 +385,34 @@ function showEndMessage(check) {
       aiContentP.textContent = "Skanna nästa QR-kod för att fortsätta!";
     }, 600);
   }
-  if (window.location.search.split("?layout=")[1] === "layout2") {
-    window.localStorage.setItem("cluesFound", 4);
-  }
-  if (parseInt(window.localStorage.getItem("cluesFound")) === 4) {
-    alert("Du har 4 nya ledtrådar i ledtrådsbanken");
-    console.log("hje");
-  }
+  
+  
   console.log("YO WTF IS HAPPENING?");
   
 }
 
-// if (window.location.search.split("?layout=")[1] === "layout4") {
-//   /*
-//   document.querySelector("body").innerHTML = `
 
-//   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.1.8/build/spline-viewer.js"></script>
-// <spline-viewer url="https://prod.spline.design/Xz5uwIX7cuwOBMMv/scene.splinecode"></spline-viewer>
-
-//  `
-//  */
-//   displayImage("./uploads/Kvitto.png");
-// }
 
 function displayImage(url) {
   document.querySelector("body").innerHTML = `
-  <img id="content_img" src="default-pfp.jpg"></img>
-  <img src="${url}"></img>
-  <button id="nextMessage"></button>
+  <img id="content_img" src="./uploads/anemoia.png"></img>
+  <img id="image" src="${url}"></img>
+  <div id="content_div">
+        <p id="ai_content_p"></p>
+      </div>
+  <button id="removeImage">Stäng ner bilden</button>
   <button id="goHome">Go Home!</button>`;
+  document.getElementById("removeImage").addEventListener("click", event => {
+    document.getElementById("image").remove()
+  })
+}
+function addClues(number){
+  //let numClues = parseInt(window.localStorage.getItem("cluesFound"));
+  window.localStorage.setItem("cluesFound", number)
+  console.log(window.localStorage.getItem("cluesFound"));
+  alert("du har fått nya ledtrådar")
 }
 
-/*
-
- <!-- Fake captcha start -->
-  <div class="fkrc-container fkrc-m-p">
-    <!-- Captcha checkbox widget -->
-    <div id="fkrc-checkbox-window" class="fkrc-checkbox-window fkrc-m-p fkrc-block">
-        <div class="fkrc-checkbox-container fkrc-m-p">
-            <button type="button" id="fkrc-checkbox" class="fkrc-checkbox fkrc-m-p fkrc-line-normal"></button>
-        </div>
-        <p class="fkrc-im-not-a-robot fkrc-m-p fkrc-line-normal">I'm not a robot</p>
-        <img src="./uploads/captcha_logo.svg" class="fkrc-captcha-logo fkrc-line-normal" alt="">
-        <p class="fkrc-checkbox-desc fkrc-m-p fkrc-line-normal">CAPTCHA</p>
-        <p class="fkrc-checkbox-desc fkrc-m-p fkrc-line-normal">Privacy - Terms</p>
-        <img src="./uploads/captcha_spinner.gif" class="fkrc-spinner fkrc-m-p fkrc-line-normal" alt="" id="fkrc-spinner">
-    </div>
-    <!-- Captcha checkbox verification window -->
-    <div id="fkrc-verifywin-window" class="fkrc-verifywin-window">
-        <div class="fkrc-verifywin-container">
-            <header class="fkrc-verifywin-header">
-                
-                <span class="fkrc-verifywin-header-text-big fkrc-m-p fkrc-block">Tack mannen</span>
-               
-            </header>
-            <main class="fkrc-verifywin-main">
-                Your content
-            </main>
-        </div>
-        <footer class="fkrc-verifywin-container fkrc-verifywin-footer">
-            <div class="fkrc-verifywin-footer-left">
-                Press the verify button to proceed.
-            </div>
-            <button type="button" class="fkrc-verifywin-verify-button fkrc-block" id="fkrc-verifywin-verify-button">Verify</button>
-        </footer>
-    </div>
-    <img src="./uploads/captcha_arrow.svg" alt="" class="fkrc-verifywin-window-arrow" id="fkrc-verifywin-window-arrow"/>
-</div>
-<!-- Fake captcha end -->`
-*/
-
-/*
-//   document.querySelector("body").innerHTML = `
-
-//   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.1.8/build/spline-viewer.js"></script>
-// <spline-viewer url="https://prod.spline.design/Xz5uwIX7cuwOBMMv/scene.splinecode"></spline-viewer>
-
-//  `
-//  */
-//   displayImage("./uploads/Kvitto.png");
 
 function switchFunction(layout) {
   switch (layout) {
@@ -448,16 +420,82 @@ function switchFunction(layout) {
       displayUpload();
       break;
     case "layout2":
+      addClues(4)
       passwordFunction();
       break;
     case "layout3":
+      addClues(5)
+      displayImage("./uploads/kontoutdrag.png")
       showEndMessage(true)
       break;
     case "layout4":
+      addClues(6)
+      displayImage("./uploads/Kvitto.png")
+      passwordFunction()
       break;
     case "layout5":
+      addClues(7)
+      break;
+    case "layout6":
+      addClues(8)
+      break;
+    case "layou7":
+        addClues(9)
+        break;
+    case "layout8":
+      addClues(7)
+      passwordFunction()
+      break;
+    case "layout9":
+      fakeCaptcha()
+      break;
+    case "layout10":
+      addClues(10)
       break;
     default:
       break;
   }
 }
+
+function fakeCaptcha(){
+  let captchas = document.querySelector("#content_div");
+  //captcha.classList.add("captcha")
+  captchas.innerHTML = `
+  <div id="fake-captcha">
+  <div id="fake-checkbox"></div>
+  Are you really a human?
+  </div>
+  `
+  document.querySelector("body").appendChild(captchas)
+  
+
+var captcha = document.getElementById("fake-captcha");
+
+var passOrFail = function() {
+  var pass = Math.round(Math.random());
+  console.log(pass);
+  if(pass === 1){
+    addClues(7)
+    return "pass"
+  }
+}
+
+captcha.onclick = function() {
+  if (captcha.className.includes("loading")) return;
+  
+  captcha.className = "";
+  
+  captcha.className += "loading";
+  
+  setTimeout(function() {
+    captcha.className = captcha.className.replace("loading", "");
+    captcha.className += passOrFail();
+  }, Math.floor((Math.random() * 3000) + 1000));
+  
+}
+}
+/*
+lägg in för rörlig bild
+<div style="padding-top:100.000%;position:relative;"><iframe src="https://gifer.com/embed/QWfb" width="100%" height="100%" style='position:absolute;top:0;left:0;' frameBorder="0" allowFullScreen></iframe></div>
+<p><a href="https://gifer.com%22%3Evia/" GIFER></a></p>
+*/
