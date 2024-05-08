@@ -24,12 +24,12 @@ button {
 }
 #checkPassword {
   position: absolute;
-  left: 15px;
+  left: 65px;
   top: 557px;
 }
 #passwordInput {
   position: absolute;
-  left: 78px;
+  left: 100px;
   top: 485px;
 }
 h1,

@@ -65,6 +65,6 @@ function uploadFile(file) {
 function checkUpload() {
   if (window.localStorage.getItem("upload") === "true") {
     console.log("Upload key is true!");
-    showEndMessage();
+    showEndMessage(true);
   }
 }

@@ -1,4 +1,4 @@
-//window.localStorage.clear();
+// window.localStorage.clear();
 if (localStorage.getItem("access") === "false") {
   accessCheck();
 }
@@ -48,6 +48,7 @@ if (localStorage.getItem("username")) {
 //   return true;
 // }
 
+displayAudio();
 function RenderStartingpage() {
   if (document.getElementById("content_img")) {
     document.getElementById("content_img").remove();
@@ -197,7 +198,7 @@ function displayLayoutName() {
 
   if (layoutNumber > keysFound) {
     RenderStartingpage();
-    window.location.reload();
+    // window.location.reload();
   } else {
     document.querySelector("body").innerHTML = `
       <button id="goHome">Gå tillbaka</button>
@@ -363,7 +364,7 @@ function showEndMessage(check) {
 
 function displayImage(url) {
   document.querySelector("body").innerHTML = `
-  <img id="content_img" src="./uploads/anemoia.png"></img>
+  <img id="content_img" class="display_image" src="./uploads/anemoia.png"></img>
   <img id="image" src="${url}"></img>
   <div id="content_div">
         <p id="ai_content_p"></p>
@@ -378,7 +379,7 @@ function addClues(number){
   //let numClues = parseInt(window.localStorage.getItem("cluesFound"));
   window.localStorage.setItem("cluesFound", number)
   console.log(window.localStorage.getItem("cluesFound"));
-  alert("du har fått nya ledtrådar")
+  alert("Du har fått nya ledtrådar");
 }
 
 
