@@ -23,4 +23,11 @@ function displayAudio() {
   document.body.appendChild(container);
 }
 
-let audioContent = ["./audio/Take_me.mp3", "./audio/WithoutYou.mp3"];
+let audioContent = [
+  "./audio/Amandadel1.mp3",
+  "./audio/Amandadel2.mp3",
+  "./audio/Amandadel3.mp3",
+  "./audio/Amandadel4.mp3",
+  "./audio/Amandadel5.mp3",
+  "./audio/Amandadel6.mp3",
+];
