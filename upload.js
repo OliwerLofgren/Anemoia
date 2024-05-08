@@ -54,11 +54,17 @@ function uploadFile(file) {
       return response.json();
     })
     .then((data) => {
-      window.localStorage.setItem("upload", "true")
+      window.localStorage.setItem("upload", "true");
       console.log(data);
-      checkUpload()
+      checkUpload();
     })
     .catch((error) => {
       console.error("Error:", error);
     });
+}
+function checkUpload() {
+  if (window.localStorage.getItem("upload") === "true") {
+    console.log("Upload key is true!");
+    showEndMessage();
+  }
 }
