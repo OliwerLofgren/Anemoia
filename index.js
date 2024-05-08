@@ -48,7 +48,7 @@ if (localStorage.getItem("username")) {
 //   return true;
 // }
 
-displayAudio();
+
 function RenderStartingpage() {
   if (document.getElementById("content_img")) {
     document.getElementById("content_img").remove();
@@ -272,6 +272,9 @@ function displayContent(currentIndex) {
         const text = message[sender];
         
         console.log(text);
+        if(sender === "Ljudfil"){
+          displayAudio()
+        }
         if (sender === "Spelare") {
           // Display user message
           displayUserMessage(text);
