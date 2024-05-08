@@ -1,4 +1,4 @@
-//window.localStorage.clear();
+// window.localStorage.clear();
 if (localStorage.getItem("access") === "false") {
   accessCheck();
 }
@@ -48,6 +48,7 @@ if (localStorage.getItem("username")) {
 //   return true;
 // }
 
+displayAudio();
 function RenderStartingpage() {
   if (document.getElementById("content_img")) {
     document.getElementById("content_img").remove();
@@ -192,7 +193,7 @@ function displayLayoutName() {
 
   if (layoutNumber > keysFound) {
     RenderStartingpage();
-    window.location.reload();
+    // window.location.reload();
   } else {
     document.querySelector("body").innerHTML = `
       <button id="goHome">Gå tillbaka</button>
