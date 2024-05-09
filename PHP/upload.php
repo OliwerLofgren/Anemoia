@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 
 function updateJson() {
-    $filename = "users.json"; 
+    $filename = "./users.json"; 
     $json = json_decode(file_get_contents($filename), true);
     
     foreach ($json as &$obj) {

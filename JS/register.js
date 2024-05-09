@@ -28,7 +28,7 @@ function registerFunction(event) {
   let username = document.getElementById("registerUsername").value;
   let password = document.getElementById("registerPassword").value;
 
-  fetch("register.php", {
+  fetch("../PHP/register.php", {
     method: "POST",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify({

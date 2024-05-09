@@ -27,7 +27,7 @@ function loginFunction(event) {
   let password = document.getElementById("loginPassword").value;
   console.log(username);
 
-  fetch("login.php", {
+  fetch("../PHP/login.php", {
     method: "POST",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify({
