@@ -369,3 +369,9 @@ select {
     transform: translate(-50%, -50%);
   }
 }
+
+#audio {
+  position: absolute;
+  top: 350px;
+  left: 80px;
+}
