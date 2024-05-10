@@ -281,6 +281,10 @@ function displayContent(currentIndex) {
         
         console.log(text);
         if(sender === "Ljudfil"){
+          document.getElementById("ai_content_p").style.opacity = "0";
+          if(document.getElementById("audio")){
+            document.getElementById("audio").remove()
+          }
           displayAudio()
         }
         if (sender === "Spelare") {

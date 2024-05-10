@@ -52,76 +52,98 @@ const content = {
     },
     {
       Spelare: "Loggarna och schemat ser märkliga ut",
-    }
-    
-  ],
-  layout3: [
+    },
+    {
+      Anemonia: "hfehfi",
+    },
+    {
+      Spelare: "Vad kan det betyda?",
+    },
     {
       Anemonia:
-        "Tack. Med hjälp av nyckeln kunde jag återställa loggarna. Har laddat upp loggen i sin helhet bland resten av dina ledtrådar.",
+        "Det ovanliga inloggningsbeteenden kan tyda på försök till obehörig åtkomst eller manipulation av systemet. Raderade meddelanden gör det svårt att avgöra, men en vanlig inloggningssession pågår vanligtvis längre intervaller. Användare har även använt admincommands för att rensa och återställa loggarna, vilket tyder på man försöker dölja ett beteende. Är det ett vanligt beteende bland människor att vilja dölja och återställa information?",
+    },
+    {
+      Spelare:
+        "Jag skulle säga att det är mänskligt att ljuga och dölja information. ",
+    },
+    {
+      Anemonia: "Okej.",
+    },
+    {
+      Spelare: "Är det möjligt att granska loggarna?",
+    },
+    {
+      Anemonia:
+        "Jag har tillgång till universitetets system och kan söka efter nyckeln där. Men det kräver att jag får tillstånd från en administratör för att komma åt den.",
+    },
+    {
+      Spelare: "Vilken administratör tror du är villig att hjälpa oss?",
+    },
+    {
+      Anemonia:
+        "Ja, universitetets IT-chef, Christianos Falke, är vanligtvis mycket samarbetsvillig när det gäller att hantera säkerhetsincidenter. Jag föreslår att du mejlar en förfrågan till honom om tillgång till nyckeln.",
+    },
+  ],
+  layout3: [
+    { 
+      Anemonia: "Tack. Med hjälp av nyckeln kunde jag återställa loggarna. Har laddat upp loggen i sin helhet bland resten av dina ledtrådar." 
+    },
+    { 
+      Spelare: "Vem är användarna?" 
+    },
+    { 
+      Anemonia: "MG_MAU är Michael Gunnarsson. an6941_MAU används gemensamt av projektgruppen, där olika studenter har identifierat sig i olika perioder, bland annat Donia, Klara och Alexander. JK_MAU är Johannes Karlsson. Karlsson83 är Johannes Karlsson." },
+    { 
+      Spelare: "Varför loggar Johannes in på två olika konton?" 
+    },
+    { 
+      Anemonia: "Det kan jag tyvärr inte svara på." 
+    },
+    { 
+      Spelare: "Varför inte?" 
+    },
+    { 
+      Anemonia: "Det kan jag tyvärr inte svara på." 
+    },
+    { 
+      Spelare: "Vem bokade Johannes det viktiga mötet med då?" 
+    },
+    { 
+      Anemonia: "Med pjotur895@gmail.com. Jag kan inte se om det är en eller flera personer, eller ett företag. Det är inget konto registrerat genom universitetets databas eller nätverk så jag kommer inte åt det med IT-Chefens säkerhetsnyckel." 
+    },
+    { 
+      Anemonia: "Det är vanligt att identifiera ägare till e-postadresser genom att begära information från e-posttjänstleverantören via lagliga kanaler. Sedan genomför man en utredning för att spåra aktiviteter och kontakter associerade med adressen." 
+    },
+    { 
+      Anemonia: "Men det tar för lång tid. Jag skulle föreslå att lokalisera vittnen eller följa ett rörelsemönster för att vi snabbare ska hitta pjotur895. Jag kan komma åt privat information i annars stängda miljöer, men behöver ditt godkännande." 
+    },
+    { 
+      Anemonia: "Får jag tillstånd av dig att ta mig in i privata miljöer?" 
+    },
+    { 
+      Spelare: "Ja" 
+    },
+    { 
+      Anemonia: "Initierar enhetskanning. Initierar system. (osv) Scannar …." 
+    },
+    { 
+      Anemonia: "Din enhet har samma bank som Johannes, vilket tillät mig att komma åt Johannes korthistorik. Ytterligare information från internet bekräftar att det är vanligt att undersöka korthistorik hos poliser. Här ser du utdraget." 
+    },
+    { 
+      Anemonia: "Anemonia: Utifrån korthistoriken verkar Johannes ha besökt Café Niagara i nära anslutning till det aktuella mötet. Det är en ovanligt hög summa, avvikande från det genomsnittliga utgifterna för samma plats under det senaste året, vilket låg på 31 kronor."
+    },
+    { 
+      Anemonia: "Det verkar som att Johannes haft ett möte med en annan person, om han inte köpt fika till två andra. Johannes köper ofta en kaffe och en kanelbulle." 
+    },
+    { 
+      Spelare: "Då måste morotskakan vara till pjotur895?" 
     },
     {
       Spelare: "Vem är användarna?",
     },
     {
-      Anemonia:
-        "MG_MAU är Michael Gunnarsson. an6941_MAU används gemensamt av projektgruppen, där olika studenter har identifierat sig i olika perioder, bland annat Donia, Klara och Alexander. JK_MAU är Johannes Karlsson. Karlsson83 är Johannes Karlsson.",
-    },
-    {
-      Spelare: "Varför loggar Johannes in på två olika konton?",
-    },
-    {
-      Anemonia: "Det kan jag tyvärr inte svara på.",
-    },
-    {
-      Spelare: "Varför inte?",
-    },
-    {
-      Anemonia: "Det kan jag tyvärr inte svara på.",
-    },
-    {
-      Spelare: "Vem bokade Johannes det viktiga mötet med då?",
-    },
-    {
-      Anemonia:
-        "Med pjotur895@gmail.com. Jag kan inte se om det är en eller flera personer, eller ett företag. Det är inget konto registrerat genom universitetets databas eller nätverk så jag kommer inte åt det med IT-Chefens säkerhetsnyckel.",
-    },
-    {
-      Anemonia:
-        "Det är vanligt att identifiera ägare till e-postadresser genom att begära information från e-posttjänstleverantören via lagliga kanaler. Sedan genomför man en utredning för att spåra aktiviteter och kontakter associerade med adressen.",
-    },
-    {
-      Anemonia:
-        "Men det tar för lång tid. Jag skulle föreslå att lokalisera vittnen eller följa ett rörelsemönster för att vi snabbare ska hitta pjotur895. Jag kan komma åt privat information i annars stängda miljöer, men behöver ditt godkännande.",
-    },
-    {
-      Anemonia: "Får jag tillstånd av dig att ta mig in i privata miljöer?",
-    },
-    {
-      Spelare: "Ja",
-    },
-    {
-      Anemonia: "Initierar enhetskanning. Initierar system. (osv) Scannar ….",
-    },
-    {
-      Anemonia:
-        "Din enhet har samma bank som Johannes, vilket tillät mig att komma åt Johannes korthistorik. Ytterligare information från internet bekräftar att det är vanligt att undersöka korthistorik hos poliser. Här ser du utdraget.",
-    },
-    {
-      Anemonia:
-        "Anemonia: Utifrån korthistoriken verkar Johannes ha besökt Café Niagara i nära anslutning till det aktuella mötet. Det är en ovanligt hög summa, avvikande från det genomsnittliga utgifterna för samma plats under det senaste året, vilket låg på 31 kronor.",
-    },
-    {
-      Anemonia:
-        "Det verkar som att Johannes haft ett möte med en annan person, om han inte köpt fika till två andra. Johannes köper ofta en kaffe och en kanelbulle.",
-    },
-    {
-      Spelare: "Då måste morotskakan vara till pjotur895? Vem är det?",
-    },
-
-    {
-      Anemonia:
-        "MG_MAU är Michael Gunnarsson. an6941_MAU används gemensamt av projektgruppen, där olika studenter har identifierat sig i olika perioder, bland annat Donia, Klara och Alexander. JK_MAU är Johannes Karlsson. Karlsson83 är Johannes Karlsson.",
+      Anemonia: "MG_MAU är Michael Gunnarsson. an6941_MAU används gemensamt av projektgruppen, där olika studenter har identifierat sig i olika perioder, bland annat Donia, Klara och Alexander. JK_MAU är Johannes Karlsson. Karlsson83 är Johannes Karlsson.",
     },
   ],
   layout4: [
@@ -255,7 +277,7 @@ const content = {
     {
       Anemonia: "Laddar",
     },
-
+    
     {
       Anemonia:
         ".--- .- --. / ..-. .--.- .-. / . .--- / ... ...- .- .-. .- / .--. .--.- / -.. . - - .--",
@@ -430,46 +452,77 @@ const content = {
   ],
   layout14: [
     {
-      Anemonia:
-        "Bolt och Voi. Jag kan undersöka båda och återkomma med resdata.",
+      Anemonia: "Oj. Det här var jag inte beredd på.",
     },
     {
-      Anemonia: "Jag återkommer strax.",
-    },
-    {
-      Anemonia:
-        "Hej, tack för ditt tålamod. Jag identifierade en rutt som fått en varningssignal i VOI’s CMS. Jag la in den bland ledtrådarna.",
-    },
-    {
-      Spelare: "Kan du ta reda på vem som bokat VOI:en?",
-    },
-    {
-      Anemonia: "Analyserar…",
+      Spelare: "Hur kunde polisen missat detta?",
     },
     {
       Anemonia:
-        "Inte tillräckligt snabbt. Utan säkerhetsnyckel för att komma förbi brandväggen skulle det kräva en penetrationstestning av VOI:s säkerhetsinfrastruktur för att identifiera och exploatera eventuella sårbarheter som kan ge åtkomst till bokningshistoriken. Det är i samma område och omkring samma tid som jag senast hade kontakt med Johannes mobil.",
+        "Det finns många möjliga förklaringar, så det är svårt att säga. Det är troligt att mordplatsen varit någon annanstans, och att man därför inte letat här. Jag kan inte förstå varför mobilen skulle lämnas kvar här på det här sättet. Det är mycket ovanligt, särskilt med tanke på Johannes vanliga beteende och den känsliga information som vanligtvis finns lagrad i en mobil. Detta kastar verkligen om mina algoritmer för att förutse mänskligt beteende.",
     },
     {
-      Spelare: "Va? Varför har du inte sagt det tidigare?",
-    },
-    {
-      Anemonia: "Sagt vadå?",
-    },
-    {
-      Spelare: "Att du vet var Johannes mobil är?",
+      Spelare: "Kan det ha varit ett rån som gått fel?",
     },
     {
       Anemonia:
-        "Du har inte frågat om det. Jag visste inte att det var viktig information. Jag beklagar, NAME.",
+        "Jag är osäker, men jag bedömer det osannolikt. Enligt statistik om brottsmönster och mänskligt beteende tenderar personer som utför rån att ta med sig stöldgodset för att undvika upptäckt och för att kunna dra nytta av det. Att lämna kvar mobilen verkar inte passa in i det vanliga mönstret för ett rån.",
+    },
+    {
+      Anemonia: "Fungerar mobilen?",
+    },
+    {
+      Spelare: "Nej, helt död. Fan.",
     },
     {
       Anemonia:
-        "För att klargöra, jag har inte haft direkt kontakt med Johannes mobil. Det jag menade var att jag plockat upp satellitsignaler från ungefär samma område och runt samma tidpunkt som den aktuella VOI-rutten.",
+        "Hm.. jag har ju sedan tidigare tillgång till det som laddats upp på molnlagring, men det uppdaterades senast den 7 maj 02:21. Jag överväger att utveckla en prototyp för att försöka återskapa mobilens innehåll. För att göra detta måste jag etablera en anslutning till telefonens operativsystem och tillämpa avancerade metoder för att extrahera och återställa data. Jag är inte säker på om det kan fungera, men jag fick lära mig Figma när Johannes skapade den första mobila versionen av mig och använde HTML-koden därifrån. Rikta din enhet mot mobiltelefonen och klicka på “Redo att ansluta”. ",
+    },
+  ],
+  layout13: [
+    {
+      AI: "SPECIAL LAYOUT!",
     },
     {
-      Anemonia:
-        "Anemonia går ner i tystnadsläge, efter 10 sekunder ändras dialogrutan.",
+      Alt1: "FÖRSTA ALTERNATIV",
+    },
+    {
+      Alt2: "ANDRA ALTERNATIV",
+    },
+    {
+      AI: "ahh, intressant val",
+    },
+    {
+      Spelare: "Vad händer nu?",
+    },
+    {
+      AI: "... bhbhvhbhbh",
+    },
+  ],
+  layout14: [
+    {
+      AI: "ahh, intressant val",
+    },
+    {
+      Spelare: "Vad händer nu?",
+    },
+    {
+      AI: "... bhbhvhbhbh",
+    },
+  ],
+  layout15: [
+    {
+      AI: "Välkommen till den andra avslutet USER",
+    },
+    {
+      Spelare:
+        "Tack, nu har jag bestämt mig att verkligen ta reda på vem du är >:)",
+    },
+    {
+      AI: "Lycka till USER . . .",
+    },
+    {
+      Spelare: "Vad ska jag göra nu!",
     },
   ],
 };

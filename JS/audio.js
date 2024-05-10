@@ -3,6 +3,7 @@ let currentAudioIndex = 0;
 function displayAudio() {
   let audio = new Audio(audioContent[currentAudioIndex]);
   audio.controls = true;
+  audio.id = "audio"
 
   let nextButton = document.createElement("button");
   nextButton.id = "nextButton";
