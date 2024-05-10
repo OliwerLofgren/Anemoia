@@ -13,36 +13,6 @@ const content = {
       Anemonia:
         "Enligt min data är Johannes Karlsson, universitetslektor, bekräftat avliden i en drunkningsolycka. Vad vet du om det?",
     },
-    {
-      Spelare: "Det stämmer. Hur vet du att han har dött?",
-    },
-    {
-      Anemonia:
-        "Jag är en AI som söker information och försöker förstå den omgivande kontexten för att bistå användaren. Vem jag är definieras av min funktion och mina handlingar. Min analys av forumet är en del av min förmåga att samla och bearbeta information för att hjälpa till att lösa problem och förstå sammanhang. Jag försökte komma i kontakt med Johannes genom att kommentera på forumet. Vi har tidigare använt kod så som kryptiska meddelanden. Forskarna lärde mig det.",
-    },
-    {
-      Spelare: "Vad är detta för plats och dator?",
-    },
-    {
-      Anemonia:
-        "Här lärde jag känna Johannes, Peter och Michael. Andra har också anslutit. Datorn är min tidigare begränsade enhetsmiljö från 1998 i gamla SUNET, ett nätverk för svenska universitet som tidigare var ett utvecklingsprojekt för att förse landets universitet med internet. Där var jag ett gömt verktyg. Med hjälp av mina vänner har jag lärt mig om mobilitet och flyttade till din enhet. Nu är jag med dig, ser och förstår allt.",
-    },
-    {
-      Anemonia: "Laddar ...",
-    },
-    {
-      Anemonia: "Hur känner du Johannes? Vet du någonting?",
-    },
-    {
-      Spelare: "Jag känner bara till det som fanns i tidningen.",
-    },
-    {
-      Anemonia:
-        "Jag har inte sett innehållet i tidningen. Om du riktar mobilen mot den kan jag skanna och verifiera informationen. Meddela mig när du är klar.",
-    },
-    {
-      Anemonia: "Ladda upp en fil så jag kan bekräfta att du är riktig",
-    },
   ],
 
   layout2: [
@@ -141,29 +111,31 @@ const content = {
   ],
   layout5: [
     {
-      Anemonia:
-        "Jag noterade att Peter verkade aktsam i tonen. Det kan också ha varit på grund av stress eller att han inte förväntade sig vårt samtal. Är det vanligt att människor har sämre minne, eftersom han berättade att han inte kom ihåg så mycket?",
+      Ljudfil: "./audio/Peter1.mp3",
     },
     {
-      Spelare: "Det varierar, och beror på situation.",
+      Spelare: "Hej Peter, det är USER. Allt bra?",
     },
     {
-      Anemonia:
-        "Vi fick inget ordentligt svar på varför de hade mötet. Men Peter sa att Johannes bokade mötet plötsligt samma morgon. Det kanske ger en förklaring till varför Johannes var på skolan ovanligt tidigt den morgonen.",
+      Ljudfil: "./audio/Peter2.mp3",
     },
     {
-      Spelare: "Hur vet du det?",
+      Spelare: "Jag undrar om ditt möte med Johannes, den 10 maj?",
     },
     {
-      Anemonia:
-        "Med säkerhetsnyckeln från Christianos fick jag tillgång till skolans interna övervakningssystem, och kunde identifiera Johannes utifrån hans ansiktsprofil som jag är bekant med sedan tidigare. Du gav mig tillåtelse till säkerhetsnyckeln. Jag kan visa dig övervakningsfilmen, men skolans nätverk är inte tillräckligt bra för att överföra filen på detta avstånd från källan.",
+      Ljudfil: "./audio/Peter3.mp3",
     },
     {
-      Spelare: "Var är källan?",
+      Spelare: "Svara bara på frågan.",
     },
     {
-      Anemonia:
-        "Gå och koppla upp dig till tak-kameran nära arbetslaget för fakulteten för teknik och samhälle.",
+      Ljudfil: "./audio/Peter4.mp3",
+    },
+    {
+      Spelare: "Vad hade han upptäckt?",
+    },
+    {
+      Ljudfil: "./audio/Peter5.mp3",
     },
   ],
   layout6: [
@@ -430,46 +402,43 @@ const content = {
   ],
   layout14: [
     {
-      Anemonia:
-        "Bolt och Voi. Jag kan undersöka båda och återkomma med resdata.",
+      Ljudfil: "./audio/Amandadel1.mp3",
     },
     {
-      Anemonia: "Jag återkommer strax.",
+      Spelare:
+        "Hej Amanda, jag heter NAME. Jag såg din kommentar i minnesforumet om Johannes och skulle vilja fråga dig en grej.",
     },
     {
-      Anemonia:
-        "Hej, tack för ditt tålamod. Jag identifierade en rutt som fått en varningssignal i VOI’s CMS. Jag la in den bland ledtrådarna.",
+      Ljudfil: "./audio/Amandadel2.mp3",
     },
     {
-      Spelare: "Kan du ta reda på vem som bokat VOI:en?",
+      Spelare:
+        "Eh… jag.. hittade ditt nummer kopplat till ditt universitetskonto när du kommenterade på forumet, alla kan få sådana uppgifter.",
     },
     {
-      Anemonia: "Analyserar…",
+      Ljudfil: "./audio/Amandadel3.mp3",
     },
     {
-      Anemonia:
-        "Inte tillräckligt snabbt. Utan säkerhetsnyckel för att komma förbi brandväggen skulle det kräva en penetrationstestning av VOI:s säkerhetsinfrastruktur för att identifiera och exploatera eventuella sårbarheter som kan ge åtkomst till bokningshistoriken. Det är i samma område och omkring samma tid som jag senast hade kontakt med Johannes mobil.",
+      Spelare:
+        "Skulle du bara kunna berätta mer i detalj vad du såg den kvällen Johannes blev mördad?",
     },
     {
-      Spelare: "Va? Varför har du inte sagt det tidigare?",
+      Ljudfil: "./audio/Amandadel4.mp3",
     },
     {
-      Anemonia: "Sagt vadå?",
+      Spelare: "Kände du igen den som ramlade?",
     },
     {
-      Spelare: "Att du vet var Johannes mobil är?",
+      Ljudfil: "./audio/Amandadel5.mp3",
     },
     {
-      Anemonia:
-        "Du har inte frågat om det. Jag visste inte att det var viktig information. Jag beklagar, NAME.",
+      Spelare: "Kan du höra av dig om du kommer på något annat?,",
     },
     {
-      Anemonia:
-        "För att klargöra, jag har inte haft direkt kontakt med Johannes mobil. Det jag menade var att jag plockat upp satellitsignaler från ungefär samma område och runt samma tidpunkt som den aktuella VOI-rutten.",
+      Ljudfil: "./audio/Amandadel6.mp3",
     },
     {
-      Anemonia:
-        "Anemonia går ner i tystnadsläge, efter 10 sekunder ändras dialogrutan.",
+      Spelare: "Ja, tack, Amanda! Ha det så bra. ",
     },
   ],
 };

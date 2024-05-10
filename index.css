@@ -22,6 +22,10 @@ button {
   cursor: pointer;
   border-radius: 5px;
 }
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 #checkPassword {
   position: absolute;
   left: 65px;

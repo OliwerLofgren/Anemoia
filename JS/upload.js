@@ -43,7 +43,7 @@ function uploadFile(file) {
   const formData = new FormData();
   formData.append("upload", file);
 
-  fetch("upload.php", {
+  fetch("../PHP/upload.php", {
     method: "POST",
     body: formData,
   })
