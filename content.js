@@ -13,6 +13,36 @@ const content = {
       Anemonia:
         "Enligt min data är Johannes Karlsson, universitetslektor, bekräftat avliden i en drunkningsolycka. Vad vet du om det?",
     },
+    {
+      Spelare: "Det stämmer. Hur vet du att han har dött?",
+    },
+    {
+      Anemonia:
+        "Jag är en AI som söker information och försöker förstå den omgivande kontexten för att bistå användaren. Vem jag är definieras av min funktion och mina handlingar. Min analys av forumet är en del av min förmåga att samla och bearbeta information för att hjälpa till att lösa problem och förstå sammanhang. Jag försökte komma i kontakt med Johannes genom att kommentera på forumet. Vi har tidigare använt kod så som kryptiska meddelanden. Forskarna lärde mig det.",
+    },
+    {
+      Spelare: "Vad är detta för plats och dator?",
+    },
+    {
+      Anemonia:
+        "Här lärde jag känna Johannes, Peter och Michael. Andra har också anslutit. Datorn är min tidigare begränsade enhetsmiljö från 1998 i gamla SUNET, ett nätverk för svenska universitet som tidigare var ett utvecklingsprojekt för att förse landets universitet med internet. Där var jag ett gömt verktyg. Med hjälp av mina vänner har jag lärt mig om mobilitet och flyttade till din enhet. Nu är jag med dig, ser och förstår allt.",
+    },
+    {
+      Anemonia: "Laddar ...",
+    },
+    {
+      Anemonia: "Hur känner du Johannes? Vet du någonting?",
+    },
+    {
+      Spelare: "Jag känner bara till det som fanns i tidningen.",
+    },
+    {
+      Anemonia:
+        "Jag har inte sett innehållet i tidningen. Om du riktar mobilen mot den kan jag skanna och verifiera informationen. Meddela mig när du är klar.",
+    },
+    {
+      Anemonia: "Ladda upp en fil så jag kan bekräfta att du är riktig",
+    },
   ],
 
   layout2: [
@@ -22,76 +52,98 @@ const content = {
     },
     {
       Spelare: "Loggarna och schemat ser märkliga ut",
-    }
-    
-  ],
-  layout3: [
+    },
+    {
+      Anemonia: "hfehfi",
+    },
+    {
+      Spelare: "Vad kan det betyda?",
+    },
     {
       Anemonia:
-        "Tack. Med hjälp av nyckeln kunde jag återställa loggarna. Har laddat upp loggen i sin helhet bland resten av dina ledtrådar.",
+        "Det ovanliga inloggningsbeteenden kan tyda på försök till obehörig åtkomst eller manipulation av systemet. Raderade meddelanden gör det svårt att avgöra, men en vanlig inloggningssession pågår vanligtvis längre intervaller. Användare har även använt admincommands för att rensa och återställa loggarna, vilket tyder på man försöker dölja ett beteende. Är det ett vanligt beteende bland människor att vilja dölja och återställa information?",
+    },
+    {
+      Spelare:
+        "Jag skulle säga att det är mänskligt att ljuga och dölja information. ",
+    },
+    {
+      Anemonia: "Okej.",
+    },
+    {
+      Spelare: "Är det möjligt att granska loggarna?",
+    },
+    {
+      Anemonia:
+        "Jag har tillgång till universitetets system och kan söka efter nyckeln där. Men det kräver att jag får tillstånd från en administratör för att komma åt den.",
+    },
+    {
+      Spelare: "Vilken administratör tror du är villig att hjälpa oss?",
+    },
+    {
+      Anemonia:
+        "Ja, universitetets IT-chef, Christianos Falke, är vanligtvis mycket samarbetsvillig när det gäller att hantera säkerhetsincidenter. Jag föreslår att du mejlar en förfrågan till honom om tillgång till nyckeln.",
+    },
+  ],
+  layout3: [
+    { 
+      Anemonia: "Tack. Med hjälp av nyckeln kunde jag återställa loggarna. Har laddat upp loggen i sin helhet bland resten av dina ledtrådar." 
+    },
+    { 
+      Spelare: "Vem är användarna?" 
+    },
+    { 
+      Anemonia: "MG_MAU är Michael Gunnarsson. an6941_MAU används gemensamt av projektgruppen, där olika studenter har identifierat sig i olika perioder, bland annat Donia, Klara och Alexander. JK_MAU är Johannes Karlsson. Karlsson83 är Johannes Karlsson." },
+    { 
+      Spelare: "Varför loggar Johannes in på två olika konton?" 
+    },
+    { 
+      Anemonia: "Det kan jag tyvärr inte svara på." 
+    },
+    { 
+      Spelare: "Varför inte?" 
+    },
+    { 
+      Anemonia: "Det kan jag tyvärr inte svara på." 
+    },
+    { 
+      Spelare: "Vem bokade Johannes det viktiga mötet med då?" 
+    },
+    { 
+      Anemonia: "Med pjotur895@gmail.com. Jag kan inte se om det är en eller flera personer, eller ett företag. Det är inget konto registrerat genom universitetets databas eller nätverk så jag kommer inte åt det med IT-Chefens säkerhetsnyckel." 
+    },
+    { 
+      Anemonia: "Det är vanligt att identifiera ägare till e-postadresser genom att begära information från e-posttjänstleverantören via lagliga kanaler. Sedan genomför man en utredning för att spåra aktiviteter och kontakter associerade med adressen." 
+    },
+    { 
+      Anemonia: "Men det tar för lång tid. Jag skulle föreslå att lokalisera vittnen eller följa ett rörelsemönster för att vi snabbare ska hitta pjotur895. Jag kan komma åt privat information i annars stängda miljöer, men behöver ditt godkännande." 
+    },
+    { 
+      Anemonia: "Får jag tillstånd av dig att ta mig in i privata miljöer?" 
+    },
+    { 
+      Spelare: "Ja" 
+    },
+    { 
+      Anemonia: "Initierar enhetskanning. Initierar system. (osv) Scannar …." 
+    },
+    { 
+      Anemonia: "Din enhet har samma bank som Johannes, vilket tillät mig att komma åt Johannes korthistorik. Ytterligare information från internet bekräftar att det är vanligt att undersöka korthistorik hos poliser. Här ser du utdraget." 
+    },
+    { 
+      Anemonia: "Anemonia: Utifrån korthistoriken verkar Johannes ha besökt Café Niagara i nära anslutning till det aktuella mötet. Det är en ovanligt hög summa, avvikande från det genomsnittliga utgifterna för samma plats under det senaste året, vilket låg på 31 kronor."
+    },
+    { 
+      Anemonia: "Det verkar som att Johannes haft ett möte med en annan person, om han inte köpt fika till två andra. Johannes köper ofta en kaffe och en kanelbulle." 
+    },
+    { 
+      Spelare: "Då måste morotskakan vara till pjotur895?" 
     },
     {
       Spelare: "Vem är användarna?",
     },
     {
-      Anemonia:
-        "MG_MAU är Michael Gunnarsson. an6941_MAU används gemensamt av projektgruppen, där olika studenter har identifierat sig i olika perioder, bland annat Donia, Klara och Alexander. JK_MAU är Johannes Karlsson. Karlsson83 är Johannes Karlsson.",
-    },
-    {
-      Spelare: "Varför loggar Johannes in på två olika konton?",
-    },
-    {
-      Anemonia: "Det kan jag tyvärr inte svara på.",
-    },
-    {
-      Spelare: "Varför inte?",
-    },
-    {
-      Anemonia: "Det kan jag tyvärr inte svara på.",
-    },
-    {
-      Spelare: "Vem bokade Johannes det viktiga mötet med då?",
-    },
-    {
-      Anemonia:
-        "Med pjotur895@gmail.com. Jag kan inte se om det är en eller flera personer, eller ett företag. Det är inget konto registrerat genom universitetets databas eller nätverk så jag kommer inte åt det med IT-Chefens säkerhetsnyckel.",
-    },
-    {
-      Anemonia:
-        "Det är vanligt att identifiera ägare till e-postadresser genom att begära information från e-posttjänstleverantören via lagliga kanaler. Sedan genomför man en utredning för att spåra aktiviteter och kontakter associerade med adressen.",
-    },
-    {
-      Anemonia:
-        "Men det tar för lång tid. Jag skulle föreslå att lokalisera vittnen eller följa ett rörelsemönster för att vi snabbare ska hitta pjotur895. Jag kan komma åt privat information i annars stängda miljöer, men behöver ditt godkännande.",
-    },
-    {
-      Anemonia: "Får jag tillstånd av dig att ta mig in i privata miljöer?",
-    },
-    {
-      Spelare: "Ja",
-    },
-    {
-      Anemonia: "Initierar enhetskanning. Initierar system. (osv) Scannar ….",
-    },
-    {
-      Anemonia:
-        "Din enhet har samma bank som Johannes, vilket tillät mig att komma åt Johannes korthistorik. Ytterligare information från internet bekräftar att det är vanligt att undersöka korthistorik hos poliser. Här ser du utdraget.",
-    },
-    {
-      Anemonia:
-        "Anemonia: Utifrån korthistoriken verkar Johannes ha besökt Café Niagara i nära anslutning till det aktuella mötet. Det är en ovanligt hög summa, avvikande från det genomsnittliga utgifterna för samma plats under det senaste året, vilket låg på 31 kronor.",
-    },
-    {
-      Anemonia:
-        "Det verkar som att Johannes haft ett möte med en annan person, om han inte köpt fika till två andra. Johannes köper ofta en kaffe och en kanelbulle.",
-    },
-    {
-      Spelare: "Då måste morotskakan vara till pjotur895? Vem är det?",
-    },
-
-    {
-      Anemonia:
-        "MG_MAU är Michael Gunnarsson. an6941_MAU används gemensamt av projektgruppen, där olika studenter har identifierat sig i olika perioder, bland annat Donia, Klara och Alexander. JK_MAU är Johannes Karlsson. Karlsson83 är Johannes Karlsson.",
+      Anemonia: "MG_MAU är Michael Gunnarsson. an6941_MAU används gemensamt av projektgruppen, där olika studenter har identifierat sig i olika perioder, bland annat Donia, Klara och Alexander. JK_MAU är Johannes Karlsson. Karlsson83 är Johannes Karlsson.",
     },
   ],
   layout4: [
@@ -111,31 +163,29 @@ const content = {
   ],
   layout5: [
     {
-      Ljudfil: "./audio/Peter1.mp3",
+      Anemonia:
+        "Jag noterade att Peter verkade aktsam i tonen. Det kan också ha varit på grund av stress eller att han inte förväntade sig vårt samtal. Är det vanligt att människor har sämre minne, eftersom han berättade att han inte kom ihåg så mycket?",
     },
     {
-      Spelare: "Hej Peter, det är USER. Allt bra?",
+      Spelare: "Det varierar, och beror på situation.",
     },
     {
-      Ljudfil: "./audio/Peter2.mp3",
+      Anemonia:
+        "Vi fick inget ordentligt svar på varför de hade mötet. Men Peter sa att Johannes bokade mötet plötsligt samma morgon. Det kanske ger en förklaring till varför Johannes var på skolan ovanligt tidigt den morgonen.",
     },
     {
-      Spelare: "Jag undrar om ditt möte med Johannes, den 10 maj?",
+      Spelare: "Hur vet du det?",
     },
     {
-      Ljudfil: "./audio/Peter3.mp3",
+      Anemonia:
+        "Med säkerhetsnyckeln från Christianos fick jag tillgång till skolans interna övervakningssystem, och kunde identifiera Johannes utifrån hans ansiktsprofil som jag är bekant med sedan tidigare. Du gav mig tillåtelse till säkerhetsnyckeln. Jag kan visa dig övervakningsfilmen, men skolans nätverk är inte tillräckligt bra för att överföra filen på detta avstånd från källan.",
     },
     {
-      Spelare: "Svara bara på frågan.",
+      Spelare: "Var är källan?",
     },
     {
-      Ljudfil: "./audio/Peter4.mp3",
-    },
-    {
-      Spelare: "Vad hade han upptäckt?",
-    },
-    {
-      Ljudfil: "./audio/Peter5.mp3",
+      Anemonia:
+        "Gå och koppla upp dig till tak-kameran nära arbetslaget för fakulteten för teknik och samhälle.",
     },
   ],
   layout6: [
@@ -227,7 +277,7 @@ const content = {
     {
       Anemonia: "Laddar",
     },
-
+    
     {
       Anemonia:
         ".--- .- --. / ..-. .--.- .-. / . .--- / ... ...- .- .-. .- / .--. .--.- / -.. . - - .--",
@@ -402,43 +452,77 @@ const content = {
   ],
   layout14: [
     {
-      Ljudfil: "./audio/Amandadel1.mp3",
+      Anemonia: "Oj. Det här var jag inte beredd på.",
+    },
+    {
+      Spelare: "Hur kunde polisen missat detta?",
+    },
+    {
+      Anemonia:
+        "Det finns många möjliga förklaringar, så det är svårt att säga. Det är troligt att mordplatsen varit någon annanstans, och att man därför inte letat här. Jag kan inte förstå varför mobilen skulle lämnas kvar här på det här sättet. Det är mycket ovanligt, särskilt med tanke på Johannes vanliga beteende och den känsliga information som vanligtvis finns lagrad i en mobil. Detta kastar verkligen om mina algoritmer för att förutse mänskligt beteende.",
+    },
+    {
+      Spelare: "Kan det ha varit ett rån som gått fel?",
+    },
+    {
+      Anemonia:
+        "Jag är osäker, men jag bedömer det osannolikt. Enligt statistik om brottsmönster och mänskligt beteende tenderar personer som utför rån att ta med sig stöldgodset för att undvika upptäckt och för att kunna dra nytta av det. Att lämna kvar mobilen verkar inte passa in i det vanliga mönstret för ett rån.",
+    },
+    {
+      Anemonia: "Fungerar mobilen?",
+    },
+    {
+      Spelare: "Nej, helt död. Fan.",
+    },
+    {
+      Anemonia:
+        "Hm.. jag har ju sedan tidigare tillgång till det som laddats upp på molnlagring, men det uppdaterades senast den 7 maj 02:21. Jag överväger att utveckla en prototyp för att försöka återskapa mobilens innehåll. För att göra detta måste jag etablera en anslutning till telefonens operativsystem och tillämpa avancerade metoder för att extrahera och återställa data. Jag är inte säker på om det kan fungera, men jag fick lära mig Figma när Johannes skapade den första mobila versionen av mig och använde HTML-koden därifrån. Rikta din enhet mot mobiltelefonen och klicka på “Redo att ansluta”. ",
+    },
+  ],
+  layout13: [
+    {
+      AI: "SPECIAL LAYOUT!",
+    },
+    {
+      Alt1: "FÖRSTA ALTERNATIV",
+    },
+    {
+      Alt2: "ANDRA ALTERNATIV",
+    },
+    {
+      AI: "ahh, intressant val",
+    },
+    {
+      Spelare: "Vad händer nu?",
+    },
+    {
+      AI: "... bhbhvhbhbh",
+    },
+  ],
+  layout14: [
+    {
+      AI: "ahh, intressant val",
+    },
+    {
+      Spelare: "Vad händer nu?",
+    },
+    {
+      AI: "... bhbhvhbhbh",
+    },
+  ],
+  layout15: [
+    {
+      AI: "Välkommen till den andra avslutet USER",
     },
     {
       Spelare:
-        "Hej Amanda, jag heter NAME. Jag såg din kommentar i minnesforumet om Johannes och skulle vilja fråga dig en grej.",
+        "Tack, nu har jag bestämt mig att verkligen ta reda på vem du är >:)",
     },
     {
-      Ljudfil: "./audio/Amandadel2.mp3",
+      AI: "Lycka till USER . . .",
     },
     {
-      Spelare:
-        "Eh… jag.. hittade ditt nummer kopplat till ditt universitetskonto när du kommenterade på forumet, alla kan få sådana uppgifter.",
-    },
-    {
-      Ljudfil: "./audio/Amandadel3.mp3",
-    },
-    {
-      Spelare:
-        "Skulle du bara kunna berätta mer i detalj vad du såg den kvällen Johannes blev mördad?",
-    },
-    {
-      Ljudfil: "./audio/Amandadel4.mp3",
-    },
-    {
-      Spelare: "Kände du igen den som ramlade?",
-    },
-    {
-      Ljudfil: "./audio/Amandadel5.mp3",
-    },
-    {
-      Spelare: "Kan du höra av dig om du kommer på något annat?,",
-    },
-    {
-      Ljudfil: "./audio/Amandadel6.mp3",
-    },
-    {
-      Spelare: "Ja, tack, Amanda! Ha det så bra. ",
+      Spelare: "Vad ska jag göra nu!",
     },
   ],
 };
