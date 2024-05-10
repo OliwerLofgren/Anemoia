@@ -268,8 +268,16 @@ function displayContent(currentIndex) {
           showEndMessage();
           return;
         }
+        let text;
         const sender = Object.keys(message)[0];
-        const text = message[sender];
+        const textContent = message[sender];
+        if (content) {
+          text = textContent.replace(
+            /USER/g,
+            window.localStorage.getItem("username")
+          );
+        }
+
         
         console.log(text);
         if(sender === "Ljudfil"){
@@ -277,10 +285,12 @@ function displayContent(currentIndex) {
         }
         if (sender === "Spelare") {
           // Display user message
+          
           displayUserMessage(text);
         }
-console.log(sender);
+  console.log(sender);
         if (sender === "Anemonia") {
+          document.getElementById("nextButton").disabled = true;
           const messageContainer = document.getElementById("ai_content_p");
           let index = 0;
           if(messageContainer.innerHTML !== ""){
@@ -295,6 +305,7 @@ console.log(sender);
               index++;
             } else {
               clearInterval(interval);
+              document.getElementById("nextButton").disabled = false;
               let newMessage = content[layoutContent][currentIndex + 1];
               let newSender = Object.keys(newMessage)[0];
               let newText = newMessage[newSender];
