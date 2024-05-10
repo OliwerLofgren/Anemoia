@@ -169,15 +169,6 @@ const content = {
     {
       Spelare: "Ja",
     },
-    {
-      Ljudfil: "./audio/Amandadel1.mp3",
-    },
-    {
-      Spelare: "Jag hittade det i datanse",
-    },
-    {
-      Anemonia: "damn va weird",
-    },
   ],
   layout5: [
     {
