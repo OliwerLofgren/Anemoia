@@ -229,7 +229,7 @@ function displayContent(currentIndex) {
     aiDiv = document.createElement("div");
     aiDiv.id = "aiDiv";
     aiDiv.innerHTML = `
-      <img id="content_img" src="./uploads/anemoia1.png"></img>
+      <img id="content_img" src="../uploads/anemoia1.png"></img>
       <div id="content_div">
         <p id="ai_content_p"></p>
       </div>
@@ -392,7 +392,7 @@ function showEndMessage(check) {
 
 function displayImage(url) {
   document.querySelector("body").innerHTML = `
-  <img id="content_img" class="display_image" src="./uploads/anemoia.png"></img>
+  <img id="content_img" class="display_image" src="../uploads/anemoia.png"></img>
   <img id="image" src="${url}"></img>
   <div id="content_div">
         <p id="ai_content_p"></p>
@@ -460,7 +460,7 @@ function switchFunction(layout) {
       break;
     case "layout14":
       addClues(13);
-      //Här ska man komma till nästa layout genom user_content_p
+      displayAudio();
       break;
     case "layout15":
       addClues(14);
