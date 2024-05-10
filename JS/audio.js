@@ -3,6 +3,7 @@ let currentAudioIndex = 0;
 function displayAudio(audioContent) {
   let audio = new Audio(audioContent);
   audio.controls = true;
+  audio.id = "audio";
 
   function nextAudio(event) {
     currentAudioIndex = (currentAudioIndex + 1) % audioContent.length; // Increment index and loop back if necessary

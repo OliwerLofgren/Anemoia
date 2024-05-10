@@ -305,6 +305,10 @@ function displayContent(currentIndex) {
 
         console.log(text);
         if (sender === "Ljudfil") {
+          document.getElementById("ai_content_p").style.opacity = "0";
+          if (document.getElementById("audio")) {
+            document.getElementById("audio").remove();
+          }
           displayAudio(text);
         }
         if (sender === "Spelare") {
@@ -414,19 +418,6 @@ function addClues(number) {
 }
 
 function switchFunction(layout) {
-  let audioAmanda = [
-    "./audio/Amandadel1.mp3",
-    "./audio/Amandadel2.mp3",
-    "./audio/Amandadel3.mp3",
-    "./audio/Amandadel4.mp3",
-    "./audio/Amandadel5.mp3",
-    "./audio/Amandadel6.mp3",
-  ];
-
-  let audioPeter1 = [];
-
-  let audioPeter2 = [];
-
   switch (layout) {
     case "layout1":
       displayUpload();
