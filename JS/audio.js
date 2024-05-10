@@ -1,6 +1,6 @@
 let currentAudioIndex = 0;
 
-function displayAudio() {
+function displayAudio(audioContent) {
   let audio = new Audio(audioContent[currentAudioIndex]);
   audio.controls = true;
 
@@ -13,12 +13,11 @@ function displayAudio() {
     audio.src = audioContent[currentAudioIndex];
     audio.play();
     console.log(audio);
-
-    
   }
-  audio.addEventListener("ended", function() {
-    messageIndex++
-    displayContent(messageIndex)
+
+  audio.addEventListener("ended", function () {
+    messageIndex++;
+    displayContent(messageIndex);
     // Add your logic here to handle the end of audio playback
   });
 
@@ -31,7 +30,7 @@ function displayAudio() {
   document.body.appendChild(container);
 }
 
-let audioContent = [
+let audioAmanda = [
   "./audio/Amandadel1.mp3",
   "./audio/Amandadel2.mp3",
   "./audio/Amandadel3.mp3",
@@ -39,3 +38,7 @@ let audioContent = [
   "./audio/Amandadel5.mp3",
   "./audio/Amandadel6.mp3",
 ];
+
+let audioPeter1 = [];
+
+let audioPeter2 = [];

@@ -48,7 +48,6 @@ if (localStorage.getItem("username")) {
 //   return true;
 // }
 
-
 function RenderStartingpage() {
   if (document.getElementById("content_img")) {
     document.getElementById("content_img").remove();
@@ -111,8 +110,6 @@ function RenderStartingpage() {
   if (parseInt(window.localStorage.getItem("keysFound")) >= 2) {
     document.getElementById("scan_p").innerHTML = "";
   }
-
-  // displayUpload();
 }
 
 function goToClues(clueIndex) {
@@ -138,7 +135,7 @@ function goToClues(clueIndex) {
       img.src = "uploads/Tidning.png";
       break;
     case "2":
-      img.src = "uploads/Skolforum.png";
+      img.src = "uploads/Skolforum-1.png";
       break;
     case "3":
       img.src = "uploads/logs_censored_font_10.png";
@@ -150,7 +147,25 @@ function goToClues(clueIndex) {
       img.src = "uploads/logs_uncensored_font_10.png";
       break;
     case "6":
+      img.src = "uploads/Kontoutdrag.png";
+      break;
+    case "7":
       img.src = "uploads/Kvitto.png";
+      break;
+    case "9":
+      // displayVideo();
+      break;
+    case "10":
+      img.src = "uploads/Logbok.png";
+      break;
+    case "11":
+      img.src = "uploads/Instagram.png";
+      break;
+    case "13":
+      img.src = "uploads/Anteckningar.png";
+      break;
+    case "14":
+      img.src = "uploads/Karta.png";
       break;
     default:
       break;
@@ -169,6 +184,15 @@ function goToClues(clueIndex) {
   }
 }
 
+function createNextButton() {
+  let nextButton = document.createElement("button");
+  nextButton.textContent = "Nästa";
+
+  nextButton.addEventListener("click", continueToNextLayout);
+
+  document.body.appendChild(nextButton);
+}
+
 function continueToNextLayout() {
   let keysFound = parseInt(window.localStorage.getItem("keysFound")) || 0;
   keysFound++;
@@ -177,12 +201,14 @@ function continueToNextLayout() {
 
   window.location.href = `?layout=layout${keysFound}`;
 }
+
 function checkUpload() {
   if (window.localStorage.getItem("upload") === "true") {
     console.log("Upload key is true!");
     showEndMessage();
   }
 }
+
 function displayLayoutName() {
   const urlParams = new URLSearchParams(window.location.search);
   const layoutNumber = urlParams.get("layout").replace("layout", "");
@@ -224,7 +250,6 @@ function addKey() {
   }
 }
 
-
 function displayContent(currentIndex) {
   const layoutUrl = window.location.search.split("?layout=")[1];
   let aiDiv = document.getElementById("aiDiv");
@@ -233,7 +258,7 @@ function displayContent(currentIndex) {
     aiDiv = document.createElement("div");
     aiDiv.id = "aiDiv";
     aiDiv.innerHTML = `
-      <img id="content_img" src="./uploads/anemoia1.png"></img>
+      <img id="content_img" src="../uploads/anemoia1.png"></img>
       <div id="content_div">
         <p id="ai_content_p"></p>
       </div>
@@ -252,9 +277,9 @@ function displayContent(currentIndex) {
       helpMe.setAttribute("id", "helpButton");
       helpMe.textContent = "jag behöver hjälp";
       document.querySelector("#user_options").appendChild(helpMe);
-      helpMe.addEventListener("click", event => {
+      helpMe.addEventListener("click", (event) => {
         passwordFunction(currentIndex);
-      })
+      });
     }
   }
 
@@ -270,6 +295,7 @@ function displayContent(currentIndex) {
         }
         let text;
         const sender = Object.keys(message)[0];
+<<<<<<< Updated upstream
         const textContent = message[sender];
         if (content) {
           text = textContent.replace(
@@ -279,24 +305,32 @@ function displayContent(currentIndex) {
         }
 
         
+=======
+        const text = message[sender];
+
+>>>>>>> Stashed changes
         console.log(text);
-        if(sender === "Ljudfil"){
-          displayAudio()
+        if (sender === "Ljudfil") {
+          displayAudio();
         }
         if (sender === "Spelare") {
           // Display user message
           
           displayUserMessage(text);
         }
+<<<<<<< Updated upstream
   console.log(sender);
+=======
+        console.log(sender);
+>>>>>>> Stashed changes
         if (sender === "Anemonia") {
           document.getElementById("nextButton").disabled = true;
           const messageContainer = document.getElementById("ai_content_p");
           let index = 0;
-          if(messageContainer.innerHTML !== ""){
+          if (messageContainer.innerHTML !== "") {
             console.log("content");
             return;
-          }else{
+          } else {
             console.log("no content");
           }
           const interval = setInterval(() => {
@@ -309,23 +343,25 @@ function displayContent(currentIndex) {
               let newMessage = content[layoutContent][currentIndex + 1];
               let newSender = Object.keys(newMessage)[0];
               let newText = newMessage[newSender];
-              
+
               // Check if the next message is from the user
               if (newSender === "Spelare") {
                 document.getElementById("nextButton").textContent = newText;
-                messageIndex++
+                messageIndex++;
               } else {
                 console.log("AI");
                 document.getElementById("nextButton").textContent = "Next";
               }
-              
+
               document.getElementById("nextMessage").style.display = "block";
-              document.getElementById("nextButton").addEventListener("click", event => {
-                conversationPaused = false;
-                //messageContainer.innerHTML = ""
-                
-                displayContent(messageIndex);
-              });
+              document
+                .getElementById("nextButton")
+                .addEventListener("click", (event) => {
+                  conversationPaused = false;
+                  //messageContainer.innerHTML = ""
+
+                  displayContent(messageIndex);
+                });
             }
           }, 50);
         }
@@ -333,10 +369,6 @@ function displayContent(currentIndex) {
     }
   }
 }
-
-
-
-
 
 function displayUserMessage(text) {
   document.getElementById("nextMessage").style.display = "flex";
@@ -356,11 +388,10 @@ if (document.getElementById("nextMessage")) {
 }
 
 function showEndMessage(check) {
-  if(check !== true){
-    switchFunction(window.location.search.split("?layout=")[1])
+  if (check !== true) {
+    switchFunction(window.location.search.split("?layout=")[1]);
   }
-  if(check === true){
-    console.log("hfu");
+  if (check === true) {
     setTimeout(() => {
       const aiContentP = document.getElementById("ai_content_p");
       aiContentP.style.color = "#9ed644";
@@ -368,13 +399,9 @@ function showEndMessage(check) {
       aiContentP.textContent = "Skanna nästa QR-kod för att fortsätta!";
     }, 600);
   }
-  
-  
+
   console.log("YO WTF IS HAPPENING?");
-  
 }
-
-
 
 function displayImage(url) {
   document.querySelector("body").innerHTML = `
@@ -385,62 +412,99 @@ function displayImage(url) {
       </div>
   <button id="removeImage">Stäng ner bilden</button>
   <button id="goHome">Go Home!</button>`;
-  document.getElementById("removeImage").addEventListener("click", event => {
-    document.getElementById("image").remove()
-  })
+  document.getElementById("removeImage").addEventListener("click", (event) => {
+    document.getElementById("image").remove();
+  });
 }
-function addClues(number){
+function addClues(number) {
   //let numClues = parseInt(window.localStorage.getItem("cluesFound"));
-  window.localStorage.setItem("cluesFound", number)
+  window.localStorage.setItem("cluesFound", number);
   console.log(window.localStorage.getItem("cluesFound"));
   alert("Du har fått nya ledtrådar");
 }
 
-
 function switchFunction(layout) {
+  let audioAmanda = [
+    "./audio/Amandadel1.mp3",
+    "./audio/Amandadel2.mp3",
+    "./audio/Amandadel3.mp3",
+    "./audio/Amandadel4.mp3",
+    "./audio/Amandadel5.mp3",
+    "./audio/Amandadel6.mp3",
+  ];
+
+  let audioPeter1 = [];
+
+  let audioPeter2 = [];
+
   switch (layout) {
     case "layout1":
       displayUpload();
       break;
     case "layout2":
-      addClues(4)
+      addClues(4);
       passwordFunction();
       break;
     case "layout3":
-      addClues(5)
-      displayImage("./uploads/kontoutdrag.png")
-      showEndMessage(true)
+      addClues(5);
+      displayImage("./uploads/kontoutdrag.png");
+      showEndMessage(true);
       break;
     case "layout4":
-      addClues(6)
-      displayImage("./uploads/Kvitto.png")
-      passwordFunction()
+      addClues(6);
+      displayImage("./uploads/Kvitto.png");
+      passwordFunction();
       break;
     case "layout5":
-      addClues(7)
+      addClues(7);
+      displayAudio(audioPeter1);
       break;
     case "layout6":
-      addClues(8)
+      addClues(8);
       break;
     case "layou7":
-        addClues(9)
-        break;
+      addClues(9);
+      break;
     case "layout8":
-      addClues(7)
-      passwordFunction()
+      addClues(7);
+      passwordFunction();
       break;
     case "layout9":
-      fakeCaptcha()
+      fakeCaptcha();
       break;
     case "layout10":
-      addClues(10)
+      addClues(10);
+      break;
+    case "layout11":
+      passwordFunction();
+      break;
+    case "layout12":
+      passwordFunction();
+      break;
+    case "layout13":
+      addClues(11);
+      createNextButton();
+      break;
+    case "layout14":
+      addClues(13);
+      displayAudio(audioAmanda);
+      break;
+    case "layout15":
+      addClues(14);
+      break;
+    case "layout16":
+      showEndMessage(true);
+      break;
+    case "layout17":
+      addClues(15);
+      showEndMessage(true);
       break;
     default:
       break;
   }
 }
 
-function fakeCaptcha(){
+function fakeCaptcha() {
   let captchas = document.querySelector("#content_div");
   //captcha.classList.add("captcha")
   captchas.innerHTML = `
@@ -448,34 +512,32 @@ function fakeCaptcha(){
   <div id="fake-checkbox"></div>
   Are you really a human?
   </div>
-  `
-  document.querySelector("body").appendChild(captchas)
-  
+  `;
+  document.querySelector("body").appendChild(captchas);
 
-var captcha = document.getElementById("fake-captcha");
+  var captcha = document.getElementById("fake-captcha");
 
-var passOrFail = function() {
-  var pass = Math.round(Math.random());
-  console.log(pass);
-  if(pass === 1){
-    addClues(7)
-    return "pass"
-  }
-}
+  var passOrFail = function () {
+    var pass = Math.round(Math.random());
+    console.log(pass);
+    if (pass === 1) {
+      addClues(7);
+      return "pass";
+    }
+  };
 
-captcha.onclick = function() {
-  if (captcha.className.includes("loading")) return;
-  
-  captcha.className = "";
-  
-  captcha.className += "loading";
-  
-  setTimeout(function() {
-    captcha.className = captcha.className.replace("loading", "");
-    captcha.className += passOrFail();
-  }, Math.floor((Math.random() * 3000) + 1000));
-  
-}
+  captcha.onclick = function () {
+    if (captcha.className.includes("loading")) return;
+
+    captcha.className = "";
+
+    captcha.className += "loading";
+
+    setTimeout(function () {
+      captcha.className = captcha.className.replace("loading", "");
+      captcha.className += passOrFail();
+    }, Math.floor(Math.random() * 3000 + 1000));
+  };
 }
 /*
 lägg in för rörlig bild

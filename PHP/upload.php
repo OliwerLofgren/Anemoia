@@ -3,7 +3,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_FILES["upload"])) {
         $tmp_name = $_FILES["upload"]["tmp_name"];
         $name = $_FILES["upload"]["name"];
-        $upload_folder = "uploads/";
+        $upload_folder = "../uploads/";
 
         
         if (!is_dir($upload_folder)) {
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 
 function updateJson() {
-    $filename = "./users.json"; 
+    $filename = "../users.json"; 
     $json = json_decode(file_get_contents($filename), true);
     
     foreach ($json as &$obj) {
