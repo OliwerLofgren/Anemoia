@@ -295,7 +295,6 @@ function displayContent(currentIndex) {
         }
         let text;
         const sender = Object.keys(message)[0];
-<<<<<<< Updated upstream
         const textContent = message[sender];
         if (content) {
           text = textContent.replace(
@@ -304,25 +303,16 @@ function displayContent(currentIndex) {
           );
         }
 
-        
-=======
-        const text = message[sender];
-
->>>>>>> Stashed changes
         console.log(text);
         if (sender === "Ljudfil") {
-          displayAudio();
+          displayAudio(text);
         }
         if (sender === "Spelare") {
           // Display user message
-          
+
           displayUserMessage(text);
         }
-<<<<<<< Updated upstream
-  console.log(sender);
-=======
         console.log(sender);
->>>>>>> Stashed changes
         if (sender === "Anemonia") {
           document.getElementById("nextButton").disabled = true;
           const messageContainer = document.getElementById("ai_content_p");
@@ -457,7 +447,6 @@ function switchFunction(layout) {
       break;
     case "layout5":
       addClues(7);
-      displayAudio(audioPeter1);
       break;
     case "layout6":
       addClues(8);
@@ -487,7 +476,7 @@ function switchFunction(layout) {
       break;
     case "layout14":
       addClues(13);
-      displayAudio(audioAmanda);
+      // displayAudio(audioAmanda);
       break;
     case "layout15":
       addClues(14);

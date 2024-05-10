@@ -1,7 +1,7 @@
 let currentAudioIndex = 0;
 
 function displayAudio(audioContent) {
-  let audio = new Audio(audioContent[currentAudioIndex]);
+  let audio = new Audio(audioContent);
   audio.controls = true;
 
   let nextButton = document.createElement("button");
@@ -42,3 +42,15 @@ let audioAmanda = [
 let audioPeter1 = [];
 
 let audioPeter2 = [];
+
+//Video
+function displayVideo(videoFilePath) {
+  let video = document.createElement("video");
+  video.src = videoFilePath;
+  video.controls = true;
+
+  let container = document.createElement("div");
+  container.appendChild(video);
+
+  document.body.appendChild(container);
+}
