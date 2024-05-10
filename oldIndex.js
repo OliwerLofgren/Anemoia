@@ -48,6 +48,7 @@ if (localStorage.getItem("username")) {
 //   return true;
 // }
 
+// displayAudio();
 
 function RenderStartingpage() {
   if (document.getElementById("content_img")) {
@@ -177,12 +178,7 @@ function continueToNextLayout() {
 
   window.location.href = `?layout=layout${keysFound}`;
 }
-function checkUpload() {
-  if (window.localStorage.getItem("upload") === "true") {
-    console.log("Upload key is true!");
-    showEndMessage();
-  }
-}
+
 function displayLayoutName() {
   const urlParams = new URLSearchParams(window.location.search);
   const layoutNumber = urlParams.get("layout").replace("layout", "");
@@ -224,8 +220,8 @@ function addKey() {
   }
 }
 
-
 function displayContent(currentIndex) {
+  // accessCheck();
   const layoutUrl = window.location.search.split("?layout=")[1];
   let aiDiv = document.getElementById("aiDiv");
 
@@ -233,18 +229,20 @@ function displayContent(currentIndex) {
     aiDiv = document.createElement("div");
     aiDiv.id = "aiDiv";
     aiDiv.innerHTML = `
-      <img id="content_img" src="./uploads/anemoia1.png"></img>
+      <img id="content_img" src="../uploads/anemoia1.png"></img>
       <div id="content_div">
         <p id="ai_content_p"></p>
       </div>
-      <div id="nextMessage" class="nextMessage" style="display:none;">
-        <button id="nextButton"></button>
+      
+      <div id="nextMessage" class="nextMessage">
+        <p id="user_content_p"></p>
       </div>
       <div id="user_options"></div>
+      
+    
     `;
     document.body.append(aiDiv);
   }
-
   if (layoutUrl === "layout10" && layout10Passed === false) {
     let helpMe = document.getElementById("helpButton");
     if (!helpMe) {
@@ -252,84 +250,115 @@ function displayContent(currentIndex) {
       helpMe.setAttribute("id", "helpButton");
       helpMe.textContent = "jag behöver hjälp";
       document.querySelector("#user_options").appendChild(helpMe);
-      helpMe.addEventListener("click", event => {
+      helpMe.addEventListener("click", (event) => {
         passwordFunction(currentIndex);
-      })
+      });
     }
   }
-
+  console.log(conversationPaused);
   if (conversationPaused === false) {
     for (let layoutContent in content) {
       if (layoutUrl === layoutContent) {
         const message = content[layoutContent][currentIndex];
         const container = document.getElementById("content_div");
 
-        if (!message) {
-          showEndMessage();
-          return;
-        }
-        const sender = Object.keys(message)[0];
-        const text = message[sender];
-        
-        console.log(text);
-        if(sender === "Ljudfil"){
-          displayAudio()
-        }
-        if (sender === "Spelare") {
-          // Display user message
-          displayUserMessage(text);
-        }
-console.log(sender);
-        if (sender === "Anemonia") {
-          const messageContainer = document.getElementById("ai_content_p");
-          let index = 0;
-          if(messageContainer.innerHTML !== ""){
-            console.log("content");
-            return;
-          }else{
-            console.log("no content");
+        console.log(message);
+
+        if (message === undefined || Object.keys(message).length == 0) {
+          console.log("hmm");
+          if (document.getElementById("nextMessage")) {
+            document.getElementById("nextMessage").style.display = "none";
           }
-          const interval = setInterval(() => {
-            if (index < text.length && conversationPaused === false) {
-              messageContainer.textContent += text[index];
-              index++;
-            } else {
-              clearInterval(interval);
-              let newMessage = content[layoutContent][currentIndex + 1];
-              let newSender = Object.keys(newMessage)[0];
-              let newText = newMessage[newSender];
-              
-              // Check if the next message is from the user
-              if (newSender === "Spelare") {
-                document.getElementById("nextButton").textContent = newText;
-                messageIndex++
-              } else {
-                console.log("AI");
-                document.getElementById("nextButton").textContent = "Next";
-              }
-              
-              document.getElementById("nextMessage").style.display = "block";
-              document.getElementById("nextButton").addEventListener("click", event => {
-                conversationPaused = false;
-                //messageContainer.innerHTML = ""
-                
-                displayContent(messageIndex);
-              });
+          showEndMessage();
+        } else {
+          let replacedContent;
+          const sender = Object.keys(message)[0];
+          const text = message[sender];
+          if (text) {
+            replacedContent = text.replace(
+              /USER/g,
+              window.localStorage.getItem("username")
+            );
+          }
+
+          if (sender === "Spelare") {
+            console.log(replacedContent);
+            displayUserMessage(replacedContent);
+          }
+          if (sender === "Anemonia") {
+            document.getElementById("nextMessage").style.display = "none";
+            document.getElementById("ai_content_p").style.opacity = "100%";
+
+            const messageContainer = document.getElementById("ai_content_p");
+            const messageElement = document.createElement("div");
+            messageElement.classList.add("message", sender.toLowerCase());
+            console.log(messageElement);
+
+            let index = 0;
+            if (
+              index === replacedContent.length &&
+              conversationPaused === false
+            ) {
+              document.getElementById("ai_content_p").textContent = "";
+              setInterval(() => {
+                console.log("jife");
+              }, 1000);
             }
-          }, 50);
+            const interval = setInterval(() => {
+              if (
+                index < replacedContent.length &&
+                conversationPaused === false
+              ) {
+                messageContainer.textContent += replacedContent[index];
+                index++;
+              } else {
+                if (
+                  replacedContent ===
+                  ".--- .- --. / ..-. .--.- .-. / . .--- / ... ...- .- .-. .- / .--. .--.- / -.. . - - .--"
+                ) {
+                  conversationPaused = true;
+                }
+                if (replacedContent === "SPECIAL LAYOUT!") {
+                  let alt1 = document.createElement("div");
+                  let alt2 = document.createElement("div");
+
+                  alt1.classList.add("nextMessage");
+                  alt1.textContent = "Option 1";
+                  alt1.addEventListener("click", (event) => {
+                    window.location.href = `?layout=layout7`;
+                    displayContent(0);
+                  });
+
+                  alt2.classList.add("nextMessage");
+                  alt2.textContent = "Option 2";
+                  alt2.addEventListener("click", (event) => {
+                    window.location.href = `?layout=layout8`;
+                    displayContent(0);
+                  });
+
+                  document.querySelector("#user_options").append(alt1, alt2);
+                }
+                clearInterval(interval);
+                if (
+                  document.getElementById("user_content_p").textContent === ""
+                ) {
+                  setTimeout(() => {
+                    messageIndex++;
+                    displayContent(messageIndex);
+                  }, 800);
+                }
+              }
+            }, 50);
+          }
         }
       }
     }
   }
 }
 
-
-
-
-
 function displayUserMessage(text) {
   document.getElementById("nextMessage").style.display = "flex";
-  document.getElementById("nextButton").textContent = text;
+  document.getElementById("user_content_p").textContent = text;
   if (text === undefined) {
     showEndMessage();
   }
@@ -338,17 +367,17 @@ if (document.getElementById("nextMessage")) {
   document.getElementById("nextMessage").addEventListener("click", (event) => {
     messageIndex++;
     document.getElementById("ai_content_p").innerHTML = "";
-    //document.getElementById("user_content_p").innerHTML = ``;
+    document.getElementById("user_content_p").innerHTML = ``;
 
     displayContent(messageIndex);
   });
 }
 
 function showEndMessage(check) {
-  if(check !== true){
-    switchFunction(window.location.search.split("?layout=")[1])
+  if (check !== true) {
+    switchFunction(window.location.search.split("?layout=")[1]);
   }
-  if(check === true){
+  if (check === true) {
     console.log("hfu");
     setTimeout(() => {
       const aiContentP = document.getElementById("ai_content_p");
@@ -357,34 +386,29 @@ function showEndMessage(check) {
       aiContentP.textContent = "Skanna nästa QR-kod för att fortsätta!";
     }, 600);
   }
-  
-  
+
   console.log("YO WTF IS HAPPENING?");
-  
 }
-
-
 
 function displayImage(url) {
   document.querySelector("body").innerHTML = `
-  <img id="content_img" class="display_image" src="./uploads/anemoia.png"></img>
+  <img id="content_img" class="display_image" src="../uploads/anemoia.png"></img>
   <img id="image" src="${url}"></img>
   <div id="content_div">
         <p id="ai_content_p"></p>
       </div>
   <button id="removeImage">Stäng ner bilden</button>
   <button id="goHome">Go Home!</button>`;
-  document.getElementById("removeImage").addEventListener("click", event => {
-    document.getElementById("image").remove()
-  })
+  document.getElementById("removeImage").addEventListener("click", (event) => {
+    document.getElementById("image").remove();
+  });
 }
-function addClues(number){
+function addClues(number) {
   //let numClues = parseInt(window.localStorage.getItem("cluesFound"));
-  window.localStorage.setItem("cluesFound", number)
+  window.localStorage.setItem("cluesFound", number);
   console.log(window.localStorage.getItem("cluesFound"));
   alert("Du har fått nya ledtrådar");
 }
-
 
 function switchFunction(layout) {
   switch (layout) {
@@ -392,44 +416,68 @@ function switchFunction(layout) {
       displayUpload();
       break;
     case "layout2":
-      addClues(4)
+      addClues(4);
       passwordFunction();
       break;
     case "layout3":
-      addClues(5)
-      displayImage("./uploads/kontoutdrag.png")
-      showEndMessage(true)
+      addClues(5);
+      displayImage("./uploads/kontoutdrag.png");
+      showEndMessage(true);
       break;
     case "layout4":
-      addClues(6)
-      displayImage("./uploads/Kvitto.png")
-      passwordFunction()
+      addClues(6);
+      displayImage("./uploads/Kvitto.png");
+      passwordFunction();
       break;
     case "layout5":
-      addClues(7)
+      addClues(7);
       break;
     case "layout6":
-      addClues(8)
+      addClues(8);
       break;
     case "layou7":
-        addClues(9)
-        break;
+      addClues(9);
+      break;
     case "layout8":
-      addClues(7)
-      passwordFunction()
+      addClues(7);
+      passwordFunction();
       break;
     case "layout9":
-      fakeCaptcha()
+      fakeCaptcha();
       break;
     case "layout10":
-      addClues(10)
+      addClues(10);
+      break;
+    case "layout11":
+      passwordFunction();
+      break;
+    case "layout12":
+      passwordFunction();
+      break;
+    case "layout13":
+      addClues(11);
+      //Här ska man komma till nästa layout genom user_content_p
+      break;
+    case "layout14":
+      addClues(13);
+      displayAudio();
+      break;
+    case "layout15":
+      addClues(14);
+      break;
+    case "layout16":
+      showEndMessage(true);
+      break;
+    case "layout17":
+      addClues(15);
+      showEndMessage(true);
       break;
     default:
       break;
   }
 }
 
-function fakeCaptcha(){
+function fakeCaptcha() {
   let captchas = document.querySelector("#content_div");
   //captcha.classList.add("captcha")
   captchas.innerHTML = `
@@ -437,34 +485,32 @@ function fakeCaptcha(){
   <div id="fake-checkbox"></div>
   Are you really a human?
   </div>
-  `
-  document.querySelector("body").appendChild(captchas)
-  
+  `;
+  document.querySelector("body").appendChild(captchas);
 
-var captcha = document.getElementById("fake-captcha");
+  var captcha = document.getElementById("fake-captcha");
 
-var passOrFail = function() {
-  var pass = Math.round(Math.random());
-  console.log(pass);
-  if(pass === 1){
-    addClues(7)
-    return "pass"
-  }
-}
+  var passOrFail = function () {
+    var pass = Math.round(Math.random());
+    console.log(pass);
+    if (pass === 1) {
+      addClues(7);
+      return "pass";
+    }
+  };
 
-captcha.onclick = function() {
-  if (captcha.className.includes("loading")) return;
-  
-  captcha.className = "";
-  
-  captcha.className += "loading";
-  
-  setTimeout(function() {
-    captcha.className = captcha.className.replace("loading", "");
-    captcha.className += passOrFail();
-  }, Math.floor((Math.random() * 3000) + 1000));
-  
-}
+  captcha.onclick = function () {
+    if (captcha.className.includes("loading")) return;
+
+    captcha.className = "";
+
+    captcha.className += "loading";
+
+    setTimeout(function () {
+      captcha.className = captcha.className.replace("loading", "");
+      captcha.className += passOrFail();
+    }, Math.floor(Math.random() * 3000 + 1000));
+  };
 }
 /*
 lägg in för rörlig bild
