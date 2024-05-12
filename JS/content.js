@@ -158,22 +158,20 @@ const content = {
   ],
   layout4: [
     {
-      Bild: "kontouttrdag"
+      Bild: "../uploads/Kontoutdrag.png"
     },
-  {
-    Anemonia:
-      "Det verkar som att Johannes haft ett möte med en annan person, om han inte köpt fika till två andra. Johannes köper ofta en kaffe och en kanelbulle.",
-  },
-  {
-    Spelare: "Då måste morotskakan vara till pjotur895? Vem är det?",
-  },
-
+    {
+      Anemonia: "Det verkar som att Johannes haft ett möte med en annan person, om han inte köpt fika till två andra. Johannes köper ofta en kaffe och en kanelbulle.",
+    },
+    {
+      Spelare: "Då måste morotskakan vara till pjotur895? Vem är det?",
+    },
+    //FIXA NÅTT HÄR!
     {
       Anemonia: `Jag håller med. Enligt insamlad data och din inmatning verkar "peter" vara en relevant kontakt för att utforska möjliga sammanhang. Jag föreslår att vi ringer honom för ytterligare insikter.`,
     },
     {
-      Anemonia:
-        "Jag har hittat Peters mobilnummer på MrKoll. Peter Nowicki är född i maj 1989, vilket skulle passa med användarnamnet dessutom.",
+      Anemonia:"Jag har hittat Peters mobilnummer på MrKoll. Peter Nowicki är född i maj 1989, vilket skulle passa med användarnamnet dessutom.",
     },
     {
       Anemonia: "Godkänner du att jag ringer honom?",

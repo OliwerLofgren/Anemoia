@@ -385,12 +385,14 @@ function displayContent(currentIndex) {
 function displayUserMessage(text) {
   document.getElementById("nextMessage").style.display = "flex";
   document.getElementById("nextButton").textContent = text;
+  console.log(text);
   if (text === undefined) {
     showEndMessage();
   }
 }
-if (document.getElementById("nextMessage")) {
-  document.getElementById("nextMessage").addEventListener("click", (event) => {
+if (document.getElementById("nextButton")) {
+  console.log("här");
+  document.getElementById("nextButton").addEventListener("click", (event) => {
     messageIndex++;
     document.getElementById("ai_content_p").innerHTML = "";
     //document.getElementById("user_content_p").innerHTML = ``;
