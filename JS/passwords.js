@@ -1,5 +1,5 @@
 const passWords = {
-  layout2: "carl",
+  layout2: "861",
   layout4: "peter",
   layout8: "idkyet",
   layout10: "aiomen"

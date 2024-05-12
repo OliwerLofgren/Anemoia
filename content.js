@@ -54,7 +54,7 @@ const content = {
       Spelare: "Loggarna och schemat ser märkliga ut",
     },
     {
-      Anemonia: "hfehfi",
+      Anemonia: "hfehfi"
     },
     {
       Spelare: "Vad kan det betyda?",

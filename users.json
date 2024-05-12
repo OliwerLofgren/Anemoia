@@ -7,5 +7,14 @@
         "indications": 0,
         "keysFound": 0,
         "upload": "true"
+    },
+    {
+        "id": 2,
+        "username": "hatar_tjejer1",
+        "password": "123",
+        "access": "true",
+        "indications": 0,
+        "keysFound": 0,
+        "upload": "false"
     }
 ]

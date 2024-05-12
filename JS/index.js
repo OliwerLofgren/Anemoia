@@ -332,6 +332,11 @@ function displayContent(currentIndex) {
               messageContainer.textContent += text[index];
               index++;
             } else {
+              if (
+                text === ".--- .- --. / ..-. .--.- .-. / . .--- / ... ...- .- .-. .- / .--. .--.- / -.. . - - .--"
+              ) {
+                conversationPaused = true;
+              }
               clearInterval(interval);
               document.getElementById("nextButton").disabled = false;
               let newMessage = content[layoutContent][currentIndex + 1];
@@ -421,9 +426,9 @@ function switchFunction(layout) {
   switch (layout) {
     case "layout1":
       displayUpload();
+      addClues(4);
       break;
     case "layout2":
-      addClues(4);
       passwordFunction();
       break;
     case "layout3":
