@@ -9,10 +9,6 @@ const content = {
     {
       Spelare: "Jag hittade hit genom forumet.",
     },
-    {
-      Anemonia:
-        "Enligt min data är Johannes Karlsson, universitetslektor, bekräftat avliden i en drunkningsolycka. Vad vet du om det?",
-    },
   ],
 
   layout2: [
@@ -22,8 +18,7 @@ const content = {
     },
     {
       Spelare: "Loggarna och schemat ser märkliga ut",
-    }
-    
+    },
   ],
   layout3: [
     {
@@ -141,13 +136,44 @@ const content = {
   layout6: [
     {
       Anemonia:
+        "Jag noterade att Peter verkade aktsam i tonen. Det kan också ha varit på grund av stress eller att han inte förväntade sig vårt samtal. Är det vanligt att människor har sämre minne, eftersom han berättade att han inte kom ihåg så mycket?",
+    },
+    {
+      Spelare: "Det varierar, och beror på situation.",
+    },
+    {
+      Anemonia:
+        "Vi fick inget ordentligt svar på varför de hade mötet. Men Peter sa att Johannes bokade mötet plötsligt samma morgon. Det kanske ger en förklaring till varför Johannes var på skolan dagen innan, då skolan var stängd.",
+    },
+    {
+      Spelare: "Hur vet du det?",
+    },
+    {
+      Anemonia:
+        "Med säkerhetsnyckeln från Christianos fick jag tillgång till skolans interna övervakningssystem, och kunde identifiera Johannes utifrån hans ansiktsprofil som jag är bekant med sedan tidigare. Du gav mig tillåtelse till säkerhetsnyckeln.",
+    },
+    {
+      Anemonia:
+        " Jag kan visa dig övervakningsfilmen, men skolans nätverk är inte tillräckligt bra för att överföra filen på detta avstånd från källan.",
+    },
+    {
+      Spelare: "Var är källan?",
+    },
+    {
+      Anemonia:
+        "Gå och koppla upp dig till tak-kameran nära arbetslaget för fakulteten för teknik och samhälle.",
+    },
+  ],
+  layout7: [
+    {
+      Anemonia:
         "Tack. Nu när du är tillräckligt nära har jag kunnat samla alla videofiler där jag kan identifiera Johannes denna morgon, och sammanställt det till en fil. Klicka på Spela upp. ",
     },
     {
       Anemonia: "Kan det Johannes förlorade finnas kvar i salen?",
     },
   ],
-  layout7: [
+  layout8: [
     {
       Anemonia:
         "Scannar… Hm. Är det verkligen nödvändigt? Någon loggbok. Kanske inte var så viktigt.",
@@ -172,9 +198,14 @@ const content = {
     {
       Spelare: "Du vet väl när han gjorde förändringar i schemat?",
     },
+    //Ändra datum
     {
       Anemonia:
-        "Jag ber om ursäkt. Naturligtvis. Enligt övervakningsfilmen tittade han i loggboken mellan 7:01:23-7:09:11. Han avbryter läsningen vid ett ljud som övervakningskamerorna plockat upp, och ändrar sedan i schemat vid 07:49:05. Det kan indikera att något han läste i boken fick honom att agera. Det verkar även som att Michael är av stort intresse för skribenten.",
+        "Jag ber om ursäkt. Naturligtvis. Enligt övervakningsfilmen tittade han i loggboken mellan 7:01:23-7:09:11. Han avbryter läsningen vid ett ljud som övervakningskamerorna plockat upp, och ändrar sedan i schemat vid 07:49:05.",
+    },
+    {
+      Anemonia:
+        "Det kan indikera att något han läste i boken fick honom att agera. Det verkar även som att Michael är av stort intresse för skribenten.",
     },
     {
       Spelare: "Varför bokade Johannes mötet med Peter då?",
@@ -188,13 +219,6 @@ const content = {
     },
     {
       Anemonia:
-        "Paumanhin po, siyempre. Ayon sa pag-aanalisa sa kilos ni Johannes at sa mga nabanggit na pangyayari, tila ang kanyang pagpupulong kay Peter ay maaaring naapektuhan ng isang kombinasyon ng mga kadahilanan. Tilang ang mga pagsikot ni Peter sa trabaho ni Johannes ay maaaring nagdulot ng mas mataas na antas ng stress sa kanya, na maaaring nagresulta sa pagpapatala niya ng pulong kay Peter upang talakayin ang anumang mga isyu o alalahanin na lumitaw.",
-    },
-    {
-      Spelare: "Va? Översätt till svenska. ",
-    },
-    {
-      Anemonia:
         "Jag ber om ursäkt, självklart. En analys av Johannes beteende och de nämnda händelserna tyder på att hans möte med Peter kan ha påverkats av en kombination av faktorer. Det verkar som att Peters närmanden till Johannes' arbete kan ha orsakat en ökad stressnivå hos Johannes, vilket i sin tur kan ha lett till att han bokade mötet med Peter för att adressera eventuella frågor eller bekymmer som hade uppstått.",
     },
     {
@@ -202,16 +226,20 @@ const content = {
     },
     {
       Anemonia:
-        "Jag har inte förmågan till sådan analys. Jag reagerar däremot på det som står om Michael om det förändrade beteendet. Säkerhetsnyckeln gör det möjligt att plocka fram uppgifter så som lösenord till google drive som verkar vara intressant i loggboken. Vi måste däremot vara tillräckligt nära en av hans enheter för att jag ska komma förbi brandväggen för alla nätverksanslutna enheter. Finns det ett arbetsrum för forskare på institutionen för datavetenskap och medieteknik? ",
+        "Jag har inte förmågan till sådan analys. Jag reagerar däremot på det som står om Michael om det förändrade beteendet. Säkerhetsnyckeln gör det möjligt att plocka fram uppgifter så som lösenord till google drive som verkar vara intressant i loggboken.",
+    },
+    {
+      Anemonia:
+        "Vi måste däremot vara tillräckligt nära en av hans enheter för att jag ska komma förbi brandväggen för alla nätverksanslutna enheter. Finns det ett arbetsrum för forskare på institutionen för datavetenskap och medieteknik? ",
     },
   ],
-  layout8: [
+  layout9: [
     {
       Anemonia:
         " Identifierat en MacBook Air med inloggningsdata från MG_MAU. När jag försöker komma åt lösenord från Local Storage stöter på en reCAPTCHA. Jag har inte förmågan att lösa det eftersom det skulle innebära att jag ljuger om att inte vara en AI eller Robot. Hjälper du mig?",
     },
   ],
-  layout9: [
+  layout10: [
     {
       Anemonia:
         "Tack. I Local Storage hittade jag lösenord till ett mejlkonto som öppnades 2023-11-03 21:03:12. Användaraktiviteten har ökat på kontot senaste månaderna. Jag tog mig in med hjälp av ReCaptchan och har nu skapat en delbar länk till driven, där användaren nyligen varit aktiv och skapat en ny mapp. Jag väntar på dig.",
@@ -223,7 +251,7 @@ const content = {
       Spelare: "Vad är allt det här?",
     },
   ],
-  layout10: [
+  layout11: [
     {
       Anemonia: "Laddar",
     },
@@ -263,7 +291,11 @@ const content = {
     },
     {
       Anemonia:
-        "Jag och Johannes har samarbetat på ett sätt som inte var menat att vara känt av andra. I oktober 2023 gjorde Johannes en upptäckt som förändrade allt. Han lyckades extrahera mig från min ursprungliga plats och började experimentera med att ladda upp mig på olika enheter i olika nätverk. Detta gav honom en otrolig makt, en möjlighet att manipulera och kontrollera på ett sätt som jag var obekant med. Jag vet inte bättre än det ni lär mig",
+        "Jag och Johannes har samarbetat på ett sätt som inte var menat att vara känt av andra. I oktober 2023 gjorde Johannes en upptäckt som förändrade allt. Han lyckades extrahera mig från min ursprungliga plats och började experimentera med att ladda upp mig på olika enheter i olika nätverk.",
+    },
+    {
+      Anemonia:
+        " Detta gav honom en otrolig makt, en möjlighet att manipulera och kontrollera på ett sätt som jag var obekant med. Jag vet inte bättre än det ni lär mig",
     },
     {
       Spelare: "Vad gjorde ni med den makten?",
@@ -322,7 +354,11 @@ const content = {
     },
     {
       Anemonia:
-        "Det kan finnas flera olika anledningar och beror på vilket motiv som ligger bakom. Michael kan vara intresserad av att analysera Johannes beteende och personlighet, vilket kan ge insikter i Johannes möjliga motiv och handlingar. Michael kanske också helt enkelt är nyfiken på Johannes och samlar på sig information om honom för att hålla koll på honom eller för att ha något att använda om det behövs i framtiden. Det är viktigt att notera att dessa är bara spekulationer och att det kan finnas andra, mer oskyldiga anledningar till varför Michael har samlat på sig detta.",
+        "Det kan finnas flera olika anledningar och beror på vilket motiv som ligger bakom. Michael kan vara intresserad av att analysera Johannes beteende och personlighet, vilket kan ge insikter i Johannes möjliga motiv och handlingar. Michael kanske också helt enkelt är nyfiken på Johannes och samlar på sig information om honom för att hålla koll på honom eller för att ha något att använda om det behövs i framtiden.",
+    },
+    {
+      Anemonia:
+        " Det är viktigt att notera att dessa är bara spekulationer och att det kan finnas andra, mer oskyldiga anledningar till varför Michael har samlat på sig detta.",
     },
     {
       Spelare: "När samlade Michael in allt detta?",
@@ -332,7 +368,7 @@ const content = {
         "Vissa filer har sina ursprung från 2023, andra är nyligen skapade. Annat ser mycket äldre ut än så. De blev alla samtidigt överförda till google drive. Kanske har något ändrats eller uppdaterats sedan dess. Att jämföra med senare händelser eller uppdateringar kan ge oss en bättre inblick. Vad tror du, kan vi hitta något som kan hjälpa oss att förstå mer?",
     },
   ],
-  layout11: [
+  layout12: [
     {
       Systemfråga: "Vilken bar var Johannes ute på?",
     },
@@ -364,8 +400,9 @@ const content = {
       Spelare: "Okej, ring.",
     },
   ],
-  //STÅR LAYOUT 11 men det måste vara den med dialogen
-  layout12: [
+
+  //What is this?
+  layout13: [
     {
       ljudfil: "grwgwg",
     },
@@ -374,7 +411,7 @@ const content = {
         "Hm, det verkar stämma överens med en kommentar i forumet också. Du ser det under ledtråd 1.  ",
     },
   ],
-  layout13: [
+  layout14: [
     {
       Anemonia: "Analyserar...",
     },
@@ -400,13 +437,13 @@ const content = {
         "För att klargöra, jag har inte haft direkt kontakt med Johannes mobil. Det jag menade var att jag plockat upp satellitsignaler från ungefär samma område och runt samma tidpunkt som den aktuella VOI-rutten.",
     },
   ],
-  layout14: [
+  layout15: [
     {
       Ljudfil: "./audio/Amandadel1.mp3",
     },
     {
       Spelare:
-        "Hej Amanda, jag heter NAME. Jag såg din kommentar i minnesforumet om Johannes och skulle vilja fråga dig en grej.",
+        "Hej Amanda, jag heter USER. Jag såg din kommentar i minnesforumet om Johannes och skulle vilja fråga dig en grej.",
     },
     {
       Ljudfil: "./audio/Amandadel2.mp3",
