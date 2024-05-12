@@ -48,7 +48,8 @@ function loginFunction(event) {
         window.localStorage.setItem("upload", "false");
         window.localStorage.setItem("cluesFound", 0);
 
-        RenderStartingpage();
+        //RenderStartingpage();
+        continueToNextLayout()
       } else {
         console.log("login failed");
         document.getElementById("loginMessage").textContent = resource.message;

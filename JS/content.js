@@ -68,7 +68,10 @@ const content = {
     },
     {
       Anemonia:
-        "Det ovanliga inloggningsbeteenden kan tyda på försök till obehörig åtkomst eller manipulation av systemet. Raderade meddelanden gör det svårt att avgöra, men en vanlig inloggningssession pågår vanligtvis längre intervaller. Användare har även använt admincommands för att rensa och återställa loggarna, vilket tyder på man försöker dölja ett beteende. Är det ett vanligt beteende bland människor att vilja dölja och återställa information?",
+        "Det ovanliga inloggningsbeteenden kan tyda på försök till obehörig åtkomst eller manipulation av systemet. Raderade meddelanden gör det svårt att avgöra, men en vanlig inloggningssession pågår vanligtvis längre intervaller.",
+    },
+    {
+      Anemonia: "Användare har även använt admincommands för att rensa och återställa loggarna, vilket tyder på man försöker dölja ett beteende. Är det ett vanligt beteende bland människor att vilja dölja och återställa information?",
     },
     {
       Spelare:
@@ -145,11 +148,11 @@ const content = {
         "Din enhet har samma bank som Johannes, vilket tillät mig att komma åt Johannes korthistorik. Ytterligare information från internet bekräftar att det är vanligt att undersöka korthistorik hos poliser. Här ser du utdraget.",
     },
     {
-      Bild: "Kvitto"
+      Bild: "../uploads/Kvitto.png"
     },
     {
       Anemonia:
-        "Anemonia: Utifrån korthistoriken verkar Johannes ha besökt Café Niagara i nära anslutning till det aktuella mötet. Det är en ovanligt hög summa, avvikande från det genomsnittliga utgifterna för samma plats under det senaste året, vilket låg på 31 kronor.",
+        "Utifrån korthistoriken verkar Johannes ha besökt Café Niagara i nära anslutning till det aktuella mötet. Det är en ovanligt hög summa, avvikande från det genomsnittliga utgifterna för samma plats under det senaste året, vilket låg på 31 kronor.",
     },
     
   ],
@@ -477,6 +480,9 @@ const content = {
 
   //What is this?
   layout13: [
+    {
+      Anemonia: "ringring"
+    },
     {
       ljudfil: "grwgwg",
     },

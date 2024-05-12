@@ -1,4 +1,4 @@
-// window.localStorage.clear();
+//window.localStorage.clear();
 if (localStorage.getItem("access") === "false") {
   accessCheck();
 }
@@ -258,7 +258,7 @@ function displayContent(currentIndex) {
     aiDiv = document.createElement("div");
     aiDiv.id = "aiDiv";
     aiDiv.innerHTML = `
-      <img id="content_img" src="../uploads/anemoia1.png"></img>
+      <img id="content_img" src="../uploads/ai.gif"></img>
       <div id="content_div">
         <p id="ai_content_p"></p>
       </div>
@@ -266,11 +266,12 @@ function displayContent(currentIndex) {
         <button id="nextButton"></button>
       </div>
       <div id="user_options"></div>
+      
     `;
     document.body.append(aiDiv);
   }
 
-  if (layoutUrl === "layout10" && layout10Passed === false) {
+  if (layoutUrl === "layout11" && layout10Passed === false) {
     let helpMe = document.getElementById("helpButton");
     if (!helpMe) {
       helpMe = document.createElement("p");
@@ -302,8 +303,13 @@ function displayContent(currentIndex) {
             window.localStorage.getItem("username")
           );
         }
-
+        document.getElementById("content_img").style.opacity = "1"
+        document.getElementById("ai_content_p").style.opacity = "1"
         console.log(text);
+        if(sender === "Bild"){
+         messageIndex++
+          displayImage(text, messageIndex)
+        }
         if (sender === "Ljudfil") {
           document.getElementById("ai_content_p").style.opacity = "0";
           if (document.getElementById("audio")) {
@@ -317,6 +323,7 @@ function displayContent(currentIndex) {
           displayUserMessage(text);
         }
         console.log(sender);
+
         if (sender === "Anemonia") {
           document.getElementById("nextButton").disabled = true;
           const messageContainer = document.getElementById("ai_content_p");
@@ -335,10 +342,16 @@ function displayContent(currentIndex) {
               if (
                 text === ".--- .- --. / ..-. .--.- .-. / . .--- / ... ...- .- .-. .- / .--. .--.- / -.. . - - .--"
               ) {
+                console.log("hmm");
+                //document.getElementById("nextButton").disabled = true;
                 conversationPaused = true;
               }
               clearInterval(interval);
               document.getElementById("nextButton").disabled = false;
+              
+              if(content[layoutContent][currentIndex + 1] === undefined){
+                showEndMessage(true)
+              }
               let newMessage = content[layoutContent][currentIndex + 1];
               let newSender = Object.keys(newMessage)[0];
               let newText = newMessage[newSender];
@@ -356,7 +369,7 @@ function displayContent(currentIndex) {
               document
                 .getElementById("nextButton")
                 .addEventListener("click", (event) => {
-                  conversationPaused = false;
+                  //conversationPaused = false;
                   //messageContainer.innerHTML = ""
 
                   displayContent(messageIndex);
@@ -402,7 +415,7 @@ function showEndMessage(check) {
   console.log("YO WTF IS HAPPENING?");
 }
 
-function displayImage(url) {
+function displayImage(url, index) {
   document.querySelector("body").innerHTML = `
   <img id="content_img" class="display_image" src="./uploads/anemoia.png"></img>
   <img id="image" src="${url}"></img>
@@ -413,13 +426,17 @@ function displayImage(url) {
   <button id="goHome">Go Home!</button>`;
   document.getElementById("removeImage").addEventListener("click", (event) => {
     document.getElementById("image").remove();
+    document.querySelector("body").innerHTML = ""
+    displayContent(index)
   });
+  document.getElementById("content_img").style.opacity = "0"
+  document.getElementById("ai_content_p").style.opacity = "0"
 }
 function addClues(number) {
   //let numClues = parseInt(window.localStorage.getItem("cluesFound"));
   window.localStorage.setItem("cluesFound", number);
   console.log(window.localStorage.getItem("cluesFound"));
-  alert("Du har fått nya ledtrådar");
+ 
 }
 
 function switchFunction(layout) {

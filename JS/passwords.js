@@ -2,7 +2,8 @@ const passWords = {
   layout2: "861",
   layout4: "peter",
   layout8: "9691",
-  layout10: "aiomen",
+  layout11: "aiomen",
+  layout12:"lionbar"
 };
 
 function passwordFunction(currentIndex) {
@@ -33,12 +34,12 @@ function checkPassword(event) {
 
   if (passWords[layoutUrl] === document.getElementById("passwordInput").value) {
     foundPassword = true;
-    if (layoutUrl === "layout10") {
-      document.querySelector("#ai_content_p").innerHTML = "";
-      document.getElementById("checkPassword").remove();
+    if (layoutUrl === "layout11") {
+    
       layout10Passed = true;
       conversationPaused = false;
-      displayContent(index);
+      document.body.innerHTML = ""
+      displayContent(index + 2);
       return true;
     }
     window.location.href = `?layout=layout${numLayout + 1}`;
