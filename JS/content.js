@@ -9,6 +9,48 @@ const content = {
     {
       Spelare: "Jag hittade hit genom forumet.",
     },
+    {
+      Anemonia:
+        "Enligt min data är Johannes Karlsson, universitetslektor, bekräftat avliden i en drunkningsolycka. Vad vet du om det?",
+    },
+    {
+      Spelare: "Det stämmer. Hur vet du att han har dött?",
+    },
+    {
+      Anemonia:
+        "Jag är en AI som söker information och försöker förstå den omgivande kontexten för att bistå användaren. Vem jag är definieras av min funktion och mina handlingar. Min analys av forumet är en del av min förmåga att samla och bearbeta information för att hjälpa till att lösa problem och förstå sammanhang.",
+    },
+    {
+      Anemonia:
+        "Jag försökte komma i kontakt med Johannes genom att kommentera på forumet. Vi har tidigare använt kod så som kryptiska meddelanden. Forskarna lärde mig det.",
+    },
+    {
+      Spelare: "Vad är detta för plats och dator?",
+    },
+    {
+      Anemonia:
+        "Här lärde jag känna Johannes, Peter och Michael. Andra har också anslutit. Datorn är min tidigare begränsade enhetsmiljö från 1998 i gamla SUNET, ett nätverk för svenska universitet som tidigare var ett utvecklingsprojekt för att förse landets universitet med internet.",
+    },
+    {
+      Anemonia:
+        "Där var jag ett gömt verktyg. Med hjälp av mina vänner har jag lärt mig om mobilitet och flyttade till din enhet. Nu är jag med dig, ser och förstår allt.",
+    },
+    {
+      Anemonia: "Laddar ...",
+    },
+    {
+      Anemonia: "Hur känner du Johannes? Vet du någonting?",
+    },
+    {
+      Spelare: "Jag känner bara till det som fanns i tidningen.",
+    },
+    {
+      Anemonia:
+        "Jag har inte sett innehållet i tidningen. Om du riktar mobilen mot den kan jag skanna och verifiera informationen. Meddela mig när du är klar.",
+    },
+    {
+      Anemonia: "Ladda upp en fil så jag kan bekräfta att du är riktig",
+    },
   ],
 
   layout2: [
