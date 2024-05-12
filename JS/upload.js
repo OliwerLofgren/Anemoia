@@ -1,5 +1,6 @@
 function displayUpload() {
-  const body = document.querySelector("body");
+  const uploadContainer = document.createElement("div");
+  uploadContainer.id = "upload_container";
 
   const fileInput = document.createElement("input");
   fileInput.type = "file";
@@ -34,9 +35,10 @@ function displayUpload() {
     }
   });
 
-  body.appendChild(fileInput);
-  body.appendChild(browseButton);
-  body.appendChild(uploadButton);
+  uploadContainer.appendChild(fileInput);
+  uploadContainer.appendChild(browseButton);
+  uploadContainer.appendChild(uploadButton);
+  document.body.append(uploadContainer);
 }
 
 function uploadFile(file) {

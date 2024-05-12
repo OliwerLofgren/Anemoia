@@ -72,7 +72,7 @@ function RenderStartingpage() {
   }
 
   document.querySelector("body").innerHTML = `
-  <h1>Välkommen till Anomeia</h1>
+  <h1>Välkommen till Anemonia</h1>
   <h3>${username}</h3>
   <select id="dialogSelect" >
     ${optionsHTML}
@@ -111,7 +111,7 @@ function RenderStartingpage() {
     document.getElementById("scan_p").innerHTML = "";
   }
 }
-
+// displayVideo("./audio/Overvakning.mp4");
 function goToClues(clueIndex) {
   console.log(clueIndex);
 

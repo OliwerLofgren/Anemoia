@@ -30,6 +30,7 @@ function displayVideo(videoFilePath) {
   let video = document.createElement("video");
   video.src = videoFilePath;
   video.controls = true;
+  video.id = "video";
 
   let container = document.createElement("div");
   container.appendChild(video);

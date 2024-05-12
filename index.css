@@ -192,7 +192,6 @@ input {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 200px;
   height: auto;
   border-radius: 5px;
   align-items: center;
@@ -208,7 +207,9 @@ input {
   cursor: pointer;
   border-radius: 5px;
 }
-
+#nextButton {
+  width: auto;
+}
 .lines {
   width: 100px;
   border: 1px solid #9ed644;
@@ -374,4 +375,15 @@ select {
   position: absolute;
   top: 350px;
   left: 80px;
+}
+
+#video {
+  height: auto;
+  width: 400px;
+}
+
+#upload_container {
+  position: absolute;
+  top: 50%;
+  left: 130px;
 }
