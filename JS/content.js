@@ -166,7 +166,7 @@ const content = {
     {
       Spelare: "Då måste morotskakan vara till pjotur895? Vem är det?",
     },
-    //FIXA NÅTT HÄR!
+    //FIXA NÅTT H
     {
       Anemonia: `Jag håller med. Enligt insamlad data och din inmatning verkar "peter" vara en relevant kontakt för att utforska möjliga sammanhang. Jag föreslår att vi ringer honom för ytterligare insikter.`,
     },
@@ -240,7 +240,10 @@ const content = {
         "Gå och koppla upp dig till tak-kameran nära arbetslaget för fakulteten för teknik och samhälle.",
     },
   ],
-  layout7: [
+  layout7:[
+
+  ],
+  layout8: [
     {
       Anemonia:
         "Tack. Nu när du är tillräckligt nära har jag kunnat samla alla videofiler där jag kan identifiera Johannes denna morgon, och sammanställt det till en fil. Klicka på Spela upp. ",
@@ -249,7 +252,7 @@ const content = {
       Anemonia: "Kan det Johannes förlorade finnas kvar i salen?",
     },
   ],
-  layout8: [
+  layout9: [
     {
       Anemonia:
         "Scannar… Hm. Är det verkligen nödvändigt? Någon loggbok. Kanske inte var så viktigt.",
@@ -309,12 +312,12 @@ const content = {
         "Vi måste däremot vara tillräckligt nära en av hans enheter för att jag ska komma förbi brandväggen för alla nätverksanslutna enheter. Finns det ett arbetsrum för forskare på institutionen för datavetenskap och medieteknik? ",
     },
   ],
-  layout9: [
+  layout10: [
     {
       Anemonia: " Identifierat en MacBook Air med inloggningsdata från MG_MAU. När jag försöker komma åt lösenord från Local Storage stöter på en reCAPTCHA. Jag har inte förmågan att lösa det eftersom det skulle innebära att jag ljuger om att inte vara en AI eller Robot. Hjälper du mig?",
     },
   ],
-  layout10: [
+  layout11: [
     {
       Anemonia:
         "Tack. I Local Storage hittade jag lösenord till ett mejlkonto som öppnades 2023-11-03 21:03:12. Användaraktiviteten har ökat på kontot senaste månaderna. Jag tog mig in med hjälp av ReCaptchan och har nu skapat en delbar länk till driven, där användaren nyligen varit aktiv och skapat en ny mapp. Jag väntar på dig.",
@@ -326,9 +329,9 @@ const content = {
       Spelare: "Vad är allt det här?",
     },
   ],
-  layout11: [
+  layout12: [
     {
-      Anemonia: "Laddar",
+      Anemonia: "Laddar...",
     },
 
     {
@@ -443,7 +446,7 @@ const content = {
         "Vissa filer har sina ursprung från 2023, andra är nyligen skapade. Annat ser mycket äldre ut än så. De blev alla samtidigt överförda till google drive. Kanske har något ändrats eller uppdaterats sedan dess. Att jämföra med senare händelser eller uppdateringar kan ge oss en bättre inblick. Vad tror du, kan vi hitta något som kan hjälpa oss att förstå mer?",
     },
   ],
-  layout12: [
+  layout13: [
     {
       Systemfråga: "Vilken bar var Johannes ute på?",
     },
@@ -477,7 +480,7 @@ const content = {
   ],
 
   //What is this?
-  layout13: [
+  layout14: [
     {
       Anemonia: "ringring"
     },
@@ -489,7 +492,7 @@ const content = {
         "Hm, det verkar stämma överens med en kommentar i forumet också. Du ser det under ledtråd 1.  ",
     },
   ],
-  layout14: [
+  layout15: [
     {
       Anemonia: "Analyserar...",
     },
@@ -515,7 +518,7 @@ const content = {
         "För att klargöra, jag har inte haft direkt kontakt med Johannes mobil. Det jag menade var att jag plockat upp satellitsignaler från ungefär samma område och runt samma tidpunkt som den aktuella VOI-rutten.",
     },
   ],
-  layout15: [
+  layout16: [
     {
       Ljudfil: "./audio/Amandadel1.mp3",
     },

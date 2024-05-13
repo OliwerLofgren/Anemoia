@@ -6,6 +6,7 @@ let conversationPaused = false;
 let alternateEnding = false;
 let layoutSixFinished = false;
 let layout10Passed = false;
+let addedEvent = false;
 
 function accessCheck() {
   history.pushState(null, "", "?layout=layout0");
@@ -250,6 +251,7 @@ function addKey() {
   }
 }
 
+
 function displayContent(currentIndex) {
   const layoutUrl = window.location.search.split("?layout=")[1];
   let aiDiv = document.getElementById("aiDiv");
@@ -268,10 +270,11 @@ function displayContent(currentIndex) {
       <div id="user_options"></div>
       
     `;
+    addedEvent = false;
     document.body.append(aiDiv);
   }
 
-  if (layoutUrl === "layout11" && layout10Passed === false) {
+  if (layoutUrl === "layout12" && layout10Passed === false) {
     let helpMe = document.getElementById("helpButton");
     if (!helpMe) {
       helpMe = document.createElement("p");
@@ -283,6 +286,13 @@ function displayContent(currentIndex) {
       });
     }
   }
+  
+  if (layoutUrl === "layout12" && layout10Passed === true) {
+    conversationPaused = false;
+      messageIndex++;
+      
+  }
+  
 
   if (conversationPaused === false) {
     for (let layoutContent in content) {
@@ -337,26 +347,26 @@ function displayContent(currentIndex) {
           const interval = setInterval(() => {
             if (index < text.length && conversationPaused === false) {
               messageContainer.textContent += text[index];
+              console.log("yes");
               index++;
             } else {
               if (
                 text === ".--- .- --. / ..-. .--.- .-. / . .--- / ... ...- .- .-. .- / .--. .--.- / -.. . - - .--"
               ) {
                 console.log("hmm");
-                //document.getElementById("nextButton").disabled = true;
+                document.getElementById("nextButton").disabled = true;
                 conversationPaused = true;
+                
               }
               clearInterval(interval);
               document.getElementById("nextButton").disabled = false;
-              
-              if(content[layoutContent][currentIndex + 1] === undefined){
+              let newMessage = content[layoutContent][currentIndex + 1];
+              if(!Object.keys(newMessage)[0] || !content[layoutContent][currentIndex + 1]){
                 showEndMessage(true)
               }
-              let newMessage = content[layoutContent][currentIndex + 1];
               let newSender = Object.keys(newMessage)[0];
               let newText = newMessage[newSender];
 
-              // Check if the next message is from the user
               if (newSender === "Spelare") {
                 document.getElementById("nextButton").textContent = newText;
                 messageIndex++;
@@ -364,16 +374,18 @@ function displayContent(currentIndex) {
                 console.log("AI");
                 document.getElementById("nextButton").textContent = "Next";
               }
+              if(addedEvent === false){
+                document.getElementById("nextMessage").style.display = "block";
+                document
+                  .getElementById("nextButton")
+                  .addEventListener("click", (event) => {
+                    //conversationPaused = false;
+                    //messageContainer.innerHTML = ""
+                    addedEvent = true;
+                    displayContent(messageIndex);
+                  });
 
-              document.getElementById("nextMessage").style.display = "block";
-              document
-                .getElementById("nextButton")
-                .addEventListener("click", (event) => {
-                  //conversationPaused = false;
-                  //messageContainer.innerHTML = ""
-
-                  displayContent(messageIndex);
-                });
+              }
             }
           }, 50);
         }
@@ -385,18 +397,16 @@ function displayContent(currentIndex) {
 function displayUserMessage(text) {
   document.getElementById("nextMessage").style.display = "flex";
   document.getElementById("nextButton").textContent = text;
-  console.log(text);
   if (text === undefined) {
     showEndMessage();
   }
 }
-if (document.getElementById("nextButton")) {
-  console.log("här");
-  document.getElementById("nextButton").addEventListener("click", (event) => {
+if (document.getElementById("nextMessage") && addedEvent === false) {
+  document.getElementById("nextMessage").addEventListener("click", (event) => {
     messageIndex++;
     document.getElementById("ai_content_p").innerHTML = "";
     //document.getElementById("user_content_p").innerHTML = ``;
-
+    console.log("hufe");
     displayContent(messageIndex);
   });
 }
@@ -474,10 +484,10 @@ function switchFunction(layout) {
       passwordFunction();
       break;
     case "layout9":
-      fakeCaptcha();
       break;
-    case "layout10":
-      addClues(10);
+      case "layout10":
+        addClues(10);
+        fakeCaptcha();
       break;
     case "layout11":
       passwordFunction();
@@ -526,6 +536,7 @@ function fakeCaptcha() {
     console.log(pass);
     if (pass === 1) {
       addClues(7);
+      window.location.href = `?layout=layout11`;
       return "pass";
     }
   };

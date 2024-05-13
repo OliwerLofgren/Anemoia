@@ -34,7 +34,7 @@ function checkPassword(event) {
 
   if (passWords[layoutUrl] === document.getElementById("passwordInput").value) {
     foundPassword = true;
-    if (layoutUrl === "layout11") {
+    if (layoutUrl === "layout12") {
     
       layout10Passed = true;
       conversationPaused = false;

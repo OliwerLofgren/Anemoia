@@ -116,8 +116,7 @@ h1 {
   transform: translate(-50%, -50%);
   height: 100px;
   width: 100px;
-  border-radius: 50%; /* Makes it a circle */
-  box-shadow: 0px 0px 50px white;
+  border-radius: 50%; 
   background-image: url("uploads/anemoia.png");
 }
 
@@ -206,6 +205,7 @@ input {
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
+  width: 230px;
 }
 #nextButton {
   width: auto;
