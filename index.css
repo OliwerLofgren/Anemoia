@@ -28,13 +28,21 @@ button:disabled {
 }
 #checkPassword {
   position: absolute;
-  left: 65px;
-  top: 557px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 70%;
+  text-align: center;
 }
 #passwordInput {
   position: absolute;
-  left: 100px;
-  top: 485px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 56%;
+  text-align: center;
 }
 h1,
 h3 {
@@ -55,7 +63,13 @@ h1 {
 }
 #h2 {
   position: absolute;
-  top: 230px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 35%;
+  text-align: center;
+  width: 200px;
 }
 #goHome {
   position: fixed;
@@ -107,6 +121,7 @@ h1 {
   padding: 10px;
   width: 250px;
   text-align: left;
+  
 }
 
 #content_img {
@@ -384,6 +399,17 @@ select {
 
 #upload_container {
   position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
   top: 50%;
-  left: 130px;
+  text-align: center;
+}
+
+#alt1{
+  top: 20%;
+}
+#alt2{
+  top: 40%;
 }
