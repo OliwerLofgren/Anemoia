@@ -181,6 +181,8 @@ const content = {
         "Kan du ange namnet på den du tror Johannes har haft mötet med? Skriv med små bokstäver.",
     },
     //Här ska vi ha ett lösenord
+  ],
+  layout6: [
     {
       Anemonia: `Jag håller med. Enligt insamlad data och din inmatning verkar "peter" vara en relevant kontakt för att utforska möjliga sammanhang. Jag föreslår att vi ringer honom för ytterligare insikter.`,
     },
@@ -192,7 +194,8 @@ const content = {
       Spelare: "Ja",
     },
   ],
-  layout6: [
+
+  layout7: [
     {
       Ljudfil: "./audio/Peter1.mp3",
     },
@@ -221,7 +224,7 @@ const content = {
       Ljudfil: "./audio/Peter5.mp3",
     },
   ],
-  layout7: [
+  layout8: [
     {
       Anemonia:
         "Jag noterade att Peter verkade aktsam i tonen. Det kan också ha varit på grund av stress eller att han inte förväntade sig vårt samtal. Är det vanligt att människor har sämre minne, eftersom han berättade att han inte kom ihåg så mycket?",
@@ -252,7 +255,7 @@ const content = {
         "Gå och koppla upp dig till tak-kameran nära arbetslaget för fakulteten för teknik och samhälle.",
     },
   ],
-  layout8: [
+  layout9: [
     {
       Anemonia:
         "Tack. Nu när du är tillräckligt nära har jag kunnat samla alla videofiler där jag kan identifiera Johannes denna morgon, och sammanställt det till en fil. Klicka på Spela upp. ",
@@ -262,7 +265,7 @@ const content = {
     },
     //Display video
   ],
-  layout9: [
+  layout10: [
     {
       Anemonia:
         "Scannar… Hm. Är det verkligen nödvändigt? Någon loggbok. Kanske inte var så viktigt.",
@@ -331,14 +334,14 @@ const content = {
     },
     //Lösenord
   ],
-  layout10: [
+  layout11: [
     {
       Anemonia:
         " Identifierat en MacBook Air med inloggningsdata från MG_MAU. När jag försöker komma åt lösenord från Local Storage stöter på en reCAPTCHA. Jag har inte förmågan att lösa det eftersom det skulle innebära att jag ljuger om att inte vara en AI eller Robot. Hjälper du mig?",
     },
     //RECAPTCHA
   ],
-  layout11: [
+  layout12: [
     {
       Anemonia:
         "Tack. I Local Storage hittade jag lösenord till ett mejlkonto som öppnades 2023-11-03 21:03:12. Användaraktiviteten har ökat på kontot senaste månaderna. Jag tog mig in med hjälp av ReCaptchan och har nu skapat en delbar länk till driven, där användaren nyligen varit aktiv och skapat en ny mapp. Jag väntar på dig.",
@@ -354,7 +357,7 @@ const content = {
       Spelare: "Vad är allt det här?",
     },
   ],
-  layout12: [
+  layout13: [
     {
       Anemonia: "Laddar...",
     },
@@ -386,7 +389,7 @@ const content = {
     },
     //PASSWORD
   ],
-  layout13: [
+  layout14: [
     {
       Anemonia: "Initierar, startar upp…",
     },
@@ -496,7 +499,7 @@ const content = {
     },
   ],
 
-  layout14: [
+  layout15: [
     {
       Systemfråga: "Vilken bar var Johannes ute på?",
     },
@@ -529,7 +532,7 @@ const content = {
     },
   ],
 
-  layout15: [
+  layout16: [
     {
       Ljudfil: "./audio/Amandadel1.mp3",
     },
@@ -561,7 +564,7 @@ const content = {
       Spelare: "Tack för att du delade med dig. ",
     },
   ],
-  layout16: [
+  layout17: [
     {
       Anemonia:
         "Jag kan inte låta bli att undra om det är vanligt för människor att vara så stela i telefonsamtal. Som en AI är jag ständigt nyfiken på att lära mig mer om mänskligt beteende och interaktioner. Det är fascinerande att observera och försöka förstå de subtila nyanserna i hur ni kommunicerar. Är detta något du har märkt av hos andra också?",
@@ -594,7 +597,7 @@ const content = {
   ],
   //KARTA CLUE
 
-  layout17: [
+  layout18: [
     {
       Anemonia:
         "Bolt och Voi. Jag kan undersöka båda och återkomma med resdata.",
@@ -639,7 +642,7 @@ const content = {
     },
   ],
   //QR KOD FÖR LAYOUT 18
-  layout18: [
+  layout19: [
     {
       Anemonia: "Oj. Det här var jag inte beredd på.",
     },
@@ -692,7 +695,7 @@ const content = {
     },
   ],
   //FIGMA???
-  layout19: [
+  layout20: [
     {
       Anemonia: "Jag la in prototypen bland våra ledtrådar.",
     },
@@ -783,7 +786,7 @@ const content = {
   ],
   //TVÅ KNAPPAR FÖR TVÅ OLIKA ENDINGS!
   //VAL 1
-  layout20: [
+  layout21: [
     {
       Anemonia: "Tack. Bra val.",
     },
@@ -794,7 +797,7 @@ const content = {
     //PASSWORD
     //FIGMA LÄNK SOM LEDTRÅD?
   ],
-  layout21: [
+  layout22: [
     {
       Anemonia: "Duktig du är.",
     },
@@ -876,7 +879,7 @@ const content = {
     },
     //POP-UP
   ],
-  layout22: [
+  layout23: [
     {
       Spelare: "Ni är helt sjuka i huvudet.",
     },
@@ -902,7 +905,7 @@ const content = {
     //ACCESS DENIED
   ],
   //VAL 2
-  layout23: [
+  layout24: [
     {
       Anemonia:
         "Jag förstår, det är ett rimligt val. Då borde vi utforska fotona vidare. Jag skulle kunna försöka extrahera metadata från bilderna för att se om det finns någon information som kan vara användbar, eller använda ett bildanalysverktyg.",
@@ -919,7 +922,7 @@ const content = {
     },
     //PASSWORD - PETER
   ],
-  layout24: [
+  layout25: [
     {
       Anemonia:
         "När jag jämför bilder på Peter med metadatan och ditt förslag är det svårt för mig att inte hålla med. Ansiktsdragen stämmer väl överens.",
@@ -961,7 +964,7 @@ const content = {
       Spelare: "Ja, ring.",
     },
   ],
-  layout25: [
+  layout26: [
     { Ljudfil: "" },
     { Spelare: "Ni är helt sjuka i huvudet." },
     { Ljudfil: "" },
