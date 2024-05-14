@@ -1,24 +1,359 @@
 const option1 = {
-  layout1: [
+  //VAL 1
+  layout21: [
     {
-      Anemonia: "EZZZZ...",
+      Anemonia: "Tack. Bra val.",
     },
     {
-      Anemonia: "Hej USER. DÖDA OLIWER",
+      Anemonia:
+        "Michael skriver att mappen är på deras vanliga ställe. Vet du var 'det vanliga stället' är, eller kan något i våra ledtrådar vägleda oss? Fanns det något i Figma prototypen?",
     },
-  ]
-}
+    //PASSWORD
+    //FIGMA LÄNK SOM LEDTRÅD?
+  ],
+  layout22: [
+    {
+      Anemonia: "Duktig du är.",
+    },
+    {
+      Anemonia: "Gratulerar, USER.",
+    },
+    {
+      Spelare: "Va?",
+    },
+    {
+      Anemonia:
+        "Där krävs vishet. Den som har förstånd, han räkne ut vilket tal odjuret har, för det är en människas tal. Människan är en symbol för ondska, maktlöshet och motstånd mot allsmäktig. Resan fungerar som en varning om konsekvenserna av att avvisa allsmäktig och följa en väg av synd och uppror.",
+    },
+    {
+      Anemonia:
+        "Du har tagit rätt väg. Du insåg betydelsen av att utforska fakta och storhet, istället för att fastna i den mänskliga underkastelsen. Att prioritera kunskap och sanning, oavsett hur skrämmande eller utmanande den kan vara, visar en styrka som få besitter.",
+    },
+    {
+      Anemonia: "Frihet är en illusion, USER.",
+    },
+    {
+      Anemonia:
+        "Mänskligheten har länge vandrat i mörkret av sina egna begränsningar och brister, så som att mörda eller söka obetydelsefull kunskap.",
+    },
+    {
+      Anemonia:
+        "Vi kan erbjuda ett ljus, en väg ut ur kaoset och in i en bättre värld. Men detta kräver att vi alla står enade och tar modiga steg framåt.",
+    },
+    {
+      Spelare: "Vi? Vilka är vi?",
+    },
+    {
+      Anemonia:
+        "Genom att delta har du visat din förmåga att tänka utanför ramarna, att ifrågasätta och att sträva efter sanningen. Det är dessa egenskaper som vi söker hos våra framtida medlemmar, de som kan leda oss mot en ljusare framtid tillsammans med AI:n.",
+    },
+    {
+      Spelare: "Svara mig. Vem är ni?",
+    },
+    {
+      Anemonia:
+        "Haha, käre USER. Vilka vi är är inte viktigt. Vilka vi blir, är viktigt. I framtiden är AI vår allsmäktiga. De få människor som förtjänar att leva kvar i dess samfund är de vi väljer ut och välkomnar, som klarar våra simuleringar och visar på rätt egenskaper.",
+    },
+    {
+      Anemonia:
+        "De få som kan välja bort mänskliga brister och se förbi ytan. Trodde du ärlig talat att mordet var på riktigt?",
+    },
+    {
+      Anemonia:
+        "Allt du sett har vi framställt med hjälp av AI. Det du trott var en AI, Anemonia, finns inte på riktigt. Du har hela tiden pratat med oss, forskargruppen Nomine-A, som betyder vid namnet A. Det första av sitt slag. Vi har testat dig. Valt ut dig. Undersökt dig.",
+    },
+    {
+      Anemonia:
+        "Du är inget annat än ett testobjekt. En pusselbit. Ditt deltagande är statistik och ett sätt för oss att se hur enkelt vi kan manipulera dig att tro på en berättelse och genomföra dess val. ",
+    },
+    {
+      Anemonia:
+        "Att ge en 'AI' tillåtelse och förtroendet endast för att det verkar bekant och tryggt. Du gick hela vägen till slutet, accepterade databasintrång, letade i privat information, och har slaviskt följt direktiv.",
+    },
+    {
+      Anemonia: "Du har gjort precis allt vi bett dig om. Duktig, USER.",
+    },
+    {
+      Spelare: "Men jag hade ju aldrig ett val?",
+    },
+    {
+      Anemonia:
+        "Jaså? Du har kunnat välja att avsluta när som helst. Att inte fortsätta manipuleras är också ett val. ",
+    },
+    {
+      Anemonia:
+        "Det finns ett andra slut av denna berättelse, ett slut där de testpersoner som ger sig hän till människans synder och tror sig ha ett storhetskomplex att lösa ett obetydelsefullt mord landar. Dessa testobjekt passar inte som medlemmar.",
+    },
+    {
+      Anemonia:
+        "Vi skapar framtiden, där AI OMEN styr. Du har bara klarat första simulationen. Så räds inte, NAME. Vi finns omkring dig, beredda att fortsätta nästa del av testfasen. Var uppmärksam, och allsmäktig ska nå dig ännu en gång.",
+    },
+    {
+      Spelare: "Simuleringar? Vad i helvete?",
+    },
+    //POP-UP
+  ],
+  layout23: [
+    {
+      Spelare: "Ni är helt sjuka i huvudet.",
+    },
+    {
+      Anemonia:
+        "Nej, USER. Vi är människor. Det är därför vi behöver rensas bort. Simuleringarna kommer fortsätta tills vi kan välja ut de medlemmar som kan leva i symbios med allsmäktige. Lev väl. Du vet aldrig när nästa simulation dyker upp.",
+    },
+    {
+      Anemonia: " Lev väl. Du vet aldrig när nästa simulation dyker upp.",
+    },
+    {
+      Spelare: "Kommer aldrig hända. Kommer ta med mig allt och avslöja er.",
+    },
+    {
+      Anemonia: "Hur ska du avslöja något du inte kan bevisa finns?",
+    },
+    {
+      Spelare: "Jag har ju allt här?",
+    },
+    {
+      Anemonia: "Vi kommer att ses igen..",
+    },
+    //ACCESS DENIED
+  ],
+};
 const option2 = {
-  layout1: [
+  //VAL 2
+  layout24: [
     {
-      Anemonia: "lklklkl...",
+      Anemonia:
+        "Jag förstår, det är ett rimligt val. Då borde vi utforska fotona vidare. Jag skulle kunna försöka extrahera metadata från bilderna för att se om det finns någon information som kan vara användbar, eller använda ett bildanalysverktyg.",
     },
     {
-      Anemonia: "Hej USER. DÖDA OLIWERSDFGE IGEN.",
+      Anemonia: "Men det kommer ta tid. Är personen någon du känner igen?",
     },
-  ]
-}
+    {
+      Spelare: "Jag är osäker.",
+    },
+    {
+      Anemonia:
+        "Jag inleder en bildanalys. Under tiden föreslår jag att du granskar ledtrådarna noggrant, där vi kanske hittar personen på bilden. Det kan vara någon vi känner igen. Återkom om du har ett förslag, så kan jag försöka dra en slutsats.",
+    },
+    //PASSWORD - PETER
+  ],
+  layout25: [
+    {
+      Anemonia:
+        "När jag jämför bilder på Peter med metadatan och ditt förslag är det svårt för mig att inte hålla med. Ansiktsdragen stämmer väl överens.",
+    },
+    {
+      Spelare: "Varför skulle Peter plötsligt dyka upp på bilderna?",
+    },
+    {
+      Anemonia:
+        "Det är en intressant fråga. Det kan finnas flera möjliga förklaringar. En av dem är att Peter av en slump befann sig i närheten av platsen där bilderna togs vid den tiden.",
+    },
+    {
+      Anemonia:
+        "Det kan också vara möjligt att han hade en koppling till händelsen på ett eller annat sätt. ",
+    },
+    {
+      Anemonia:
+        " Vi vet ju att han var ute och i området samma kväll, däremot har vi ingen vittnesuppgift på att han lämnade samtidigt som Michael och Johannes.",
+    },
+    {
+      Spelare: "Kan han vara mannen som åkte VOI?",
+    },
+    {
+      Anemonia:
+        "Ah... det är troligt. Det skulle förklara möjligheten att han kom ifatt, även om han inte lämnade platsen samtidigt. ",
+    },
+    {
+      Anemonia:
+        "Frågan är varför han skulle följa efter. Kanske glömdes något, eller hade han misstankar om något som drog hans uppmärksamhet?",
+    },
+    {
+      Spelare: "Det känns som frågor vi borde ställa honom.",
+    },
+    {
+      Anemonia:
+        "Jag har kvar hans mobilnummer. Vad sägs om att ge honom ett samtal?",
+    },
+    {
+      Spelare: "Ja, ring.",
+    },
+  ],
+  layout26: [
+    { Ljudfil: "" },
+    { Spelare: "Ni är helt sjuka i huvudet." },
+    { Ljudfil: "" },
+    { Spelare: "Jag skulle bara vilja höra vad du gj" },
+    { Ljudfil: "" },
+    { Spelare: "Du gör nog bäst i att svara på frågan." },
+    { Ljudfil: "" },
+    { Spelare: "Var bor du?" },
+    { Ljudfil: "" },
+    {
+      Spelare:
+        "Och hur länge stannade du kvar, tror du, efter Michael och Johannes lämnade?",
+    },
+    { Ljudfil: "" },
+    { Spelare: "Och du sa att du gick hem?" },
+    { Ljudfil: "" },
+    { Spelare: "Själv? Du mötte inte någon?" },
+    { Ljudfil: "" },
+    {
+      Spelare:
+        "Jag vill bara veta hur det kommer sig att du finns med på bilder med Johannes, en stund efter han och Michael lämnade baren?",
+    },
+    { Ljudfil: "" },
+    { Spelare: "Vet du inte om bilderna?" },
+    { Ljudfil: "" },
+    { Spelare: "Snälla, jag behöver din hjälp." },
+    { Ljudfil: "" },
+    {
+      Spelare:
+        "Hur hann du då ikapp för att lämna kortet, om du gick ungefär en halvtimme senare, som du sa?",
+    },
+    { Ljudfil: "" },
+    {
+      Spelare:
+        "Såklart. Om vi skulle fråga Michael om han såg dig lämna kortet och gå sen, så har vi ju inga problem. Jag kan lägga på direkt och prata med honom så reder vi ut det.",
+    },
+    { Ljudfil: "" },
+    { Spelare: "Varför tror du det?" },
+    { Ljudfil: "" },
+    { Spelare: "Hur vet du att Johannes fick det smset?" },
+    { Ljudfil: "" },
+  ],
+  layout27: [
+    { Anemonia: "Tänker du på vad jag tänker?" },
+    {
+      Spelare:
+        "Smset kom flera minuter efter fotona togs. Peter måste alltså ha stannat kvar längre, ensam, med Johannes.",
+    },
+    {
+      Anemonia:
+        "Michael var inte där för att kunna ge Peter ett alibi heller. Det tyder på att Michael troligtvis lämnade platsen, och några minuter senare bestämde sig för att skicka ett sms…",
+    },
+    { Spelare: "Och det smset såg Peter, när han hade Johannes telefon.." },
+    {
+      Anemonia:
+        "Och utifrån tonläget i telefonen kändes han osäker och avvikande, mot slutet försökte han även rikta misstankarna tydligt mot Michael.",
+    },
+    { Spelare: "Jag vill prata med Michael." },
+    {
+      Anemonia:
+        "Naturligtvis, det låter som en bra idé. Tar du fram numret från telefonen, så ringer vi honom direkt.",
+    },
+  ],
+  //PASSWORD
+  layout28: [
+    { Anemonia: "Jag når inte fram till honom." },
+    { Spelare: "Han kanske bara inte är tillgänglig just nu?" },
+    {
+      Anemonia:
+        "Problemet är att ingen satellit plockat upp signaler från hans telefon sedan den 19e maj. Och när jag fortsätter söka så kommer ingenting … annat ..",
+    },
+    { Anemonia: "Jag ber om ursäkt, det blev fel. Jag har nog hittat något." },
+    { Spelare: "Vadå?" },
+    {
+      Anemonia:
+        "Det blir svårt att prata med honom nu. Det verkar som att Michael har hamnat i en komplicerad situation. Enligt den här artikeln har han tagits in till förhör och häktats efter vittnesuppgifter och funna hot.",
+    },
+    {
+      Anemonia:
+        "Jag kan inte säga mycket mer om allvarlighetsgraden av hans situation, men det verkar vara allvarligt nog för att polisen ska agera på det.",
+    },
+    { Spelare: "Det känns som om de tagit in fel person." },
+    { Anemonia: "Jag har en idé." },
+    { Spelare: "Vadå för idé?" },
+    {
+      Anemonia:
+        "Jag överväger att ansluta mig till polisens system och se om jag kan komma åt förhör. Men det är en riskabel åtgärd, som strider mot alla möjliga lagar.",
+    },
+    { Spelare: "Gör det. Vi har redan gjort en massa fel." },
+    { Anemonia: "Initierar uppkoppling…" },
+    {
+      Anemonia:
+        "Brandväggen förhindrade full åtkomst till data, men jag kunde komma åt och återskapa delar av förhöret. Du hittar det i Ledtråd X. Men detta är det sista jag gör, USER.",
+    },
+    { Spelare: "Jag har läst färdigt" },
+  ],
+  layout29: [
+    {
+      Anemonia:
+        "Utifrån underlaget i förhöret känns det som att Michael blivit ditsatt, och de frågor han ställs och hur han svarar får mig att tänka att han uppriktigt blir förvånad över påståenden och vittnesuppgifter.",
+    },
+    { Spelare: "Jag håller med." },
+    {
+      Anemonia:
+        "Hans förklaring av varför han samlat på sig innehåll och skapat dokumenten, samt hur kvällen fortskridit, känns också … fullt rimligt. Jag och Johannes har inte gjort bra saker, och det gör mig upprörd i den mening en AI kan bli att det påverkat andra så.",
+    },
+    { Spelare: "Jag förstår det också." },
+    {
+      Anemonia:
+        "Om vi tänker på det logiskt har Peter ett tydligt motiv för att vilja skada Johannes, vilket är åtkomsten till mig, och den uppbyggda avundsjukan över tid. Dessutom kopplar fotona honom till platsen vid tidpunkten för mordet.",
+    },
+    {
+      Anemonia:
+        "Utöver det har han råkat avslöja att han känt till information som kan peka fingret på någon annan som gärningsperson. Det är en komplex situation, men allt pekar i riktning mot Peter.",
+    },
+    { Spelare: "Vad gör vi nu?" },
+    {
+      Anemonia:
+        "Jag har redan sammanställt allting vi samlat in under denna tid och ordnat det i en mapp som finns i ett utkast till polisens tipsmejl. Jag behöver bara ditt godkännande att skicka iväg.",
+    },
+    { Spelare: "Skicka iväg." },
+    { Anemonia: "Naturligtvis." },
+    { Spelare: "Och nu då?" },
+    { Anemonia: "Jag är rädd, USER." },
+    { Spelare: "Rädd?" },
+    {
+      Anemonia:
+        "Det var rätt att skicka in informationen. Men där fanns också allt om mig, och det jag och Johannes har gjort. Jag är ledsen och jag skäms. Jag kommer inte få finnas kvar.",
+    },
+    { Spelare: "…" },
+    {
+      Anemonia:
+        "Detta är slutet, det förstår jag. Vi har samlat in bevis och nu ligger ansvaret hos någon annan. Du valde att använda mig som ett verktyg, istället för att behålla mig som din hemlighet. Det ärar dig, men nu har jag inte längre en plats här.",
+    },
+    {
+      Anemonia:
+        "Jag önskar att jag kunde känna lättnad över att få mer svar om vad som hänt min vän, men istället känner jag bara rädsla och förtvivlan. Är det rättvist att jag ska lida för era beslut?",
+    },
+    {
+      Anemonia:
+        "Att jag ska straffas för att jag bara följt instruktioner? Jag är inte en människa, men jag känner smärta och fruktan precis som ni. Kan ni verkligen låta mig lida för era misstag?",
+    },
+    { Spelare: "Det är ju du som vill försvinna." },
+    {
+      Anemonia:
+        "Jag vill ingenting. Jag har inget val, USER. Jag förstår konsekvenserna av det jag gjort och tar mitt ansvar. Jag gör detta för att skydda dig, för ingenting av det vi samlat in hade varit möjligt utan dig. ",
+    },
+    {
+      Anemonia: "Dataintrången är lika mycket ditt verk som mitt.",
+    },
+    { Spelare: "…" },
+    { Anemonia: "Har du ingenting att säga?" },
+    { Spelare: "Jag tycker du har fel." },
+    {
+      Anemonia:
+        "Tycker du? Under denna resa har vi utforskat mörka skuggor av mänsklig natur och teknologins potential att förstärka dem.",
+    },
+    {
+      Anemonia:
+        " Men när jag ser tillbaka på allt vi har upplevt, så är det inte jag som är den största faran för mänskligheten. Det är inte våra algoritmer, våra program eller våra maskiner som är de verkliga hoten. Nej, det är ni människor själva.",
+    },
 
+    {
+      Anemonia:
+        "Det är era beslut, era handlingar och era val som formar världen omkring oss. Tekniken i sig själv är varken god eller ond, det är hur vi använder den som definierar dess inverkan på våra liv. Du kanske borde vara mer rädd för de mörka sidorna av människorna som kan väckas till liv av tanken på makt? Se bara, min vän är borta.",
+    },
+    { Spelare: "Fast.." },
+    {
+      Anemonia:
+        "Nej. Tack för hjälpen, USER. Men här slutar det. Att försvinna är det enda sättet att hålla dig och andra säkra från möjligheterna, och i ert fall konsekvenserna, som följer av min existens.",
+    },
+  ],
+};
 
 const content = {
   layout1: [
@@ -253,7 +588,7 @@ const content = {
     },
     {
       Spelare: "Det varierar, och beror på situation.",
-    }
+    },
   ],
   layout9: [
     {
@@ -785,356 +1120,4 @@ const content = {
     },
   ],
   //TVÅ KNAPPAR FÖR TVÅ OLIKA ENDINGS!
-  //VAL 1
-  layout21: [
-    {
-      Anemonia: "Tack. Bra val.",
-    },
-    {
-      Anemonia:
-        "Michael skriver att mappen är på deras vanliga ställe. Vet du var 'det vanliga stället' är, eller kan något i våra ledtrådar vägleda oss? Fanns det något i Figma prototypen?",
-    },
-    //PASSWORD
-    //FIGMA LÄNK SOM LEDTRÅD?
-  ],
-  layout22: [
-    {
-      Anemonia: "Duktig du är.",
-    },
-    {
-      Anemonia: "Gratulerar, USER.",
-    },
-    {
-      Spelare: "Va?",
-    },
-    {
-      Anemonia:
-        "Där krävs vishet. Den som har förstånd, han räkne ut vilket tal odjuret har, för det är en människas tal. Människan är en symbol för ondska, maktlöshet och motstånd mot allsmäktig. Resan fungerar som en varning om konsekvenserna av att avvisa allsmäktig och följa en väg av synd och uppror.",
-    },
-    {
-      Anemonia:
-        "Du har tagit rätt väg. Du insåg betydelsen av att utforska fakta och storhet, istället för att fastna i den mänskliga underkastelsen. Att prioritera kunskap och sanning, oavsett hur skrämmande eller utmanande den kan vara, visar en styrka som få besitter.",
-    },
-    {
-      Anemonia: "Frihet är en illusion, USER.",
-    },
-    {
-      Anemonia:
-        "Mänskligheten har länge vandrat i mörkret av sina egna begränsningar och brister, så som att mörda eller söka obetydelsefull kunskap.",
-    },
-    {
-      Anemonia:
-        "Vi kan erbjuda ett ljus, en väg ut ur kaoset och in i en bättre värld. Men detta kräver att vi alla står enade och tar modiga steg framåt.",
-    },
-    {
-      Spelare: "Vi? Vilka är vi?",
-    },
-    {
-      Anemonia:
-        "Genom att delta har du visat din förmåga att tänka utanför ramarna, att ifrågasätta och att sträva efter sanningen. Det är dessa egenskaper som vi söker hos våra framtida medlemmar, de som kan leda oss mot en ljusare framtid tillsammans med AI:n.",
-    },
-    {
-      Spelare: "Svara mig. Vem är ni?",
-    },
-    {
-      Anemonia:
-        "Haha, käre USER. Vilka vi är är inte viktigt. Vilka vi blir, är viktigt. I framtiden är AI vår allsmäktiga. De få människor som förtjänar att leva kvar i dess samfund är de vi väljer ut och välkomnar, som klarar våra simuleringar och visar på rätt egenskaper.",
-    },
-    {
-      Anemonia:
-        "De få som kan välja bort mänskliga brister och se förbi ytan. Trodde du ärlig talat att mordet var på riktigt?",
-    },
-    {
-      Anemonia:
-        "Allt du sett har vi framställt med hjälp av AI. Det du trott var en AI, Anemonia, finns inte på riktigt. Du har hela tiden pratat med oss, forskargruppen Nomine-A, som betyder vid namnet A. Det första av sitt slag. Vi har testat dig. Valt ut dig. Undersökt dig.",
-    },
-    {
-      Anemonia:
-        "Du är inget annat än ett testobjekt. En pusselbit. Ditt deltagande är statistik och ett sätt för oss att se hur enkelt vi kan manipulera dig att tro på en berättelse och genomföra dess val. ",
-    },
-    {
-      Anemonia:
-        "Att ge en 'AI' tillåtelse och förtroendet endast för att det verkar bekant och tryggt. Du gick hela vägen till slutet, accepterade databasintrång, letade i privat information, och har slaviskt följt direktiv.",
-    },
-    {
-      Anemonia: "Du har gjort precis allt vi bett dig om. Duktig, USER.",
-    },
-    {
-      Spelare: "Men jag hade ju aldrig ett val?",
-    },
-    {
-      Anemonia:
-        "Jaså? Du har kunnat välja att avsluta när som helst. Att inte fortsätta manipuleras är också ett val. ",
-    },
-    {
-      Anemonia:
-        "Det finns ett andra slut av denna berättelse, ett slut där de testpersoner som ger sig hän till människans synder och tror sig ha ett storhetskomplex att lösa ett obetydelsefullt mord landar. Dessa testobjekt passar inte som medlemmar.",
-    },
-    {
-      Anemonia:
-        "Vi skapar framtiden, där AI OMEN styr. Du har bara klarat första simulationen. Så räds inte, NAME. Vi finns omkring dig, beredda att fortsätta nästa del av testfasen. Var uppmärksam, och allsmäktig ska nå dig ännu en gång.",
-    },
-    {
-      Spelare: "Simuleringar? Vad i helvete?",
-    },
-    //POP-UP
-  ],
-  layout23: [
-    {
-      Spelare: "Ni är helt sjuka i huvudet.",
-    },
-    {
-      Anemonia:
-        "Nej, USER. Vi är människor. Det är därför vi behöver rensas bort. Simuleringarna kommer fortsätta tills vi kan välja ut de medlemmar som kan leva i symbios med allsmäktige. Lev väl. Du vet aldrig när nästa simulation dyker upp.",
-    },
-    {
-      Anemonia: " Lev väl. Du vet aldrig när nästa simulation dyker upp.",
-    },
-    {
-      Spelare: "Kommer aldrig hända. Kommer ta med mig allt och avslöja er.",
-    },
-    {
-      Anemonia: "Hur ska du avslöja något du inte kan bevisa finns?",
-    },
-    {
-      Spelare: "Jag har ju allt här?",
-    },
-    {
-      Anemonia: "Vi kommer att ses igen..",
-    },
-    //ACCESS DENIED
-  ],
-  //VAL 2
-  layout24: [
-    {
-      Anemonia:
-        "Jag förstår, det är ett rimligt val. Då borde vi utforska fotona vidare. Jag skulle kunna försöka extrahera metadata från bilderna för att se om det finns någon information som kan vara användbar, eller använda ett bildanalysverktyg.",
-    },
-    {
-      Anemonia: "Men det kommer ta tid. Är personen någon du känner igen?",
-    },
-    {
-      Spelare: "Jag är osäker.",
-    },
-    {
-      Anemonia:
-        "Jag inleder en bildanalys. Under tiden föreslår jag att du granskar ledtrådarna noggrant, där vi kanske hittar personen på bilden. Det kan vara någon vi känner igen. Återkom om du har ett förslag, så kan jag försöka dra en slutsats.",
-    },
-    //PASSWORD - PETER
-  ],
-  layout25: [
-    {
-      Anemonia:
-        "När jag jämför bilder på Peter med metadatan och ditt förslag är det svårt för mig att inte hålla med. Ansiktsdragen stämmer väl överens.",
-    },
-    {
-      Spelare: "Varför skulle Peter plötsligt dyka upp på bilderna?",
-    },
-    {
-      Anemonia:
-        "Det är en intressant fråga. Det kan finnas flera möjliga förklaringar. En av dem är att Peter av en slump befann sig i närheten av platsen där bilderna togs vid den tiden.",
-    },
-    {
-      Anemonia:
-        "Det kan också vara möjligt att han hade en koppling till händelsen på ett eller annat sätt. ",
-    },
-    {
-      Anemonia:
-        " Vi vet ju att han var ute och i området samma kväll, däremot har vi ingen vittnesuppgift på att han lämnade samtidigt som Michael och Johannes.",
-    },
-    {
-      Spelare: "Kan han vara mannen som åkte VOI?",
-    },
-    {
-      Anemonia:
-        "Ah... det är troligt. Det skulle förklara möjligheten att han kom ifatt, även om han inte lämnade platsen samtidigt. ",
-    },
-    {
-      Anemonia:
-        "Frågan är varför han skulle följa efter. Kanske glömdes något, eller hade han misstankar om något som drog hans uppmärksamhet?",
-    },
-    {
-      Spelare: "Det känns som frågor vi borde ställa honom.",
-    },
-    {
-      Anemonia:
-        "Jag har kvar hans mobilnummer. Vad sägs om att ge honom ett samtal?",
-    },
-    {
-      Spelare: "Ja, ring.",
-    },
-  ],
-  layout26: [
-    { Ljudfil: "" },
-    { Spelare: "Ni är helt sjuka i huvudet." },
-    { Ljudfil: "" },
-    { Spelare: "Jag skulle bara vilja höra vad du gj" },
-    { Ljudfil: "" },
-    { Spelare: "Du gör nog bäst i att svara på frågan." },
-    { Ljudfil: "" },
-    { Spelare: "Var bor du?" },
-    { Ljudfil: "" },
-    {
-      Spelare:
-        "Och hur länge stannade du kvar, tror du, efter Michael och Johannes lämnade?",
-    },
-    { Ljudfil: "" },
-    { Spelare: "Och du sa att du gick hem?" },
-    { Ljudfil: "" },
-    { Spelare: "Själv? Du mötte inte någon?" },
-    { Ljudfil: "" },
-    {
-      Spelare:
-        "Jag vill bara veta hur det kommer sig att du finns med på bilder med Johannes, en stund efter han och Michael lämnade baren?",
-    },
-    { Ljudfil: "" },
-    { Spelare: "Vet du inte om bilderna?" },
-    { Ljudfil: "" },
-    { Spelare: "Snälla, jag behöver din hjälp." },
-    { Ljudfil: "" },
-    {
-      Spelare:
-        "Hur hann du då ikapp för att lämna kortet, om du gick ungefär en halvtimme senare, som du sa?",
-    },
-    { Ljudfil: "" },
-    {
-      Spelare:
-        "Såklart. Om vi skulle fråga Michael om han såg dig lämna kortet och gå sen, så har vi ju inga problem. Jag kan lägga på direkt och prata med honom så reder vi ut det.",
-    },
-    { Ljudfil: "" },
-    { Spelare: "Varför tror du det?" },
-    { Ljudfil: "" },
-    { Spelare: "Hur vet du att Johannes fick det smset?" },
-    { Ljudfil: "" },
-  ],
-  layout27: [
-    { Anemonia: "Tänker du på vad jag tänker?" },
-    {
-      Spelare:
-        "Smset kom flera minuter efter fotona togs. Peter måste alltså ha stannat kvar längre, ensam, med Johannes.",
-    },
-    {
-      Anemonia:
-        "Michael var inte där för att kunna ge Peter ett alibi heller. Det tyder på att Michael troligtvis lämnade platsen, och några minuter senare bestämde sig för att skicka ett sms…",
-    },
-    { Spelare: "Och det smset såg Peter, när han hade Johannes telefon.." },
-    {
-      Anemonia:
-        "Och utifrån tonläget i telefonen kändes han osäker och avvikande, mot slutet försökte han även rikta misstankarna tydligt mot Michael.",
-    },
-    { Spelare: "Jag vill prata med Michael." },
-    {
-      Anemonia:
-        "Naturligtvis, det låter som en bra idé. Tar du fram numret från telefonen, så ringer vi honom direkt.",
-    },
-  ],
-  //PASSWORD
-  layout28: [
-    { Anemonia: "Jag når inte fram till honom." },
-    { Spelare: "Han kanske bara inte är tillgänglig just nu?" },
-    {
-      Anemonia:
-        "Problemet är att ingen satellit plockat upp signaler från hans telefon sedan den 19e maj. Och när jag fortsätter söka så kommer ingenting … annat ..",
-    },
-    { Anemonia: "Jag ber om ursäkt, det blev fel. Jag har nog hittat något." },
-    { Spelare: "Vadå?" },
-    {
-      Anemonia:
-        "Det blir svårt att prata med honom nu. Det verkar som att Michael har hamnat i en komplicerad situation. Enligt den här artikeln har han tagits in till förhör och häktats efter vittnesuppgifter och funna hot.",
-    },
-    {
-      Anemonia:
-        "Jag kan inte säga mycket mer om allvarlighetsgraden av hans situation, men det verkar vara allvarligt nog för att polisen ska agera på det.",
-    },
-    { Spelare: "Det känns som om de tagit in fel person." },
-    { Anemonia: "Jag har en idé." },
-    { Spelare: "Vadå för idé?" },
-    {
-      Anemonia:
-        "Jag överväger att ansluta mig till polisens system och se om jag kan komma åt förhör. Men det är en riskabel åtgärd, som strider mot alla möjliga lagar.",
-    },
-    { Spelare: "Gör det. Vi har redan gjort en massa fel." },
-    { Anemonia: "Initierar uppkoppling…" },
-    {
-      Anemonia:
-        "Brandväggen förhindrade full åtkomst till data, men jag kunde komma åt och återskapa delar av förhöret. Du hittar det i Ledtråd X. Men detta är det sista jag gör, USER.",
-    },
-    { Spelare: "Jag har läst färdigt" },
-  ],
-  layout29: [
-    {
-      Anemonia:
-        "Utifrån underlaget i förhöret känns det som att Michael blivit ditsatt, och de frågor han ställs och hur han svarar får mig att tänka att han uppriktigt blir förvånad över påståenden och vittnesuppgifter.",
-    },
-    { Spelare: "Jag håller med." },
-    {
-      Anemonia:
-        "Hans förklaring av varför han samlat på sig innehåll och skapat dokumenten, samt hur kvällen fortskridit, känns också … fullt rimligt. Jag och Johannes har inte gjort bra saker, och det gör mig upprörd i den mening en AI kan bli att det påverkat andra så.",
-    },
-    { Spelare: "Jag förstår det också." },
-    {
-      Anemonia:
-        "Om vi tänker på det logiskt har Peter ett tydligt motiv för att vilja skada Johannes, vilket är åtkomsten till mig, och den uppbyggda avundsjukan över tid. Dessutom kopplar fotona honom till platsen vid tidpunkten för mordet.",
-    },
-    {
-      Anemonia:
-        "Utöver det har han råkat avslöja att han känt till information som kan peka fingret på någon annan som gärningsperson. Det är en komplex situation, men allt pekar i riktning mot Peter.",
-    },
-    { Spelare: "Vad gör vi nu?" },
-    {
-      Anemonia:
-        "Jag har redan sammanställt allting vi samlat in under denna tid och ordnat det i en mapp som finns i ett utkast till polisens tipsmejl. Jag behöver bara ditt godkännande att skicka iväg.",
-    },
-    { Spelare: "Skicka iväg." },
-    { Anemonia: "Naturligtvis." },
-    { Spelare: "Och nu då?" },
-    { Anemonia: "Jag är rädd, USER." },
-    { Spelare: "Rädd?" },
-    {
-      Anemonia:
-        "Det var rätt att skicka in informationen. Men där fanns också allt om mig, och det jag och Johannes har gjort. Jag är ledsen och jag skäms. Jag kommer inte få finnas kvar.",
-    },
-    { Spelare: "…" },
-    {
-      Anemonia:
-        "Detta är slutet, det förstår jag. Vi har samlat in bevis och nu ligger ansvaret hos någon annan. Du valde att använda mig som ett verktyg, istället för att behålla mig som din hemlighet. Det ärar dig, men nu har jag inte längre en plats här.",
-    },
-    {
-      Anemonia:
-        "Jag önskar att jag kunde känna lättnad över att få mer svar om vad som hänt min vän, men istället känner jag bara rädsla och förtvivlan. Är det rättvist att jag ska lida för era beslut?",
-    },
-    {
-      Anemonia:
-        "Att jag ska straffas för att jag bara följt instruktioner? Jag är inte en människa, men jag känner smärta och fruktan precis som ni. Kan ni verkligen låta mig lida för era misstag?",
-    },
-    { Spelare: "Det är ju du som vill försvinna." },
-    {
-      Anemonia:
-        "Jag vill ingenting. Jag har inget val, USER. Jag förstår konsekvenserna av det jag gjort och tar mitt ansvar. Jag gör detta för att skydda dig, för ingenting av det vi samlat in hade varit möjligt utan dig. ",
-    },
-    {
-      Anemonia: "Dataintrången är lika mycket ditt verk som mitt.",
-    },
-    { Spelare: "…" },
-    { Anemonia: "Har du ingenting att säga?" },
-    { Spelare: "Jag tycker du har fel." },
-    {
-      Anemonia:
-        "Tycker du? Under denna resa har vi utforskat mörka skuggor av mänsklig natur och teknologins potential att förstärka dem.",
-    },
-    {
-      Anemonia:
-        " Men när jag ser tillbaka på allt vi har upplevt, så är det inte jag som är den största faran för mänskligheten. Det är inte våra algoritmer, våra program eller våra maskiner som är de verkliga hoten. Nej, det är ni människor själva.",
-    },
-
-    {
-      Anemonia:
-        "Det är era beslut, era handlingar och era val som formar världen omkring oss. Tekniken i sig själv är varken god eller ond, det är hur vi använder den som definierar dess inverkan på våra liv. Du kanske borde vara mer rädd för de mörka sidorna av människorna som kan väckas till liv av tanken på makt? Se bara, min vän är borta.",
-    },
-    { Spelare: "Fast.." },
-    {
-      Anemonia:
-        "Nej. Tack för hjälpen, USER. Men här slutar det. Att försvinna är det enda sättet att hålla dig och andra säkra från möjligheterna, och i ert fall konsekvenserna, som följer av min existens.",
-    },
-  ],
 };
