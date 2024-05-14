@@ -1,25 +1,3 @@
-const option1 = {
-  layout1: [
-    {
-      Anemonia: "EZZZZ...",
-    },
-    {
-      Anemonia: "Hej USER. DÖDA OLIWER",
-    },
-  ]
-}
-const option2 = {
-  layout1: [
-    {
-      Anemonia: "lklklkl...",
-    },
-    {
-      Anemonia: "Hej USER. DÖDA OLIWERSDFGE IGEN.",
-    },
-  ]
-}
-
-
 const content = {
   layout1: [
     {
@@ -203,8 +181,6 @@ const content = {
         "Kan du ange namnet på den du tror Johannes har haft mötet med? Skriv med små bokstäver.",
     },
     //Här ska vi ha ett lösenord
-  ],
-  layout6: [
     {
       Anemonia: `Jag håller med. Enligt insamlad data och din inmatning verkar "peter" vara en relevant kontakt för att utforska möjliga sammanhang. Jag föreslår att vi ringer honom för ytterligare insikter.`,
     },
@@ -216,8 +192,7 @@ const content = {
       Spelare: "Ja",
     },
   ],
-
-  layout7: [
+  layout6: [
     {
       Ljudfil: "./audio/Peter1.mp3",
     },
@@ -246,16 +221,38 @@ const content = {
       Ljudfil: "./audio/Peter5.mp3",
     },
   ],
-  layout8: [
+  layout7: [
     {
       Anemonia:
         "Jag noterade att Peter verkade aktsam i tonen. Det kan också ha varit på grund av stress eller att han inte förväntade sig vårt samtal. Är det vanligt att människor har sämre minne, eftersom han berättade att han inte kom ihåg så mycket?",
     },
     {
       Spelare: "Det varierar, och beror på situation.",
-    }
+    },
+    {
+      Anemonia:
+        "Vi fick inget ordentligt svar på varför de hade mötet. Men Peter sa att Johannes bokade mötet plötsligt samma morgon. Det kanske ger en förklaring till varför Johannes var på skolan dagen innan, då skolan var stängd.",
+    },
+    {
+      Spelare: "Hur vet du det?",
+    },
+    {
+      Anemonia:
+        "Med säkerhetsnyckeln från Christianos fick jag tillgång till skolans interna övervakningssystem, och kunde identifiera Johannes utifrån hans ansiktsprofil som jag är bekant med sedan tidigare. Du gav mig tillåtelse till säkerhetsnyckeln.",
+    },
+    {
+      Anemonia:
+        " Jag kan visa dig övervakningsfilmen, men skolans nätverk är inte tillräckligt bra för att överföra filen på detta avstånd från källan.",
+    },
+    {
+      Spelare: "Var är källan?",
+    },
+    {
+      Anemonia:
+        "Gå och koppla upp dig till tak-kameran nära arbetslaget för fakulteten för teknik och samhälle.",
+    },
   ],
-  layout9: [
+  layout8: [
     {
       Anemonia:
         "Tack. Nu när du är tillräckligt nära har jag kunnat samla alla videofiler där jag kan identifiera Johannes denna morgon, och sammanställt det till en fil. Klicka på Spela upp. ",
@@ -265,7 +262,7 @@ const content = {
     },
     //Display video
   ],
-  layout10: [
+  layout9: [
     {
       Anemonia:
         "Scannar… Hm. Är det verkligen nödvändigt? Någon loggbok. Kanske inte var så viktigt.",
@@ -334,14 +331,14 @@ const content = {
     },
     //Lösenord
   ],
-  layout11: [
+  layout10: [
     {
       Anemonia:
         " Identifierat en MacBook Air med inloggningsdata från MG_MAU. När jag försöker komma åt lösenord från Local Storage stöter på en reCAPTCHA. Jag har inte förmågan att lösa det eftersom det skulle innebära att jag ljuger om att inte vara en AI eller Robot. Hjälper du mig?",
     },
     //RECAPTCHA
   ],
-  layout12: [
+  layout11: [
     {
       Anemonia:
         "Tack. I Local Storage hittade jag lösenord till ett mejlkonto som öppnades 2023-11-03 21:03:12. Användaraktiviteten har ökat på kontot senaste månaderna. Jag tog mig in med hjälp av ReCaptchan och har nu skapat en delbar länk till driven, där användaren nyligen varit aktiv och skapat en ny mapp. Jag väntar på dig.",
@@ -357,7 +354,7 @@ const content = {
       Spelare: "Vad är allt det här?",
     },
   ],
-  layout13: [
+  layout12: [
     {
       Anemonia: "Laddar...",
     },
@@ -389,7 +386,7 @@ const content = {
     },
     //PASSWORD
   ],
-  layout14: [
+  layout13: [
     {
       Anemonia: "Initierar, startar upp…",
     },
@@ -499,7 +496,7 @@ const content = {
     },
   ],
 
-  layout15: [
+  layout14: [
     {
       Systemfråga: "Vilken bar var Johannes ute på?",
     },
@@ -532,7 +529,7 @@ const content = {
     },
   ],
 
-  layout16: [
+  layout15: [
     {
       Ljudfil: "./audio/Amandadel1.mp3",
     },
@@ -564,7 +561,7 @@ const content = {
       Spelare: "Tack för att du delade med dig. ",
     },
   ],
-  layout17: [
+  layout16: [
     {
       Anemonia:
         "Jag kan inte låta bli att undra om det är vanligt för människor att vara så stela i telefonsamtal. Som en AI är jag ständigt nyfiken på att lära mig mer om mänskligt beteende och interaktioner. Det är fascinerande att observera och försöka förstå de subtila nyanserna i hur ni kommunicerar. Är detta något du har märkt av hos andra också?",
@@ -597,7 +594,7 @@ const content = {
   ],
   //KARTA CLUE
 
-  layout18: [
+  layout17: [
     {
       Anemonia:
         "Bolt och Voi. Jag kan undersöka båda och återkomma med resdata.",
@@ -642,7 +639,7 @@ const content = {
     },
   ],
   //QR KOD FÖR LAYOUT 18
-  layout19: [
+  layout18: [
     {
       Anemonia: "Oj. Det här var jag inte beredd på.",
     },
@@ -695,7 +692,7 @@ const content = {
     },
   ],
   //FIGMA???
-  layout20: [
+  layout19: [
     {
       Anemonia: "Jag la in prototypen bland våra ledtrådar.",
     },
@@ -786,7 +783,7 @@ const content = {
   ],
   //TVÅ KNAPPAR FÖR TVÅ OLIKA ENDINGS!
   //VAL 1
-  layout21: [
+  layout20: [
     {
       Anemonia: "Tack. Bra val.",
     },
@@ -797,7 +794,7 @@ const content = {
     //PASSWORD
     //FIGMA LÄNK SOM LEDTRÅD?
   ],
-  layout22: [
+  layout21: [
     {
       Anemonia: "Duktig du är.",
     },
@@ -879,7 +876,7 @@ const content = {
     },
     //POP-UP
   ],
-  layout23: [
+  layout22: [
     {
       Spelare: "Ni är helt sjuka i huvudet.",
     },
@@ -905,7 +902,7 @@ const content = {
     //ACCESS DENIED
   ],
   //VAL 2
-  layout24: [
+  layout23: [
     {
       Anemonia:
         "Jag förstår, det är ett rimligt val. Då borde vi utforska fotona vidare. Jag skulle kunna försöka extrahera metadata från bilderna för att se om det finns någon information som kan vara användbar, eller använda ett bildanalysverktyg.",
@@ -922,7 +919,7 @@ const content = {
     },
     //PASSWORD - PETER
   ],
-  layout25: [
+  layout24: [
     {
       Anemonia:
         "När jag jämför bilder på Peter med metadatan och ditt förslag är det svårt för mig att inte hålla med. Ansiktsdragen stämmer väl överens.",
@@ -964,7 +961,7 @@ const content = {
       Spelare: "Ja, ring.",
     },
   ],
-  layout26: [
+  layout25: [
     { Ljudfil: "" },
     { Spelare: "Ni är helt sjuka i huvudet." },
     { Ljudfil: "" },

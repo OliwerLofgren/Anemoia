@@ -5,13 +5,13 @@ function signUppage(event) {
     <main>
     <h1>Anomeia</h1>
     <div class="container">
-    <div id="helloMessage">What should I call you?</div>
+    <div id="helloMessage">Vilket alias ska jag tillskriva dig?</div>
       <div class="box">
         <input placeholder="Username" id="registerUsername"></input>
         <input placeholder="Password" id="registerPassword" type ="password"></input>
-        <button id="register">Register</button>
+        <button id="register">Registrera</button>
       </div>
-        <button id="loginShortCut">Go to login</button>
+        <button id="loginShortCut">Gå till login</button>
         <p id="registrationMessage"></p>
     </div>
 </main>
