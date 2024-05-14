@@ -1,3 +1,25 @@
+const option1 = {
+  layout1: [
+    {
+      Anemonia: "EZZZZ...",
+    },
+    {
+      Anemonia: "Hej USER. DÖDA OLIWER",
+    },
+  ]
+}
+const option2 = {
+  layout1: [
+    {
+      Anemonia: "lklklkl...",
+    },
+    {
+      Anemonia: "Hej USER. DÖDA OLIWERSDFGE IGEN.",
+    },
+  ]
+}
+
+
 const content = {
   layout1: [
     {
@@ -216,29 +238,7 @@ const content = {
     },
     {
       Spelare: "Det varierar, och beror på situation.",
-    },
-    {
-      Anemonia:
-        "Vi fick inget ordentligt svar på varför de hade mötet. Men Peter sa att Johannes bokade mötet plötsligt samma morgon. Det kanske ger en förklaring till varför Johannes var på skolan dagen innan, då skolan var stängd.",
-    },
-    {
-      Spelare: "Hur vet du det?",
-    },
-    {
-      Anemonia:
-        "Med säkerhetsnyckeln från Christianos fick jag tillgång till skolans interna övervakningssystem, och kunde identifiera Johannes utifrån hans ansiktsprofil som jag är bekant med sedan tidigare. Du gav mig tillåtelse till säkerhetsnyckeln.",
-    },
-    {
-      Anemonia:
-        " Jag kan visa dig övervakningsfilmen, men skolans nätverk är inte tillräckligt bra för att överföra filen på detta avstånd från källan.",
-    },
-    {
-      Spelare: "Var är källan?",
-    },
-    {
-      Anemonia:
-        "Gå och koppla upp dig till tak-kameran nära arbetslaget för fakulteten för teknik och samhälle.",
-    },
+    }
   ],
   layout7:[
 

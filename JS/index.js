@@ -7,6 +7,9 @@ let alternateEnding = false;
 let layoutSixFinished = false;
 let layout10Passed = false;
 let addedEvent = false;
+let option1s = false;
+let option2s = false;
+let messageIndex = 0;
 
 function accessCheck() {
   history.pushState(null, "", "?layout=layout0");
@@ -22,7 +25,6 @@ function accessCheck() {
   document.body.appendChild(h1Element);
 }
 
-let messageIndex = 0;
 let goToLayout = (layoutNumber) => {
   console.log(layoutNumber);
   window.location.href = `?layout=layout${layoutNumber}`;
@@ -253,6 +255,7 @@ function addKey() {
 
 
 function displayContent(currentIndex) {
+  console.log(currentIndex);
   const layoutUrl = window.location.search.split("?layout=")[1];
   let aiDiv = document.getElementById("aiDiv");
 
@@ -289,15 +292,33 @@ function displayContent(currentIndex) {
   
   if (layoutUrl === "layout12" && layout10Passed === true) {
     conversationPaused = false;
+    document.getElementById("nextMessage").addEventListener("click", (event) => {
       messageIndex++;
-      
+      displayContent(messageIndex);
+    });
   }
   
 
   if (conversationPaused === false) {
-    for (let layoutContent in content) {
-      if (layoutUrl === layoutContent) {
-        const message = content[layoutContent][currentIndex];
+    let currentContent;
+      currentContent = content
+    
+    if(option1s === true){
+      currentContent = option1;
+      console.log("SNÄLLA");
+    }
+    console.log(option2s);
+    if(option2s === true){
+      currentContent = option2;
+      console.log("SNÄLLA");
+    }
+    
+    for (let layoutContent in currentContent) {
+      console.log(layoutContent);
+      console.log(layoutUrl);
+      if (layoutUrl === layoutContent || option1s === true || option2s === true) {
+        const message = currentContent[layoutContent][currentIndex];
+        console.log(message);
         const container = document.getElementById("content_div");
 
         if (!message) {
@@ -307,7 +328,7 @@ function displayContent(currentIndex) {
         let text;
         const sender = Object.keys(message)[0];
         const textContent = message[sender];
-        if (content) {
+        if (content || currentContent) {
           text = textContent.replace(
             /USER/g,
             window.localStorage.getItem("username")
@@ -316,6 +337,9 @@ function displayContent(currentIndex) {
         document.getElementById("content_img").style.opacity = "1"
         document.getElementById("ai_content_p").style.opacity = "1"
         console.log(text);
+        if(sender === "timeToChoose"){
+          displayOptions()
+        }
         if(sender === "Bild"){
          messageIndex++
           displayImage(text, messageIndex)
@@ -346,8 +370,8 @@ function displayContent(currentIndex) {
           }
           const interval = setInterval(() => {
             if (index < text.length && conversationPaused === false) {
-              messageContainer.textContent += text[index];
               console.log("yes");
+              messageContainer.textContent += text[index];
               index++;
             } else {
               if (
@@ -356,7 +380,8 @@ function displayContent(currentIndex) {
                 console.log("hmm");
                 document.getElementById("nextButton").disabled = true;
                 conversationPaused = true;
-                
+                clearInterval(interval);
+                return;
               }
               clearInterval(interval);
               document.getElementById("nextButton").disabled = false;
@@ -474,7 +499,8 @@ function switchFunction(layout) {
       addClues(7);
       break;
     case "layout6":
-      addClues(8);
+      //addClues(8);
+      displayOptions()
       break;
     case "layou7":
       addClues(9);
@@ -505,6 +531,7 @@ function switchFunction(layout) {
       break;
     case "layout15":
       addClues(14);
+      
       break;
     case "layout16":
       showEndMessage(true);
@@ -553,6 +580,37 @@ function fakeCaptcha() {
       captcha.className += passOrFail();
     }, Math.floor(Math.random() * 3000 + 1000));
   };
+}
+
+function displayOptions(){
+  let alt1 = document.createElement("div");
+  let alt2 = document.createElement("div");
+
+  alt1.classList.add("nextMessage");
+  alt1.id = "alt1"
+  alt1.textContent = "Option 1";
+  
+  alt1.addEventListener("click", (event) => {
+    option1s = true;
+    messageIndex = 0
+    document.getElementById("ai_content_p").innerHTML = ""
+    alt2.remove()
+    displayContent(messageIndex);
+  });
+
+  alt2.classList.add("nextMessage");
+  alt2.id = "alt2"
+  alt2.textContent = "Option 2";
+
+  alt2.addEventListener("click", (event) => {
+    option2s = true;
+    messageIndex = 0
+    document.getElementById("ai_content_p").innerHTML = ""
+    alt1.remove()
+    displayContent(messageIndex);
+  });
+
+  document.querySelector("#user_options").append(alt1, alt2);
 }
 /*
 lägg in för rörlig bild

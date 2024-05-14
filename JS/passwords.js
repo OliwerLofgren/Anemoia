@@ -9,13 +9,13 @@ const passWords = {
 function passwordFunction(currentIndex) {
   const aiDiv = document.getElementById("aiDiv");
   aiDiv.innerHTML = `
-      <img id="content_img" src="./uploads/anemoia1.png"></img>
+      <img id="content_img" src="./uploads/ai.gif"></img>
       <div id="content_div">
           <p id="ai_content_p"></p>
       </div>
-      <h2 id="h2">Skriv in lösenordet för att komma vidare</h2>
+      <p id="h2">Skriv in koden för att komma vidare</p>
       <input id="passwordInput"></input>
-      <button id="checkPassword">Tryck för att testa lösenordet</button>
+      <button id="checkPassword">Testa lösenordet</button>
   `;
 
   document
@@ -39,7 +39,8 @@ function checkPassword(event) {
       layout10Passed = true;
       conversationPaused = false;
       document.body.innerHTML = ""
-      displayContent(index + 2);
+      messageIndex++
+      displayContent(messageIndex);
       return true;
     }
     window.location.href = `?layout=layout${numLayout + 1}`;

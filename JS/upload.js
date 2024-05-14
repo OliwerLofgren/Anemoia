@@ -1,4 +1,5 @@
 function displayUpload() {
+  document.getElementById("ai_content_p").style.opacity = "0"
   const uploadContainer = document.createElement("div");
   uploadContainer.id = "upload_container";
 
