@@ -157,10 +157,7 @@ function goToClues(clueIndex) {
       // displayVideo();
       break;
     case "10":
-      img.src = "uploads/Logbok.png";
-      break;
-    case "11":
-      img.src = "uploads/Instagram.png";
+      img.src = "uploads/Loggbok.png";
       break;
     case "13":
       img.src = "uploads/Anteckningar.png";
