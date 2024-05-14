@@ -11,7 +11,7 @@ function signInpage(event) {
               <input placeholder="Password" id="loginPassword" type="password"></input>
               <button id="login">Login</button>
             </div>
-            <button id="loginShortCut">Go to register</button>
+            <button id="loginShortCut">Gå till registering</button>
             <p id="loginMessage"></p>
         </div>
     </main>
@@ -49,7 +49,7 @@ function loginFunction(event) {
         window.localStorage.setItem("cluesFound", 0);
 
         //RenderStartingpage();
-        continueToNextLayout()
+        continueToNextLayout();
       } else {
         console.log("login failed");
         document.getElementById("loginMessage").textContent = resource.message;

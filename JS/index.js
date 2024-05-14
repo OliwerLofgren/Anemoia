@@ -1,4 +1,4 @@
-//window.localStorage.clear();
+// window.localStorage.clear();
 if (localStorage.getItem("access") === "false") {
   accessCheck();
 }
@@ -251,7 +251,6 @@ function addKey() {
   }
 }
 
-
 function displayContent(currentIndex) {
   const layoutUrl = window.location.search.split("?layout=")[1];
   let aiDiv = document.getElementById("aiDiv");
@@ -286,13 +285,11 @@ function displayContent(currentIndex) {
       });
     }
   }
-  
+
   if (layoutUrl === "layout12" && layout10Passed === true) {
     conversationPaused = false;
-      messageIndex++;
-      
+    messageIndex++;
   }
-  
 
   if (conversationPaused === false) {
     for (let layoutContent in content) {
@@ -313,12 +310,12 @@ function displayContent(currentIndex) {
             window.localStorage.getItem("username")
           );
         }
-        document.getElementById("content_img").style.opacity = "1"
-        document.getElementById("ai_content_p").style.opacity = "1"
+        document.getElementById("content_img").style.opacity = "1";
+        document.getElementById("ai_content_p").style.opacity = "1";
         console.log(text);
-        if(sender === "Bild"){
-         messageIndex++
-          displayImage(text, messageIndex)
+        if (sender === "Bild") {
+          messageIndex++;
+          displayImage(text, messageIndex);
         }
         if (sender === "Ljudfil") {
           document.getElementById("ai_content_p").style.opacity = "0";
@@ -351,18 +348,21 @@ function displayContent(currentIndex) {
               index++;
             } else {
               if (
-                text === ".--- .- --. / ..-. .--.- .-. / . .--- / ... ...- .- .-. .- / .--. .--.- / -.. . - - .--"
+                text ===
+                ".--- .- --. / ..-. .--.- .-. / . .--- / ... ...- .- .-. .- / .--. .--.- / -.. . - - .--"
               ) {
                 console.log("hmm");
                 document.getElementById("nextButton").disabled = true;
                 conversationPaused = true;
-                
               }
               clearInterval(interval);
               document.getElementById("nextButton").disabled = false;
               let newMessage = content[layoutContent][currentIndex + 1];
-              if(!Object.keys(newMessage)[0] || !content[layoutContent][currentIndex + 1]){
-                showEndMessage(true)
+              if (
+                !Object.keys(newMessage)[0] ||
+                !content[layoutContent][currentIndex + 1]
+              ) {
+                showEndMessage(true);
               }
               let newSender = Object.keys(newMessage)[0];
               let newText = newMessage[newSender];
@@ -372,9 +372,9 @@ function displayContent(currentIndex) {
                 messageIndex++;
               } else {
                 console.log("AI");
-                document.getElementById("nextButton").textContent = "Next";
+                document.getElementById("nextButton").textContent = "Nästa";
               }
-              if(addedEvent === false){
+              if (addedEvent === false) {
                 document.getElementById("nextMessage").style.display = "block";
                 document
                   .getElementById("nextButton")
@@ -384,7 +384,6 @@ function displayContent(currentIndex) {
                     addedEvent = true;
                     displayContent(messageIndex);
                   });
-
               }
             }
           }, 50);
@@ -438,17 +437,16 @@ function displayImage(url, index) {
   <button id="goHome">Go Home!</button>`;
   document.getElementById("removeImage").addEventListener("click", (event) => {
     document.getElementById("image").remove();
-    document.querySelector("body").innerHTML = ""
-    displayContent(index)
+    document.querySelector("body").innerHTML = "";
+    displayContent(index);
   });
-  document.getElementById("content_img").style.opacity = "0"
-  document.getElementById("ai_content_p").style.opacity = "0"
+  document.getElementById("content_img").style.opacity = "0";
+  document.getElementById("ai_content_p").style.opacity = "0";
 }
 function addClues(number) {
   //let numClues = parseInt(window.localStorage.getItem("cluesFound"));
   window.localStorage.setItem("cluesFound", number);
   console.log(window.localStorage.getItem("cluesFound"));
- 
 }
 
 function switchFunction(layout) {
@@ -485,9 +483,9 @@ function switchFunction(layout) {
       break;
     case "layout9":
       break;
-      case "layout10":
-        addClues(10);
-        fakeCaptcha();
+    case "layout10":
+      addClues(10);
+      fakeCaptcha();
       break;
     case "layout11":
       passwordFunction();
