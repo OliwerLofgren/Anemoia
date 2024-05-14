@@ -114,7 +114,7 @@ function RenderStartingpage() {
     document.getElementById("scan_p").innerHTML = "";
   }
 }
-// displayVideo("./audio/Overvakning.mp4");
+
 function goToClues(clueIndex) {
   console.log(clueIndex);
 
@@ -156,7 +156,7 @@ function goToClues(clueIndex) {
       img.src = "uploads/Kvitto.png";
       break;
     case "9":
-      // displayVideo();
+      displayVideo("./audio/Overvakning.mp4");
       break;
     case "10":
       img.src = "uploads/Loggbok.png";
@@ -166,6 +166,9 @@ function goToClues(clueIndex) {
       break;
     case "14":
       img.src = "uploads/Karta.png";
+      break;
+    case "14":
+      //LÄNK TILL FIGMA
       break;
     default:
       break;
@@ -186,7 +189,7 @@ function goToClues(clueIndex) {
 
 function createNextButton() {
   let nextButton = document.createElement("button");
-  nextButton.textContent = "Nästa";
+  nextButton.textContent = "Fortsätt till nästa del";
 
   nextButton.addEventListener("click", continueToNextLayout);
 
@@ -288,30 +291,36 @@ function displayContent(currentIndex) {
 
   if (layoutUrl === "layout12" && layout10Passed === true) {
     conversationPaused = false;
-    document.getElementById("nextMessage").addEventListener("click", (event) => {
-      messageIndex++;
-      displayContent(messageIndex);
-    });
+    document
+      .getElementById("nextMessage")
+      .addEventListener("click", (event) => {
+        messageIndex++;
+        displayContent(messageIndex);
+      });
   }
 
   if (conversationPaused === false) {
     let currentContent;
-      currentContent = content
-    
-    if(option1s === true){
+    currentContent = content;
+
+    if (option1s === true) {
       currentContent = option1;
       console.log("SNÄLLA");
     }
     console.log(option2s);
-    if(option2s === true){
+    if (option2s === true) {
       currentContent = option2;
       console.log("SNÄLLA");
     }
-    
+
     for (let layoutContent in currentContent) {
       console.log(layoutContent);
       console.log(layoutUrl);
-      if (layoutUrl === layoutContent || option1s === true || option2s === true) {
+      if (
+        layoutUrl === layoutContent ||
+        option1s === true ||
+        option2s === true
+      ) {
         const message = currentContent[layoutContent][currentIndex];
         console.log(message);
         const container = document.getElementById("content_div");
@@ -332,12 +341,12 @@ function displayContent(currentIndex) {
         document.getElementById("content_img").style.opacity = "1";
         document.getElementById("ai_content_p").style.opacity = "1";
         console.log(text);
-        if(sender === "timeToChoose"){
-          displayOptions()
+        if (sender === "timeToChoose") {
+          displayOptions();
         }
-        if(sender === "Bild"){
-         messageIndex++
-          displayImage(text, messageIndex)
+        if (sender === "Bild") {
+          messageIndex++;
+          displayImage(text, messageIndex);
         }
         if (sender === "Ljudfil") {
           document.getElementById("ai_content_p").style.opacity = "0";
@@ -497,7 +506,7 @@ function switchFunction(layout) {
       break;
     case "layout6":
       //addClues(8);
-      displayOptions()
+      displayOptions();
       break;
     case "layou7":
       addClues(9);
@@ -507,6 +516,7 @@ function switchFunction(layout) {
       passwordFunction();
       break;
     case "layout9":
+      displayVideo("./audio/Overvakning.mp4");
       break;
     case "layout10":
       addClues(10);
@@ -528,7 +538,7 @@ function switchFunction(layout) {
       break;
     case "layout15":
       addClues(14);
-      
+
       break;
     case "layout16":
       showEndMessage(true);
@@ -579,31 +589,31 @@ function fakeCaptcha() {
   };
 }
 
-function displayOptions(){
+function displayOptions() {
   let alt1 = document.createElement("div");
   let alt2 = document.createElement("div");
 
   alt1.classList.add("nextMessage");
-  alt1.id = "alt1"
+  alt1.id = "alt1";
   alt1.textContent = "Option 1";
-  
+
   alt1.addEventListener("click", (event) => {
     option1s = true;
-    messageIndex = 0
-    document.getElementById("ai_content_p").innerHTML = ""
-    alt2.remove()
+    messageIndex = 0;
+    document.getElementById("ai_content_p").innerHTML = "";
+    alt2.remove();
     displayContent(messageIndex);
   });
 
   alt2.classList.add("nextMessage");
-  alt2.id = "alt2"
+  alt2.id = "alt2";
   alt2.textContent = "Option 2";
 
   alt2.addEventListener("click", (event) => {
     option2s = true;
-    messageIndex = 0
-    document.getElementById("ai_content_p").innerHTML = ""
-    alt1.remove()
+    messageIndex = 0;
+    document.getElementById("ai_content_p").innerHTML = "";
+    alt1.remove();
     displayContent(messageIndex);
   });
 
