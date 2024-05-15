@@ -198,6 +198,8 @@ function createNextButton() {
   document.querySelector("#nextMessage").remove()
 
   nextButton.addEventListener("click", continueToNextLayout);
+  document.querySelector("#content_div").remove();
+  document.querySelector("#nextMessage").remove();
 
   document.body.appendChild(nextButton);
 }
@@ -462,7 +464,7 @@ function displayImage(url, index) {
         <p id="ai_content_p"></p>
       </div>
   <button id="removeImage">Stäng ner bilden</button>
-  <button id="goHome">Go Home!</button>`;
+  <button id="goHome">Gå tillbaka</button>`;
   document.getElementById("removeImage").addEventListener("click", (event) => {
     document.getElementById("image").remove();
     document.querySelector("body").innerHTML = "";
@@ -491,12 +493,10 @@ function switchFunction(layout) {
       break;
     case "layout3":
       addClues(5);
-      displayImage("./uploads/kontoutdrag.png");
-      createNextButton();
+      showEndMessage(true);
       break;
     case "layout4":
       addClues(6);
-      displayImage("./uploads/Kvitto.png");
       createNextButton();
       break;
     case "layout5":
@@ -512,7 +512,7 @@ function switchFunction(layout) {
       break;
     case "layout8":
       addClues(7);
-      createNextButton();
+      showEndMessage(true);
       break;
     case "layout9":
       displayVideo("./audio/Overvakning.mp4");
@@ -545,10 +545,11 @@ function switchFunction(layout) {
       break;
     case "layout17":
       addClues(15);
-      createNextButton();
+      showEndMessage(true);
+
       break;
     case "layout18":
-      showEndMessage(true);
+      createNextButton();
       break;
     case "layout19":
       createNextButton();
