@@ -108,9 +108,6 @@ const content = {
   ],
   layout4: [
     {
-      Anemonia: "",
-    },
-    {
       Bild: "../uploads/Kvitto.png",
     },
     {
@@ -119,9 +116,6 @@ const content = {
     },
     {
       Spelare: "Då måste morotskakan vara till pjotur895? Vem är det?",
-    },
-    {
-      Anemonia: "FETT WALLAAA",
     },
   ],
   layout5: [
