@@ -389,6 +389,12 @@ select {
 #video {
   height: auto;
   width: 400px;
+  position: absolute;
+  top: 30%;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #goHome {
