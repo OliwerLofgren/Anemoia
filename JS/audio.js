@@ -31,7 +31,11 @@ function displayVideo(videoFilePath) {
   video.src = videoFilePath;
   video.controls = true;
   video.id = "video";
-
+  if (document.querySelector("#content_div")) {
+    document.querySelector("#content_div").style.top = "80%";
+    document.querySelector("#nextMessage").remove();
+  }
+  showEndMessage(true);
   let container = document.createElement("div");
   container.appendChild(video);
 

@@ -1,6 +1,5 @@
-//window.localStorage.clear();
-localStorage.setItem("access", "false")
-accessCheck();
+// window.localStorage.clear();
+
 if (localStorage.getItem("access") === "false") {
   accessCheck();
 }
@@ -23,7 +22,7 @@ function accessCheck() {
   if (img) img.style.display = "none";
 
   const h1Element = document.createElement("p");
-  h1Element.id="denied"
+  h1Element.id = "denied";
   h1Element.textContent = "ACCESS DENIED";
   document.body.appendChild(h1Element);
 }
@@ -194,8 +193,8 @@ function createNextButton() {
   let nextButton = document.createElement("button");
   nextButton.textContent = "Fortsätt till nästa del";
   nextButton.id = "nextLayout";
-  document.querySelector("#content_div").remove()
-  document.querySelector("#nextMessage").remove()
+  document.querySelector("#content_div").remove();
+  document.querySelector("#nextMessage").remove();
 
   nextButton.addEventListener("click", continueToNextLayout);
   document.querySelector("#content_div").remove();
@@ -311,16 +310,10 @@ function displayContent(currentIndex) {
     let currentContent;
     currentContent = content;
     for (let layoutContent in currentContent) {
-     
-      if (
-        layoutUrl === layoutContent
-      ) {
-        
-
+      if (layoutUrl === layoutContent) {
         const message = currentContent[layoutContent][currentIndex];
         console.log(message);
         const container = document.getElementById("content_div");
-
 
         if (!message) {
           showEndMessage();
@@ -346,7 +339,7 @@ function displayContent(currentIndex) {
           displayImage(text, messageIndex);
         }
         if (sender === "Ljudfil") {
-          document.getElementById("ai_content_p").style.opacity = "0";
+          document.getElementById("content_div").style.opacity = "0";
           if (document.getElementById("audio")) {
             document.getElementById("audio").remove();
           }
@@ -410,7 +403,7 @@ function displayContent(currentIndex) {
                   .addEventListener("click", (event) => {
                     //conversationPaused = false;
                     //messageContainer.innerHTML = ""
-                    
+
                     addedEvent = true;
                     displayContent(messageIndex);
                   });
@@ -501,10 +494,10 @@ function switchFunction(layout) {
       break;
     case "layout5":
       addClues(7);
-      createNextButton();
+      passwordFunction();
       break;
     case "layout6":
-      displayOptions()
+      createNextButton();
       break;
     case "layout7":
       addClues(9);
@@ -516,7 +509,7 @@ function switchFunction(layout) {
       break;
     case "layout9":
       displayVideo("./audio/Overvakning.mp4");
-      passwordFunction();
+
       break;
     case "layout10":
       addClues(10);
@@ -564,11 +557,11 @@ function switchFunction(layout) {
       createNextButton();
       break;
     case "layout23":
-      window.localStorage.setItem("access", "false")
-      accessCheck()
+      window.localStorage.setItem("access", "false");
+      accessCheck();
       break;
-      case "layout24":
-        passwordFunction();
+    case "layout24":
+      passwordFunction();
       break;
     case "layout25":
       createNextButton();
@@ -642,7 +635,7 @@ function displayOptions() {
     messageIndex = 0;
     document.getElementById("ai_content_p").innerHTML = "";
     alt2.remove();
-    keysFound = 21
+    keysFound = 21;
 
     window.localStorage.setItem("keysFound", keysFound);
 
@@ -660,7 +653,7 @@ function displayOptions() {
     document.getElementById("ai_content_p").innerHTML = "";
     alt1.remove();
 
-    keysFound = 24
+    keysFound = 24;
 
     window.localStorage.setItem("keysFound", keysFound);
 

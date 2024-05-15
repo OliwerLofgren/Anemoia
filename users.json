@@ -25,5 +25,14 @@
         "indications": 0,
         "keysFound": 0,
         "upload": "false"
+    },
+    {
+        "id": 4,
+        "username": "Oliwer2",
+        "password": "123",
+        "access": "true",
+        "indications": 0,
+        "keysFound": 0,
+        "upload": "false"
     }
 ]

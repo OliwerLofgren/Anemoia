@@ -1,9 +1,9 @@
 const passWords = {
   layout2: "861",
-  layout4: "peter",
+  layout5: "peter",
   layout8: "9691",
   layout11: "aiomen",
-  layout12:"lionbar"
+  layout12: "lionbar",
 };
 
 function passwordFunction(currentIndex) {
@@ -35,11 +35,10 @@ function checkPassword(event) {
   if (passWords[layoutUrl] === document.getElementById("passwordInput").value) {
     foundPassword = true;
     if (layoutUrl === "layout12") {
-    
       layout10Passed = true;
       conversationPaused = false;
-      document.body.innerHTML = ""
-      messageIndex++
+      document.body.innerHTML = "";
+      messageIndex++;
       displayContent(messageIndex);
       return true;
     }
