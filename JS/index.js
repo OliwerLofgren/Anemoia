@@ -1,6 +1,5 @@
 //window.localStorage.clear();
-localStorage.setItem("access", "false")
-accessCheck();
+
 if (localStorage.getItem("access") === "false") {
   accessCheck();
 }
@@ -198,8 +197,14 @@ function createNextButton() {
   document.querySelector("#nextMessage").remove()
 
   nextButton.addEventListener("click", continueToNextLayout);
-  document.querySelector("#content_div").remove();
-  document.querySelector("#nextMessage").remove();
+
+  if(document.querySelector("#content_div")){
+    document.querySelector("#content_div").remove();
+  }
+  if(document.querySelector("#nextMessage")){
+    document.querySelector("#nextMessage").remove();
+  }
+  
 
   document.body.appendChild(nextButton);
 }
@@ -338,6 +343,9 @@ function displayContent(currentIndex) {
         document.getElementById("content_img").style.opacity = "1";
         document.getElementById("ai_content_p").style.opacity = "1";
         console.log(text);
+        if(text == "Då måste morotskakan vara till pjotur895? Vem är det?"){
+          showEndMessage()
+        }
         if (sender === "timeToChoose") {
           displayOptions();
         }
@@ -399,6 +407,7 @@ function displayContent(currentIndex) {
               if (newSender === "Spelare") {
                 document.getElementById("nextButton").textContent = newText;
                 messageIndex++;
+                console.log(messageIndex);
               } else {
                 console.log("AI");
                 document.getElementById("nextButton").textContent = "Nästa";
@@ -410,7 +419,7 @@ function displayContent(currentIndex) {
                   .addEventListener("click", (event) => {
                     //conversationPaused = false;
                     //messageContainer.innerHTML = ""
-                    
+                    console.log("geg");
                     addedEvent = true;
                     displayContent(messageIndex);
                   });
@@ -500,8 +509,8 @@ function switchFunction(layout) {
       createNextButton();
       break;
     case "layout5":
-      addClues(7);
       createNextButton();
+      addClues(7);
       break;
     case "layout6":
       displayOptions()
