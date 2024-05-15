@@ -198,13 +198,12 @@ function createNextButton() {
 
   nextButton.addEventListener("click", continueToNextLayout);
 
-  if(document.querySelector("#content_div")){
+  if (document.querySelector("#content_div")) {
     document.querySelector("#content_div").remove();
   }
-  if(document.querySelector("#nextMessage")){
+  if (document.querySelector("#nextMessage")) {
     document.querySelector("#nextMessage").remove();
   }
-  
 
   document.body.appendChild(nextButton);
 }
@@ -337,8 +336,8 @@ function displayContent(currentIndex) {
         document.getElementById("content_img").style.opacity = "1";
         document.getElementById("ai_content_p").style.opacity = "1";
         console.log(text);
-        if(text == "Då måste morotskakan vara till pjotur895? Vem är det?"){
-          showEndMessage()
+        if (text == "Då måste morotskakan vara till pjotur895? Vem är det?") {
+          showEndMessage();
         }
         if (sender === "timeToChoose") {
           displayOptions();
