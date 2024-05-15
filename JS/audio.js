@@ -32,7 +32,7 @@ function displayVideo(videoFilePath) {
   video.controls = true;
   video.id = "video";
   if (document.querySelector("#content_div")) {
-    document.querySelector("#content_div").style.top = "80%";
+    document.querySelector("#content_div").style.top = "70%";
     document.querySelector("#nextMessage").remove();
   }
   showEndMessage(true);
