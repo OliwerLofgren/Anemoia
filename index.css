@@ -71,12 +71,7 @@ h1 {
   text-align: center;
   width: 200px;
 }
-#goHome {
-  position: fixed;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
 #ai_content_p,
 #user_content_p {
   color: white;
@@ -121,7 +116,6 @@ h1 {
   padding: 10px;
   width: 250px;
   text-align: left;
-  
 }
 
 #content_img {
@@ -131,7 +125,7 @@ h1 {
   transform: translate(-50%, -50%);
   height: 100px;
   width: 100px;
-  border-radius: 50%; 
+  border-radius: 50%;
   background-image: url("uploads/anemoia.png");
 }
 
@@ -397,6 +391,25 @@ select {
   width: 400px;
 }
 
+#goHome {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#nextLayout {
+  position: absolute;
+  top: 65%;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #upload_container {
   position: absolute;
   margin-left: auto;
@@ -407,9 +420,9 @@ select {
   text-align: center;
 }
 
-#alt1{
+#alt1 {
   top: 20%;
 }
-#alt2{
+#alt2 {
   top: 40%;
 }

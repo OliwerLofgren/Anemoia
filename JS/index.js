@@ -190,6 +190,7 @@ function goToClues(clueIndex) {
 function createNextButton() {
   let nextButton = document.createElement("button");
   nextButton.textContent = "Fortsätt till nästa del";
+  nextButton.id = "nextLayout";
 
   nextButton.addEventListener("click", continueToNextLayout);
 
@@ -305,12 +306,10 @@ function displayContent(currentIndex) {
 
     if (option1s === true) {
       currentContent = option1;
-      console.log("SNÄLLA");
     }
     console.log(option2s);
     if (option2s === true) {
       currentContent = option2;
-      console.log("SNÄLLA");
     }
 
     for (let layoutContent in currentContent) {
@@ -374,7 +373,6 @@ function displayContent(currentIndex) {
           }
           const interval = setInterval(() => {
             if (index < text.length && conversationPaused === false) {
-              console.log("yes");
               messageContainer.textContent += text[index];
               index++;
             } else {
@@ -485,24 +483,28 @@ function addClues(number) {
 function switchFunction(layout) {
   switch (layout) {
     case "layout1":
-      displayUpload();
       addClues(4);
+      displayUpload();
+      if (window.localStorage.getItem("upload") === "true") {
+        createNextButton();
+      }
       break;
     case "layout2":
-      passwordFunction();
+      createNextButton();
       break;
     case "layout3":
       addClues(5);
       displayImage("./uploads/kontoutdrag.png");
-      showEndMessage(true);
+      createNextButton();
       break;
     case "layout4":
       addClues(6);
       displayImage("./uploads/Kvitto.png");
-      passwordFunction();
+      showEndMessage(true);
       break;
     case "layout5":
       addClues(7);
+      createNextButton();
       break;
     case "layout6":
       //addClues(8);
