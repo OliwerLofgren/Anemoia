@@ -103,12 +103,12 @@ const content = {
         "Utifrån korthistoriken verkar Johannes ha besökt Café Niagara i nära anslutning till det aktuella mötet. Det är en ovanligt hög summa, avvikande från det genomsnittliga utgifterna för samma plats under det senaste året, vilket låg på 31 kronor.",
     },
     {
-      Bild: "../uploads/Kontoutdrag.png",
+      Bild: "./uploads/Kontoutdrag.png",
     },
   ],
   layout4: [
     {
-      Bild: "../uploads/Kvitto.png",
+      Bild: "./uploads/Kvitto.png",
     },
     {
       Anemonia:
@@ -144,31 +144,31 @@ const content = {
 
   layout7: [
     {
-      Ljudfil: "../audio/Peter1.mp3",
+      Ljudfil: "./audio/Peter1.mp3",
     },
     {
       Spelare: "Hej Peter, det är USER. Allt bra?",
     },
     {
-      Ljudfil: "../audio/Peter2.mp3",
+      Ljudfil: "./audio/Peter2.mp3",
     },
     {
       Spelare: "Jag undrar om ditt möte med Johannes, den 10 maj?",
     },
     {
-      Ljudfil: "../audio/Peter3.mp3",
+      Ljudfil: "./audio/Peter3.mp3",
     },
     {
       Spelare: "Svara bara på frågan.",
     },
     {
-      Ljudfil: "../audio/Peter4.mp3",
+      Ljudfil: "./audio/Peter4.mp3",
     },
     {
       Spelare: "Vad hade han upptäckt?",
     },
     {
-      Ljudfil: "../audio/Peter5.mp3",
+      Ljudfil: "./audio/Peter5.mp3",
     },
   ],
   layout8: [
@@ -459,31 +459,31 @@ const content = {
 
   layout16: [
     {
-      Ljudfil: "../audio/Amandadel1.mp3",
+      Ljudfil: "./audio/Amandadel1.mp3",
     },
     {
       Spelare: "Hej Amanda. Jag såg din kommentar i forumet och har en fråga.",
     },
     {
-      Ljudfil: "../audio/Amandadel2.mp3",
+      Ljudfil: "./audio/Amandadel2.mp3",
     },
     {
       Spelare: "Jag känner igen dig från projektkursen Johannes håller. ",
     },
     {
-      Ljudfil: "../audio/Amandadel3.mp3",
+      Ljudfil: "./audio/Amandadel3.mp3",
     },
     {
       Spelare: "Vad såg du den kvällen Johannes blev mördad?",
     },
     {
-      Ljudfil: "../audio/Amandadel4.mp3",
+      Ljudfil: "./audio/Amandadel4.mp3",
     },
     {
       Spelare: "Kände du igen den som ramlade?",
     },
     {
-      Ljudfil: "../audio/Amandadel5.mp3",
+      Ljudfil: "./audio/Amandadel5.mp3",
     },
     {
       Spelare: "Tack för att du delade med dig. ",
@@ -890,47 +890,47 @@ const content = {
     },
   ],
   layout26: [
-    { Ljudfil: "../audio/Samtal2_Peter1.mp3" },
+    { Ljudfil: "./audio/Samtal2_Peter1.mp3" },
     {
       Spelare:
         "Jag skulle bara vilja höra vad du gjorde natten mellan fredag den 10 maj och lördag 11 maj?",
     },
-    { Ljudfil: "../audio/Samtal2_Peter2.mp3" },
+    { Ljudfil: "./audio/Samtal2_Peter2.mp3" },
     { Spelare: "Du gör nog bäst i att svara på frågan." },
-    { Ljudfil: "../audio/Samtal2_Peter3.mp3" },
+    { Ljudfil: "./audio/Samtal2_Peter3.mp3" },
     { Spelaren: "Vart bor du?" },
-    { Ljudfil: "../audio/Samtal2_Peter4.mp3" },
+    { Ljudfil: "./audio/Samtal2_Peter4.mp3" },
     {
       Spelare: "Hur länge stannade du kvar?",
     },
-    { Ljudfil: "../audio/Samtal2_Peter5.mp3" },
+    { Ljudfil: "./audio/Samtal2_Peter5.mp3" },
     { Spelare: "Och du sa att du gick hem?" },
-    { Ljudfil: "../audio/Samtal2_Peter6.mp3" },
+    { Ljudfil: "./audio/Samtal2_Peter6.mp3" },
     { Spelare: "Själv? Du mötte inte någon?" },
-    { Ljudfil: "../audio/Samtal2_Peter7.mp3" },
+    { Ljudfil: "./audio/Samtal2_Peter7.mp3" },
     {
       Spelare:
         "Jag vill bara veta hur det kommer sig att du finns med på bilder med Johannes",
     },
-    { Ljudfil: "../audio/Samtal2_Peter8.mp3" },
+    { Ljudfil: "./audio/Samtal2_Peter8.mp3" },
     { Spelare: "Vet du inte om bilderna?" },
-    { Ljudfil: "../audio/Samtal2_Peter9.mp3" },
+    { Ljudfil: "./audio/Samtal2_Peter9.mp3" },
     {
       Spelare: "Hur hann du då ikapp för att lämna kortet",
     },
-    { Ljudfil: "../audio/Samtal2_Peter10.mp3" },
+    { Ljudfil: "./audio/Samtal2_Peter10.mp3" },
     {
       Spelare: "Såklart",
     },
-    { Ljudfil: "../audio/Samtal2_Peter11.mp3" },
+    { Ljudfil: "./audio/Samtal2_Peter11.mp3" },
     {
       Spelaren: "Varför tror du det?.",
     },
-    { Ljudfil: "../audio/Samtal2_Peter12.mp3" },
+    { Ljudfil: "./audio/Samtal2_Peter12.mp3" },
     {
       Spelaren: "Hur vet du att Johannes fick det smset? .",
     },
-    { Ljudfil: "../audio/Samtal2_Peter13.mp3" },
+    { Ljudfil: "./audio/Samtal2_Peter13.mp3" },
   ],
   layout27: [
     { Anemonia: "Tänker du på vad jag tänker?" },

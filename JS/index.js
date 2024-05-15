@@ -274,7 +274,7 @@ function displayContent(currentIndex) {
     aiDiv = document.createElement("div");
     aiDiv.id = "aiDiv";
     aiDiv.innerHTML = `
-      <img id="content_img" src="../uploads/ai.gif"></img>
+      <img id="content_img" src="./uploads/ai.gif"></img>
       <div id="content_div">
         <p id="ai_content_p"></p>
       </div>
