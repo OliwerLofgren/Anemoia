@@ -1,4 +1,6 @@
-// window.localStorage.clear();
+//window.localStorage.clear();
+localStorage.setItem("access", "false")
+accessCheck();
 if (localStorage.getItem("access") === "false") {
   accessCheck();
 }
@@ -20,7 +22,8 @@ function accessCheck() {
   if (button) button.style.display = "none";
   if (img) img.style.display = "none";
 
-  const h1Element = document.createElement("h1");
+  const h1Element = document.createElement("p");
+  h1Element.id="denied"
   h1Element.textContent = "ACCESS DENIED";
   document.body.appendChild(h1Element);
 }
@@ -191,6 +194,8 @@ function createNextButton() {
   let nextButton = document.createElement("button");
   nextButton.textContent = "Fortsätt till nästa del";
   nextButton.id = "nextLayout";
+  document.querySelector("#content_div").remove()
+  document.querySelector("#nextMessage").remove()
 
   nextButton.addEventListener("click", continueToNextLayout);
 
@@ -303,26 +308,17 @@ function displayContent(currentIndex) {
   if (conversationPaused === false) {
     let currentContent;
     currentContent = content;
-
-    if (option1s === true) {
-      currentContent = option1;
-    }
-    console.log(option2s);
-    if (option2s === true) {
-      currentContent = option2;
-    }
-
     for (let layoutContent in currentContent) {
-      console.log(layoutContent);
-      console.log(layoutUrl);
+     
       if (
-        layoutUrl === layoutContent ||
-        option1s === true ||
-        option2s === true
+        layoutUrl === layoutContent
       ) {
+        
+
         const message = currentContent[layoutContent][currentIndex];
         console.log(message);
         const container = document.getElementById("content_div");
+
 
         if (!message) {
           showEndMessage();
@@ -412,6 +408,7 @@ function displayContent(currentIndex) {
                   .addEventListener("click", (event) => {
                     //conversationPaused = false;
                     //messageContainer.innerHTML = ""
+                    
                     addedEvent = true;
                     displayContent(messageIndex);
                   });
@@ -500,15 +497,14 @@ function switchFunction(layout) {
     case "layout4":
       addClues(6);
       displayImage("./uploads/Kvitto.png");
-      showEndMessage(true);
+      createNextButton();
       break;
     case "layout5":
       addClues(7);
       createNextButton();
       break;
     case "layout6":
-      addClues(8);
-      createNextButton();
+      displayOptions()
       break;
     case "layout7":
       addClues(9);
@@ -567,10 +563,11 @@ function switchFunction(layout) {
       createNextButton();
       break;
     case "layout23":
-      passwordFunction();
+      window.localStorage.setItem("access", "false")
+      accessCheck()
       break;
-    case "layout24":
-      createNextButton();
+      case "layout24":
+        passwordFunction();
       break;
     case "layout25":
       createNextButton();
@@ -637,13 +634,19 @@ function displayOptions() {
   alt1.classList.add("nextMessage");
   alt1.id = "alt1";
   alt1.textContent = "Option 1";
+  let keysFound = parseInt(window.localStorage.getItem("keysFound")) || 0;
 
   alt1.addEventListener("click", (event) => {
     option1s = true;
     messageIndex = 0;
     document.getElementById("ai_content_p").innerHTML = "";
     alt2.remove();
-    displayContent(messageIndex);
+    keysFound = 21
+
+    window.localStorage.setItem("keysFound", keysFound);
+
+    window.location.href = `?layout=layout${keysFound}`;
+    //displayContent(messageIndex);
   });
 
   alt2.classList.add("nextMessage");
@@ -655,6 +658,13 @@ function displayOptions() {
     messageIndex = 0;
     document.getElementById("ai_content_p").innerHTML = "";
     alt1.remove();
+
+    keysFound = 24
+
+    window.localStorage.setItem("keysFound", keysFound);
+
+    window.location.href = `?layout=layout${keysFound}`;
+    //displayContent(messageIndex);
     displayContent(messageIndex);
   });
 
