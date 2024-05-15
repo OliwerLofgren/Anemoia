@@ -507,18 +507,20 @@ function switchFunction(layout) {
       createNextButton();
       break;
     case "layout6":
-      //addClues(8);
-      displayOptions();
+      addClues(8);
+      createNextButton();
       break;
-    case "layou7":
+    case "layout7":
       addClues(9);
+      createNextButton();
       break;
     case "layout8":
       addClues(7);
-      passwordFunction();
+      createNextButton();
       break;
     case "layout9":
       displayVideo("./audio/Overvakning.mp4");
+      passwordFunction();
       break;
     case "layout10":
       addClues(10);
@@ -536,19 +538,56 @@ function switchFunction(layout) {
       break;
     case "layout14":
       addClues(13);
-      // displayAudio(audioAmanda);
+      createNextButton();
       break;
     case "layout15":
       addClues(14);
-
+      createNextButton();
       break;
     case "layout16":
-      showEndMessage(true);
+      createNextButton();
       break;
     case "layout17":
       addClues(15);
+      createNextButton();
+      break;
+    case "layout18":
       showEndMessage(true);
       break;
+    case "layout19":
+      createNextButton();
+      break;
+    case "layout20":
+      createNextButton();
+      break;
+    case "layout21":
+      createNextButton();
+      break;
+    case "layout22":
+      createNextButton();
+      break;
+    case "layout23":
+      passwordFunction();
+      break;
+    case "layout24":
+      createNextButton();
+      break;
+    case "layout25":
+      createNextButton();
+      break;
+    case "layout26":
+      createNextButton();
+      break;
+    case "layout27":
+      passwordFunction();
+      break;
+    case "layout28":
+      createNextButton();
+      break;
+    case "layout29":
+      createNextButton();
+      break;
+
     default:
       break;
   }
