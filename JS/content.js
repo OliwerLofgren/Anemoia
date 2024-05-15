@@ -77,8 +77,7 @@ const content = {
         "Användare har även använt admincommands för att rensa och återställa loggarna, vilket tyder på man försöker dölja ett beteende. Är det ett vanligt beteende bland människor att vilja dölja och återställa information?",
     },
     {
-      Spelare:
-        "Jag skulle säga att det är mänskligt att ljuga och dölja information. ",
+      Spelare: "Det är mänskligt att ljuga och dölja information. ",
     },
     {
       Anemonia: "Okej.",
@@ -91,7 +90,7 @@ const content = {
         "Jag har tillgång till universitetets system och kan söka efter nyckeln där. Men det kräver att jag får tillstånd från en administratör för att komma åt den.",
     },
     {
-      Spelare: "Vilken administratör tror du är villig att hjälpa oss?",
+      Spelare: "Vilken administratör är villig att hjälpa oss?",
     },
     {
       Anemonia:
