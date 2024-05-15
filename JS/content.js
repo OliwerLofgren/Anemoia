@@ -100,66 +100,18 @@ const content = {
   layout3: [
     {
       Anemonia:
-        "Tack. Med hjälp av nyckeln kunde jag återställa loggarna. Har laddat upp loggen i sin helhet bland resten av dina ledtrådar.",
-    },
-    {
-      Spelare: "Vem är användarna?",
-    },
-    {
-      Anemonia:
-        "MG_MAU är Michael Gunnarsson. an6941_MAU används gemensamt av projektgruppen, där olika studenter har identifierat sig i olika perioder, bland annat Donia, Klara och Alexander. JK_MAU är Johannes Karlsson. Karlsson83 är Johannes Karlsson.",
-    },
-    {
-      Spelare: "Varför loggar Johannes in på två olika konton?",
-    },
-    {
-      Anemonia: "Det kan jag tyvärr inte svara på.",
-    },
-    {
-      Spelare: "Varför inte?",
-    },
-    {
-      Anemonia: "Det kan jag tyvärr inte svara på.",
-    },
-    {
-      Spelare: "Vem bokade Johannes det viktiga mötet med då?",
-    },
-    {
-      Anemonia:
-        "Med pjotur895@gmail.com. Jag kan inte se om det är en eller flera personer, eller ett företag. Det är inget konto registrerat genom universitetets databas eller nätverk så jag kommer inte åt det med IT-Chefens säkerhetsnyckel.",
-    },
-    {
-      Anemonia:
-        "Det är vanligt att identifiera ägare till e-postadresser genom att begära information från e-posttjänstleverantören via lagliga kanaler. Sedan genomför man en utredning för att spåra aktiviteter och kontakter associerade med adressen.",
-    },
-    {
-      Anemonia:
-        "Men det tar för lång tid. Jag skulle föreslå att lokalisera vittnen eller följa ett rörelsemönster för att vi snabbare ska hitta pjotur895. Jag kan komma åt privat information i annars stängda miljöer, men behöver ditt godkännande.",
-    },
-    {
-      Anemonia: "Får jag tillstånd av dig att ta mig in i privata miljöer?",
-    },
-    {
-      Spelare: "Ja",
-    },
-    {
-      Anemonia: "Initierar enhetskanning. Initierar system. (osv) Scannar ….",
-    },
-    {
-      Anemonia:
-        "Din enhet har samma bank som Johannes, vilket tillät mig att komma åt Johannes korthistorik. Ytterligare information från internet bekräftar att det är vanligt att undersöka korthistorik hos poliser. Här ser du utdraget.",
-    },
-    {
-      Bild: "../uploads/Kvitto.png",
-    },
-    {
-      Anemonia:
         "Utifrån korthistoriken verkar Johannes ha besökt Café Niagara i nära anslutning till det aktuella mötet. Det är en ovanligt hög summa, avvikande från det genomsnittliga utgifterna för samma plats under det senaste året, vilket låg på 31 kronor.",
+    },
+    {
+      Bild: "../uploads/Kontoutdrag.png",
     },
   ],
   layout4: [
     {
-      Bild: "../uploads/Kontoutdrag.png",
+      Anemonia: "",
+    },
+    {
+      Bild: "../uploads/Kvitto.png",
     },
     {
       Anemonia:
@@ -168,7 +120,9 @@ const content = {
     {
       Spelare: "Då måste morotskakan vara till pjotur895? Vem är det?",
     },
-    //FIXA NÅTT H
+    {
+      Anemonia: "FETT WALLAAA",
+    },
   ],
   layout5: [
     {

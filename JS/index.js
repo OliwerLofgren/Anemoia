@@ -309,14 +309,12 @@ function displayContent(currentIndex) {
     if (option1s === true) {
       currentContent = option1;
     }
-    console.log(option2s);
+
     if (option2s === true) {
       currentContent = option2;
     }
 
     for (let layoutContent in currentContent) {
-      console.log(layoutContent);
-      console.log(layoutUrl);
       if (
         layoutUrl === layoutContent ||
         option1s === true ||
@@ -496,12 +494,10 @@ function switchFunction(layout) {
       break;
     case "layout3":
       addClues(5);
-      displayImage("./uploads/kontoutdrag.png");
       showEndMessage(true);
       break;
     case "layout4":
       addClues(6);
-      displayImage("./uploads/Kvitto.png");
       createNextButton();
       break;
     case "layout5":
