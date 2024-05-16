@@ -503,8 +503,7 @@ const content = {
         "Jag beklagar, men jag har inte ytterligare information om vart Johannes och Michael gick. Min databas innehåller bara den information jag har tillgång till genom dig, och jag kan inte ta beslut att utforska saker på egen hand. Om det finns någon specifik plats du vill att jag ska undersöka ytterligare, så kan jag försöka hjälpa till med det.",
     },
     {
-      Spelare:
-        "Jag hade velat ta reda på var de gick någonstans, har du några förslag?",
+      Spelare: "Jag hade velat ta reda på var de gick någonstans",
     },
     {
       Anemonia:

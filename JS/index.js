@@ -597,11 +597,11 @@ function switchFunction(layout) {
       break;
     case "layout17":
       addClues(15);
-      showEndMessage(true);
+      createNextButton();
 
       break;
     case "layout18":
-      createNextButton();
+      showEndMessage(true);
       break;
     case "layout19":
       createNextButton();
