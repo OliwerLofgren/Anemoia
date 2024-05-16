@@ -648,6 +648,7 @@ function switchFunction(layout) {
 
 function fakeCaptcha() {
   let captchas = document.querySelector("#content_div");
+
   //captcha.classList.add("captcha")
   captchas.innerHTML = `
   <div id="fake-captcha">
@@ -667,7 +668,6 @@ function fakeCaptcha() {
       window.location.href = `?layout=layout11`;
       return "pass";
     }
-    //Ingen else här? // Big daddy O
   };
 
   captcha.onclick = function () {
@@ -682,8 +682,6 @@ function fakeCaptcha() {
       captcha.className += passOrFail();
     }, Math.floor(Math.random() * 3000 + 1000));
   };
-
-  //Ingen append?
 }
 
 function displayOptions() {

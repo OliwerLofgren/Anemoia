@@ -264,6 +264,10 @@ const content = {
       Anemonia:
         " Identifierat en MacBook Air med inloggningsdata från MG_MAU. När jag försöker komma åt lösenord från Local Storage stöter på en reCAPTCHA. Jag har inte förmågan att lösa det eftersom det skulle innebära att jag ljuger om att inte vara en AI eller Robot. Hjälper du mig?",
     },
+    //Måste vara något här?
+    {
+      Spelare: "yo man",
+    },
     //RECAPTCHA
   ],
   layout12: [
