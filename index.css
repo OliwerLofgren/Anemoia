@@ -116,6 +116,12 @@ h1 {
   padding: 10px;
   width: 250px;
   text-align: left;
+
+ 
+  top: 65%;
+  
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #content_img {
@@ -133,7 +139,9 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .container {
@@ -282,6 +290,13 @@ select {
 }
 
 #helpButton {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 62%;
+  text-align: center;
 }
 
 #fake-captcha {
@@ -427,10 +442,14 @@ select {
 }
 
 #alt1 {
-  top: 20%;
+  top: 65%;
+  border: 1px solid white;
+  width: auto;
 }
 #alt2 {
-  top: 40%;
+  top: 80%;
+  border: 1px solid white;
+  width: auto;
 }
 #denied {
   position: absolute;
