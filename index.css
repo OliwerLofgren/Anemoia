@@ -398,13 +398,14 @@ select {
 }
 
 #goHome {
-  position: absolute;
+  position: fixed;
   bottom: 50px;
   left: 50%;
   right: 0;
   left: 0;
   margin-left: auto;
   margin-right: auto;
+  width: auto;
 }
 
 #nextLayout {
