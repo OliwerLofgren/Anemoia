@@ -163,14 +163,21 @@ function goToClues(clueIndex) {
     case "10":
       img.src = "uploads/Loggbok.png";
       break;
+    case "11":
+      createLink(
+        "https://drive.google.com/drive/folders/1kPFeCShDfIcNx2qT3jmrihmQoJaFJ4Mo"
+      );
+      break;
     case "13":
       img.src = "uploads/Anteckningar.png";
       break;
     case "14":
       img.src = "uploads/Karta.png";
       break;
-    case "14":
-      //LÄNK TILL FIGMA
+    case "15":
+      createLink(
+        "https://www.figma.com/proto/Twc66CE57D2vyIdav048Kq/Telefonprototyp-Anemonia?page-id=0%3A1&node-id=1-91&starting-point-node-id=1%3A91&t=3oAaJw3x5VKbklEU-1"
+      );
       break;
     default:
       break;
@@ -187,6 +194,21 @@ function goToClues(clueIndex) {
     });
     document.body.append(goHome);
   }
+}
+function createLink(text) {
+  const link = document.createElement("a");
+  link.id = "link_figma";
+  if (
+    text ===
+    "https://drive.google.com/drive/folders/1kPFeCShDfIcNx2qT3jmrihmQoJaFJ4Mo"
+  ) {
+    link.textContent = "Länk till Drive";
+  } else {
+    link.textContent = "Länk till Figma";
+  }
+  link.href = text;
+  link.target = "_blank";
+  document.body.append(link);
 }
 
 function createNextButton() {
@@ -490,7 +512,7 @@ function switchFunction(layout) {
       }
       break;
     case "layout2":
-      createNextButton();
+      passwordFunction();
       break;
     case "layout3":
       addClues(5);
@@ -521,17 +543,19 @@ function switchFunction(layout) {
       break;
     case "layout10":
       addClues(10);
-      fakeCaptcha();
+      passwordFunction();
       break;
     case "layout11":
-      passwordFunction();
+      fakeCaptcha();
+
       break;
     case "layout12":
-      passwordFunction();
+      createNextButton();
       break;
     case "layout13":
       addClues(11);
-      createNextButton();
+      passwordFunction();
+
       break;
     case "layout14":
       addClues(13);
@@ -539,7 +563,8 @@ function switchFunction(layout) {
       break;
     case "layout15":
       addClues(14);
-      createNextButton();
+      passwordFunction();
+
       break;
     case "layout16":
       createNextButton();
@@ -559,34 +584,38 @@ function switchFunction(layout) {
       createNextButton();
       break;
     case "layout21":
-      createNextButton();
+      passwordFunction();
       break;
     case "layout22":
+      displayVideo("./audio/Avslutning.mp4");
       createNextButton();
+
       break;
     case "layout23":
+      createNextButton();
+      break;
+    case "layout24":
       window.localStorage.setItem("access", "false");
       accessCheck();
       break;
-    case "layout24":
-      passwordFunction();
-      break;
     case "layout25":
-      createNextButton();
+      passwordFunction();
       break;
     case "layout26":
       createNextButton();
       break;
     case "layout27":
-      passwordFunction();
+      createNextButton();
       break;
     case "layout28":
-      createNextButton();
+      passwordFunction();
       break;
     case "layout29":
       createNextButton();
       break;
-
+    case "layout30":
+      createNextButton();
+      break;
     default:
       break;
   }

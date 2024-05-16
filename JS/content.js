@@ -269,20 +269,14 @@ const content = {
   layout12: [
     {
       Anemonia:
-        "Tack. I Local Storage hittade jag lösenord till ett mejlkonto som öppnades 2023-11-03 21:03:12. Användaraktiviteten har ökat på kontot senaste månaderna. Jag tog mig in med hjälp av ReCaptchan och har nu skapat en delbar länk till driven, där användaren nyligen varit aktiv och skapat en ny mapp. Jag väntar på dig.",
-    },
-    {
-      Anemonia:
-        "https://drive.google.com/drive/folders/1kPFeCShDfIcNx2qT3jmrihmQoJaFJ4Mo",
-    },
-    {
-      Anemonia: "Är du färdig?",
-    },
-    {
-      Spelare: "Vad är allt det här?",
+        "Tack. I Local Storage hittade jag lösenord till ett mejlkonto som öppnades 2023-11-03 21:03:12. Användaraktiviteten har ökat på kontot senaste månaderna. Jag tog mig in med hjälp av ReCaptchan och har nu skapat en delbar länk till driven.",
     },
   ],
   layout13: [
+    {
+      Anemonia:
+        "Gå först till dina ledtrådar, där hittar du driven-länken. Kom tillbaka efteråt",
+    },
     {
       Anemonia: "Laddar...",
     },
@@ -426,7 +420,7 @@ const content = {
 
   layout15: [
     {
-      Systemfråga: "Vilken bar var Johannes ute på?",
+      Anemonia: "Vilken bar var Johannes ute på?",
     },
     {
       Anemonia:
@@ -611,15 +605,8 @@ const content = {
     {
       Anemonia: "Åtkomst till operativsystem upprättas.",
     },
-    {
-      Spelare: "Hur går det?",
-    },
-    {
-      Anemonia:
-        " Prototypen är klar. Jag varnar dock för att det finns risk för att vissa data kan vara försvunnen eller skadad.",
-    },
   ],
-  //FIGMA???
+
   layout20: [
     {
       Anemonia: "Jag la in prototypen bland våra ledtrådar.",
@@ -720,9 +707,9 @@ const content = {
         "Michael skriver att mappen är på deras vanliga ställe. Vet du var 'det vanliga stället' är, eller kan något i våra ledtrådar vägleda oss? Fanns det något i Figma prototypen?",
     },
     //PASSWORD
-    //FIGMA LÄNK SOM LEDTRÅD?
   ],
-  layout22: [
+  layout22: [],
+  layout23: [
     {
       Anemonia: "Duktig du är.",
     },
@@ -804,7 +791,8 @@ const content = {
     },
     //POP-UP
   ],
-  layout23: [
+
+  layout24: [
     {
       Spelare: "Ni är helt sjuka i huvudet.",
     },
@@ -830,7 +818,7 @@ const content = {
     //ACCESS DENIED
   ],
   //VAL 2
-  layout24: [
+  layout25: [
     {
       Anemonia:
         "Jag förstår, det är ett rimligt val. Då borde vi utforska fotona vidare. Jag skulle kunna försöka extrahera metadata från bilderna för att se om det finns någon information som kan vara användbar, eller använda ett bildanalysverktyg.",
@@ -847,7 +835,7 @@ const content = {
     },
     //PASSWORD - PETER
   ],
-  layout25: [
+  layout26: [
     {
       Anemonia:
         "När jag jämför bilder på Peter med metadatan och ditt förslag är det svårt för mig att inte hålla med. Ansiktsdragen stämmer väl överens.",
@@ -889,7 +877,7 @@ const content = {
       Spelare: "Ja, ring.",
     },
   ],
-  layout26: [
+  layout27: [
     { Ljudfil: "./audio/Samtal2_Peter1.mp3" },
     {
       Spelare:
@@ -932,7 +920,7 @@ const content = {
     },
     { Ljudfil: "./audio/Samtal2_Peter13.mp3" },
   ],
-  layout27: [
+  layout28: [
     { Anemonia: "Tänker du på vad jag tänker?" },
     {
       Spelare:
@@ -954,7 +942,7 @@ const content = {
     },
   ],
   //PASSWORD
-  layout28: [
+  layout29: [
     { Anemonia: "Jag når inte fram till honom." },
     { Spelare: "Han kanske bara inte är tillgänglig just nu?" },
     {
@@ -986,7 +974,7 @@ const content = {
     },
     { Spelare: "Jag har läst färdigt" },
   ],
-  layout29: [
+  layout30: [
     {
       Anemonia:
         "Utifrån underlaget i förhöret känns det som att Michael blivit ditsatt, och de frågor han ställs och hur han svarar får mig att tänka att han uppriktigt blir förvånad över påståenden och vittnesuppgifter.",

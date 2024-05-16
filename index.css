@@ -85,8 +85,8 @@ h1 {
   border-radius: 5px;
 }
 #image {
-  height: 650px;
-  width: 350px;
+  max-width: 100%;
+  height: auto;
 }
 .captcha {
   position: absolute;
@@ -126,7 +126,6 @@ h1 {
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  background-image: url("uploads/anemoia.png");
 }
 
 #content_div {
@@ -390,7 +389,7 @@ select {
   height: auto;
   width: 400px;
   position: absolute;
-  top: 30%;
+  top: 7%;
   right: 0;
   left: 0;
   margin-left: auto;
@@ -441,4 +440,12 @@ select {
   right: 0;
   top: 50%;
   text-align: center;
+}
+
+#link_figma {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  color: skyblue;
 }

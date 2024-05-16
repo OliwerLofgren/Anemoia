@@ -4,6 +4,7 @@ const passWords = {
   layout8: "9691",
   layout11: "aiomen",
   layout12: "lionbar",
+  layout21: "38",
 };
 
 function passwordFunction(currentIndex) {
