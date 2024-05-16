@@ -1,9 +1,12 @@
 const passWords = {
   layout2: "861",
   layout5: "peter",
-  layout8: "9691",
-  layout11: "aiomen",
-  layout12: "lionbar",
+  layout10: "9691",
+  layout13: "9585",
+  layout15: "lionbar",
+  layout21: "38",
+  layout25: "peter",
+  layout28: "0708123450"
 };
 
 function passwordFunction(currentIndex) {

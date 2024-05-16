@@ -288,18 +288,7 @@ function displayContent(currentIndex) {
     document.body.append(aiDiv);
   }
 
-  if (layoutUrl === "layout12" && layout10Passed === false) {
-    let helpMe = document.getElementById("helpButton");
-    if (!helpMe) {
-      helpMe = document.createElement("p");
-      helpMe.setAttribute("id", "helpButton");
-      helpMe.textContent = "jag behöver hjälp";
-      document.querySelector("#user_options").appendChild(helpMe);
-      helpMe.addEventListener("click", (event) => {
-        passwordFunction(currentIndex);
-      });
-    }
-  }
+ 
 
   if (layoutUrl === "layout12" && layout10Passed === true) {
     conversationPaused = false;
@@ -377,8 +366,20 @@ function displayContent(currentIndex) {
             } else {
               if (
                 text ===
-                ".--- .- --. / ..-. .--.- .-. / . .--- / ... ...- .- .-. .- / .--. .--.- / -.. . - - .--"
+                ".--- .- --. / ..-. .--.- .-. / . .--- / ... ...- .- .-. .- / .--. .--.- / -.. . - - .- "
               ) {
+                
+                  let helpMe = document.getElementById("helpButton");
+                  if (!helpMe) {
+                    helpMe = document.createElement("p");
+                    helpMe.setAttribute("id", "helpButton");
+                    helpMe.textContent = "jag behöver hjälp";
+                    document.querySelector("#user_options").appendChild(helpMe);
+                    helpMe.addEventListener("click", (event) => {
+                      passwordFunction(currentIndex);
+                    });
+                  
+                }
                 console.log("hmm");
                 document.getElementById("nextButton").disabled = true;
                 conversationPaused = true;
@@ -565,11 +566,12 @@ function switchFunction(layout) {
       createNextButton();
       break;
     case "layout23":
-      window.localStorage.setItem("access", "false");
-      accessCheck();
+      
       break;
     case "layout24":
       passwordFunction();
+      window.localStorage.setItem("access", "false");
+      accessCheck();
       break;
     case "layout25":
       createNextButton();
@@ -632,18 +634,19 @@ function fakeCaptcha() {
 function displayOptions() {
   let alt1 = document.createElement("div");
   let alt2 = document.createElement("div");
+  document.getElementById("ai_content_p").textContent = "Gör ditt val";
+  document.getElementById("nextButton").remove()
 
   alt1.classList.add("nextMessage");
   alt1.id = "alt1";
-  alt1.textContent = "Option 1";
+  alt1.textContent = "Upptäck sanningen, skydda Anemonia";
   let keysFound = parseInt(window.localStorage.getItem("keysFound")) || 0;
 
   alt1.addEventListener("click", (event) => {
     option1s = true;
     messageIndex = 0;
-    document.getElementById("ai_content_p").innerHTML = "";
     alt2.remove();
-    keysFound = 21;
+    keysFound = 22;
 
     window.localStorage.setItem("keysFound", keysFound);
 
@@ -653,7 +656,7 @@ function displayOptions() {
 
   alt2.classList.add("nextMessage");
   alt2.id = "alt2";
-  alt2.textContent = "Option 2";
+  alt2.textContent = "Utforska mordet, men avslöja Anemonia";
 
   alt2.addEventListener("click", (event) => {
     option2s = true;
@@ -661,7 +664,7 @@ function displayOptions() {
     document.getElementById("ai_content_p").innerHTML = "";
     alt1.remove();
 
-    keysFound = 24;
+    keysFound = 25;
 
     window.localStorage.setItem("keysFound", keysFound);
 
