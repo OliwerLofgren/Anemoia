@@ -53,4 +53,8 @@ function displayVideo(videoFilePath) {
     button.textContent = "Fortsätt till nästa del";
     document.body.append(button);
   }
+
+  if (window.location.search.split("?layout=")[1] === "layout0") {
+    video.style.top = "30%";
+  }
 }
