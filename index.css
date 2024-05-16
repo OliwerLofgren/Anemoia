@@ -141,6 +141,8 @@ h1 {
   display: flex;
   justify-content: center;
   align-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container {
