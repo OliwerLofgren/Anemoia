@@ -573,7 +573,6 @@ function switchFunction(layout) {
       break;
     case "layout11":
       fakeCaptcha();
-
       break;
     case "layout12":
       createNextButton();
@@ -668,6 +667,7 @@ function fakeCaptcha() {
       window.location.href = `?layout=layout11`;
       return "pass";
     }
+    //Ingen else här? // Big daddy O
   };
 
   captcha.onclick = function () {
@@ -682,6 +682,8 @@ function fakeCaptcha() {
       captcha.className += passOrFail();
     }, Math.floor(Math.random() * 3000 + 1000));
   };
+
+  //Ingen append?
 }
 
 function displayOptions() {
