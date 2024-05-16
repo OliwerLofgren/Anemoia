@@ -115,6 +115,35 @@ function RenderStartingpage() {
   if (parseInt(window.localStorage.getItem("keysFound")) >= 2) {
     document.getElementById("scan_p").innerHTML = "";
   }
+  let helpButton = document.createElement("button");
+  helpButton.id = "helpMe"
+  helpButton.textContent = "Jag behöver hjälp";
+  document.body.appendChild(helpButton)
+  helpButton.addEventListener("click", event => {
+    let div = document.createElement("div");
+    div.id = "yesOrNo"
+    div.innerHTML = `
+    <p>Är du säker på att du behöver hjälp</p>
+    <button id="yes">Ja</button>
+    <button id="no"">Nej</button>`
+
+    document.body.append(div)
+    let infoDiv = document.createElement("div");
+    document.getElementById("yes").addEventListener("click", event => {
+      infoDiv.innerHTML = `
+      <p>Felix: 0730430995</p>
+      <p>Alice: 0708929980</p>
+      <p>Calle: 0709515020</p>
+      <p>Oliwer: 01348593576</p>
+      `
+      //div.remove()
+      document.body.append(infoDiv)
+  })
+    document.getElementById("no").addEventListener("click", event => {
+      infoDiv.remove()
+      div.remove()
+  })
+  })
 }
 
 function goToClues(clueIndex) {
