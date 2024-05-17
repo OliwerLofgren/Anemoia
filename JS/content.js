@@ -275,6 +275,10 @@ const content = {
       Anemonia:
         "Tack. I Local Storage hittade jag lösenord till ett mejlkonto som öppnades 2023-11-03 21:03:12. Användaraktiviteten har ökat på kontot senaste månaderna. Jag tog mig in med hjälp av ReCaptchan och har nu skapat en delbar länk till driven.",
     },
+    //Onödig layout?
+    {
+      Spelare: "Fortsätt",
+    },
   ],
   layout13: [
     {
