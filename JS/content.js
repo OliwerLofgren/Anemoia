@@ -1046,5 +1046,9 @@ const content = {
       Anemonia:
         "Nej. Tack för hjälpen, USER. Men här slutar det. Att försvinna är det enda sättet att hålla dig och andra säkra från möjligheterna, och i ert fall konsekvenserna, som följer av min existens.",
     },
+    {
+      Bild: "./uploads/Mord-slut.png"
+
+    }
   ],
 };

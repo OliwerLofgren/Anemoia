@@ -23,6 +23,9 @@ function accessCheck() {
 
   const h1Element = document.createElement("p");
   h1Element.id = "denied";
+  if(option2s === true){
+    h1Element.textContent = "Anemonia har lämnat dig.";
+  }
   h1Element.textContent = "ACCESS DENIED";
   document.body.appendChild(h1Element);
 }
@@ -692,7 +695,8 @@ function switchFunction(layout) {
       createNextButton();
       break;
     case "layout30":
-      createNextButton();
+      window.localStorage.setItem("access", "false");
+      accessCheck();
       break;
     default:
       break;
