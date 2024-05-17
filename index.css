@@ -317,7 +317,7 @@ select {
   right: 0;
   top: 65%;
   text-align: center;
-  width: auto;
+  width: 150px;
   font: 14px SF Pro Rounded, sans-serif;
 }
 #yesOrNo {
@@ -453,7 +453,7 @@ select {
 
 #goHome {
   position: absolute;
-  bottom: 94%;
+  bottom: 90%;
   left: -50%;
   right: 0;
   margin-left: auto;

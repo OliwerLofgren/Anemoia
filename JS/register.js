@@ -3,7 +3,7 @@
 function signUppage(event) {
   document.querySelector("main").innerHTML = `
     <main>
-    <h1>Anomeia</h1>
+    <h1>Anemonia</h1>
     <div class="container">
     <div id="helloMessage">Vilket alias ska jag tillskriva dig?</div>
       <div class="box">
