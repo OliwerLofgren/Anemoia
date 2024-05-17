@@ -11,8 +11,9 @@ function displayAudio(audioContent) {
     audio.play();
     console.log(audio);
   }
-
+  document.getElementById("nextButton").disabled = true;
   audio.addEventListener("ended", function () {
+    document.getElementById("nextButton").disabled = false;
     messageIndex++;
     displayContent(messageIndex);
   });
@@ -32,6 +33,7 @@ function displayVideo(videoFilePath) {
   video.controls = true;
   video.id = "video";
 
+  
   if (document.querySelector("#content_div")) {
     document.querySelector("#content_img").remove();
     document.querySelector("#nextMessage").remove();
@@ -39,16 +41,19 @@ function displayVideo(videoFilePath) {
   }
   showEndMessage(true);
   let container = document.createElement("div");
-  container.appendChild(video);
+  document.body.appendChild(video);
 
   document.body.appendChild(container);
 
+  document.querySelector("#goHome").style.position = "relative"
+  document.querySelector("#goHome").style.top = "0"
+  document.querySelector("#goHome").style.left = "-25%";
+
   if (videoFilePath === "./audio/Avslutning.mp4") {
-    const button = document.createElement("button");
-    button.id = "removeVideo";
-    button.addEventListener("click", (event) => {
-      video.remove();
-      continueToNextLayout();
+    video.addEventListener("ended",event => {
+      console.log("Video has ended");
+      video.remove()
+      createNextButton();
     });
     button.textContent = "Fortsätt till nästa del";
     document.body.append(button);
@@ -57,4 +62,7 @@ function displayVideo(videoFilePath) {
   if (window.location.search.split("?layout=")[1] === "layout0") {
     video.style.top = "30%";
   }
+  
+ 
+  
 }

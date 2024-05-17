@@ -9,7 +9,7 @@ function displayUpload() {
   fileInput.style.display = "none";
 
   const browseButton = document.createElement("button");
-  browseButton.textContent = "Browse";
+  browseButton.textContent = "Välj bild";
   browseButton.id = "browseButton";
   browseButton.style.display = "inline-block";
 
@@ -18,7 +18,7 @@ function displayUpload() {
   });
 
   const uploadButton = document.createElement("button");
-  uploadButton.textContent = "Upload";
+  uploadButton.textContent = "Ladda upp";
   uploadButton.id = "uploadButton";
   uploadButton.style.display = "inline-block";
 

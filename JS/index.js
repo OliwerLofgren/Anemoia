@@ -66,40 +66,60 @@ function RenderStartingpage() {
   let cluesFound = parseInt(window.localStorage.getItem("cluesFound")) || 0;
 
   let optionsHTML =
-    "<option value='' selected disabled>Välj en dialog</option>";
+    "<option value='' selected disabled>Välj dialog</option>";
   for (let i = 1; i < keysFound + 1; i++) {
     optionsHTML += `<option value="${i}">Dialog ${i}</option>`;
   }
 
-  let cluesHTML = "<option value='' selected disabled>Välj en ledtråd</option>";
+  let cluesHTML = "<option value='' selected disabled>Välj ledtråd</option>";
   for (let i = 1; i < cluesFound + 1; i++) {
     cluesHTML += `<option value="${i}">Ledtråd ${i}</option>`;
   }
 
   document.querySelector("body").innerHTML = `
-  <h1>Välkommen till Anemonia</h1>
-  <h3>${username}</h3>
+ 
+ 
+  <div class="div">
+  <div class="div-2"><div class="div-3"></div></div>
+  <div class="div-4">Hej, ${username}</div>
+  <div class="div-5">Vad kan jag hjälpa till med?</div>
+  <div class="div-6">
+  <select id="dialogSelect" >
+  ${optionsHTML}
+</select>
+<select id="clueSelect" >
+${cluesHTML}
+</select>
+  </div>
+ 
+  
+</div>
+
+
+`;
+/*
+ <div id="helloUser">
+  <p id="title">Hej, ${username}</p>
+  <p>Vad kan jag hjälpa dig med?</p>
+  </div>
+  <div>
   <select id="dialogSelect" >
     ${optionsHTML}
   </select>
-  <p id="scan_p" style="color:#9ed644;">Skanna första / nästa QR-koden för att fortsätta!</p>
-  <div id="logOut">Logga Ut</div>
   <select id="clueSelect" >
   ${cluesHTML}
   </select>
-  
-`;
+  </div>
+  <p id="scan_p" style="color:#9ed644;">Skanna första / nästa QR-koden för att fortsätta!</p>
 
+*/
   document
     .getElementById("dialogSelect")
     .addEventListener("change", (event) => {
       const dialogIndex = event.target.value;
       goToLayout(dialogIndex);
     });
-  document.getElementById("logOut").addEventListener("click", event => {
-    window.localStorage.clear()
-    signUppage()
-  })
+ 
   const dialogOptions = document.querySelectorAll("#dialogSelect option");
   dialogOptions.forEach((option) => {
     option.addEventListener("click", (event) => {
@@ -117,7 +137,7 @@ function RenderStartingpage() {
     accessCheck();
   }
   if (parseInt(window.localStorage.getItem("keysFound")) >= 2) {
-    document.getElementById("scan_p").innerHTML = "";
+    //document.getElementById("scan_p").innerHTML = "";
   }
   let helpButton = document.createElement("button");
   helpButton.id = "helpMe";
@@ -127,9 +147,9 @@ function RenderStartingpage() {
     let div = document.createElement("div");
     div.id = "yesOrNo";
     div.innerHTML = `
-    <p>Är du säker på att du behöver hjälp</p>
+    <p id="sure">Är du säker på att du behöver hjälp</p>
     <button id="yes">Ja</button>
-    <button id="no"">Nej</button>`;
+    <button id="no">Nej</button>`;
 
     document.body.append(div);
     let infoDiv = document.createElement("div");
@@ -190,33 +210,32 @@ function goToClues(clueIndex) {
     case "7":
       img.src = "uploads/Kvitto.png";
       break;
-    case "9":
+    case "8":
       displayVideo("./audio/Overvakning.mp4");
       break;
-    case "10":
+    case "9":
       img.src = "uploads/Loggbok.png";
       break;
-    case "11":
+    case "10":
       createLink(
         "https://drive.google.com/drive/folders/1kPFeCShDfIcNx2qT3jmrihmQoJaFJ4Mo"
       );
       break;
-    case "13":
-      img.src = "uploads/Anteckningar.png";
+      case "11":
+        img.src = "uploads/Anteckningar.png";
       break;
-    case "14":
+    case "12":
       img.src = "uploads/Karta.png";
       break;
-    case "15":
+    case "13":
       createLink(
         "https://www.figma.com/proto/Twc66CE57D2vyIdav048Kq/Telefonprototyp-Anemonia?page-id=0%3A1&node-id=1-91&starting-point-node-id=1%3A91&t=3oAaJw3x5VKbklEU-1"
       );
       break;
+  
     default:
       break;
   }
-
-  document.body.appendChild(img);
 
   if (!document.getElementById("gohome")) {
     const goHome = document.createElement("button");
@@ -227,7 +246,10 @@ function goToClues(clueIndex) {
     });
     document.body.append(goHome);
   }
+  document.getElementById("helpMe").remove()
+  document.body.appendChild(img);
 }
+
 function createLink(text) {
   const link = document.createElement("a");
   link.id = "link_figma";
@@ -249,7 +271,9 @@ function createNextButton() {
   nextButton.textContent = "Fortsätt till nästa del";
   nextButton.id = "nextLayout";
   document.querySelector("#content_div").remove();
-  document.querySelector("#nextMessage").remove();
+  if(document.querySelector("#nextMessage")){
+    document.querySelector("#nextMessage").remove();
+  }
 
   nextButton.addEventListener("click", continueToNextLayout);
 
@@ -297,7 +321,7 @@ function displayLayoutName() {
     // window.location.reload();
   } else {
     document.querySelector("body").innerHTML = `
-      <button id="goHome">Gå tillbaka</button>
+      <button id="goHome">Gå till startsidan</button>
     `;
     document.getElementById("goHome").addEventListener("click", (event) => {
       RenderStartingpage();
@@ -329,6 +353,7 @@ function displayContent(currentIndex) {
     aiDiv = document.createElement("div");
     aiDiv.id = "aiDiv";
     aiDiv.innerHTML = `
+    
       <img id="content_img" src="./uploads/ai.gif"></img>
       <div id="content_div">
         <p id="ai_content_p"></p>
@@ -343,7 +368,15 @@ function displayContent(currentIndex) {
     addedEvent = false;
     document.body.append(aiDiv);
   }
-
+  if(!document.getElementById("goHome")){
+    let goHome = document.createElement("button");
+    goHome.id = "goHome"
+    goHome.textContent = "Gå till startsidan"
+    document.body.append(goHome)
+    goHome.addEventListener("click", event => {
+      RenderStartingpage()
+    })
+  }
   if (layoutUrl === "layout12" && layout10Passed === true) {
     conversationPaused = false;
     document
@@ -404,6 +437,7 @@ function displayContent(currentIndex) {
         console.log(sender);
 
         if (sender === "Anemonia") {
+          document.getElementById("nextButton").textContent = "Nästa"
           document.getElementById("nextButton").disabled = true;
           const messageContainer = document.getElementById("ai_content_p");
           let index = 0;
@@ -426,7 +460,11 @@ function displayContent(currentIndex) {
                 if (!helpMe) {
                   helpMe = document.createElement("p");
                   helpMe.setAttribute("id", "helpButton");
-                  helpMe.textContent = "jag behöver hjälp";
+                  document.getElementById("ai_content_p").textContent = "SYSTEMMEDDELANDE: ÅTERSTÄLL ANEMONIA";
+                  document.getElementById("ai_content_p").style.textAlign = "center"
+                  document.getElementById("ai_content_p").style.setProperty('--c', "black")
+                  helpMe.textContent = "SKRIV IN ÅTERSTÄLLNIGSKOD"
+                  helpMe.classList.add("nextMessage")
                   document.querySelector("#user_options").appendChild(helpMe);
                   helpMe.addEventListener("click", (event) => {
                     passwordFunction(currentIndex);
@@ -441,13 +479,18 @@ function displayContent(currentIndex) {
               clearInterval(interval);
               document.getElementById("nextButton").disabled = false;
               let newMessage = content[layoutContent][currentIndex + 1];
+              if(newMessage === undefined){
+                //showEndMessage()
+              }
               if (
                 !Object.keys(newMessage)[0] ||
                 !content[layoutContent][currentIndex + 1]
               ) {
+                document.getElementById("nextButton").textContent = "Nästa";
                 showEndMessage(true);
               }
               let newSender = Object.keys(newMessage)[0];
+              console.log(newSender);
               let newText = newMessage[newSender];
 
               if (newSender === "Spelare") {
@@ -500,10 +543,12 @@ function showEndMessage(check) {
   }
   if (check === true) {
     setTimeout(() => {
-      const aiContentP = document.getElementById("ai_content_p");
-      aiContentP.style.color = "#9ed644";
-      aiContentP.style.border = "none";
-      aiContentP.textContent = "Skanna nästa QR-kod för att fortsätta!";
+      if(document.getElementById("ai_content_p")){
+        const aiContentP = document.getElementById("ai_content_p");
+        aiContentP.style.color = "#9ed644";
+        aiContentP.style.border = "none";
+        aiContentP.textContent = "Skanna nästa QR-kod för att fortsätta!";
+      }
     }, 600);
   }
 
@@ -512,18 +557,25 @@ function showEndMessage(check) {
 
 function displayImage(url, index) {
   document.querySelector("body").innerHTML = `
+  <button id="goHome">Gå till startsidan</button>
   <img id="content_img" class="display_image" src="./uploads/anemoia.png"></img>
   <img id="image" src="${url}"></img>
   <div id="content_div">
         <p id="ai_content_p"></p>
       </div>
   <button id="removeImage">Stäng ner bilden</button>
-  <button id="goHome">Gå tillbaka</button>`;
+  `;
   document.getElementById("removeImage").addEventListener("click", (event) => {
     document.getElementById("image").remove();
     document.querySelector("body").innerHTML = "";
     displayContent(index);
   });
+  document.getElementById("goHome").style.position = "relative"
+  document.getElementById("goHome").style.top = "0";
+  document.getElementById("goHome").style.left = "0"
+  document.getElementById("goHome").addEventListener("click", event => {
+    RenderStartingpage()
+  })
   document.getElementById("content_img").style.opacity = "0";
   document.getElementById("ai_content_p").style.opacity = "0";
 }
@@ -565,7 +617,6 @@ function switchFunction(layout) {
       createNextButton();
       break;
     case "layout8":
-      addClues(7);
       showEndMessage(true);
       break;
     case "layout9":
@@ -588,40 +639,37 @@ function switchFunction(layout) {
 
       break;
     case "layout14":
-      addClues(13);
-      createNextButton();
-      break;
-    case "layout15":
-      addClues(14);
       passwordFunction();
-
+      break;
+      case "layout15":
+        createNextButton();
       break;
     case "layout16":
-      createNextButton();
+      createNextButton(11);
       break;
     case "layout17":
-      addClues(15);
+      addClues(12);
       createNextButton();
-
       break;
     case "layout18":
+      addClues(13);
       showEndMessage(true);
       break;
     case "layout19":
       createNextButton();
       break;
     case "layout20":
-      createNextButton();
+      displayOptions()
       break;
     case "layout21":
       passwordFunction();
       break;
-    case "layout22":
+      case "layout22":
       displayVideo("./audio/Avslutning.mp4");
       createNextButton();
-
       break;
     case "layout23":
+      
       createNextButton();
       break;
     case "layout24":
@@ -733,8 +781,3 @@ function displayOptions() {
 
   document.querySelector("#user_options").append(alt1, alt2);
 }
-/*
-lägg in för rörlig bild
-<div style="padding-top:100.000%;position:relative;"><iframe src="https://gifer.com/embed/QWfb" width="100%" height="100%" style='position:absolute;top:0;left:0;' frameBorder="0" allowFullScreen></iframe></div>
-<p><a href="https://gifer.com%22%3Evia/" GIFER></a></p>
-*/

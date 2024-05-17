@@ -230,7 +230,7 @@ input {
   position: absolute;
   right: 0;
   left: 5%;
-  top: 30%;
+  top: 45%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -269,6 +269,7 @@ input {
   background-color: rgba(255, 255, 255, 0);
   padding: 10px;
   border-radius: 5px;
+  font: 14px SF Pro Rounded, sans-serif;
 }
 
 #clueSelect {
@@ -276,9 +277,11 @@ input {
   background-color: rgba(255, 255, 255, 0);
   padding: 10px;
   border-radius: 5px;
+  font: 14px SF Pro Rounded, sans-serif;
 }
 
 #clueImage {
+  margin-top: 10px;
   max-width: 100%;
   height: auto;
 }
@@ -301,8 +304,8 @@ select {
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-  left: 0;
-  right: 0;
+  border: 1px solid white;
+  font-family:'Courier New', Courier, monospace;
   top: 62%;
   text-align: center;
 }
@@ -312,9 +315,10 @@ select {
   margin-right: auto;
   left: 0;
   right: 0;
-  top: 75%;
+  top: 65%;
   text-align: center;
   width: auto;
+  font: 14px SF Pro Rounded, sans-serif;
 }
 #yesOrNo {
   position: absolute;
@@ -322,8 +326,18 @@ select {
   margin-right: auto;
   left: 0;
   right: 0;
-  top: 82%;
+  top: 74%;
   text-align: center;
+  font: 14px SF Pro Rounded, sans-serif;
+}
+#yes{
+  font: 14px SF Pro Rounded, sans-serif;
+}
+#no{
+  font: 14px SF Pro Rounded, sans-serif;
+}
+#sure{
+  font: 14px SF Pro Rounded, sans-serif;
 }
 #fake-captcha {
   position: absolute;
@@ -439,12 +453,14 @@ select {
 
 #goHome {
   position: absolute;
-  bottom: 5%;
-  left: 5%;
+  bottom: 94%;
+  left: -50%;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  max-width: 150px;
+  
+  border: none;
+  text-align: left;
 }
 
 #nextLayout {
@@ -494,3 +510,102 @@ select {
   left: 0;
   color: skyblue;
 }
+#title{
+  font-size: 25px;
+  
+}
+#helloUser{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.div {
+  background-color: #000;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 8vh;
+
+}
+.div-2 {
+  align-self: end;
+  display: flex;
+  width: 249px;
+  max-width: 100%;
+  align-items: flex-start;
+  gap: 20px;
+  justify-content: space-between;
+}
+.div-3 {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.div-4 {
+  text-align: center;
+  background: linear-gradient(90deg, #0084ad 0%, #cb98d4 23.5%, #f55252 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 181px;
+  font: 700 25px SF Pro Rounded, sans-serif;
+}
+.div-5 {
+  color: #8d8888;
+  text-align: center;
+  margin-top: 5px;
+  font: 600 18px SF Pro Rounded, sans-serif;
+}
+.div-6 {
+  display: flex;
+  margin-top: 24px;
+  gap: 19px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 500;
+}
+.div-7 {
+  font-family: SF Pro Text, sans-serif;
+  border-radius: 9px;
+  background-color: #222;
+  justify-content: center;
+  padding: 19px 25px;
+}
+.div-8 {
+  font-family: SF Pro Text, sans-serif;
+  border-radius: 9px;
+  background-color: #222;
+  justify-content: center;
+  padding: 13px 17px;
+}
+.div-9 {
+  color: #8d8888;
+  margin-top: 364px;
+  font: 700 15px SF Pro Text, sans-serif;
+}
+.div-10 {
+  border-radius: 20px;
+  background-color: #454545;
+  display: flex;
+  margin-top: 22px;
+  gap: 20px;
+  font-size: 11px;
+  color: #fff;
+  font-weight: 400;
+  justify-content: space-between;
+  padding: 7px 54px 7px 19px;
+}
+.div-11 {
+  font-family: SF Pro Text, sans-serif;
+  margin: auto 0;
+}
+.img {
+  aspect-ratio: 1.04;
+  object-fit: auto;
+  object-position: center;
+  width: 23px;
+}
+

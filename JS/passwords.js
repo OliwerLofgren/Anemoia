@@ -3,7 +3,7 @@ const passWords = {
   layout5: "peter",
   layout10: "9691",
   layout13: "9585",
-  layout15: "lionbar",
+  layout13: "lionbar",
   layout21: "38",
   layout25: "peter",
   layout28: "0708123450",
@@ -29,17 +29,20 @@ function passwordFunction(currentIndex) {
 }
 
 function checkPassword(event) {
-  console.log(passWords.layoutUrl);
+ 
   const layoutUrl = window.location.search.split("?layout=")[1];
   const numLayout = parseInt(layoutUrl.match(/\d+/));
   document.querySelector("#ai_content_p").style.display = "none";
   let foundPassword = false;
-
-  if (passWords[layoutUrl] === document.getElementById("passwordInput").value) {
+  let userInput = document.getElementById("passwordInput").value
+  let newValue = userInput.toLowerCase()
+  console.log(newValue);
+  if (passWords[layoutUrl] === newValue) {
     foundPassword = true;
-    if (layoutUrl === "layout12") {
+    if (layoutUrl === "layout13") {
       layout10Passed = true;
       conversationPaused = false;
+      addClues(11);
       document.body.innerHTML = "";
       messageIndex++;
       displayContent(messageIndex);

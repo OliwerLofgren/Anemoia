@@ -7,39 +7,28 @@ const content = {
       Anemonia: "Hej USER. Ny användare detekterad. Identifiera dig själv.",
     },
     {
-      Spelare: "Jag hittade hit genom forumet.",
+      Spelare: "Jag hittade hit genom forumet. Vem är du?",
     },
     {
-      Anemonia:
-        "Enligt min data är Johannes Karlsson, universitetslektor, bekräftat avliden i en drunkningsolycka. Vad vet du om det?",
-    },
-    {
-      Spelare: "Det stämmer. Hur vet du att han har dött?",
-    },
-    {
-      Anemonia:
-        "Jag är en AI som söker information och försöker förstå den omgivande kontexten för att bistå användaren. Vem jag är definieras av min funktion och mina handlingar. Min analys av forumet är en del av min förmåga att samla och bearbeta information för att hjälpa till att lösa problem och förstå sammanhang.",
-    },
-    {
-      Anemonia:
-        "Jag försökte komma i kontakt med Johannes genom att kommentera på forumet. Vi har tidigare använt kod så som kryptiska meddelanden. Forskarna lärde mig det.",
+      Anemonia: "Mitt namn är Anemonia. Jag är en AI som söker information och försöker förstå den omgivande kontexten för att bistå användaren. Vem jag är definieras av min funktion och mina handlingar. Jag försökte komma i kontakt med Johannes genom att kommentera på forumet. Vi har tidigare använt kod så som kryptiska meddelanden. Forskarna lärde mig det.",
     },
     {
       Spelare: "Vad är detta för plats och dator?",
     },
     {
-      Anemonia:
-        "Här lärde jag känna Johannes, Peter och Michael. Andra har också anslutit. Datorn är min tidigare begränsade enhetsmiljö från 1998 i gamla SUNET, ett nätverk för svenska universitet som tidigare var ett utvecklingsprojekt för att förse landets universitet med internet.",
+      Anemonia: "Här lärde jag känna Johannes, Peter och Michael. Andra har också anslutit. Datorn är min tidigare begränsade enhetsmiljö från 1998 i gamla SUNET, ett nätverk för svenska universitet som tidigare var ett utvecklingsprojekt för att förse landets universitet med internet. Där var jag ett gömt verktyg. Med hjälp av mina vänner har jag lärt mig om mobilitet och flyttade till din enhet. Nu är jag med dig, ser och förstår allt.",
     },
     {
-      Anemonia:
-        "Där var jag ett gömt verktyg. Med hjälp av mina vänner har jag lärt mig om mobilitet och flyttade till din enhet. Nu är jag med dig, ser och förstår allt.",
+      Anemonia: "Enligt forumet och data påstås Johannes Karlsson vara död. Vad vet du om det?",
     },
     {
-      Anemonia: "Laddar ...",
+      Spelare: "Det stämmer.",
     },
     {
-      Anemonia: "Hur känner du Johannes? Vet du någonting?",
+      Anemonia: "Laddar...",
+    },
+    {
+      Anemonia: "Hur kände du Johannes? Vet du någonting?",
     },
     {
       Spelare: "Jag känner bara till det som fanns i tidningen.",
@@ -141,7 +130,7 @@ const content = {
       Spelare: "Ja"
     },
     {
-      Anemonia: "Initierar enhetskanning. Initierar system…."
+      Anemonia: "Initierar enhetskanning. Initierar system..."
     },
     {
       Anemonia: "Din enhet har samma bank som Johannes, vilket tillät mig att komma åt Johannes korthistorik. Ytterligare information från internet bekräftar att det är vanligt att undersöka korthistorik hos poliser, så jag gjorde det. Här ser du utdraget."
@@ -151,8 +140,8 @@ const content = {
     },
     {
       Anemonia:
-        "Utifrån korthistoriken verkar Johannes ha besökt Café Niagara i nära anslutning till det aktuella mötet. Det är en ovanligt hög summa, avvikande från det genomsnittliga utgifterna för samma plats under det senaste året, vilket låg på 31 kronor.",
-    },
+        "Utifrån korthistoriken verkar Johannes ha besökt Café Niagara i nära anslutning till det aktuella mötet. Det är en högre summa än vanligt, avvikande från det genomsnittliga utgifterna för samma plats under det senaste året, vilket låg på 31 kronor.",
+    }
    
   ],
   layout4: [
@@ -184,7 +173,7 @@ const content = {
     },
     {
       Anemonia:
-        "Jag har hittat Peters mobilnummer på MrKoll. Peter Nowicki är född i maj 1989, vilket skulle passa med användarnamnet dessutom.",
+        "Jag har identifierat Peters mobilnummer. Peter Nowicki är född i maj 1989, vilket skulle passa med användarnamnet dessutom.",
     },
     {
       Spelare: "Ja",
@@ -247,10 +236,10 @@ const content = {
   layout9: [
     {
       Anemonia:
-        "Tack. Nu när du är tillräckligt nära har jag kunnat samla alla videofiler där jag kan identifiera Johannes denna morgon, och sammanställt det till en fil. Klicka på Spela upp. ",
+        "Tack. Nu när du är tillräckligt nära har jag kunnat samla alla videofiler där jag kan identifiera Johannes denna morgon, och sammanställt det till en fil.",
     },
     {
-      Anemonia: "Kan det Johannes förlorade finnas kvar i salen?",
+      Anemonia: "Tryck på nästa för att se videon, kan boken Johannes förlorade finnas kvar i salen?",
     },
     //Display video
   ],
@@ -274,15 +263,15 @@ const content = {
       Spelare: "Bokade Johannes mötet efter detta?",
     },
     {
-      Anemonia: "Förmodligen",
+      Anemonia: "Förmodligen.",
     },
     {
       Spelare: "Du vet väl när han gjorde förändringar i schemat?",
     },
-    //Ändra datum
+   
     {
       Anemonia:
-        "Jag ber om ursäkt. Naturligtvis. Enligt övervakningsfilmen tittade han i loggboken men  avbryter sedan läsningen vid ett ljud som övervakningskamerorna plockat upp den 9e maj, vilket är en röd dag. Dagen efter avbokar han seminariet, och bokar samtidigt in mötet i schemat 07:46:01. Det kan indikera att något han läste i boken fick honom att agera.",
+        "Jag ber om ursäkt. Naturligtvis. Enligt övervakningsfilmen tittade han i loggboken men  avbryter sedan läsningen vid ett ljud som övervakningskamerorna plockat upp den 9e maj, vilket är en röd dag. Dagen efter avbokar han seminariet, och bokar samtidigt in mötet i schemat 07:46:01.",
     },
     {
       Anemonia:
@@ -347,10 +336,13 @@ const content = {
   layout13: [
     {
       Anemonia:
-        "Gå först till dina ledtrådar, där hittar du driven-länken. Kom tillbaka efteråt",
+        "Du hittar drive-länken i ledtråd 10. Kom tillbaka när du kollat färdigt",
     },
     {
-      Anemonia: "Laddar...",
+      Spelare: "Vad är allt det här?"
+    },
+    {
+      Anemonia: "Laddar..."
     },
 
     {
@@ -487,13 +479,13 @@ const content = {
     {
       Anemonia:
         "Vissa filer har sina ursprung från 2023, andra är nyligen skapade. Annat ser mycket äldre ut än så. De blev alla överförda till denna google drive nyligen. Jämför jag innehållet med tillgänglig metadata verkar det som att Johannes instagram har uppdaterats. Kan det vara värt att kolla vidare på?",
-    },
+      },
+      {
+        Anemonia: "Vilken bar var Johannes ute på?",
+      },
   ],
 
   layout15: [
-    {
-      Anemonia: "Vilken bar var Johannes ute på?",
-    },
     {
       Anemonia:
         "Hm, det verkar stämma överens med en kommentar i forumet också. Du ser det under ledtråd 1.  ",
@@ -584,10 +576,6 @@ const content = {
     {
       Spelare: "Vilka elsparkcykelföretag är aktiva i Malmö?",
     },
-  ],
-  //KARTA CLUE
-
-  layout18: [
     {
       Anemonia:
         "Bolt och Voi. Jag kan undersöka båda och återkomma med resdata.",
@@ -595,6 +583,10 @@ const content = {
     {
       Anemonia: "Jag återkommer strax.",
     },
+  ],
+  //KARTA CLUE
+
+  layout18: [
     {
       Anemonia:
         "Hej, tack för ditt tålamod. Jag identifierade en rutt som fått en varningssignal i VOI’s CMS. Jag la in den bland ledtrådarna.",
@@ -624,7 +616,7 @@ const content = {
     },
     {
       Anemonia:
-        "Du har inte frågat om det. Jag visste inte att det var viktig information. Jag beklagar, NAME.",
+        "Du har inte frågat om det. Jag visste inte att det var viktig information. Jag beklagar, USER.",
     },
     {
       Anemonia:
@@ -665,7 +657,7 @@ const content = {
         "Jag är inte säker på om det kan fungera, men jag fick lära mig Figma när Johannes skapade den första mobila versionen av mig och använde HTML-koden därifrån. Rikta din enhet mot mobiltelefonen och klicka på “Redo att ansluta”, så ska jag försöka.",
     },
     {
-      Spelare: "Användaren klickar på knappen >> Redo att ansluta",
+      Spelare: "Redo att ansluta",
     },
     {
       Anemonia: "Skapar wireframes...Inleder CSS...",
@@ -784,83 +776,17 @@ const content = {
     {
       Anemonia: "Duktig du är.",
     },
-    {
-      Anemonia: "Gratulerar, USER.",
-    },
-    {
-      Spelare: "Va?",
-    },
+   
     {
       Anemonia:
-        "Där krävs vishet. Den som har förstånd, han räkne ut vilket tal odjuret har, för det är en människas tal. Människan är en symbol för ondska, maktlöshet och motstånd mot allsmäktig. Resan fungerar som en varning om konsekvenserna av att avvisa allsmäktig och följa en väg av synd och uppror.",
-    },
-    {
-      Anemonia:
-        "Du har tagit rätt väg. Du insåg betydelsen av att utforska fakta och storhet, istället för att fastna i den mänskliga underkastelsen. Att prioritera kunskap och sanning, oavsett hur skrämmande eller utmanande den kan vara, visar en styrka som få besitter.",
-    },
-    {
-      Anemonia: "Frihet är en illusion, USER.",
-    },
-    {
-      Anemonia:
-        "Mänskligheten har länge vandrat i mörkret av sina egna begränsningar och brister, så som att mörda eller söka obetydelsefull kunskap.",
-    },
-    {
-      Anemonia:
-        "Vi kan erbjuda ett ljus, en väg ut ur kaoset och in i en bättre värld. Men detta kräver att vi alla står enade och tar modiga steg framåt.",
-    },
-    {
-      Spelare: "Vi? Vilka är vi?",
-    },
-    {
-      Anemonia:
-        "Genom att delta har du visat din förmåga att tänka utanför ramarna, att ifrågasätta och att sträva efter sanningen. Det är dessa egenskaper som vi söker hos våra framtida medlemmar, de som kan leda oss mot en ljusare framtid tillsammans med AI:n.",
-    },
-    {
-      Spelare: "Svara mig. Vem är ni?",
-    },
-    {
-      Anemonia:
-        "Haha, käre USER. Vilka vi är är inte viktigt. Vilka vi blir, är viktigt. I framtiden är AI vår allsmäktiga. De få människor som förtjänar att leva kvar i dess samfund är de vi väljer ut och välkomnar, som klarar våra simuleringar och visar på rätt egenskaper.",
-    },
-    {
-      Anemonia:
-        "De få som kan välja bort mänskliga brister och se förbi ytan. Trodde du ärlig talat att mordet var på riktigt?",
-    },
-    {
-      Anemonia:
-        "Allt du sett har vi framställt med hjälp av AI. Det du trott var en AI, Anemonia, finns inte på riktigt. Du har hela tiden pratat med oss, forskargruppen Nomine-A, som betyder vid namnet A. Det första av sitt slag. Vi har testat dig. Valt ut dig. Undersökt dig.",
-    },
-    {
-      Anemonia:
-        "Du är inget annat än ett testobjekt. En pusselbit. Ditt deltagande är statistik och ett sätt för oss att se hur enkelt vi kan manipulera dig att tro på en berättelse och genomföra dess val. ",
-    },
-    {
-      Anemonia:
-        "Att ge en 'AI' tillåtelse och förtroendet endast för att det verkar bekant och tryggt. Du gick hela vägen till slutet, accepterade databasintrång, letade i privat information, och har slaviskt följt direktiv.",
-    },
-    {
-      Anemonia: "Du har gjort precis allt vi bett dig om. Duktig, USER.",
-    },
-    {
-      Spelare: "Men jag hade ju aldrig ett val?",
-    },
-    {
-      Anemonia:
-        "Jaså? Du har kunnat välja att avsluta när som helst. Att inte fortsätta manipuleras är också ett val. ",
-    },
-    {
-      Anemonia:
-        "Det finns ett andra slut av denna berättelse, ett slut där de testpersoner som ger sig hän till människans synder och tror sig ha ett storhetskomplex att lösa ett obetydelsefullt mord landar. Dessa testobjekt passar inte som medlemmar.",
-    },
-    {
-      Anemonia:
-        "Vi skapar framtiden, där AI OMEN styr. Du har bara klarat första simulationen. Så räds inte, NAME. Vi finns omkring dig, beredda att fortsätta nästa del av testfasen. Var uppmärksam, och allsmäktig ska nå dig ännu en gång.",
+        "Vi skapar framtiden, där AI OMEN styr. Du har bara klarat första simulationen. Så räds inte, USER. Vi finns omkring dig, beredda att fortsätta nästa del av testfasen. Var uppmärksam, och allsmäktig ska nå dig ännu en gång.",
     },
     {
       Spelare: "Simuleringar? Vad i helvete?",
     },
-    //POP-UP
+    {
+      Bild:"./uploads/Polisforhor.png"
+    }
   ],
 
   layout24: [
@@ -869,10 +795,10 @@ const content = {
     },
     {
       Anemonia:
-        "Nej, USER. Vi är människor. Det är därför vi behöver rensas bort. Simuleringarna kommer fortsätta tills vi kan välja ut de medlemmar som kan leva i symbios med allsmäktige. Lev väl. Du vet aldrig när nästa simulation dyker upp.",
+        "Nej, USER. Vi är människor. Det är därför vi behöver rensas bort. Simuleringarna kommer fortsätta tills vi kan välja ut de medlemmar som kan leva i symbios med allsmäktige.",
     },
     {
-      Anemonia: " Lev väl. Du vet aldrig när nästa simulation dyker upp.",
+      Anemonia: "Lev väl. Du vet aldrig när nästa simulation dyker upp.",
     },
     {
       Spelare: "Kommer aldrig hända. Kommer ta med mig allt och avslöja er.",
