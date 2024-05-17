@@ -314,6 +314,7 @@ select {
   right: 0;
   top: 75%;
   text-align: center;
+  width: auto;
 }
 #yesOrNo {
   position: absolute;
@@ -451,6 +452,7 @@ select {
   top: 65%;
   right: 0;
   left: 0;
+  width: auto;
   margin-left: auto;
   margin-right: auto;
 }

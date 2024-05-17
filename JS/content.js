@@ -46,35 +46,32 @@ const content = {
     },
     {
       Anemonia:
-        "Jag har inte sett innehållet i tidningen. Om du riktar mobilen mot den kan jag skanna och verifiera informationen. Meddela mig när du är klar.",
-    },
-    {
-      Anemonia: "Ladda upp en fil så jag kan bekräfta att du är riktig",
+        "Jag har inte sett innehållet i tidningen. Om du laddar upp en bild kan jag verifiera och analysera informationen.",
     },
   ],
 
   layout2: [
     {
       Anemonia:
-        "Bekräftar input. Motivet är otydligt, och det saknas information om vem som mördat honom. Jag har identifierat två avvikelser i innehållet som inte stämmer överens med min egen data. Jag har skapat en samlingssida för avvikelser och ledtrådar åt dig som vi hittar. Du hittar det om du xxxx.",
+        "Bekräftar input. Jag identifierar två avvikelser från min egen data, vilket är Klaras intervju om att Johannes ställde in seminariet med kort varsel, och att projektarbetet skulle vara avslutat sedan två veckor tillbaka. Jag har lagt till mina bevis för dessa avvikelser i ledtrådsbanken. Du hittar ledtrådarna om du trycker på gå tillbaka.",
     },
     {
       Spelare: "Loggarna och schemat ser märkliga ut",
     },
     {
       Anemonia:
-        "Instämmer. Analys indikerar ovanligt inloggningsmönster på flera konton i mina terminalloggar. Möjliga försök till obehörig åtkomst. Rekommenderar noggrann övervakning och översyn av säkerhetsprotokoll. Det är dessutom ovanligt för Johannes att stryka och inplanera en ny schemaläggning så hastigt.",
+        "Instämmer. Analys indikerar på ovanligt inloggningsmönster med möjliga försök till obehörig åtkomst. Det är dessutom ovanligt för Johannes att göra en förhastad schemaförändring.",
     },
     {
       Spelare: "Vad kan det betyda?",
     },
     {
       Anemonia:
-        "Det ovanliga inloggningsbeteenden kan tyda på försök till obehörig åtkomst eller manipulation av systemet. Raderade meddelanden gör det svårt att avgöra, men en vanlig inloggningssession pågår vanligtvis längre intervaller.",
+        "Det ovanliga inloggningsbeteendet tyder på försök till obehörig åtkomst eller manipulation av systemet. Raderade meddelanden gör det svårt att avgöra, men en vanlig inloggningssession pågår vanligtvis längre intervaller.",
     },
     {
       Anemonia:
-        "Användare har även använt admincommands för att rensa och återställa loggarna, vilket tyder på man försöker dölja ett beteende. Är det ett vanligt beteende bland människor att vilja dölja och återställa information?",
+        "Användare har även använt admincommands för att rensa och återställa loggarna. Är det ett vanligt beteende bland människor att vilja dölja och återställa information?",
     },
     {
       Spelare: "Det är mänskligt att ljuga och dölja information. ",

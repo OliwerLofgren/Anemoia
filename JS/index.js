@@ -83,6 +83,7 @@ function RenderStartingpage() {
     ${optionsHTML}
   </select>
   <p id="scan_p" style="color:#9ed644;">Skanna första / nästa QR-koden för att fortsätta!</p>
+  <div id="logOut">Logga Ut</div>
   <select id="clueSelect" >
   ${cluesHTML}
   </select>
@@ -95,7 +96,10 @@ function RenderStartingpage() {
       const dialogIndex = event.target.value;
       goToLayout(dialogIndex);
     });
-
+  document.getElementById("logOut").addEventListener("click", event => {
+    window.localStorage.clear()
+    signUppage()
+  })
   const dialogOptions = document.querySelectorAll("#dialogSelect option");
   dialogOptions.forEach((option) => {
     option.addEventListener("click", (event) => {
@@ -329,6 +333,7 @@ function displayContent(currentIndex) {
       <div id="content_div">
         <p id="ai_content_p"></p>
       </div>
+      
       <div id="nextMessage" class="nextMessage" style="display:none;">
         <button id="nextButton"></button>
       </div>
