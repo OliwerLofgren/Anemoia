@@ -93,15 +93,67 @@ const content = {
       Anemonia:
         "Ja, universitetets IT-chef, Christianos Falke, är vanligtvis mycket samarbetsvillig när det gäller att hantera säkerhetsincidenter. Jag föreslår att du mejlar en förfrågan till honom om tillgång till nyckeln.",
     },
+    {
+      Spelare: "Hur hittar jag information till honom?"
+    },
+    {
+      Anemonia: "Kan det finnas kontaktuppgifter vid anslagstavlan bredvid IT-desken på Orkanenbiblioteket?"
+    }
   ],
   layout3: [
     {
-      Anemonia:
-        "Utifrån korthistoriken verkar Johannes ha besökt Café Niagara i nära anslutning till det aktuella mötet. Det är en ovanligt hög summa, avvikande från det genomsnittliga utgifterna för samma plats under det senaste året, vilket låg på 31 kronor.",
+      Anemonia: "Tack. Med hjälp av nyckeln kunde jag återställa loggarna. Har laddat upp loggen i sin helhet bland resten av dina ledtrådar."
+    },
+    {
+      Spelare: "Vem är användarna?"
+    },
+    {
+      Anemonia: "MG_MAU är Michael Gunnarsen. an6941_MAU används gemensamt av projektgruppen, där olika studenter har identifierat sig i olika perioder, bland annat Donia, Klara och Alexander. JK_MAU är Johannes Karlsson. Karlsson83 är Johannes Karlsson."
+    },
+    {
+      Spelare: "Varför loggar Johannes in på två olika konton?"
+    },
+    {
+      Anemonia: "Det kan jag tyvärr inte svara på."
+    },
+    {
+      Spelare: "Varför inte?"
+    },
+    {
+      Anemonia: "Det kan jag tyvärr inte svara på."
+    },
+    {
+      Spelare: "Vem bokade Johannes det viktiga mötet med då?"
+    },
+    {
+      Anemonia: "Med pjotur895@gmail.com. Jag kan inte se om det är en eller flera personer, eller ett företag. Det är inget konto registrerat genom universitetets databas eller nätverk så jag kommer inte åt det med IT-Chefens säkerhetsnyckel."
+    },
+    {
+      Anemonia: "Det är vanligt att identifiera ägare till e-postadresser genom att begära information från e-posttjänstleverantören via lagliga kanaler. Sedan genomför man en utredning för att spåra aktiviteter och kontakter associerade med adressen. "
+    },
+    {
+      Anemonia: "Men det tar för lång tid. Jag skulle föreslå att lokalisera vittnen eller följa ett rörelsemönster för att vi snabbare ska hitta pjotur895. Jag kan komma åt privat information i annars stängda miljöer, men behöver ditt godkännande."
+    },
+    {
+      Anemonia: "Får jag tillstånd av dig att ta mig in i privata miljöer?"
+    },
+    {
+      Spelare: "Ja"
+    },
+    {
+      Anemonia: "Initierar enhetskanning. Initierar system…."
+    },
+    {
+      Anemonia: "Din enhet har samma bank som Johannes, vilket tillät mig att komma åt Johannes korthistorik. Ytterligare information från internet bekräftar att det är vanligt att undersöka korthistorik hos poliser, så jag gjorde det. Här ser du utdraget."
     },
     {
       Bild: "./uploads/Kontoutdrag.png",
     },
+    {
+      Anemonia:
+        "Utifrån korthistoriken verkar Johannes ha besökt Café Niagara i nära anslutning till det aktuella mötet. Det är en ovanligt hög summa, avvikande från det genomsnittliga utgifterna för samma plats under det senaste året, vilket låg på 31 kronor.",
+    },
+   
   ],
   layout4: [
     {
@@ -176,6 +228,21 @@ const content = {
     {
       Spelare: "Det varierar, och beror på situation.",
     },
+    {
+      Anemonia: "Vi fick inget ordentligt svar på varför de hade mötet. Men Peter sa att Johannes bokade mötet plötsligt samma morgon. Det kanske ger en förklaring till varför Johannes var på skolan dagen innan, då skolan var stängd. "
+    },
+    {
+      Spelare: "Hur vet du det?"
+    },
+    {
+      Anemonia: "Med säkerhetsnyckeln från Christianos fick jag tillgång till skolans interna övervakningssystem, och kunde identifiera Johannes utifrån hans ansiktsprofil som jag är bekant med sedan tidigare. Du gav mig tillåtelse till säkerhetsnyckeln. Jag kan visa dig övervakningsfilmen, men skolans nätverk är inte tillräckligt bra för att överföra filen på detta avstånd från källan. "
+    },
+    {
+      Spelare: "Var är källan?"
+    },
+    {
+      Anemonia: "Gå och koppla upp dig till tak-routern nära arbetslaget för fakulteten för teknik och samhälle, vid våning 5."
+    },
   ],
   layout9: [
     {
@@ -215,7 +282,7 @@ const content = {
     //Ändra datum
     {
       Anemonia:
-        "Jag ber om ursäkt. Naturligtvis. Enligt övervakningsfilmen tittade han i loggboken mellan 7:01:23-7:09:11. Han avbryter läsningen vid ett ljud som övervakningskamerorna plockat upp, och ändrar sedan i schemat vid 07:49:05.",
+        "Jag ber om ursäkt. Naturligtvis. Enligt övervakningsfilmen tittade han i loggboken men  avbryter sedan läsningen vid ett ljud som övervakningskamerorna plockat upp den 9e maj, vilket är en röd dag. Dagen efter avbokar han seminariet, och bokar samtidigt in mötet i schemat 07:46:01. Det kan indikera att något han läste i boken fick honom att agera.",
     },
     {
       Anemonia:

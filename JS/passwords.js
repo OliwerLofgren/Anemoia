@@ -54,7 +54,7 @@ function checkPassword(event) {
         .getElementById("ai_content_p")
         .style.setProperty("--c", "#ff0000");
       let ai = document.querySelector("#ai_content_p");
-      ai.textContent = "Sorry fel kod prova igen";
+      ai.textContent = "Vänligen försök igen";
       ai.style.color = "white";
     }
   }
