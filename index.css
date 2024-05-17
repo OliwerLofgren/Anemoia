@@ -34,6 +34,7 @@ button:disabled {
   right: 0;
   top: 70%;
   text-align: center;
+  max-width: 200px;
 }
 #passwordInput {
   position: absolute;
