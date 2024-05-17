@@ -1,4 +1,4 @@
-//window.localStorage.clear();
+// window.localStorage.clear();
 
 if (localStorage.getItem("access") === "false") {
   accessCheck();
@@ -665,7 +665,7 @@ function fakeCaptcha() {
     console.log(pass);
     if (pass === 1) {
       addClues(7);
-      window.location.href = `?layout=layout11`;
+      continueToNextLayout();
       return "pass";
     }
   };

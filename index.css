@@ -334,7 +334,7 @@ select {
   line-height: 4.25vw;
   white-space: nowrap;
   cursor: pointer;
-  color: #444;
+  color: #ffffff;
 }
 
 #fake-captcha:hover {
