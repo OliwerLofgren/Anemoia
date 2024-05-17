@@ -266,7 +266,7 @@ const content = {
     },
     //Måste vara något här?
     {
-      Spelare: "yo man",
+      Spelare: "Fortsätt",
     },
     //RECAPTCHA
   ],
