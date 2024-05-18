@@ -514,6 +514,7 @@ select {
   right: 0;
   left: 0;
   color: skyblue;
+  font-size: 5vw;
 }
 #title {
   font-size: 25px;
@@ -575,8 +576,6 @@ select {
   font-size: 12px;
   color: #fff;
   font-weight: 500;
-  
-  
 }
 .div-7 {
   font-family: SF Pro Text, sans-serif;
