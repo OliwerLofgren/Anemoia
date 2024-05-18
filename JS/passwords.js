@@ -29,15 +29,13 @@ function passwordFunction(currentIndex) {
 }
 
 function checkPassword(event) {
- 
   const layoutUrl = window.location.search.split("?layout=")[1];
   const numLayout = parseInt(layoutUrl.match(/\d+/));
   document.querySelector("#ai_content_p").style.display = "none";
   let foundPassword = false;
-  let userInput = document.getElementById("passwordInput").value
-  let newValue = userInput.toLowerCase()
-  console.log(newValue, passWords[layoutUrl]);
-  
+  let userInput = document.getElementById("passwordInput").value;
+  let newValue = userInput.toLowerCase();
+  console.log(newValue);
   if (passWords[layoutUrl] === newValue) {
     foundPassword = true;
     if (layoutUrl === "layout13") {
