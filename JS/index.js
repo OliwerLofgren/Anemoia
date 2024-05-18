@@ -627,7 +627,6 @@ function switchFunction(layout) {
     case "layout9":
       addClues(9);
       displayVideo("./audio/Overvakning.mp4");
-
       break;
     case "layout10":
       passwordFunction();

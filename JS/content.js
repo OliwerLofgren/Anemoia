@@ -152,7 +152,6 @@ const content = {
       Anemonia:
         "Utifrån korthistoriken verkar Johannes ha besökt Café Niagara i nära anslutning till det aktuella mötet. Det är en högre summa än vanligt, avvikande från det genomsnittliga utgifterna för samma plats under det senaste året, vilket låg på 31 kronor.",
     },
-   
   ],
   layout4: [
     {
@@ -777,7 +776,7 @@ const content = {
   //VAL 1
   layout21: [
     {
-      Anemonia: "Tack. Bra val.",
+      Anemonia: "Tack. USER.",
     },
     {
       Anemonia:
