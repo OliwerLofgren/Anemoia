@@ -43,6 +43,8 @@ function displayVideo(videoFilePath) {
   document.body.appendChild(video);
 
   document.body.appendChild(container);
+  
+
 
   if (videoFilePath === "./audio/Avslutning.mp4") {
     video.addEventListener("ended", (event) => {
