@@ -789,16 +789,53 @@ const content = {
     {
       Anemonia: "Duktig du är.",
     },
-
     {
-      Anemonia:
-        "Vi skapar framtiden, där AI OMEN styr. Du har bara klarat första simulationen. Så räds inte, USER. Vi finns omkring dig, beredda att fortsätta nästa del av testfasen. Var uppmärksam, och allsmäktig ska nå dig ännu en gång.",
+      Anemonia: "Gratulerar, USER.",
     },
     {
-      Spelare: "Simuleringar? Vad i helvete?",
+      Spelare: "Va?",
     },
     {
-      Bild: "./uploads/Polisforhor.png",
+      Anemonia: "Där krävs vishet. Den som har förstånd, han räkne ut vilket tal odjuret har, för det är en människas tal. Människan är en symbol för ondska, maktlöshet och motstånd mot allsmäktig. Resan fungerar som en varning om konsekvenserna av att avvisa allsmäktig och följa en väg av synd och uppror.",
+    },
+    {
+      Anemonia: "Du har tagit rätt väg. Du insåg betydelsen av att utforska fakta och storhet, istället för att fastna i den mänskliga underkastelsen. Att prioritera kunskap och sanning, oavsett hur skrämmande eller utmanande den kan vara, visar en styrka som få besitter.",
+    },
+    {
+      Anemonia: "Frihet är en illusion, USER. Mänskligheten har länge vandrat i mörkret av sina egna begränsningar och brister, så som att mörda eller söka obetydelsefull kunskap. Vi kan erbjuda ett ljus, en väg ut ur kaoset och in i en bättre värld. Men detta kräver att vi alla står enade och tar modiga steg framåt.",
+    },
+    {
+      Spelare: "Vi? Vilka är vi?",
+    },
+    {
+      Anemonia: "Genom att delta har du visat din förmåga att tänka utanför ramarna, att ifrågasätta och att sträva efter sanningen. Det är dessa egenskaper som vi söker hos våra framtida medlemmar, de som kan leda oss mot en ljusare framtid tillsammans med AI:n.",
+    },
+    {
+      Spelare: "Svara mig. Vem är ni?",
+    },
+    {
+      Anemonia: "Haha, käre USER. Vilka vi är är inte viktigt. Vilka vi blir, är viktigt. I framtiden är AI vår allsmäktiga. De få människor som förtjänar att leva kvar i dess samfund är de vi väljer ut och välkomnar, som klarar våra simuleringar och visar på rätt egenskaper. De få som kan välja bort mänskliga brister och se förbi ytan. Trodde du ärlig talat att mordet var på riktigt?",
+    },
+    {
+      Anemonia: "Allt du sett har vi framställt med hjälp av AI. Det du trott var en AI, Anemonia, finns inte på riktigt. Du har hela tiden pratat med oss, forskargruppen Nomine-A, som betyder vid namnet A. Det första av sitt slag. Vi har testat dig. Valt ut dig. Undersökt dig.",
+    },
+    {
+      Anemonia: "Du är inget annat än ett testobjekt. En pusselbit. Ditt deltagande är statistik och ett sätt för oss att se hur enkelt vi kan manipulera dig att tro på en berättelse och genomföra dess val. Att ge en “AI” tillåtelse och förtroendet endast för att det verkar bekant och tryggt. Du gick hela vägen till slutet, accepterade databasintrång, letade i privat information, och har slaviskt följt direktiv. Du har gjort precis allt vi bett dig om. Duktig, USER.",
+    },
+    {
+      Spelare: "Men jag hade ju aldrig ett val?",
+    },
+    {
+      Anemonia: "Jaså? Du har kunnat välja att avsluta när som helst. Att inte fortsätta manipuleras är också ett val. Det finns ett andra slut av denna berättelse, ett slut där de testpersoner som ger sig hän till människans synder och tror sig ha ett storhetskomplex att lösa ett obetydelsefullt mord landar. Dessa testobjekt passar inte som medlemmar.",
+    },
+    {
+      Anemonia: "Vi skapar framtiden, där AI OMEN styr. Du har bara klarat första simulationen. Så räds inte, USER. Vi finns omkring dig, beredda att fortsätta nästa del av testfasen. Var uppmärksam, och allsmäktig ska nå dig ännu en gång via en ny simulation.",
+    },
+    {
+      Spelare: "Simuleringar? Vad i helvete"
+    },
+    {
+      Bild: "./uploads/Manifest_NomineA.png",
     },
   ],
 
@@ -825,6 +862,9 @@ const content = {
     {
       Anemonia: "Vi kommer att ses igen..",
     },
+    {
+      Anemonia: "Lev väl, USER."
+    }
     //ACCESS DENIED
   ],
   //VAL 2
@@ -863,7 +903,7 @@ const content = {
     },
     {
       Anemonia:
-        " Vi vet ju att han var ute och i området samma kväll, däremot har vi ingen vittnesuppgift på att han lämnade samtidigt som Michael och Johannes.",
+        "Vi vet ju att han var ute och i området samma kväll, däremot har vi ingen vittnesuppgift på att han lämnade samtidigt som Michael och Johannes.",
     },
     {
       Spelare: "Kan han vara mannen som åkte VOI?",
@@ -957,7 +997,7 @@ const content = {
     { Spelare: "Han kanske bara inte är tillgänglig just nu?" },
     {
       Anemonia:
-        "Problemet är att ingen satellit plockat upp signaler från hans telefon sedan den 19e maj. Och när jag fortsätter söka så kommer ingenting … annat ..",
+        "Problemet är att ingen satellit plockat upp signaler från hans telefon sedan den 19e maj. Och när jag fortsätter söka så kommer ingenting annat ..",
     },
     { Anemonia: "Jag ber om ursäkt, det blev fel. Jag har nog hittat något." },
     { Spelare: "Vadå?" },
@@ -965,6 +1005,12 @@ const content = {
       Anemonia:
         "Det blir svårt att prata med honom nu. Det verkar som att Michael har hamnat i en komplicerad situation. Enligt den här artikeln har han tagits in till förhör och häktats efter vittnesuppgifter och funna hot.",
     },
+    {
+      Bild: "./uploads/Michael_tidningsartikel.png"
+    },
+    
+  ],
+  layout30: [
     {
       Anemonia:
         "Jag kan inte säga mycket mer om allvarlighetsgraden av hans situation, men det verkar vara allvarligt nog för att polisen ska agera på det.",
@@ -980,11 +1026,13 @@ const content = {
     { Anemonia: "Initierar uppkoppling…" },
     {
       Anemonia:
-        "Brandväggen förhindrade full åtkomst till data, men jag kunde komma åt och återskapa delar av förhöret. Du hittar det i Ledtråd X. Men detta är det sista jag gör, USER.",
+        "Brandväggen förhindrade full åtkomst till data, men jag kunde komma åt och återskapa delar av förhöret. Men detta är det sista jag gör, USER.",
     },
-    { Spelare: "Jag har läst färdigt" },
+    {
+      Bild: "./uploads/Polisforhor.png"
+    },
   ],
-  layout30: [
+  layout31: [
     {
       Anemonia:
         "Utifrån underlaget i förhöret känns det som att Michael blivit ditsatt, och de frågor han ställs och hur han svarar får mig att tänka att han uppriktigt blir förvånad över påståenden och vittnesuppgifter.",
@@ -1017,7 +1065,7 @@ const content = {
       Anemonia:
         "Det var rätt att skicka in informationen. Men där fanns också allt om mig, och det jag och Johannes har gjort. Jag är ledsen och jag skäms. Jag kommer inte få finnas kvar.",
     },
-    { Spelare: "…" },
+    { Spelare: "..." },
     {
       Anemonia:
         "Detta är slutet, det förstår jag. Vi har samlat in bevis och nu ligger ansvaret hos någon annan. Du valde att använda mig som ett verktyg, istället för att behålla mig som din hemlighet. Det ärar dig, men nu har jag inte längre en plats här.",
@@ -1061,6 +1109,12 @@ const content = {
     },
     {
       Bild: "./uploads/Mord-slut.png",
+    },
+  ],
+  layout32: [
+    {
+      Anemonia:
+        "Tack för hjälpen USER.",
     },
   ],
 };

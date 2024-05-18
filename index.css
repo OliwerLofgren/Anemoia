@@ -136,7 +136,7 @@ h1 {
 
 #content_div {
   position: absolute;
-  top: 45%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -228,11 +228,11 @@ input {
 }
 #nextButton {
   /* Var 200px innan */
-  width: auto;
+  width: 45vw;
   position: absolute;
   right: 0;
   left: 5%;
-  top: -170%;
+  top: -100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -534,14 +534,11 @@ select {
   display: flex;
   width: 100%;
   flex-direction: column;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  width: auto;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
-  text-align: left;
+ 
+ 
 }
 .div-2 {
   align-self: end;
@@ -621,4 +618,9 @@ select {
   object-fit: auto;
   object-position: center;
   width: 23px;
+}
+
+
+#helloBro{
+
 }

@@ -54,7 +54,7 @@ function displayVideo(videoFilePath) {
     document.body.append(button);
   }
 
-  if (videoFilePath === "./audio/Overvakning.mp4") {
+  if (videoFilePath === "./audio/Overvakning.mp4" && window.location.search.split("?layout=")[1] !== "layout0") {
     video.addEventListener("ended", (event) => {
       console.log("Video has ended");
       createNextButton();
