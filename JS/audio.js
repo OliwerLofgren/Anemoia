@@ -33,7 +33,6 @@ function displayVideo(videoFilePath) {
   video.controls = true;
   video.id = "video";
 
-  
   if (document.querySelector("#content_div")) {
     document.querySelector("#content_img").remove();
     document.querySelector("#nextMessage").remove();
@@ -45,14 +44,10 @@ function displayVideo(videoFilePath) {
 
   document.body.appendChild(container);
 
-  document.querySelector("#goHome").style.position = "relative"
-  document.querySelector("#goHome").style.top = "0"
-  document.querySelector("#goHome").style.left = "-25%";
-
   if (videoFilePath === "./audio/Avslutning.mp4") {
-    video.addEventListener("ended",event => {
+    video.addEventListener("ended", (event) => {
       console.log("Video has ended");
-      video.remove()
+      video.remove();
       createNextButton();
     });
     button.textContent = "Fortsätt till nästa del";
@@ -62,7 +57,4 @@ function displayVideo(videoFilePath) {
   if (window.location.search.split("?layout=")[1] === "layout0") {
     video.style.top = "30%";
   }
-  
- 
-  
 }

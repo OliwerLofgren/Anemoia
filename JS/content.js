@@ -152,7 +152,6 @@ const content = {
       Anemonia:
         "Utifrån korthistoriken verkar Johannes ha besökt Café Niagara i nära anslutning till det aktuella mötet. Det är en högre summa än vanligt, avvikande från det genomsnittliga utgifterna för samma plats under det senaste året, vilket låg på 31 kronor.",
     },
-   
   ],
   layout4: [
     {
@@ -502,7 +501,7 @@ const content = {
   layout15: [
     {
       Anemonia:
-        "Hm, det verkar stämma överens med en kommentar i forumet också. Du ser det under ledtråd 1.  ",
+        "Hm, det verkar stämma överens med en kommentar i forumet också. Du ser det under ledtråd 2.  ",
     },
     {
       Spelare: "Vem är an_4319? ",
@@ -777,11 +776,11 @@ const content = {
   //VAL 1
   layout21: [
     {
-      Anemonia: "Tack. Bra val.",
+      Anemonia: "Tack. USER.",
     },
     {
       Anemonia:
-        "Michael skriver att mappen är på deras vanliga ställe. Vet du var 'det vanliga stället' är, eller kan något i våra ledtrådar vägleda oss? Fanns det något i Figma prototypen?",
+        "Michael skriver att mappen är på deras vanliga ställe. Vet du var 'det vanliga stället' är, eller kan något i våra ledtrådar vägleda oss? Fanns det något i Figma prototypen exempelvis?",
     },
     //PASSWORD
   ],
