@@ -143,7 +143,7 @@ const content = {
     },
     {
       Anemonia:
-        "Din enhet har samma bank som Johannes, vilket tillät mig att komma åt Johannes korthistorik. Ytterligare information från internet bekräftar att det är vanligt att undersöka korthistorik hos poliser, så jag gjorde det. Här ser du utdraget.",
+        "Din enhet har samma bank som Johannes, vilket tillät mig att komma åt Johannes korthistorik. Ytterligare information från internet bekräftar att det är vanligt att undersöka korthistorik i polisutredningar, så jag gjorde det. Här ser du utdraget.",
     },
     {
       Bild: "./uploads/Kontoutdrag.png",

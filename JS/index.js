@@ -485,8 +485,8 @@ function displayContent(currentIndex) {
               clearInterval(interval);
               document.getElementById("nextButton").disabled = false;
               let newMessage = content[layoutContent][currentIndex + 1];
-              if(newMessage === undefined){
-                showEndMessage()
+              if (newMessage === undefined) {
+                showEndMessage();
               }
               if (
                 !Object.keys(newMessage)[0] ||
@@ -549,7 +549,7 @@ function showEndMessage(check) {
   }
   if (check === true) {
     setTimeout(() => {
-      if(document.getElementById("ai_content_p")){
+      if (document.getElementById("ai_content_p")) {
         document.getElementById("nextButton").disabled = true;
         const aiContentP = document.getElementById("ai_content_p");
         aiContentP.style.color = "#9ed644";
@@ -613,31 +613,30 @@ function switchFunction(layout) {
       createNextButton();
       break;
     case "layout5":
-      addClues(8);
       passwordFunction();
       break;
     case "layout6":
       createNextButton();
       break;
     case "layout7":
-      addClues(9);
       createNextButton();
       break;
     case "layout8":
       showEndMessage(true);
       break;
     case "layout9":
+      addClues(9);
       displayVideo("./audio/Overvakning.mp4");
 
       break;
     case "layout10":
-      addClues(10);
       passwordFunction();
       break;
     case "layout11":
       fakeCaptcha();
       break;
     case "layout12":
+      addClues(10);
       createNextButton();
       break;
     case "layout13":
