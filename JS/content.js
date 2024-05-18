@@ -502,7 +502,7 @@ const content = {
   layout15: [
     {
       Anemonia:
-        "Hm, det verkar stämma överens med en kommentar i forumet också. Du ser det under ledtråd 1.  ",
+        "Hm, det verkar stämma överens med en kommentar i forumet också. Du ser det under ledtråd 2.",
     },
     {
       Spelare: "Vem är an_4319? ",

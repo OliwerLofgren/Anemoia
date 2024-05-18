@@ -53,6 +53,7 @@ function displayVideo(videoFilePath) {
     video.addEventListener("ended",event => {
       console.log("Video has ended");
       video.remove()
+      
       createNextButton();
     });
     button.textContent = "Fortsätt till nästa del";

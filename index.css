@@ -136,7 +136,7 @@ h1 {
 
 #content_div {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -226,11 +226,11 @@ input {
   width: 230px;
 }
 #nextButton {
-  width: auto;
+  width: 150px;
   position: absolute;
   right: 0;
   left: 5%;
-  top: 45%;
+  top: -170%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -550,7 +550,7 @@ select {
   align-items: center;
 }
 .div-4 {
-  text-align: center;
+  text-align: left;
   background: linear-gradient(90deg, #0084ad 0%, #cb98d4 23.5%, #f55252 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -560,7 +560,7 @@ select {
 }
 .div-5 {
   color: #8d8888;
-  text-align: center;
+  text-align: left;
   margin-top: 5px;
   font: 600 18px SF Pro Rounded, sans-serif;
 }
@@ -571,6 +571,8 @@ select {
   font-size: 12px;
   color: #fff;
   font-weight: 500;
+  
+  
 }
 .div-7 {
   font-family: SF Pro Text, sans-serif;
