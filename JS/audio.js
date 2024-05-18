@@ -43,13 +43,20 @@ function displayVideo(videoFilePath) {
   document.body.appendChild(video);
 
   document.body.appendChild(container);
-  
-
 
   if (videoFilePath === "./audio/Avslutning.mp4") {
     video.addEventListener("ended", (event) => {
       console.log("Video has ended");
-      video.remove()
+      video.remove();
+      createNextButton();
+    });
+    button.textContent = "Fortsätt till nästa del";
+    document.body.append(button);
+  }
+
+  if (videoFilePath === "./audio/Overvakning.mp4") {
+    video.addEventListener("ended", (event) => {
+      console.log("Video has ended");
       createNextButton();
     });
     button.textContent = "Fortsätt till nästa del";
