@@ -44,7 +44,7 @@ function checkPassword(event) {
       addClues(11);
       document.body.innerHTML = "";
       messageIndex++;
-      displayContent(messageIndex);
+      continueToNextLayout()
       return true;
     }
     window.location.href = `?layout=layout${numLayout + 1}`;
