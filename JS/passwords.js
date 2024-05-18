@@ -3,7 +3,7 @@ const passWords = {
   layout5: "peter",
   layout10: "9691",
   layout13: "9585",
-  layout13: "lionbar",
+  layout14: "lionbar",
   layout21: "38",
   layout25: "peter",
   layout28: "0708123450",
@@ -36,7 +36,8 @@ function checkPassword(event) {
   let foundPassword = false;
   let userInput = document.getElementById("passwordInput").value
   let newValue = userInput.toLowerCase()
-  console.log(newValue);
+  console.log(newValue, passWords[layoutUrl]);
+  
   if (passWords[layoutUrl] === newValue) {
     foundPassword = true;
     if (layoutUrl === "layout13") {
@@ -45,7 +46,7 @@ function checkPassword(event) {
       addClues(11);
       document.body.innerHTML = "";
       messageIndex++;
-      displayContent(messageIndex);
+      continueToNextLayout()
       return true;
     }
     window.location.href = `?layout=layout${numLayout + 1}`;

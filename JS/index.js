@@ -196,7 +196,7 @@ function goToClues(clueIndex) {
       img.src = "uploads/Tidning.png";
       break;
     case "2":
-      img.src = "uploads/Skolforum-1.png";
+      img.src = "uploads/Skolforum_storresize.png";
       break;
     case "3":
       img.src = "uploads/logs_censored_font_10.png";
@@ -483,7 +483,7 @@ function displayContent(currentIndex) {
               document.getElementById("nextButton").disabled = false;
               let newMessage = content[layoutContent][currentIndex + 1];
               if(newMessage === undefined){
-                //showEndMessage()
+                showEndMessage()
               }
               if (
                 !Object.keys(newMessage)[0] ||
@@ -547,6 +547,7 @@ function showEndMessage(check) {
   if (check === true) {
     setTimeout(() => {
       if(document.getElementById("ai_content_p")){
+        document.getElementById("nextButton").disabled = true;
         const aiContentP = document.getElementById("ai_content_p");
         aiContentP.style.color = "#9ed644";
         aiContentP.style.border = "none";
@@ -639,7 +640,6 @@ function switchFunction(layout) {
     case "layout13":
       addClues(11);
       passwordFunction();
-
       break;
     case "layout14":
       passwordFunction();
