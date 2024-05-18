@@ -608,11 +608,11 @@ function switchFunction(layout) {
       showEndMessage(true);
       break;
     case "layout4":
-      addClues(6);
+      addClues(7);
       createNextButton();
       break;
     case "layout5":
-      addClues(7);
+      addClues(8);
       passwordFunction();
       break;
     case "layout6":
