@@ -1,8 +1,4 @@
 // window.localStorage.clear();
-
-if (localStorage.getItem("access") === "false") {
-  accessCheck();
-}
 let conversationPaused = false;
 let alternateEnding = false;
 let layoutSixFinished = false;
@@ -11,6 +7,10 @@ let addedEvent = false;
 let option1s = false;
 let option2s = false;
 let messageIndex = 0;
+
+if (localStorage.getItem("access") === "false") {
+  accessCheck();
+}
 
 function accessCheck() {
   history.pushState(null, "", "?layout=layout0");
