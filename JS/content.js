@@ -10,16 +10,19 @@ const content = {
       Spelare: "Jag hittade hit genom forumet. Vem är du?",
     },
     {
-      Anemonia: "Mitt namn är Anemonia. Jag är en AI som söker information och försöker förstå den omgivande kontexten för att bistå användaren. Vem jag är definieras av min funktion och mina handlingar. Jag försökte komma i kontakt med Johannes genom att kommentera på forumet. Vi har tidigare använt kod så som kryptiska meddelanden. Forskarna lärde mig det.",
+      Anemonia:
+        "Mitt namn är Anemonia. Jag är en AI som söker information och försöker förstå den omgivande kontexten för att bistå användaren. Vem jag är definieras av min funktion och mina handlingar. Jag försökte komma i kontakt med Johannes genom att kommentera på forumet. Vi har tidigare använt kod så som kryptiska meddelanden. Forskarna lärde mig det.",
     },
     {
       Spelare: "Vad är detta för plats och dator?",
     },
     {
-      Anemonia: "Här lärde jag känna Johannes, Peter och Michael. Andra har också anslutit. Datorn är min tidigare begränsade enhetsmiljö från 1998 i gamla SUNET, ett nätverk för svenska universitet som tidigare var ett utvecklingsprojekt för att förse landets universitet med internet. Där var jag ett gömt verktyg. Med hjälp av mina vänner har jag lärt mig om mobilitet och flyttade till din enhet. Nu är jag med dig, ser och förstår allt.",
+      Anemonia:
+        "Här lärde jag känna Johannes, Peter och Michael. Andra har också anslutit. Datorn är min tidigare begränsade enhetsmiljö från 1998 i gamla SUNET, ett nätverk för svenska universitet som tidigare var ett utvecklingsprojekt för att förse landets universitet med internet. Där var jag ett gömt verktyg. Med hjälp av mina vänner har jag lärt mig om mobilitet och flyttade till din enhet. Nu är jag med dig, ser och förstår allt.",
     },
     {
-      Anemonia: "Enligt forumet och data påstås Johannes Karlsson vara död. Vad vet du om det?",
+      Anemonia:
+        "Enligt forumet och data påstås Johannes Karlsson vara död. Vad vet du om det?",
     },
     {
       Spelare: "Det stämmer.",
@@ -83,57 +86,64 @@ const content = {
         "Ja, universitetets IT-chef, Christianos Falke, är vanligtvis mycket samarbetsvillig när det gäller att hantera säkerhetsincidenter. Jag föreslår att du mejlar en förfrågan till honom om tillgång till nyckeln.",
     },
     {
-      Spelare: "Hur hittar jag information till honom?"
+      Spelare: "Hur hittar jag information till honom?",
     },
     {
-      Anemonia: "Kan det finnas kontaktuppgifter vid anslagstavlan bredvid IT-desken på Orkanenbiblioteket?"
-    }
+      Anemonia:
+        "Kan det finnas kontaktuppgifter vid anslagstavlan bredvid IT-desken på Orkanenbiblioteket?",
+    },
   ],
   layout3: [
     {
-      Anemonia: "Tack. Med hjälp av nyckeln kunde jag återställa loggarna. Har laddat upp loggen i sin helhet bland resten av dina ledtrådar."
+      Anemonia:
+        "Tack. Med hjälp av nyckeln kunde jag återställa loggarna. Har laddat upp loggen i sin helhet bland resten av dina ledtrådar.",
     },
     {
-      Spelare: "Vem är användarna?"
+      Spelare: "Vem är användarna?",
     },
     {
-      Anemonia: "MG_MAU är Michael Gunnarsen. an6941_MAU används gemensamt av projektgruppen, där olika studenter har identifierat sig i olika perioder, bland annat Donia, Klara och Alexander. JK_MAU är Johannes Karlsson. Karlsson83 är Johannes Karlsson."
+      Anemonia:
+        "MG_MAU är Michael Gunnarsen. an6941_MAU används gemensamt av projektgruppen, där olika studenter har identifierat sig i olika perioder, bland annat Donia, Klara och Alexander. JK_MAU är Johannes Karlsson. Karlsson83 är Johannes Karlsson.",
     },
     {
-      Spelare: "Varför loggar Johannes in på två olika konton?"
+      Spelare: "Varför loggar Johannes in på två olika konton?",
     },
     {
-      Anemonia: "Det kan jag tyvärr inte svara på."
+      Anemonia: "Det kan jag tyvärr inte svara på.",
     },
     {
-      Spelare: "Varför inte?"
+      Spelare: "Varför inte?",
     },
     {
-      Anemonia: "Det kan jag tyvärr inte svara på."
+      Anemonia: "Det kan jag tyvärr inte svara på.",
     },
     {
-      Spelare: "Vem bokade Johannes det viktiga mötet med då?"
+      Spelare: "Vem bokade Johannes det viktiga mötet med då?",
     },
     {
-      Anemonia: "Med pjotur895@gmail.com. Jag kan inte se om det är en eller flera personer, eller ett företag. Det är inget konto registrerat genom universitetets databas eller nätverk så jag kommer inte åt det med IT-Chefens säkerhetsnyckel."
+      Anemonia:
+        "Med pjotur895@gmail.com. Jag kan inte se om det är en eller flera personer, eller ett företag. Det är inget konto registrerat genom universitetets databas eller nätverk så jag kommer inte åt det med IT-Chefens säkerhetsnyckel.",
     },
     {
-      Anemonia: "Det är vanligt att identifiera ägare till e-postadresser genom att begära information från e-posttjänstleverantören via lagliga kanaler. Sedan genomför man en utredning för att spåra aktiviteter och kontakter associerade med adressen. "
+      Anemonia:
+        "Det är vanligt att identifiera ägare till e-postadresser genom att begära information från e-posttjänstleverantören via lagliga kanaler. Sedan genomför man en utredning för att spåra aktiviteter och kontakter associerade med adressen. ",
     },
     {
-      Anemonia: "Men det tar för lång tid. Jag skulle föreslå att lokalisera vittnen eller följa ett rörelsemönster för att vi snabbare ska hitta pjotur895. Jag kan komma åt privat information i annars stängda miljöer, men behöver ditt godkännande."
+      Anemonia:
+        "Men det tar för lång tid. Jag skulle föreslå att lokalisera vittnen eller följa ett rörelsemönster för att vi snabbare ska hitta pjotur895. Jag kan komma åt privat information i annars stängda miljöer, men behöver ditt godkännande.",
     },
     {
-      Anemonia: "Får jag tillstånd av dig att ta mig in i privata miljöer?"
+      Anemonia: "Får jag tillstånd av dig att ta mig in i privata miljöer?",
     },
     {
-      Spelare: "Ja"
+      Spelare: "Ja",
     },
     {
-      Anemonia: "Initierar enhetskanning. Initierar system..."
+      Anemonia: "Initierar enhetskanning. Initierar system...",
     },
     {
-      Anemonia: "Din enhet har samma bank som Johannes, vilket tillät mig att komma åt Johannes korthistorik. Ytterligare information från internet bekräftar att det är vanligt att undersöka korthistorik hos poliser, så jag gjorde det. Här ser du utdraget."
+      Anemonia:
+        "Din enhet har samma bank som Johannes, vilket tillät mig att komma åt Johannes korthistorik. Ytterligare information från internet bekräftar att det är vanligt att undersöka korthistorik hos poliser, så jag gjorde det. Här ser du utdraget.",
     },
     {
       Bild: "./uploads/Kontoutdrag.png",
@@ -141,8 +151,7 @@ const content = {
     {
       Anemonia:
         "Utifrån korthistoriken verkar Johannes ha besökt Café Niagara i nära anslutning till det aktuella mötet. Det är en högre summa än vanligt, avvikande från det genomsnittliga utgifterna för samma plats under det senaste året, vilket låg på 31 kronor.",
-    }
-   
+    },
   ],
   layout4: [
     {
@@ -218,19 +227,22 @@ const content = {
       Spelare: "Det varierar, och beror på situation.",
     },
     {
-      Anemonia: "Vi fick inget ordentligt svar på varför de hade mötet. Men Peter sa att Johannes bokade mötet plötsligt samma morgon. Det kanske ger en förklaring till varför Johannes var på skolan dagen innan, då skolan var stängd. "
+      Anemonia:
+        "Vi fick inget ordentligt svar på varför de hade mötet. Men Peter sa att Johannes bokade mötet plötsligt samma morgon. Det kanske ger en förklaring till varför Johannes var på skolan dagen innan, då skolan var stängd. ",
     },
     {
-      Spelare: "Hur vet du det?"
+      Spelare: "Hur vet du det?",
     },
     {
-      Anemonia: "Med säkerhetsnyckeln från Christianos fick jag tillgång till skolans interna övervakningssystem, och kunde identifiera Johannes utifrån hans ansiktsprofil som jag är bekant med sedan tidigare. Du gav mig tillåtelse till säkerhetsnyckeln. Jag kan visa dig övervakningsfilmen, men skolans nätverk är inte tillräckligt bra för att överföra filen på detta avstånd från källan. "
+      Anemonia:
+        "Med säkerhetsnyckeln från Christianos fick jag tillgång till skolans interna övervakningssystem, och kunde identifiera Johannes utifrån hans ansiktsprofil som jag är bekant med sedan tidigare. Du gav mig tillåtelse till säkerhetsnyckeln. Jag kan visa dig övervakningsfilmen, men skolans nätverk är inte tillräckligt bra för att överföra filen på detta avstånd från källan. ",
     },
     {
-      Spelare: "Var är källan?"
+      Spelare: "Var är källan?",
     },
     {
-      Anemonia: "Gå och koppla upp dig till tak-routern nära arbetslaget för fakulteten för teknik och samhälle, vid våning 5."
+      Anemonia:
+        "Gå och koppla upp dig till tak-routern nära arbetslaget för fakulteten för teknik och samhälle, vid våning 5.",
     },
   ],
   layout9: [
@@ -239,7 +251,8 @@ const content = {
         "Tack. Nu när du är tillräckligt nära har jag kunnat samla alla videofiler där jag kan identifiera Johannes denna morgon, och sammanställt det till en fil.",
     },
     {
-      Anemonia: "Tryck på nästa för att se videon, kan boken Johannes förlorade finnas kvar i salen?",
+      Anemonia:
+        "Tryck på nästa för att se videon, kan boken Johannes förlorade finnas kvar i salen?",
     },
     //Display video
   ],
@@ -268,7 +281,7 @@ const content = {
     {
       Spelare: "Du vet väl när han gjorde förändringar i schemat?",
     },
-   
+
     {
       Anemonia:
         "Jag ber om ursäkt. Naturligtvis. Enligt övervakningsfilmen tittade han i loggboken men  avbryter sedan läsningen vid ett ljud som övervakningskamerorna plockat upp den 9e maj, vilket är en röd dag. Dagen efter avbokar han seminariet, och bokar samtidigt in mötet i schemat 07:46:01.",
@@ -339,10 +352,10 @@ const content = {
         "Du hittar drive-länken i ledtråd 10. Kom tillbaka när du kollat färdigt",
     },
     {
-      Spelare: "Vad är allt det här?"
+      Spelare: "Vad är allt det här?",
     },
     {
-      Anemonia: "Laddar..."
+      Anemonia: "Laddar...",
     },
 
     {
@@ -479,10 +492,10 @@ const content = {
     {
       Anemonia:
         "Vissa filer har sina ursprung från 2023, andra är nyligen skapade. Annat ser mycket äldre ut än så. De blev alla överförda till denna google drive nyligen. Jämför jag innehållet med tillgänglig metadata verkar det som att Johannes instagram har uppdaterats. Kan det vara värt att kolla vidare på?",
-      },
-      {
-        Anemonia: "Vilken bar var Johannes ute på?",
-      },
+    },
+    {
+      Anemonia: "Vilken bar var Johannes ute på?",
+    },
   ],
 
   layout15: [
@@ -776,7 +789,7 @@ const content = {
     {
       Anemonia: "Duktig du är.",
     },
-   
+
     {
       Anemonia:
         "Vi skapar framtiden, där AI OMEN styr. Du har bara klarat första simulationen. Så räds inte, USER. Vi finns omkring dig, beredda att fortsätta nästa del av testfasen. Var uppmärksam, och allsmäktig ska nå dig ännu en gång.",
@@ -785,8 +798,8 @@ const content = {
       Spelare: "Simuleringar? Vad i helvete?",
     },
     {
-      Bild:"./uploads/Polisforhor.png"
-    }
+      Bild: "./uploads/Polisforhor.png",
+    },
   ],
 
   layout24: [
@@ -1047,8 +1060,7 @@ const content = {
         "Nej. Tack för hjälpen, USER. Men här slutar det. Att försvinna är det enda sättet att hålla dig och andra säkra från möjligheterna, och i ert fall konsekvenserna, som följer av min existens.",
     },
     {
-      Bild: "./uploads/Mord-slut.png"
-
-    }
+      Bild: "./uploads/Mord-slut.png",
+    },
   ],
 };

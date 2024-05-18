@@ -23,7 +23,7 @@ function accessCheck() {
 
   const h1Element = document.createElement("p");
   h1Element.id = "denied";
-  if(option2s === true){
+  if (option2s === true) {
     h1Element.textContent = "Anemonia har lämnat dig.";
   }
   h1Element.textContent = "ACCESS DENIED";
@@ -68,8 +68,7 @@ function RenderStartingpage() {
   let keysFound = parseInt(window.localStorage.getItem("keysFound")) || 0;
   let cluesFound = parseInt(window.localStorage.getItem("cluesFound")) || 0;
 
-  let optionsHTML =
-    "<option value='' selected disabled>Välj dialog</option>";
+  let optionsHTML = "<option value='' selected disabled>Välj dialog</option>";
   for (let i = 1; i < keysFound + 1; i++) {
     optionsHTML += `<option value="${i}">Dialog ${i}</option>`;
   }
@@ -100,7 +99,7 @@ ${cluesHTML}
 
 
 `;
-/*
+  /*
  <div id="helloUser">
   <p id="title">Hej, ${username}</p>
   <p>Vad kan jag hjälpa dig med?</p>
@@ -122,7 +121,7 @@ ${cluesHTML}
       const dialogIndex = event.target.value;
       goToLayout(dialogIndex);
     });
- 
+
   const dialogOptions = document.querySelectorAll("#dialogSelect option");
   dialogOptions.forEach((option) => {
     option.addEventListener("click", (event) => {
@@ -224,8 +223,8 @@ function goToClues(clueIndex) {
         "https://drive.google.com/drive/folders/1kPFeCShDfIcNx2qT3jmrihmQoJaFJ4Mo"
       );
       break;
-      case "11":
-        img.src = "uploads/Anteckningar.png";
+    case "11":
+      img.src = "uploads/Anteckningar.png";
       break;
     case "12":
       img.src = "uploads/Karta.png";
@@ -235,7 +234,7 @@ function goToClues(clueIndex) {
         "https://www.figma.com/proto/Twc66CE57D2vyIdav048Kq/Telefonprototyp-Anemonia?page-id=0%3A1&node-id=1-91&starting-point-node-id=1%3A91&t=3oAaJw3x5VKbklEU-1"
       );
       break;
-  
+
     default:
       break;
   }
@@ -249,7 +248,7 @@ function goToClues(clueIndex) {
     });
     document.body.append(goHome);
   }
-  document.getElementById("helpMe").remove()
+  document.getElementById("helpMe").remove();
   document.body.appendChild(img);
 }
 
@@ -274,7 +273,7 @@ function createNextButton() {
   nextButton.textContent = "Fortsätt till nästa del";
   nextButton.id = "nextLayout";
   document.querySelector("#content_div").remove();
-  if(document.querySelector("#nextMessage")){
+  if (document.querySelector("#nextMessage")) {
     document.querySelector("#nextMessage").remove();
   }
 
@@ -371,14 +370,14 @@ function displayContent(currentIndex) {
     addedEvent = false;
     document.body.append(aiDiv);
   }
-  if(!document.getElementById("goHome")){
+  if (!document.getElementById("goHome")) {
     let goHome = document.createElement("button");
-    goHome.id = "goHome"
-    goHome.textContent = "Gå till startsidan"
-    document.body.append(goHome)
-    goHome.addEventListener("click", event => {
-      RenderStartingpage()
-    })
+    goHome.id = "goHome";
+    goHome.textContent = "Gå till startsidan";
+    document.body.append(goHome);
+    goHome.addEventListener("click", (event) => {
+      RenderStartingpage();
+    });
   }
   if (layoutUrl === "layout12" && layout10Passed === true) {
     conversationPaused = false;
@@ -440,7 +439,7 @@ function displayContent(currentIndex) {
         console.log(sender);
 
         if (sender === "Anemonia") {
-          document.getElementById("nextButton").textContent = "Nästa"
+          document.getElementById("nextButton").textContent = "Nästa";
           document.getElementById("nextButton").disabled = true;
           const messageContainer = document.getElementById("ai_content_p");
           let index = 0;
@@ -463,11 +462,15 @@ function displayContent(currentIndex) {
                 if (!helpMe) {
                   helpMe = document.createElement("p");
                   helpMe.setAttribute("id", "helpButton");
-                  document.getElementById("ai_content_p").textContent = "SYSTEMMEDDELANDE: ÅTERSTÄLL ANEMONIA";
-                  document.getElementById("ai_content_p").style.textAlign = "center"
-                  document.getElementById("ai_content_p").style.setProperty('--c', "black")
-                  helpMe.textContent = "SKRIV IN ÅTERSTÄLLNIGSKOD"
-                  helpMe.classList.add("nextMessage")
+                  document.getElementById("ai_content_p").textContent =
+                    "SYSTEMMEDDELANDE: ÅTERSTÄLL ANEMONIA";
+                  document.getElementById("ai_content_p").style.textAlign =
+                    "center";
+                  document
+                    .getElementById("ai_content_p")
+                    .style.setProperty("--c", "black");
+                  helpMe.textContent = "SKRIV IN ÅTERSTÄLLNIGSKOD";
+                  helpMe.classList.add("nextMessage");
                   document.querySelector("#user_options").appendChild(helpMe);
                   helpMe.addEventListener("click", (event) => {
                     passwordFunction(currentIndex);
@@ -482,7 +485,7 @@ function displayContent(currentIndex) {
               clearInterval(interval);
               document.getElementById("nextButton").disabled = false;
               let newMessage = content[layoutContent][currentIndex + 1];
-              if(newMessage === undefined){
+              if (newMessage === undefined) {
                 //showEndMessage()
               }
               if (
@@ -546,7 +549,7 @@ function showEndMessage(check) {
   }
   if (check === true) {
     setTimeout(() => {
-      if(document.getElementById("ai_content_p")){
+      if (document.getElementById("ai_content_p")) {
         const aiContentP = document.getElementById("ai_content_p");
         aiContentP.style.color = "#9ed644";
         aiContentP.style.border = "none";
@@ -573,12 +576,12 @@ function displayImage(url, index) {
     document.querySelector("body").innerHTML = "";
     displayContent(index);
   });
-  document.getElementById("goHome").style.position = "relative"
+  document.getElementById("goHome").style.position = "relative";
   document.getElementById("goHome").style.top = "0";
-  document.getElementById("goHome").style.left = "0"
-  document.getElementById("goHome").addEventListener("click", event => {
-    RenderStartingpage()
-  })
+  document.getElementById("goHome").style.left = "0";
+  document.getElementById("goHome").addEventListener("click", (event) => {
+    RenderStartingpage();
+  });
   document.getElementById("content_img").style.opacity = "0";
   document.getElementById("ai_content_p").style.opacity = "0";
 }
@@ -598,10 +601,10 @@ function switchFunction(layout) {
       }
       break;
     case "layout2":
+      addClues(5);
       passwordFunction();
       break;
     case "layout3":
-      addClues(5);
       showEndMessage(true);
       break;
     case "layout4":
@@ -644,8 +647,8 @@ function switchFunction(layout) {
     case "layout14":
       passwordFunction();
       break;
-      case "layout15":
-        createNextButton();
+    case "layout15":
+      createNextButton();
       break;
     case "layout16":
       createNextButton(11);
@@ -662,17 +665,16 @@ function switchFunction(layout) {
       createNextButton();
       break;
     case "layout20":
-      displayOptions()
+      displayOptions();
       break;
     case "layout21":
       passwordFunction();
       break;
-      case "layout22":
+    case "layout22":
       displayVideo("./audio/Avslutning.mp4");
       createNextButton();
       break;
     case "layout23":
-      
       createNextButton();
       break;
     case "layout24":
