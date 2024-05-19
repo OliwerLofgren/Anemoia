@@ -45,7 +45,7 @@ const content = {
   layout2: [
     {
       Anemonia:
-        "Bekräftar input. Jag identifierar två avvikelser från min egen data, vilket är Klaras intervju om att Johannes ställde in seminariet med kort varsel, och att projektarbetet skulle vara avslutat sedan två veckor tillbaka. Jag har lagt till mina bevis för dessa avvikelser i ledtrådsbanken. Du hittar ledtrådarna om du trycker på gå tillbaka.",
+        "Bekräftar input. Jag identifierar två avvikelser från min egen data, vilket är Klaras intervju om att Johannes ställde in seminariet med kort varsel, och att projektarbetet skulle vara avslutat sedan två veckor tillbaka. Jag har lagt till mina bevis för dessa avvikelser i ledtrådsbanken. Du hittar ledtrådarna om du trycker på gå till startsidan.",
     },
     {
       Spelare: "Loggarna och schemat ser märkliga ut",
@@ -252,7 +252,7 @@ const content = {
     },
     {
       Anemonia:
-        "Tryck på nästa för att se videon, kan boken Johannes förlorade finnas kvar i salen?",
+        "Tryck på playknappen för att se videon, kan boken Johannes förlorade finnas kvar i salen?",
     },
     //Display video
   ],
@@ -954,11 +954,11 @@ const content = {
     { Spelare: "Vet du inte om bilderna?" },
     { Ljudfil: "./audio/Samtal2_Peter9.mp3" },
     {
-      Spelare: "Hur hann du då ikapp för att lämna kortet",
+      Spelare: "Hur hann du om du lämnade en halvtimme senare?",
     },
     { Ljudfil: "./audio/Samtal2_Peter10.mp3" },
     {
-      Spelare: "Såklart",
+      Spelare: "Såg Michael dig lämna kortet om vi frågar honom då?",
     },
     { Ljudfil: "./audio/Samtal2_Peter11.mp3" },
     {

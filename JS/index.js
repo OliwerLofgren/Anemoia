@@ -448,7 +448,7 @@ function displayContent(currentIndex) {
                   helpMe = document.createElement("p");
                   helpMe.setAttribute("id", "helpButton");
                   document.getElementById("ai_content_p").textContent =
-                    "SYSTEMMEDDELANDE: ÅTERSTÄLL ANEMONIA";
+                    "SYSTEMMEDDELANDE: ANEMONIA SVARAR INTE";
                   document.getElementById("ai_content_p").style.textAlign =
                     "center";
                   document
@@ -635,7 +635,7 @@ function switchFunction(layout) {
       createNextButton();
       break;
     case "layout16":
-      createNextButton(11);
+      createNextButton();
       break;
     case "layout17":
       addClues(12);
