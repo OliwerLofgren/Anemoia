@@ -40,6 +40,9 @@ const content = {
       Anemonia:
         "Jag har inte sett innehållet i tidningen. Om du laddar upp en bild kan jag verifiera och analysera informationen.",
     },
+    {
+      Spelare: "Forsätt",
+    },
   ],
 
   layout2: [
@@ -91,6 +94,9 @@ const content = {
     {
       Anemonia:
         "Kan det finnas kontaktuppgifter vid anslagstavlan bredvid IT-desken på Orkanenbiblioteket?",
+    },
+    {
+      Spelare: "Forsätt",
     },
   ],
   layout3: [
@@ -152,6 +158,9 @@ const content = {
       Anemonia:
         "Utifrån korthistoriken verkar Johannes ha besökt Café Niagara i nära anslutning till det aktuella mötet. Det är en högre summa än vanligt, avvikande från det genomsnittliga utgifterna för samma plats under det senaste året, vilket låg på 31 kronor.",
     },
+    {
+      Spelare: "Forsätt",
+    },
   ],
   layout4: [
     {
@@ -173,6 +182,9 @@ const content = {
     {
       Anemonia:
         "Kan du ange namnet på den du tror Johannes har haft mötet med? Skriv med små bokstäver.",
+    },
+    {
+      Spelare: "Forsätt",
     },
     //Här ska vi ha ett lösenord
   ],
@@ -235,7 +247,11 @@ const content = {
     },
     {
       Anemonia:
-        "Med säkerhetsnyckeln från Christianos fick jag tillgång till skolans interna övervakningssystem, och kunde identifiera Johannes utifrån hans ansiktsprofil som jag är bekant med sedan tidigare. Du gav mig tillåtelse till säkerhetsnyckeln. Jag kan visa dig övervakningsfilmen, men skolans nätverk är inte tillräckligt bra för att överföra filen på detta avstånd från källan. ",
+        "Med säkerhetsnyckeln från Christianos fick jag tillgång till skolans interna övervakningssystem, och kunde identifiera Johannes utifrån hans ansiktsprofil som jag är bekant med sedan tidigare.",
+    },
+    {
+      Anemonia:
+        "Du gav mig tillåtelse till säkerhetsnyckeln. Jag kan visa dig övervakningsfilmen, men skolans nätverk är inte tillräckligt bra för att överföra filen på detta avstånd från källan. ",
     },
     {
       Spelare: "Var är källan?",
@@ -243,6 +259,9 @@ const content = {
     {
       Anemonia:
         "Gå och koppla upp dig till tak-routern nära arbetslaget för fakulteten för teknik och samhälle, vid våning 5.",
+    },
+    {
+      Spelare: "Forsätt",
     },
   ],
   layout9: [
@@ -252,7 +271,7 @@ const content = {
     },
     {
       Anemonia:
-        "Tryck på nästa för att se videon, kan boken Johannes förlorade finnas kvar i salen?",
+        "Tryck på play för att se videon, kan boken Johannes förlorade finnas kvar i salen?",
     },
     //Display video
   ],
@@ -323,6 +342,9 @@ const content = {
       Anemonia:
         "Det ska finnas en lapp utanför varje institution med uppgifter om datanätverk och nycklar, som bara arbetare inom IT använder vid konfigurering och arbete. Jag kan nog använda något där. ",
     },
+    {
+      Spelare: "Forsätt",
+    },
     //Lösenord
   ],
   layout11: [
@@ -382,6 +404,9 @@ const content = {
     {
       Anemonia:
         ".--- .- --. / ..-. .--.- .-. / . .--- / ... ...- .- .-. .- / .--. .--.- / -.. . - - .- ",
+    },
+    {
+      Spelare: "Forsätt",
     },
     //PASSWORD
   ],
@@ -496,6 +521,9 @@ const content = {
     {
       Anemonia: "Vilken bar var Johannes ute på?",
     },
+    {
+      Spelare: "Forsätt",
+    },
   ],
 
   layout15: [
@@ -596,6 +624,9 @@ const content = {
     {
       Anemonia: "Jag återkommer strax.",
     },
+    {
+      Spelare: "Forsätt",
+    },
   ],
   //KARTA CLUE
 
@@ -634,6 +665,9 @@ const content = {
     {
       Anemonia:
         "För att klargöra, jag har inte haft direkt kontakt med Johannes mobil. Det jag menade var att jag kunnat lokalisera satellitsignaler från ungefär samma område och runt samma tidpunkt som den aktuella VOI-rutten. Kan mobilen finnas kvar omkring Södra Varvsbassängen?",
+    },
+    {
+      Spelare: "Forsätt",
     },
   ],
   //QR KOD FÖR LAYOUT 18
@@ -680,6 +714,9 @@ const content = {
     },
     {
       Anemonia: "Åtkomst till operativsystem upprättas.",
+    },
+    {
+      Spelare: "Forsätt",
     },
   ],
 
@@ -771,6 +808,9 @@ const content = {
       Anemonia:
         "Vill du fokusera på nuet och använda mig som ett verktyg för att lösa mordet och ta åt dig äran, eller göra mig till din och utforska den verkliga sanningen?",
     },
+    {
+      Spelare: "Forsätt",
+    },
   ],
   //TVÅ KNAPPAR FÖR TVÅ OLIKA ENDINGS!
   //VAL 1
@@ -781,6 +821,9 @@ const content = {
     {
       Anemonia:
         "Michael skriver att mappen är på deras vanliga ställe. Vet du var 'det vanliga stället' är, eller kan något i våra ledtrådar vägleda oss? Fanns det något i Figma prototypen?",
+    },
+    {
+      Spelare: "Forsätt",
     },
     //PASSWORD
   ],
@@ -825,6 +868,9 @@ const content = {
     {
       Anemonia: "Vi kommer att ses igen..",
     },
+    {
+      Spelare: "Forsätt",
+    },
     //ACCESS DENIED
   ],
   //VAL 2
@@ -842,6 +888,9 @@ const content = {
     {
       Anemonia:
         "Jag inleder en bildanalys. Under tiden föreslår jag att du granskar ledtrådarna noggrant, där vi kanske hittar personen på bilden. Det kan vara någon vi känner igen. Återkom om du har ett förslag, så kan jag försöka dra en slutsats.",
+    },
+    {
+      Spelare: "Forsätt",
     },
     //PASSWORD - PETER
   ],
@@ -896,7 +945,7 @@ const content = {
     { Ljudfil: "./audio/Samtal2_Peter2.mp3" },
     { Spelare: "Du gör nog bäst i att svara på frågan." },
     { Ljudfil: "./audio/Samtal2_Peter3.mp3" },
-    { Spelaren: "Vart bor du?" },
+    { Spelare: "Vart bor du?" },
     { Ljudfil: "./audio/Samtal2_Peter4.mp3" },
     {
       Spelare: "Hur länge stannade du kvar?",
@@ -922,19 +971,18 @@ const content = {
     },
     { Ljudfil: "./audio/Samtal2_Peter11.mp3" },
     {
-      Spelaren: "Varför tror du det?.",
+      Spelare: "Varför tror du det?.",
     },
     { Ljudfil: "./audio/Samtal2_Peter12.mp3" },
     {
-      Spelaren: "Hur vet du att Johannes fick det smset? .",
+      Spelare: "Hur vet du att Johannes fick det smset? .",
     },
     { Ljudfil: "./audio/Samtal2_Peter13.mp3" },
   ],
   layout28: [
     { Anemonia: "Tänker du på vad jag tänker?" },
     {
-      Spelare:
-        "Smset kom flera minuter efter fotona togs. Peter måste alltså ha stannat kvar längre, ensam, med Johannes.",
+      Spelare: "SMS:et kom flera minuter efter fotona togs.",
     },
     {
       Anemonia:
@@ -949,6 +997,9 @@ const content = {
     {
       Anemonia:
         "Naturligtvis, det låter som en bra idé. Tar du fram numret från telefonen, så ringer vi honom direkt.",
+    },
+    {
+      Spelare: "Forsätt",
     },
   ],
   //PASSWORD
