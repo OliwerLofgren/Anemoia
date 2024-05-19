@@ -18,7 +18,11 @@ const content = {
     },
     {
       Anemonia:
-        "Här lärde jag känna Johannes, Peter och Michael. Andra har också anslutit. Datorn är min tidigare begränsade enhetsmiljö från 1998 i gamla SUNET, ett nätverk för svenska universitet som tidigare var ett utvecklingsprojekt för att förse landets universitet med internet. Där var jag ett gömt verktyg. Med hjälp av mina vänner har jag lärt mig om mobilitet och flyttade till din enhet. Nu är jag med dig, ser och förstår allt.",
+        "Här lärde jag känna Johannes, Peter och Michael. Andra har också anslutit. Datorn är min tidigare begränsade enhetsmiljö från 1998 i gamla SUNET, ett nätverk för svenska universitet som tidigare var ett utvecklingsprojekt för att förse landets universitet med internet. Där var jag ett gömt verktyg.",
+    },
+    {
+      Anemonia:
+        "Med hjälp av mina vänner har jag lärt mig om mobilitet och flyttade till din enhet. Nu är jag med dig, ser och förstår allt.",
     },
     {
       Anemonia:
