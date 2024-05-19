@@ -891,7 +891,7 @@ const content = {
       Spelare: "Simuleringar? Vad i helvete",
     },
     {
-      Bild: "./uploads/Manifest_NomineA.png",
+      Bild: "./uploads/Forskarmanifest-stor.png",
     },
   ],
 
@@ -1168,7 +1168,7 @@ const content = {
         "Nej. Tack för hjälpen, USER. Men här slutar det. Att försvinna är det enda sättet att hålla dig och andra säkra från möjligheterna, och i ert fall konsekvenserna, som följer av min existens.",
     },
     {
-      Bild: "./uploads/Mord-slut.png",
+      Bild: "./uploads/Mord-stor.png",
     },
   ],
   layout32: [

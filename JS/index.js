@@ -212,7 +212,7 @@ function goToClues(clueIndex) {
       img.src = "uploads/Anteckningar.png";
       break;
     case "12":
-      img.src = "uploads/Karta.png";
+      img.src = "uploads/VOI-karta-stor.png";
       break;
     case "13":
       createLink(
