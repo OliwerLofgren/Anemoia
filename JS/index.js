@@ -1,33 +1,35 @@
 // window.localStorage.clear();
+if (localStorage.getItem("access") === "false") {
+  accessCheck();
+}
+
 let conversationPaused = false;
 let alternateEnding = false;
 let layoutSixFinished = false;
 let layout10Passed = false;
 let addedEvent = false;
+let messageIndex = 0;
 let option1s = false;
 let option2s = false;
-let messageIndex = 0;
-
-if (localStorage.getItem("access") === "false") {
-  accessCheck();
-}
 
 function accessCheck() {
   history.pushState(null, "", "?layout=layout0");
 
-  document.body.innerHTML = "";
   const button = document.querySelector("button");
   const img = document.querySelector("img");
+  if(document.getElementById("helpMe")){
+    document.getElementById("helpMe").remove()
+  }
   if (button) button.style.display = "none";
   if (img) img.style.display = "none";
-
+  
   const h1Element = document.createElement("p");
   h1Element.id = "denied";
-  if (option2s === true) {
-    h1Element.textContent = "Anemonia har lämnat dig.";
-  }
+  
   h1Element.textContent = "ACCESS DENIED";
+  document.body.innerHTML = "";
   document.body.appendChild(h1Element);
+  return;
 }
 
 let goToLayout = (layoutNumber) => {
@@ -83,38 +85,22 @@ function RenderStartingpage() {
  
   <div class="div">
   <div class="div-2"><div class="div-3"></div></div>
+  <div id="helloBro">
   <div class="div-4">Hej, ${username}</div>
   <div class="div-5">Vad kan jag hjälpa till med?</div>
+  </div>
   <div class="div-6">
   <select id="dialogSelect" >
   ${optionsHTML}
-</select>
-<select id="clueSelect" >
-${cluesHTML}
-</select>
-  </div>
- 
-  
-</div>
-
-
-`;
-  /*
- <div id="helloUser">
-  <p id="title">Hej, ${username}</p>
-  <p>Vad kan jag hjälpa dig med?</p>
-  </div>
-  <div>
-  <select id="dialogSelect" >
-    ${optionsHTML}
   </select>
   <select id="clueSelect" >
   ${cluesHTML}
   </select>
   </div>
-  <p id="scan_p" style="color:#9ed644;">Skanna första / nästa QR-koden för att fortsätta!</p>
+  </div>
+<button id="helpMe">Jag behöver hjälp</button>
+`;
 
-*/
   document
     .getElementById("dialogSelect")
     .addEventListener("change", (event) => {
@@ -141,11 +127,9 @@ ${cluesHTML}
   if (parseInt(window.localStorage.getItem("keysFound")) >= 2) {
     //document.getElementById("scan_p").innerHTML = "";
   }
-  let helpButton = document.createElement("button");
-  helpButton.id = "helpMe";
-  helpButton.textContent = "Jag behöver hjälp";
-  document.body.appendChild(helpButton);
-  helpButton.addEventListener("click", (event) => {
+  
+  
+  document.querySelector("#helpMe").addEventListener("click", (event) => {
     let div = document.createElement("div");
     div.id = "yesOrNo";
     div.innerHTML = `
@@ -155,6 +139,7 @@ ${cluesHTML}
 
     document.body.append(div);
     let infoDiv = document.createElement("div");
+    infoDiv.id = "infoDiv"
     document.getElementById("yes").addEventListener("click", (event) => {
       infoDiv.innerHTML = `
       <p>Felix: 0730430995</p>
@@ -163,7 +148,7 @@ ${cluesHTML}
       <p>Oliwer: 01348593576</p>
       `;
       //div.remove()
-      document.body.append(infoDiv);
+      document.querySelector(".div").append(infoDiv);
     });
     document.getElementById("no").addEventListener("click", (event) => {
       infoDiv.remove();
@@ -463,7 +448,7 @@ function displayContent(currentIndex) {
                   helpMe = document.createElement("p");
                   helpMe.setAttribute("id", "helpButton");
                   document.getElementById("ai_content_p").textContent =
-                    "SYSTEMMEDDELANDE: ÅTERSTÄLL ANEMONIA";
+                    "SYSTEMMEDDELANDE: ANEMONIA SVARAR INTE";
                   document.getElementById("ai_content_p").style.textAlign =
                     "center";
                   document
@@ -627,6 +612,7 @@ function switchFunction(layout) {
     case "layout9":
       addClues(9);
       displayVideo("./audio/Overvakning.mp4");
+
       break;
     case "layout10":
       passwordFunction();
@@ -649,7 +635,7 @@ function switchFunction(layout) {
       createNextButton();
       break;
     case "layout16":
-      createNextButton(11);
+      createNextButton();
       break;
     case "layout17":
       addClues(12);
@@ -695,9 +681,15 @@ function switchFunction(layout) {
       createNextButton();
       break;
     case "layout30":
-      window.localStorage.setItem("access", "false");
-      accessCheck();
+      createNextButton()
       break;
+    case "layout31":
+      createNextButton()
+        break;
+      case "layout32":
+        window.localStorage.setItem("access", "false");
+        accessCheck();
+          break;
     default:
       break;
   }
