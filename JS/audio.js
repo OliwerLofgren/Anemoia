@@ -54,10 +54,15 @@ function displayVideo(videoFilePath) {
     document.body.append(button);
   }
 
-  if (videoFilePath === "./audio/Overvakning.mp4" && window.location.search.split("?layout=")[1] !== "layout0") {
+  if (
+    videoFilePath === "./audio/Overvakning.mp4" &&
+    window.location.search.split("?layout=")[1] !== "layout0"
+  ) {
     video.addEventListener("ended", (event) => {
       console.log("Video has ended");
-      createNextButton();
+      const ai_p = document.getElementById("ai_content_p");
+      ai_p.textContent = "Skanna nästa QR-kod för att fortsätta!";
+      ai_p.style.color = "#9ed644";
     });
     button.textContent = "Fortsätt till nästa del";
     document.body.append(button);
