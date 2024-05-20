@@ -145,7 +145,7 @@ function RenderStartingpage() {
       <p>Felix: 0730430995</p>
       <p>Alice: 0708929980</p>
       <p>Calle: 0709515020</p>
-      <p>Oliwer: 01348593576</p>
+      <p>Oliwer: 0760401070</p>
       `;
       //div.remove()
       document.querySelector(".div").append(infoDiv);
@@ -497,6 +497,9 @@ function displayContent(currentIndex) {
                 document
                   .getElementById("nextButton")
                   .addEventListener("click", (event) => {
+                    if(layoutUrl === "layout3" && document.getElementById("nextButton").textContent === "Forsätt"){
+                      showEndMessage(true);
+                    }
                     //conversationPaused = false;
                     //messageContainer.innerHTML = ""
                     addedEvent = true;
@@ -748,7 +751,7 @@ function displayOptions() {
     option1s = true;
     messageIndex = 0;
     alt2.remove();
-    keysFound = 22;
+    keysFound = 21;
 
     window.localStorage.setItem("keysFound", keysFound);
 

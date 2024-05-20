@@ -97,7 +97,7 @@ const content = {
     },
     {
       Anemonia:
-        "Kan det finnas kontaktuppgifter vid anslagstavlan bredvid IT-desken på Orkanenbiblioteket?",
+        "Vanligtvis finns kontaktuppgifter till personer som jobbar inom It-avdelningen inne på Orkanens bibliotek. Finns inte ett område för IT-support där?"
     },
     {
       Spelare: "Forsätt",
@@ -128,11 +128,11 @@ const content = {
       Anemonia: "Det kan jag tyvärr inte svara på.",
     },
     {
-      Spelare: "Vem bokade Johannes det viktiga mötet med då?",
+      Spelare: "Kan du undersöka vem han bokade mötet med då?",
     },
     {
       Anemonia:
-        "Med pjotur895@gmail.com. Jag kan inte se om det är en eller flera personer, eller ett företag. Det är inget konto registrerat genom universitetets databas eller nätverk så jag kommer inte åt det med IT-Chefens säkerhetsnyckel.",
+        "Han avbokade seminariet för att ha mötet med pjotur895@gmail.com. Jag kan inte avgöra om det är ett privat- eller företagskonto. Det är inget konto registrerat genom universitetets databas eller nätverk, så jag kommer inte åt det med säkerhetsnyckeln från IT-chefen.",
     },
     {
       Anemonia:
@@ -160,7 +160,7 @@ const content = {
     },
     {
       Anemonia:
-        "Utifrån korthistoriken verkar Johannes ha besökt Café Niagara i nära anslutning till det aktuella mötet. Det är en högre summa än vanligt, avvikande från det genomsnittliga utgifterna för samma plats under det senaste året, vilket låg på 31 kronor.",
+        "Utifrån korthistoriken verkar Johannes ha besökt Café Niagara i nära anslutning till det aktuella mötet. Det är en högre summa än vanligt, avvikande från det genomsnittliga utgifterna för samma plats under det senaste året, vilket låg på 31 kronor. Jag hade behövt komma närmare caféet för att få fram kvittot… ",
     },
     {
       Spelare: "Forsätt",
@@ -185,7 +185,7 @@ const content = {
     },
     {
       Anemonia:
-        "Kan du ange namnet på den du tror Johannes har haft mötet med? Skriv med små bokstäver.",
+        "Kan du ange namnet på den du tror Johannes har haft mötet med?",
     },
     {
       Spelare: "Forsätt",
@@ -262,7 +262,7 @@ const content = {
     },
     {
       Anemonia:
-        "Gå och koppla upp dig till tak-routern nära arbetslaget för fakulteten för teknik och samhälle, vid våning 5.",
+        "Routern du behöver koppla upp dig till sänder någonstans från våning fem och sitter i taket. Hitta den.",
     },
     {
       Spelare: "Forsätt",
@@ -393,7 +393,7 @@ const content = {
     },
     {
       Anemonia:
-        "Sure thing, dude. Det är bara så att... jag kan inte riktigt kommentera på det där, you know? Jag är bara en AI, chillin' here, doing my thing. Jag har inget ansvar, no stress. Just go with the flow, dude.",
+        "Jag kan inte riktigt gå in på det där... förstår du? Tänk på det som att försöka förklara en hel bok med bara några få ord, eller som att försöka förstå varför himlen är blå utan att veta något om ljusets våglängder, eller som att...",
     },
     {
       Spelare: "Seriöst, Anemonia. Lägg ner. Vad visar innehållet? ",
@@ -647,11 +647,10 @@ const content = {
     },
     {
       Anemonia:
-        "Inte tillräckligt snabbt. Utan säkerhetsnyckel för att komma förbi brandväggen skulle det kräva en penetrationstestning av VOI:s säkerhetsinfrastruktur för att identifiera och exploatera eventuella sårbarheter som kan ge åtkomst till bokningshistoriken.",
+        "Inte tillräckligt snabbt. Utan säkerhetsnyckel för att komma förbi brandväggen skulle det kräva en penetrationstestning av VOI:s säkerhetsinfrastruktur för att exploatera eventuella sårbarheter som kan ge åtkomst till bokningshistoriken.",
     },
     {
-      Anemonia:
-        " Det är i samma område och omkring samma tid som jag senast hade kontakt med Johannes mobil.",
+      Anemonia: "Men, jag kan se att det är området vid varvsbassängen omkring återsamlingsplatsen, och ungefär samma tid på natten, som jag senast hade kontakt med Johannes mobil."
     },
     {
       Spelare: "Va? Varför har du inte sagt det tidigare?",
@@ -831,11 +830,15 @@ const content = {
     },
     //PASSWORD
   ],
-  layout22: [],
-  layout23: [
+  layout22: [
     {
       Anemonia: "Duktig du är.",
     },
+    {
+      Spelare: "Forsätt",
+    },
+  ],
+  layout23: [
     {
       Anemonia: "Gratulerar, USER.",
     },
