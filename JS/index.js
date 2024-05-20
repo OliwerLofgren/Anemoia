@@ -645,10 +645,10 @@ function switchFunction(layout) {
       createNextButton();
       break;
     case "layout18":
-      addClues(13);
       showEndMessage(true);
       break;
-    case "layout19":
+      case "layout19":
+      addClues(13);
       createNextButton();
       break;
     case "layout20":
